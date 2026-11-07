@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "brand": "ARTYVERSE",
+  "status": "Proposed branding; generated product screens are product vision",
+  "browserCheck": {
+    "viewports": [
+      1440,
+      390
+    ],
+    "mobileHorizontalOverflow": false,
+    "scope": "Brand HTML board only"
+  },
+  "assets": [
+    {
+      "path": "ARTYVERSE_BRAND_BOOK_TH.md",
+      "bytes": 15321,
+      "sha256": "04c1c3ae62d2fea7428f503994a247262408f964da472617ab5f57a8a279ec70",
+      "provenance": "Authored strategy, tokens, SVG or rendered HTML board"
+    },
+    {
+      "path": "ARTYVERSE_BRAND_DIRECTION.png",
+      "bytes": 1766125,
+      "sha256": "8bca2cc6bb344828d7561480a64a5b92a42dd772531cbf1b5b20e55b4a0086f2",
+      "provenance": "image_gen original visual exploration"
+    },
+    {
+      "path": "assets/artyverse-symbol.svg",
+      "bytes": 370,
+      "sha256": "ed51329e55c773e9a4a3d84111fbfb021cd6fb1e3c7970466a93387f8f624dd5",
+      "provenance": "Authored strategy, tokens, SVG or rendered HTML board"
+    },
+    {
+      "path": "brand-board-desktop.png",
+      "bytes": 207371,
+      "sha256": "ec4742f791eab11b577f0ee26a0cd2ea4b95c375bbdc76cf645f6f6fd7320310",
+      "provenance": "Authored strategy, tokens, SVG or rendered HTML board"
+    },
+    {
+      "path": "brand-board-mobile.png",
+      "bytes": 168806,
+      "sha256": "1e8ebd9bf2dbbe266c28ca168e272f9488777eebeb136743555136e3185b77c1",
+      "provenance": "Authored strategy, tokens, SVG or rendered HTML board"
+    },
+    {
+      "path": "brand-tokens.json",
+      "bytes": 659,
+      "sha256": "9809a63b794bd14db3bae0c0276cea03bbfac82bdfe045323fc08cfea1eb5434",
+      "provenance": "Authored strategy, tokens, SVG or rendered HTML board"
+    },
+    {
+      "path": "index.html",
+      "bytes": 7243,
+      "sha256": "a3fdc8ceae4b4a4de559587e2afbff22f7df051028d275b26205fcf183a34651",
+      "provenance": "Authored strategy, tokens, SVG or rendered HTML board"
+    }
+  ]
+}
