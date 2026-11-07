@@ -1,0 +1,24 @@
+{
+  "project": "https://framer.com/projects/Q9u0Ksh8PgRNuFPtNtGO",
+  "scope": "Editable visual companion; not published as a backend application",
+  "desktop": [
+    {
+      "id": "WQLkyLRf1",
+      "image_url": "https://framerusercontent.com/screenshots/on-demand/45783d74-6e8f-44bb-b3e7-40eca5d3eb12.jpg"
+    }
+  ],
+  "phone": [
+    {
+      "id": "uG_nd7_TD",
+      "image_url": "https://framerusercontent.com/screenshots/on-demand/a4eeeb3e-3fac-4cb5-a0cf-ad2b1aeabf68.jpg"
+    }
+  ],
+  "diagnostics": {
+    "changedNodeCount": 3,
+    "renamedIds": {
+      "av-orbital-wrapper": "FS6C0fY2e"
+    }
+  },
+  "review": "Desktop and phone images returned by Framer were visually inspected; no pixel-diff claim.",
+  "marketplaceImports": 0
+}

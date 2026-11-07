@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-11-07T16:03:45.507Z",
+  "browser": "154.0.8037.57",
+  "origin": "http://127.0.0.1:4315",
+  "build": "dist served by npm start",
+  "story": "Template preview → new document → add/edit Thai/English text → save revision → read persisted SQLite item through API",
+  "itemId": "cc5fd8bf-42d4-427b-bb9e-aee403ccfb50",
+  "revision": 2,
+  "errors": [],
+  "failedRequests": [],
+  "result": "passed",
+  "storage": "Isolated .test-data/production-smoke; no user database used"
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "runtimeRevision": "18d819446beead960836b0a1f1221e35090d854b",
+  "runtimeFingerprint": "a8f6d4524b452abce45ca6da1356c92b5df11203d2e8a19d508e6aa48ebaf1bd",
+  "build": "passed",
+  "contractTests": 3,
+  "endToEnd": {
+    "startTime": "2026-11-07T16:00:24.566Z",
+    "duration": 61504.715,
+    "expected": 14,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "visualCases": 27,
+  "defaultAxeCases": 24,
+  "productionSmoke": "passed",
+  "scope": "Local single-user release; see KNOWN_LIMITATIONS.md"
+}

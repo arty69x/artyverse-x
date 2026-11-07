@@ -1,0 +1,27 @@
+
+> artyverse-x@1.0.0-local test:e2e
+> playwright test
+
+[WebServer] (node:9311) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 14 tests using 1 worker
+
+(node:9335) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/journeys.spec.ts:7:1 › Home → conversation → Create → save → Library → reopen (4.8s)
+  ✓   2 tests/e2e/journeys.spec.ts:45:1 › Template creates a new document; editor undo and SVG export work (2.4s)
+  ✓   3 tests/e2e/journeys.spec.ts:68:1 › Research drafts survive navigation and selected material creates document (2.5s)
+  ✓   4 tests/e2e/journeys.spec.ts:91:1 › Local workflow validates, runs and saves a reproducible result (1.9s)
+  ✓   5 tests/e2e/journeys.spec.ts:105:1 › Motion geometry, preset round trip and reduced motion (2.6s)
+  ✓   6 tests/e2e/journeys.spec.ts:146:1 › API revision conflicts, trash restore, backup validation and origins (125ms)
+  ✓   7 tests/e2e/journeys.spec.ts:190:1 › No page overflow at target widths and main routes render without runtime errors (23.4s)
+  ✓   8 tests/e2e/journeys.spec.ts:221:1 › Home semantics, dialog keyboard and reduced-motion visibility (3.2s)
+  ✓   9 tests/e2e/journeys.spec.ts:244:1 › Synthetic microphone → stop → playback → save → Library; tracks stop (3.5s)
+  ✓  10 tests/e2e/journeys.spec.ts:283:1 › Live timer pause, cue presentation and session save (4.1s)
+  ✓  11 tests/e2e/journeys.spec.ts:303:1 › Backup round trip into an empty second database preserves documents, revisions and media (546ms)
+  ✓  12 tests/e2e/journeys.spec.ts:369:1 › Document JSON export → validate → preview → apply → save round trip (2.9s)
+  ✓  13 tests/e2e/journeys.spec.ts:406:1 › Motion Lab controls have accessible names (3.7s)
+  ✓  14 tests/e2e/journeys.spec.ts:420:1 › Newer saved revision wins over stale browser cache without losing the draft (2.8s)
+
+  14 passed (1.0m)

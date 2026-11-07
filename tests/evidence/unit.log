@@ -1,0 +1,14 @@
+
+> artyverse-x@1.0.0-local test
+> vitest run
+
+
+ RUN  v3.2.7 /workspace/artyverse-x
+
+ ✓ tests/unit/contracts.test.ts (3 tests) 24ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  16:00:23
+   Duration  402ms (transform 84ms, setup 0ms, collect 135ms, tests 24ms, environment 0ms, prepare 74ms)
+
