@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-07",
+  "purpose": "Proposed ARTYVERSE X resource selection; public listing review only",
+  "sources": [
+    {
+      "id": "templates",
+      "url": "https://www.framer.com/marketplace/templates/"
+    },
+    {
+      "id": "components",
+      "url": "https://www.framer.com/marketplace/components/"
+    },
+    {
+      "id": "plugins",
+      "url": "https://www.framer.com/marketplace/plugins/"
+    },
+    {
+      "id": "vectors",
+      "url": "https://www.framer.com/marketplace/vectors/"
+    },
+    {
+      "id": "gallery",
+      "url": "https://www.framer.com/community/gallery/"
+    },
+    {
+      "id": "motion-react",
+      "url": "https://motion.dev/docs/react"
+    },
+    {
+      "id": "motion-framer",
+      "url": "https://motion.dev/docs/framer"
+    }
+  ],
+  "resources": [
+    {
+      "id": "template-deepocean",
+      "type": "template",
+      "name": "DeepOcean",
+      "url": "https://www.framer.com/marketplace/templates/deepocean/",
+      "targets": [
+        "Home",
+        "Composer entry"
+      ],
+      "status": "candidate",
+      "evidence": "Public listing/documentation inspected, not remixed or runtime-verified",
+      "listedCost": "Free listed",
+      "licenseLabel": "Limited",
+      "licenseTermsVerified": false,
+      "acquired": false,
+      "framerRemixUrl": null,
+      "imported": false,
+      "codeAccessVerified": false,
+      "externalReactCompatibility": "unknown until checked",
+      "verificationEvidence": []
+    },
+    {
+      "id": "template-camo",
+      "type": "template",
+      "name": "Camo",
+      "url": "https://www.framer.com/marketplace/templates/camo/",
+      "targets": [
+        "Marketing",
+        "Visual hierarchy"
+      ],
+      "status": "candidate",
+      "evidence": "Public listing/documentation inspected, not remixed or runtime-verified",
+      "listedCost": "Free listed",
+      "licenseLabel": "Limited",
+      "licenseTermsVerified": false,
+      "acquired": false,
+      "framerRemixUrl": null,
+      "imported": false,
+      "codeAccessVerified": false,
+      "externalReactCompatibility": "unknown until checked",
+      "verificationEvidence": []
+    },
+    {
+      "id": "template-pretty",
+      "type": "template",
+      "name": "Pretty",
+      "url": "https://www.framer.com/marketplace/templates/pretty/",
+      "targets": [
+        "Marketing",
+        "Feature showcase"
+      ],
+      "status": "candidate",
+      "evidence": "Public listing/documentation inspected, not remixed or runtime-verified",
+      "listedCost": "Free listed",
+      "licenseLabel": "Limited",
+      "licenseTermsVerified": false,
+      "acquired": false,
+      "framerRemixUrl": null,
+      "imported": false,
+      "codeAccessVerified": false,
+      "externalReactCompatibility": "unknown until checked",
+      "verificationEvidence": []
+    },
+    {
+      "id": "component-spatialgallery",
+      "type": "component",
+      "name": "3D SpatialGallery",
+      "url": "https://www.framer.com/marketplace/components/3d-spatialgallery/",
+      "targets": [
+        "Showcase",
+        "Motion Lab",
+        "Media corridor"
+      ],
+      "status": "candidate",
+      "evidence": "Public listing/documentation inspected, not remixed or runtime-verified",
+      "listedCost": "Free listed",
+      "licenseLabel": "Limited",
+      "licenseTermsVerified": false,
+      "acquired": false,
+      "framerRemixUrl": null,
+      "imported": false,
+      "codeAccessVerified": false,
+      "externalReactCompatibility": "unknown until checked",
+      "verificationEvidence": []
+    },
+    {
+      "id": "component-text-reveal",
+      "type": "component",
+      "name": "Text Reveal",
+      "url": "https://www.framer.com/marketplace/components/xDgp5el32fHNjPkyEMsb/",
+      "targets": [
+        "Hero headings",
+        "Motion Lab"
+      ],
+      "status": "candidate",
+      "evidence": "Public listing/documentation inspected, not remixed or runtime-verified",
+      "listedCost": "Free listed",
+      "licenseLabel": "Limited",
+      "licenseTermsVerified": false,
+      "acquired": false,
+      "framerRemixUrl": null,
+      "imported": false,
+      "codeAccessVerified": false,
+      "externalReactCompatibility": "unknown until checked",
+      "verificationEvidence": []
+    },
+    {
+      "id": "vector-coolicons",
+      "type": "vector",
+      "name": "coolicons",
+      "url": "https://www.framer.com/marketplace/vectors/coolicons/",
+      "targets": [
+        "Navigation",
+        "UI icons"
+      ],
+      "status": "candidate",
+      "evidence": "Public listing/documentation inspected, not remixed or runtime-verified",
+      "listedCost": "Free listed",
+      "licenseLabel": "Limited",
+      "licenseTermsVerified": false,
+      "acquired": false,
+      "framerRemixUrl": null,
+      "imported": false,
+      "codeAccessVerified": false,
+      "externalReactCompatibility": "unknown until checked",
+      "verificationEvidence": []
+    },
+    {
+      "id": "plugin-shadergradient",
+      "type": "plugin",
+      "name": "ShaderGradient",
+      "url": "https://www.framer.com/marketplace/plugins/shadergradient/",
+      "targets": [
+        "Framer backgrounds"
+      ],
+      "status": "candidate",
+      "evidence": "Public listing/documentation inspected, not remixed or runtime-verified",
+      "listedCost": "Pricing/terms to verify for selected use",
+      "licenseLabel": "Limited",
+      "licenseTermsVerified": false,
+      "acquired": false,
+      "framerRemixUrl": null,
+      "imported": false,
+      "codeAccessVerified": false,
+      "externalReactCompatibility": "unknown until checked",
+      "verificationEvidence": []
+    },
+    {
+      "id": "plugin-react-export",
+      "type": "plugin",
+      "name": "React Export",
+      "url": "https://www.framer.com/marketplace/plugins/react-export/",
+      "targets": [
+        "Optional React export"
+      ],
+      "status": "candidate",
+      "evidence": "Public listing/documentation inspected, not remixed or runtime-verified",
+      "listedCost": "Paid subscription listed; not selected as default",
+      "licenseLabel": "Limited",
+      "licenseTermsVerified": false,
+      "acquired": false,
+      "framerRemixUrl": null,
+      "imported": false,
+      "codeAccessVerified": false,
+      "externalReactCompatibility": "unknown until checked",
+      "verificationEvidence": []
+    }
+  ]
+}

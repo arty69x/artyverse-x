@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "primitive": {
+    "background": "#060608",
+    "surface": "#0D0D12",
+    "elevated": "#16161D",
+    "text": "#F0F0F8",
+    "muted": "#A3A3B6",
+    "border": "#2A2A36",
+    "accent": "#CCFF00",
+    "cyan": "#43E6FF",
+    "violet": "#9B43FF",
+    "danger": "#FF8899"
+  },
+  "semantic": {
+    "background": "primitive.background",
+    "surface": "primitive.surface",
+    "elevated": "primitive.elevated",
+    "text": "primitive.text",
+    "muted": "primitive.muted",
+    "border": "primitive.border",
+    "focus": "primitive.accent",
+    "accent": "primitive.accent",
+    "danger": "primitive.danger"
+  },
+  "component": {
+    "composer": {
+      "background": "semantic.surface",
+      "border": "semantic.border",
+      "radius": 12
+    },
+    "button": {
+      "background": "semantic.elevated",
+      "primary": "semantic.accent",
+      "radius": 8,
+      "minHeight": 38
+    },
+    "dialog": {
+      "background": "semantic.elevated",
+      "radius": 16
+    },
+    "sidebar": {
+      "width": 224,
+      "background": "semantic.background"
+    },
+    "inspector": {
+      "width": 225,
+      "background": "semantic.surface"
+    }
+  },
+  "space": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64,
+    96
+  ],
+  "radius": [
+    4,
+    8,
+    12,
+    16,
+    24
+  ],
+  "duration": {
+    "micro": 120,
+    "panel": 220,
+    "scene": 480
+  },
+  "font": {
+    "display": "Space Grotesk",
+    "body": "DM Sans",
+    "thai": "Noto Sans Thai"
+  }
+}

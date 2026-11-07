@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "arty-companion",
+      "purpose": "Static companion fallback",
+      "format": "SVG",
+      "dimensions": [
+        100,
+        112
+      ],
+      "source": "Original code-authored for ARTYVERSE X in this implementation",
+      "alt": "arty companion",
+      "optimization": "Compact SVG; no raster payload or embedded UI text",
+      "bytes": 664,
+      "sha256": "7b1bb7aad66135497cf8f05525a6f945b6d8e4627dc1dad2710d5e36ba3c5c1e"
+    },
+    {
+      "id": "brand-mark",
+      "purpose": "Original brand geometry",
+      "format": "SVG",
+      "dimensions": [
+        64,
+        64
+      ],
+      "source": "Original code-authored for ARTYVERSE X in this implementation",
+      "alt": "brand mark",
+      "optimization": "Compact SVG; no raster payload or embedded UI text",
+      "bytes": 245,
+      "sha256": "f6e394cb1fa0eeda2366be456b8738a05de9f83473e4def1b767fc7dfad2dfe2"
+    },
+    {
+      "id": "hero-orbit",
+      "purpose": "Portable original vector environment",
+      "format": "SVG",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "source": "Original code-authored for ARTYVERSE X in this implementation",
+      "alt": "hero orbit",
+      "optimization": "Compact SVG; no raster payload or embedded UI text",
+      "bytes": 675,
+      "sha256": "b539d4ef7b971df8f078948be6648889e2050aa910de06d50236db6de517af96"
+    }
+  ],
+  "runtimeAssets": [
+    "CSS planet/rim/orbits and portal geometry in src/style.css",
+    "Unique-ID mascot SVG in src/components/UI.tsx"
+  ],
+  "external": "Lucide icons MIT; fonts supplied by Fontsource packages under their bundled font licenses. No Framer Marketplace assets copied."
+}
