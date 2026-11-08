@@ -15,3 +15,6 @@
 
 - Modern scoped kit: src/components/kit (adapted shadcn composition with actual Radix Switch/Tabs), src/concept/FramerStudioComponents.tsx, shared/storefront.ts. Keep MIT attributions. Reuse installed motion/react; do not install a second animation runtime.
 - Hosted Vercel edition uses browser-local IndexedDB and a service worker; ordinary npm dev/build+start uses the Node/SQLite server. Preserve both modes and use tests/evidence/component-upgrade for the latest kit evidence; older V3 scores are historical.
+
+- Latest reconstruction direction: design/references/01-brand-system.jpg and 02-production-blueprint.jpg (ARTYVERSE Visual Engineering Studio / Extract.Compose.Ship), with dark WPX board 03 as supporting source. See docs/reconstruction/RECONSTRUCTION.md for observed/inferred/proposed distinctions. Do not copy Production-ready badges as evidence.
+- Unified Builder is #/builder inside Shell and reuses the existing FramerStudioBuilder; historical #/concept URLs remain compatible. Current reconstruction styling is src/v3/reconstruction.css. PrismMark is a reconstructed native SVG; arcyca-reconstructed.webp is a generated decorative reference approximation with SVG fallback, not an original 3D model.

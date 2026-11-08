@@ -1,0 +1,653 @@
+/* R1/R2 reconstructed visual identity; native live workspaces retain semantic themes. */
+.v3-shell {
+  background-image: radial-gradient(
+    ellipse at 100% 0,
+    color-mix(in srgb, var(--brand-violet) 9%, transparent),
+    transparent 42%
+  );
+}
+.v3-brand svg {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+}
+.v3-brand small {
+  font-size: 8px;
+  letter-spacing: 1.6px;
+}
+.v3-brand b {
+  color: var(--brand-pink);
+}
+.v3-home-intro {
+  padding-bottom: 14px;
+}
+.v3-home-intro .eyebrow {
+  letter-spacing: 0.18em;
+}
+.v3-home .v3-hero {
+  isolation: isolate;
+  min-height: 430px;
+  background:
+    radial-gradient(ellipse at 86% 40%, #6a27b855, transparent 48%),
+    linear-gradient(120deg, #080c20, #151536 62%, #251048);
+  border: 1px solid #a883cc66;
+  border-radius: 24px;
+  box-shadow:
+    inset 0 1px 0 #fff2,
+    0 14px 50px #14012e22;
+  color: #fff;
+}
+.v3-hero:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    128deg,
+    transparent 74%,
+    #b44fff22 74.2%,
+    #ff207833 78%,
+    transparent 78.2%
+  );
+  border-radius: inherit;
+}
+.v3-hero-copy {
+  padding: 42px 0 52px 40px;
+  max-width: 64%;
+}
+.v3-hero .v3-live-label {
+  color: #ded7f5;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+.v3-hero h1.recon-manifesto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: var(--font-display);
+  font-size: clamp(48px, 5.6vw, 80px);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+  font-weight: 800;
+  font-style: italic;
+  margin: 22px 0 20px;
+  color: #fff;
+}
+.recon-manifesto > span {
+  color: #fff;
+}
+.recon-manifesto mark {
+  background: var(--brand-lime);
+  color: #050403;
+  padding: 0 0.16em 0.07em;
+  margin-left: -0.12em;
+  transform: skew(-6deg);
+  border-radius: 5px;
+  line-height: 1.02;
+}
+.v3-hero .recon-manifesto em {
+  color: var(--brand-pink);
+  font: inherit;
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+}
+.recon-manifesto i {
+  display: block;
+  width: 55px;
+  height: 8px;
+  background: var(--brand-lime);
+  margin-bottom: 10px;
+}
+.v3-hero-copy > p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #d7d8eb;
+  max-width: 390px;
+}
+.v3-hero-character {
+  width: 43%;
+  right: 1%;
+  top: 3%;
+}
+.v3-hero-character .v3-arcyca {
+  filter: drop-shadow(0 0 14px #ac59ff55);
+}
+.v3-hero-index {
+  color: #b5adc7;
+  letter-spacing: 0.1em;
+  font-size: 9px;
+}
+.v3-hero-tour {
+  color: #e4dff3;
+}
+.v3-hero-caption {
+  color: #c8bbdf;
+}
+.v3-floating-chip {
+  background: #1d183c;
+  border-color: #aa81cc66;
+  color: #f4edff;
+  box-shadow: 0 8px 30px #0003;
+}
+.recon-launchpad {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+  padding: 24px;
+  margin: 24px 0;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.recon-launch-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.recon-launch-head h2 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  letter-spacing: -0.04em;
+  margin: 8px 0 0;
+}
+.recon-launch-head em {
+  font-weight: 400;
+  font-style: normal;
+  color: var(--muted);
+}
+.recon-launch-head > button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface2);
+  font-size: 12px;
+  color: var(--text);
+  white-space: nowrap;
+}
+.recon-flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.recon-flow > button {
+  display: flex;
+  text-align: left;
+  gap: 12px;
+  align-items: center;
+  padding: 18px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--cardgrad);
+  color: var(--text);
+  min-width: 0;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
+}
+.recon-flow > button:hover {
+  border-color: var(--focus);
+  transform: translateY(-2px);
+}
+.recon-flow > button > span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--faint);
+  align-self: flex-start;
+  padding-top: 3px;
+}
+.recon-flow strong {
+  font-size: 18px;
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.recon-flow small {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 5px;
+  line-height: 1.6;
+}
+.recon-flow > button:nth-child(2) {
+  background: var(--accent);
+  color: var(--on-accent);
+  border-color: var(--accent);
+}
+.recon-flow > button:nth-child(2) small,
+.recon-flow > button:nth-child(2) > span {
+  color: var(--on-accent);
+}
+.recon-toolstrip {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 9px;
+}
+.recon-tool {
+  position: relative;
+  min-height: 105px;
+  padding: 17px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface2);
+  color: var(--text);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.recon-tool strong {
+  font-size: 12px;
+  font-weight: 700;
+}
+.recon-tool > svg:last-child {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  color: var(--faint);
+}
+.recon-tool:hover {
+  background: var(--selected);
+  border-color: var(--focus);
+}
+.recon-tool.cyan > svg:first-child {
+  color: var(--brand-cyan);
+}
+.recon-tool.pink > svg:first-child {
+  color: var(--brand-pink);
+}
+.recon-tool.violet > svg:first-child {
+  color: var(--brand-violet);
+}
+.recon-tool.lime > svg:first-child {
+  color: var(--text);
+}
+.recon-values {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-top: 18px;
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.recon-values > span {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 11px;
+  color: var(--muted);
+}
+.recon-workspace-title {
+  margin: 8px 0 25px;
+}
+.recon-workspace-title h1 {
+  font: 800 clamp(32px, 4vw, 50px)/1.2 var(--font-display);
+  letter-spacing: -0.05em;
+  margin: 10px 0;
+}
+.recon-workspace-title h1 > span {
+  color: var(--brand-pink);
+  margin-left: 15px;
+}
+.recon-workspace-title p {
+  color: var(--muted);
+  font-size: 14px;
+}
+.unified-builder.cp-root {
+  background: transparent;
+  color: var(--text);
+  min-height: 0;
+}
+.unified-builder .ax-builder {
+  margin-top: 0;
+}
+html[data-theme="light"] .v3-home .v3-hero {
+  background:
+    radial-gradient(ellipse at 87% 30%, #b44fff28, transparent 50%),
+    linear-gradient(120deg, #fff, #f1edff 65%, #d7dafa);
+  color: #050403;
+  border-color: #c7b9e5;
+}
+.v3-home .v3-hero .recon-manifesto > span {
+  color: inherit;
+}
+html[data-theme="light"] .v3-hero h1.recon-manifesto {
+  color: #050403;
+}
+html[data-theme="light"] .v3-hero-copy > p {
+  color: #48506a;
+}
+html[data-theme="light"] .v3-hero .v3-live-label,
+html[data-theme="light"] .v3-hero-tour,
+html[data-theme="light"] .v3-hero-caption,
+html[data-theme="light"] .v3-hero-index {
+  color: #514468;
+}
+@media (min-width: 1440px) {
+  .v3-hero h1.recon-manifesto {
+    font-size: 86px;
+  }
+  .v3-hero-copy {
+    padding-left: 48px;
+  }
+}
+@media (max-width: 1023px) {
+  .recon-toolstrip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .v3-hero-copy {
+    padding-left: 28px;
+  }
+  .recon-flow strong {
+    font-size: 15px;
+    gap: 8px;
+  }
+}
+@media (max-width: 639px) {
+  .v3-home .v3-hero {
+    min-height: 0;
+  }
+  .v3-hero-copy {
+    max-width: 100%;
+    padding: 28px 22px 15px;
+  }
+  .v3-hero h1.recon-manifesto {
+    font-size: clamp(42px, 12.3vw, 68px);
+    max-width: 100%;
+    margin-top: 22px;
+  }
+  .v3-hero-character {
+    position: relative;
+    width: 85%;
+    max-width: 310px;
+    height: 270px;
+    right: auto;
+    top: auto;
+    margin: -10px auto 22px;
+  }
+  .v3-hero-character .v3-arcyca {
+    height: 270px;
+    width: 100%;
+  }
+  .v3-hero-index {
+    font-size: 8px;
+  }
+  .v3-hero .v3-hero-actions {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .v3-hero-copy > p {
+    font-size: 13px;
+  }
+  .v3-hero-character .chip-one {
+    left: 0;
+  }
+  .v3-hero-character .chip-two {
+    right: -4px;
+  }
+  .recon-launchpad {
+    padding: 17px;
+    border-radius: 17px;
+    margin-top: 18px;
+  }
+  .recon-launch-head {
+    align-items: flex-start;
+  }
+  .recon-launch-head h2 {
+    font-size: 22px;
+  }
+  .recon-launch-head h2 em {
+    display: block;
+  }
+  .recon-launch-head > button {
+    font-size: 11px;
+    padding: 7px;
+    gap: 3px;
+  }
+  .recon-flow {
+    grid-template-columns: 1fr;
+  }
+  .recon-flow > button {
+    padding: 13px;
+  }
+  .recon-flow strong {
+    font-size: 19px;
+  }
+  .recon-toolstrip {
+    gap: 7px;
+  }
+  .recon-tool {
+    padding: 13px 9px;
+    min-height: 94px;
+  }
+  .recon-tool strong {
+    font-size: 11px;
+  }
+  .recon-values {
+    gap: 12px;
+  }
+  .recon-values > span {
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .recon-flow > button,
+  .recon-tool {
+    transition: none;
+  }
+  .recon-flow > button:hover {
+    transform: none;
+  }
+}
+/* Composition containment overrides the earlier poster-style mobile backdrop. */
+.v3-app {
+  background-image: radial-gradient(
+    ellipse at 100% 0,
+    color-mix(in srgb, var(--brand-violet) 7%, transparent),
+    transparent 42%
+  );
+}
+.v3-home .v3-hero {
+  padding: 0 25px 38px 0;
+  grid-template-columns: 1.15fr 1fr;
+}
+.v3-hero .v3-hero-copy {
+  max-width: 100%;
+  min-width: 0;
+}
+.v3-hero h1.recon-manifesto {
+  font-family: var(--font-body);
+  font-weight: 900;
+  letter-spacing: -0.065em;
+}
+.v3-hero .v3-hero-character {
+  width: 100%;
+  opacity: 1;
+  position: relative;
+  right: auto;
+  top: auto;
+  min-height: 300px;
+}
+.unified-builder.cp-root {
+  padding-top: 0;
+  color-scheme: normal;
+}
+@media (max-width: 639px) {
+  .v3-home .v3-hero {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0 0 38px;
+  }
+  .v3-hero .v3-hero-copy {
+    padding: 26px 22px 0;
+  }
+  .v3-hero h1.recon-manifesto {
+    font-size: clamp(39px, 11.8vw, 68px);
+  }
+  .v3-hero .v3-hero-character {
+    width: 88%;
+    height: 235px;
+    min-height: 235px;
+    margin: 0 auto 16px;
+    pointer-events: auto;
+  }
+  .v3-hero .v3-hero-character .v3-arcyca {
+    height: 235px;
+  }
+  .v3-hero .v3-floating-chip {
+    display: flex;
+    font-size: 9px;
+  }
+  .v3-hero .v3-hero-caption {
+    display: block;
+    bottom: 0;
+    font-size: 8px;
+  }
+  .v3-hero .chip-one {
+    left: auto;
+    right: 0;
+  }
+  .v3-hero .chip-two {
+    left: 0;
+    right: auto;
+    bottom: 18%;
+  }
+}
+.recon-brand-board {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 16px;
+  margin: 25px 0 30px;
+}
+.recon-brand-primary,
+.recon-brand-marks {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--cardgrad);
+  min-width: 0;
+}
+.recon-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 26px 0;
+}
+.recon-brand-lockup > svg {
+  width: 65px;
+  flex-shrink: 0;
+}
+.recon-brand-lockup > strong {
+  font: 800 clamp(21px, 2.4vw, 36px)/1.1 var(--font-display);
+  letter-spacing: -0.05em;
+  min-width: 0;
+}
+.recon-brand-lockup b {
+  color: var(--brand-pink);
+}
+.recon-brand-lockup small {
+  display: block;
+  font: 8px/2 var(--font-mono);
+  letter-spacing: 0.22em;
+}
+.recon-brand-board p {
+  font-size: 12px;
+  color: var(--muted);
+}
+.recon-brand-marks > div {
+  display: flex;
+  gap: 14px;
+  margin: 24px 0;
+}
+.recon-appmark {
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  box-shadow: inset 0 1px 0 #ffffff30;
+}
+.recon-appmark > svg {
+  width: 52px;
+}
+.recon-appmark.dark {
+  background: #090a18;
+}
+.recon-appmark.lime {
+  background: var(--brand-lime);
+}
+.recon-appmark.white {
+  background: white;
+}
+@media (max-width: 767px) {
+  .recon-brand-board {
+    grid-template-columns: 1fr;
+  }
+  .recon-brand-lockup > strong {
+    font-size: 24px;
+  }
+  .recon-brand-lockup > svg {
+    width: 46px;
+  }
+  .recon-brand-primary,
+  .recon-brand-marks {
+    padding: 18px;
+  }
+}
+.recon-arcyca-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 490px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 25px #8e2bff22);
+}
+@media (max-width: 639px) {
+  .v3-hero .v3-hero-character {
+    height: 270px;
+    min-height: 270px;
+  }
+  .recon-arcyca-art {
+    max-height: 270px;
+    width: auto;
+    max-width: 100%;
+  }
+  .v3-hero .v3-floating-chip {
+    font-size: 8px;
+    padding: 7px;
+  }
+  .v3-hero .v3-hero-caption {
+    bottom: -5px;
+  }
+}
+.unified-builder.cp-root {
+  color: var(--cp-ink);
+}
+.unified-builder .recon-workspace-title {
+  color: var(--text);
+}
+@media (max-width: 767px) {
+  .recon-brand-lockup > strong {
+    font-size: clamp(15px, 5vw, 24px);
+  }
+  .recon-brand-lockup small {
+    font-size: 7px;
+    letter-spacing: 0.12em;
+  }
+  .recon-brand-lockup {
+    gap: 9px;
+  }
+}

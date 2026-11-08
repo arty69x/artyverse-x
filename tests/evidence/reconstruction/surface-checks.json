@@ -1,0 +1,55 @@
+{
+  "timestamp": "2026-11-08T14:49:53.238Z",
+  "browser": "154.0.8037.57",
+  "cases": [
+    {
+      "route": "home",
+      "width": 1280,
+      "height": 720,
+      "theme": "dark",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "route": "builder",
+      "width": 1440,
+      "height": 900,
+      "theme": "dark",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "route": "builder",
+      "width": 1440,
+      "height": 900,
+      "theme": "light",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "route": "design-system",
+      "width": 390,
+      "height": 900,
+      "theme": "dark",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "route": "design-system",
+      "width": 1440,
+      "height": 900,
+      "theme": "light",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "route": "code",
+      "width": 390,
+      "height": 900,
+      "theme": "dark",
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": []
+}

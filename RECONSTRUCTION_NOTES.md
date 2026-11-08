@@ -13,3 +13,6 @@ Unknown/not supplied as exact standalone files: `design-v8-spec.md`, `design-mas
 Rejected legacy behaviors: simulated listening shown as live recording, hard-coded AI success responses, fabricated scores, front-end API secrets and inherited `buildVerified` status. The new app exposes unavailable integrations until a real provider is connected.
 
 The repository baseline contained only README. Recovery branch was created before scaffolding. Original blueprint archive and reconstructed sources remain at `/workspace/blueprint-review`; source-derived catalog and Framer research registries required for this handoff are included under `docs/source`.
+
+## Latest supplied boards — unified reconstruction (2026-11-08)
+See docs/reconstruction/RECONSTRUCTION.md. Actual source JPEGs R1/R2/R3 are now available under design/references/. They supersede earlier Interview-first positioning for the principal home/shell, while Interview tools remain supported. Rebuilt native logo variants, editorial Extract/Compose/Ship home, state-preserving native Builder route, and original optimized reference-generated mascot. No claim that a multi-panel blueprint has been reproduced pixel-for-pixel as every working app screen; residual source gaps documented explicitly.

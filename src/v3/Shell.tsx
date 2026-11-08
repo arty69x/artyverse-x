@@ -26,6 +26,7 @@ import { useStore, useT } from "../core/store";
 import { kindRoutes, routeForItem } from "../../shared/routes";
 import { Modal, Button } from "../components/UI";
 import { useTheme } from "./Theme";
+import { PrismMark } from "./Brand";
 const groups = [
   {
     en: "THINK & CONNECT",
@@ -35,7 +36,15 @@ const groups = [
   {
     en: "MAKE SOMETHING",
     th: "พื้นที่สร้างสรรค์",
-    keys: ["create", "code", "sound", "dynamics", "story", "templates"],
+    keys: [
+      "builder",
+      "create",
+      "code",
+      "sound",
+      "dynamics",
+      "story",
+      "templates",
+    ],
   },
   {
     en: "YOUR WORKSPACE",
@@ -141,17 +150,11 @@ export function Shell({
   function navigation() {
     return (
       <>
-        <a className="v3-brand" href="#/home" aria-label="ARTYVERSE X Home">
-          <svg viewBox="0 0 40 40" aria-hidden="true">
-            <path
-              d="M5 31 17 6h6l12 25h-8l-3-7h-9l-3 7Zm13-14h3l-1.5-4Z"
-              fill="currentColor"
-            />
-            <circle cx="33" cy="7" r="3" className="v3-brand-dot" />
-          </svg>
+        <a className="v3-brand" href="#/home">
+          <PrismMark />
           <span>
             ARTYVERSE<b>X</b>
-            <small>ARTIST × MULTIVERSE</small>
+            <small>VISUAL ENGINEERING STUDIO</small>
           </span>
         </a>
         <button
@@ -174,7 +177,7 @@ export function Shell({
         >
           <Search size={17} />
           <span>{t("Search anything", "ค้นหาทั้งหมด")}</span>
-          <kbd>⌘ K</kbd>
+          <kbd aria-hidden="true">⌘ K</kbd>
         </button>
         <div className="v3-nav-groups">
           {groups.map((g) => (
@@ -295,7 +298,6 @@ export function Shell({
               >
                 <Search size={17} />
                 <span>{t("Search", "ค้นหา")}</span>
-                <kbd>⌘ K</kbd>
               </button>
               <button
                 className="icon-button"

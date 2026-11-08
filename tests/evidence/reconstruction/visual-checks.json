@@ -1,0 +1,75 @@
+{
+  "results": [
+    {
+      "screen": "home",
+      "theme": "dark",
+      "width": 320,
+      "clipping": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "home",
+      "theme": "dark",
+      "width": 390,
+      "clipping": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "home",
+      "theme": "dark",
+      "width": 768,
+      "clipping": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "home",
+      "theme": "dark",
+      "width": 1440,
+      "clipping": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "home",
+      "theme": "light",
+      "width": 320,
+      "clipping": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "home",
+      "theme": "light",
+      "width": 390,
+      "clipping": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "home",
+      "theme": "light",
+      "width": 768,
+      "clipping": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "home",
+      "theme": "light",
+      "width": 1440,
+      "clipping": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "builder",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": []
+}

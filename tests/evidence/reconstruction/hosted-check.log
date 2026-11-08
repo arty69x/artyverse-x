@@ -1,0 +1,9 @@
+{
+  checks: [
+    'Built browser edition runs the actual IndexedDB adapter',
+    'Form edits affect native storefront and survive reload',
+    'Local brief saves a real browser agent-run with explicit provenance',
+    'Saved storefront reopens and runs functional exported code in the opaque-origin sandbox'
+  ],
+  errors: []
+}

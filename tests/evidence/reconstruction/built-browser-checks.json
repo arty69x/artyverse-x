@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-11-08T14:53:04.028Z",
+  "base": "http://127.0.0.1:4324",
+  "browser": "154.0.8037.57",
+  "checks": [
+    "Built browser edition runs the actual IndexedDB adapter",
+    "Form edits affect native storefront and survive reload",
+    "Local brief saves a real browser agent-run with explicit provenance",
+    "Saved storefront reopens and runs functional exported code in the opaque-origin sandbox"
+  ],
+  "errors": [],
+  "conditions": "Built browser edition on isolated static preview. Not production Vercel browser interaction. No live provider or payment service used."
+}

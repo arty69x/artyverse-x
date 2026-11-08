@@ -1,0 +1,15 @@
+
+> artyverse-x@3.0.0-local test:e2e
+> playwright test --grep No page overflow at target widths|Brand board uses native
+
+[WebServer] (node:77427) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:77451) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/journeys.spec.ts:191:1 › No page overflow at target widths and main routes render without runtime errors (25.8s)
+  ✓  2 tests/e2e/reconstruction.spec.ts:30:1 › Brand board uses native vector lockups and canonical tokens (1.8s)
+
+  2 passed (30.5s)

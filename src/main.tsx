@@ -38,3 +38,5 @@ void boot().catch((e) => {
   retry.onclick = () => location.reload();
   root.append(title, message, retry);
 });
+
+import "./v3/reconstruction.css";

@@ -28,6 +28,8 @@ import { Button, Modal } from "../components/UI";
 import type { Navigate } from "../App";
 import { routeForItem } from "../../shared/routes";
 import { Arcyca } from "./Mascot";
+import { StudioLaunchpad } from "./StudioLaunchpad";
+
 const portals = [
   {
     id: "create",
@@ -178,6 +180,7 @@ export function HomeV3({ go }: { go: Navigate }) {
   const s = useStore(),
     t = useT(),
     [draft, setDraft] = useDraft("home-composer", ""),
+    [artFailed, setArtFailed] = useState(false),
     [mode, setMode] = useState("notebook"),
     [busy, setBusy] = useState(false),
     [tour, setTour] = useState(false),
@@ -260,16 +263,16 @@ export function HomeV3({ go }: { go: Navigate }) {
     <div className="v3-home">
       <div className="v3-home-intro">
         <div>
-          <span className="eyebrow">// YOUR CREATIVE OPERATING SYSTEM</span>
+          <span className="eyebrow">// VISUAL ENGINEERING STUDIO</span>
           <p>
             {t(
-              "A little space for your next big thing.",
-              "พื้นที่เล็ก ๆ สำหรับไอเดียที่ยิ่งใหญ่ของคุณ",
+              "Reverse. Remix. Rebuild.",
+              "ถอดแนวคิด ผสมความคิดสร้างสรรค์ แล้วสร้างให้เกิดขึ้นจริง",
             )}
           </p>
         </div>
-        <a href="#/concept/home" className="v3-text-link">
-          {t("Preview the new direction", "ดูแนวทางหน้าจอใหม่")}{" "}
+        <a href="#/design-system" className="v3-text-link">
+          {t("Explore the design system", "สำรวจระบบออกแบบ")}{" "}
           <ArrowUpRight size={17} />
         </a>
       </div>
@@ -278,18 +281,20 @@ export function HomeV3({ go }: { go: Navigate }) {
         <div className="v3-hero-copy">
           <span className="v3-live-label">
             <i />
-            ARTIST × MULTIVERSE
+            ARTYVERSE X / CREATIVE WORKSPACE
           </span>
-          <h1>
-            {t("One artist.", "ทุกไอเดีย")}
-            <br />
-            <span>{t("Infinite", "เป็นไปได้")}</span>{" "}
-            <em>{t("worlds.", "จริง.")}</em>
+          <h1 className="recon-manifesto">
+            <span>EXTRACT.</span>
+            <mark>COMPOSE.</mark>
+            <em>
+              SHIP.
+              <i aria-hidden="true" />
+            </em>
           </h1>
           <p>
             {t(
-              "Think freely. Build boldly. Make it unmistakably yours.",
-              "คิดอย่างอิสระ สร้างอย่างกล้าหาญ ให้ทุกชิ้นงานเป็นตัวคุณ",
+              "Reverse. Remix. Rebuild.",
+              "ถอดแนวคิด ผสานจินตนาการ สร้างผลงานในแบบคุณ",
             )}
             <br />
             {t(
@@ -311,14 +316,26 @@ export function HomeV3({ go }: { go: Navigate }) {
         <div className="v3-hero-character">
           <div className="v3-orbit-ring a" />
           <div className="v3-orbit-ring b" />
-          <Arcyca />
+          {artFailed ? (
+            <Arcyca />
+          ) : (
+            <img
+              className="recon-arcyca-art"
+              src="/assets/arcyca-reconstructed.webp"
+              alt="ARCYCA · creative companion"
+              width="960"
+              height="886"
+              fetchPriority="high"
+              onError={() => setArtFailed(true)}
+            />
+          )}
           <span className="v3-floating-chip chip-one">
             <Sparkles size={15} />
-            Your ideas. Amplified.
+            Think. Create. Analyze.
           </span>
           <span className="v3-floating-chip chip-two">
             <Command size={15} />
-            Create without limits
+            Hyper-Polish. Drive.
           </span>
           <span className="v3-hero-caption">
             ARCYCA / YOUR CREATIVE COMPANION
@@ -328,6 +345,7 @@ export function HomeV3({ go }: { go: Navigate }) {
           01 — THINK. CREATE. ANALYZE. HYPER-POLISH. DRIVE.
         </div>
       </section>
+      <StudioLaunchpad go={go} />
       <section
         className="v3-composer"
         aria-label={t("Start an idea", "เริ่มต้นไอเดีย")}

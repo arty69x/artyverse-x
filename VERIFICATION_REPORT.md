@@ -57,3 +57,6 @@ Recovery branch: `recovery/pre-v3-hyperpolish-20261108` at `20b71bf`; recovery m
 Start with `npm ci`, then `npm run dev`; or `npm run build && npm start`. Node 24+ and a running local API are required. Production deployment of the complete backend requires durable storage and identity decisions; a static Vercel build alone is not the full product.
 
 Package with `python3 scripts/package-v3.py` after committing the reviewed source/evidence. It checks runtime file hashes and verifies archive CRC plus every packaged entry SHA-256. Packaging result is written beside the archive; it does not modify user data.
+
+## Latest reconstruction evidence
+See docs/reconstruction/VERIFICATION.md and tests/evidence/reconstruction/. This supersedes previous runtime claims for the new home/brand/shell. 49 unique browser/API cases have passing evidence (47 initial passes + 2 accepted retests; initial failures retained transparently), 20 units, 15 visual/axe surface cases, both runtime builds and built IndexedDB handoff. No pixel-perfect/3D/FPS/Lighthouse claim. Historical metrics are not transferred to the reconstruction.

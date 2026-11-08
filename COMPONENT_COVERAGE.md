@@ -34,3 +34,5 @@ Hosted browser storage adapter: implemented; 12 verification scenarios in tests/
 | Type / focus / color block | studio-kit.css and shared PageHead/button styles | Bold, editorial underline, readable marker and keyboard focus |
 
 These families are not a claim that the historical 151-item inventory is implemented. Evidence and limitations are recorded separately in COMPONENT_UPGRADE_REPORT.md.
+
+Reconstruction additions: PrismMark (native SVG/unique gradients), BrandPanel (primary lockup and 3 monogram surfaces), StudioLaunchpad (3 actual workspace journeys and 6 actual tool routes), UnifiedBuilder (existing editor engine within shared shell). ARCYCA hero is optimized decorative reference-generated WebP with real load-error SVG fallback. No duplicated editor, fake metrics or connected provider added. Component counts elsewhere are historical; these named additions do not imply 151-component coverage.

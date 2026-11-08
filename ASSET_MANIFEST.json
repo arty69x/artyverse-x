@@ -117,6 +117,33 @@
       "source": "Original adapted rig study in src/concept/FramerStudioComponents.tsx based on user-provided concept",
       "alt": "Live SVG rig state and estimated input mouth shape",
       "optimization": "Unique gradient IDs, in-view suspension, static fallback"
+    },
+    {
+      "id": "arcyca-reconstructed",
+      "purpose": "Reconstructed decorative hero mascot with native SVG fallback",
+      "format": "WebP",
+      "dimensions": [
+        960,
+        877
+      ],
+      "source": "Image generation from user R1 board, 2026-11-08; not original 3D source",
+      "path": "public/assets/arcyca-reconstructed.webp",
+      "alt": "ARCYCA · creative companion",
+      "optimization": "960px maximum dimension, WebP quality87 with alpha; explicit aspect ratio",
+      "bytes": 148088
+    },
+    {
+      "id": "prism-a-reconstructed",
+      "purpose": "Native scalable mark and live board logo variants",
+      "format": "SVG/TSX",
+      "dimensions": [
+        80,
+        72
+      ],
+      "source": "Reconstructed vector interpretation of R1, unique gradient IDs; exact original master unavailable",
+      "path": "src/v3/Brand.tsx",
+      "alt": "Decorative with parent wordmark accessible text",
+      "optimization": "Native compact SVG"
     }
   ],
   "runtimeAssets": [

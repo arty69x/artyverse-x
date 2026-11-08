@@ -98,7 +98,11 @@ const DesignBoard = lazy(() =>
 const Concept = lazy(() =>
   import("./concept/Concept").then((m) => ({ default: m.Concept })),
 );
+const UnifiedBuilder = lazy(() =>
+  import("./v3/Builder").then((m) => ({ default: m.UnifiedBuilder })),
+);
 export const routes = [
+  ["builder", "Website Builder", "ออกแบบเว็บไซต์", Command],
   ["copilot", "Interview Copilot", "ผู้ช่วยสัมภาษณ์", Mic],
   ["practice", "Practice", "ฝึกสัมภาษณ์", MessageSquare],
   ["questions", "Question Bank", "คลังคำถาม", BookOpen],
@@ -192,6 +196,9 @@ export function App() {
       break;
     case "design-system":
       page = <DesignBoard />;
+      break;
+    case "builder":
+      page = <UnifiedBuilder />;
       break;
     case "home":
       page = <HomeV3 go={go} />;

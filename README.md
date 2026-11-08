@@ -28,3 +28,7 @@ Open `#/concept/home`, `#/concept/copilot`, or `#/concept/studio` (also linked f
 ## Modern component kit / storefront builder
 
 Open `#/concept/builder` for reviewed local templates, editable native storefront, responsive Motion viewport, Radix keyboard tabs/switches, product/detail/sample-bag controls, HTML/CSS/config export and real Code Studio handoff. The component suite below it demonstrates bold/underline/color blocks, tactile controls and gesture-only microphone SVG visualization. Goods/prices are samples; no checkout or AI-generation service is implied. See [release checks](COMPONENT_UPGRADE_REPORT.md) and [library choices/licenses](docs/v3/COMPONENT_LIBRARY_DECISIONS.md).
+
+### Unified reconstructed Studio
+
+Open `/#/home` for the Extract / Compose / Ship workspace and `/#/builder` for the existing editable storefront engine within the same navigation. `/#/design-system` includes native prism-A brand variants. Actual user-uploaded boards are preserved under `design/references/`; source authority, module mapping and remaining fidelity limits are in [reconstruction notes](docs/reconstruction/RECONSTRUCTION.md). The mascot hero is an optimized generated reconstruction, not a recovered 3D model. Existing editors, persistence, sandbox and export remain the same shared engines.

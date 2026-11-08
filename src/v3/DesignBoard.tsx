@@ -1,3 +1,4 @@
+import { BrandPanel } from "./BrandPanel";
 import { useState } from "react";
 import {
   Sun,
@@ -95,6 +96,7 @@ export function DesignBoard() {
           </Button>
         }
       />
+      <BrandPanel />
       <div className="v3-board-nav">
         {sections.map((name, i) => (
           <a
@@ -498,7 +500,7 @@ export function DesignBoard() {
           </div>
         </div>
       </section>
-      <a className="button" href="#/concept/builder">
+      <a className="button" href="#/builder">
         Modern component kit · Radix / Motion ↗
       </a>
       <section id="board-9">

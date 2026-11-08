@@ -5,7 +5,7 @@ test("Thai-first dashboard, theme preference and system theme persist without ch
 }) => {
   await page.goto("/");
   await expect(page.locator("html")).toHaveAttribute("lang", "th");
-  await expect(page.getByRole("heading", { name: /ทุกไอเดีย/ })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /EXTRACT/ })).toBeVisible();
   await page.getByRole("button", { name: "เปลี่ยนธีม", exact: true }).click();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
   await page.reload();
@@ -208,7 +208,7 @@ test("Design system has eleven live sections, real contrast pairs, native dialog
 }) => {
   await page.addInitScript(() => localStorage.setItem("av-locale", "en"));
   await page.goto("/#/design-system");
-  await expect(page.locator(".v3-design-board > section")).toHaveCount(11);
+  await expect(page.locator('.v3-design-board > section[id^="board-"]')).toHaveCount(11);
   await page.getByRole("tab", { name: "Overview", exact: true }).focus();
   await page.keyboard.press("ArrowRight");
   await expect(
@@ -283,7 +283,7 @@ test("Home hero is usable while saved data loads, with honest loading metrics an
   try {
     await page.goto("/");
     await expect(
-      page.getByRole("heading", { name: /One artist/ }),
+      page.getByRole("heading", { name: /EXTRACT/ }),
     ).toBeVisible();
     await expect(page.locator(".v3-stat-grid")).toHaveAttribute(
       "aria-busy",

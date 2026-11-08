@@ -68,3 +68,5 @@ Vercel remains linked to the existing project with its access policy preserved. 
 ## Hosted edition supplement (2026-11-08)
 
 The latest user instruction authorizes Git push and Vercel release. See `docs/v3/HOSTED_EDITION.md` for the browser IndexedDB mode, explicit storage limits and backup/transfer policy. This supplements the prior local-only scope. Recovery source is `2423698` / `recovery/pre-hosted-20261108`; prior READY Vercel deployment is `dpl_C6FAqSyYaoFwV3zZyY4xAM68tzDs`. Existing SQLite data is neither uploaded nor migrated automatically. Vercel deployment protection stays enabled. Deployment result and actual post-deploy checks will be recorded separately.
+
+Reconstruction release: no entity/storage migration. New #/builder route reuses existing storefront draft and CodeDocument contracts. Existing routes, including #/concept/*, remain available. Source recovery branch recovery/pre-reconstruction-20261108 points to f0fbffb. Prior production rollback dpl_3ZwTZNz9P8U2kPinqsN1pmV2712s. Do not clear IndexedDB/localStorage/SQLite when reverting source. New WebP has native SVG fallback; references are build-source evidence, not runtime UI backgrounds.

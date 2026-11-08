@@ -46,9 +46,9 @@ export function Arcyca({
     >
       <defs>
         <linearGradient id={id + "body"} x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#F4FFA2" />
-          <stop offset=".45" stopColor="#CCFF00" />
-          <stop offset="1" stopColor="#648700" />
+          <stop stopColor="#F9F5FF" />
+          <stop offset=".45" stopColor="#B44FFF" />
+          <stop offset="1" stopColor="#5743A6" />
         </linearGradient>
         <linearGradient id={id + "glass"} x1="0" y1="0" x2=".8" y2="1">
           <stop stopColor="#33475B" />
@@ -60,8 +60,8 @@ export function Arcyca({
           <stop offset="1" stopColor="#FF2078" />
         </linearGradient>
         <radialGradient id={id + "glow"}>
-          <stop stopColor="#CCFF00" stopOpacity=".35" />
-          <stop offset="1" stopColor="#CCFF00" stopOpacity="0" />
+          <stop stopColor="#B44FFF" stopOpacity=".35" />
+          <stop offset="1" stopColor="#B44FFF" stopOpacity="0" />
         </radialGradient>
       </defs>
       <ellipse cx="220" cy="391" rx="144" ry="25" fill={`url(#${id}glow)`} />
@@ -107,17 +107,17 @@ export function Arcyca({
       <path
         d="M134 155q4-76 81-77 87-1 96 78l9 91q1 56-77 57-91 5-106-38Z"
         fill={`url(#${id}body)`}
-        stroke="#DFFF75"
+        stroke="#E5BBFF"
         strokeWidth="2"
       />
       <path
         d="M139 153q1-80 77-80 76-2 91 62l4 26-28-10-7-21q-65-32-109 12l-9 25Z"
-        fill="#E6FF85"
+        fill="#F0E7FF"
       />
       <path
         d="M149 168q8-35 66-38 65-1 81 40l3 48q-3 36-75 39-68-2-73-37Z"
         fill={`url(#${id}glass)`}
-        stroke="#6E9610"
+        stroke="#00C7E8"
         strokeWidth="4"
       />
       <path
