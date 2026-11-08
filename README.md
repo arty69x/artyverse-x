@@ -16,3 +16,7 @@ Read [the merged design](ARTYVERSE_X_MASTER_SPEC.md), [V3 decisions](docs/v3/IMP
 `npm run tokens` generates UI token exports; `npm run typecheck`, `npm test`, and `npm run test:e2e` verify the code and workflows. Browser tests use system Chromium as specified in playwright.config.ts. Versioned evidence is kept separate; changes invalidate affected runtime fingerprints.
 
 Copilot outlines are deterministic local structures, not AI inference. Optional browser STT may use the browser vendor’s service and needs user permission; manual text always works. Provider adapter, real voice recording, synthesis and local workflows remain available within their documented capabilities. Public cloud/multiplayer/commerce/community services are not connected by this frontend upgrade. Vercel is linked; complete hosted persistence and identity remain a separate deployment task.
+
+## Vercel / browser edition
+
+`vercel.json` builds with `VITE_STORAGE_MODE=browser`. On Vercel, items/media/revisions live in this browser's IndexedDB, not a shared cloud database. Use Settings → Backup before clearing site data or moving to another origin/device. AI remains unavailable in this edition; deterministic local tools work. Existing Node/SQLite mode remains the default when running locally. See [hosted architecture](docs/v3/HOSTED_EDITION.md) and deployment evidence under `tests/evidence/deployment/`.

@@ -64,3 +64,7 @@ V3 is additive: keep the Item envelope, database/media layout and all existing I
 Rollback: first download a current persistent backup and save browser drafts. Restore V2 source in a separate checkout/data directory using the recovery branch/snapshot. V2 can retain JSON records but lacks V3 specialized interview routes/validation; preserve the V3 backup before switching. Keep theme/home-order preferences separate from server data and verify IDs/media/revisions before replacing a running local workspace. Release archives exclude user databases, browser drafts, recovery snapshots and secrets.
 
 Vercel remains linked to the existing project with its access policy preserved. This frontend upgrade does not migrate SQLite/media into serverless storage or publish a public backend. A durable storage and identity decision is still required for that deployment.
+
+## Hosted edition supplement (2026-11-08)
+
+The latest user instruction authorizes Git push and Vercel release. See `docs/v3/HOSTED_EDITION.md` for the browser IndexedDB mode, explicit storage limits and backup/transfer policy. This supplements the prior local-only scope. Recovery source is `2423698` / `recovery/pre-hosted-20261108`; prior READY Vercel deployment is `dpl_C6FAqSyYaoFwV3zZyY4xAM68tzDs`. Existing SQLite data is neither uploaded nor migrated automatically. Vercel deployment protection stays enabled. Deployment result and actual post-deploy checks will be recorded separately.

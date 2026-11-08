@@ -1,3 +1,4 @@
+import { browserEdition } from "../hosted/mode";
 import { useUI } from "../v3/i18n";
 import { applyAccent } from "../v3/accent";
 import { useTheme } from "../v3/Theme";
@@ -950,12 +951,16 @@ export function SettingsPage() {
         <h2>{t("Storage & backup", "พื้นที่จัดเก็บและสำรองข้อมูล")}</h2>
         <p className="muted">
           {status
-            ? `${status.storage} · ${(status.bytes / 1024).toFixed(1)} KB database (media excluded)`
+            ? `${status.storage} · ${(status.bytes / 1024).toFixed(1)} KB records (media excluded)`
             : "Checking local storage…"}
         </p>
         <p>
-          Items are stored on this machine’s local server. Browser drafts stay
-          in this browser. No account or cloud sync is active.
+          {browserEdition
+            ? t(
+                "Items and media are stored in this browser’s IndexedDB. Export backups before clearing site data or changing browser. No cloud sync is active.",
+                "งานและสื่อเก็บใน IndexedDB ของเบราว์เซอร์นี้ สำรองก่อนล้างข้อมูลหรือเปลี่ยนเบราว์เซอร์ ไม่มี cloud sync",
+              )
+            : "Items are stored on this machine’s local server. Browser drafts stay in this browser. No account or cloud sync is active."}
         </p>
         <div className="button-row">
           <Button

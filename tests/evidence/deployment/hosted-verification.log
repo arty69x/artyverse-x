@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-11-08T09:42:42.845Z",
+  "baseURL": "http://127.0.0.1:4320",
+  "browser": "154.0.8037.57",
+  "conditions": "Built browser edition on static Vite preview, isolated fresh Playwright contexts. IndexedDB/service-worker real interactions, synthetic binary WAV fixture, no cloud backend or live AI. Automated axe default Home states; not real-device or WCAG certification.",
+  "checks": [
+    {
+      "name": "Service worker initializes real browser storage before UI; status is honest",
+      "result": "passed"
+    },
+    {
+      "name": "Home → conversation → native Canvas → save revision → reload retains edit",
+      "result": "passed"
+    },
+    {
+      "name": "Two simultaneous writes with one revision: one commits, stale write gets 409",
+      "result": "passed"
+    },
+    {
+      "name": "Actual binary WAV persists as Blob and is returned by stable /api/assets URL",
+      "result": "passed"
+    },
+    {
+      "name": "Invalid media signature rejected",
+      "result": "passed"
+    },
+    {
+      "name": "Local Agent tool executes and saves; connected mode without fallback remains unavailable",
+      "result": "passed"
+    },
+    {
+      "name": "Trash and restore preserve stable identity",
+      "result": "passed"
+    },
+    {
+      "name": "Backup → empty browser context → restore: exact records/IDs, three revisions and media survive",
+      "result": "passed"
+    },
+    {
+      "name": "Invalid backup rejected without modifying stored records",
+      "result": "passed"
+    },
+    {
+      "name": "Repeated restore preserves existing edits",
+      "result": "passed"
+    },
+    {
+      "name": "Hosted Home accessibility and layout",
+      "result": "passed",
+      "width": 390
+    },
+    {
+      "name": "Hosted Home accessibility and layout",
+      "result": "passed",
+      "width": 1440
+    }
+  ],
+  "errors": []
+}

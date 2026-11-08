@@ -1,5 +1,7 @@
 # ARTYVERSE X V3 — verification report
 
+**Historical baseline:** this report records runtime `fd1ee45` before hosted mode. The later Git/Vercel release adds a separately tested browser-storage edition; see `docs/v3/HOSTED_EDITION.md` and `tests/evidence/deployment/`. Original Lighthouse scores below are not measurements of that new startup path.
+
 Date: 2026-11-08. Runtime source revision: `fd1ee45a62bada2855e59f62145d332fa3dd56f0`.
 Runtime SHA-256 fingerprint: `c184296b73c105eb63cbef63f4c1e90c0f008c99596836e5f5791aaeb42b47e0`.
 Scope: intentional merged frontend redesign, with retained local V1/V2 engines. This is not pixel reconstruction, cloud deployment, WCAG certification or a claim that every feature in the historical master prompts is completed.

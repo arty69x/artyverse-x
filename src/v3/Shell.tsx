@@ -1,3 +1,4 @@
+import { browserEdition } from "../hosted/mode";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   Home,
@@ -367,6 +368,15 @@ export function Shell({
               children
             )}
           </main>
+          {browserEdition && (
+            <aside className="v3-browser-notice">
+              {t(
+                "Browser workspace · Work stays in this browser. Export backups in Settings; clearing site data removes it.",
+                "พื้นที่ส่วนตัวในเบราว์เซอร์ · งานเก็บในเบราว์เซอร์นี้ สำรองข้อมูลใน Settings ก่อนล้างข้อมูลเว็บไซต์",
+              )}{" "}
+              <a href="#/settings">{t("Backup & storage", "สำรองข้อมูล")}</a>
+            </aside>
+          )}
           <footer className="app-footer">
             <span>
               ARTYVERSE <b>X</b> <span className="muted">/</span>{" "}
@@ -377,8 +387,10 @@ export function Shell({
             </span>
             <span>
               <i className="status-dot" />
-              {t("Saved on this server", "บันทึกบนเซิร์ฟเวอร์นี้")} ·{" "}
-              {theme.resolved.toUpperCase()}
+              {browserEdition
+                ? t("Saved in this browser", "บันทึกในเบราว์เซอร์นี้")
+                : t("Saved on this server", "บันทึกบนเซิร์ฟเวอร์นี้")}{" "}
+              · {theme.resolved.toUpperCase()}
             </span>
           </footer>
         </div>
