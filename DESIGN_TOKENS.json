@@ -1,52 +1,140 @@
 {
-  "schemaVersion": 1,
-  "primitive": {
-    "background": "#050708",
-    "surface": "#0B1012",
-    "elevated": "#141B1E",
-    "text": "#F2F6F7",
-    "muted": "#A6B3B8",
-    "border": "#283236",
-    "accent": "#D7E317",
-    "cyan": "#43E6FF",
-    "violet": "#9B43FF",
-    "danger": "#FF8899",
-    "pink": "#D4006A"
+  "legacyAdapter": {
+    "schemaVersion": 1,
+    "primitive": {
+      "background": "#080B12",
+      "surface": "#111724",
+      "text": "#F4F6FB",
+      "muted": "#B0BDD1",
+      "accent": "#CCFF00",
+      "danger": "#FF9EBC",
+      "border": "#2B374B",
+      "elevated": "#192131",
+      "pink": "#FF2078",
+      "cyan": "#00C7E8",
+      "violet": "#B44FFF"
+    },
+    "semantic": {
+      "background": "primitive.background",
+      "surface": "primitive.surface",
+      "elevated": "primitive.elevated",
+      "text": "primitive.text",
+      "muted": "primitive.muted",
+      "border": "primitive.border",
+      "focus": "primitive.accent",
+      "accent": "primitive.accent",
+      "danger": "primitive.danger"
+    },
+    "component": {
+      "composer": {
+        "background": "semantic.surface",
+        "border": "semantic.border",
+        "radius": 12
+      },
+      "button": {
+        "background": "semantic.elevated",
+        "primary": "semantic.accent",
+        "radius": 8,
+        "minHeight": 44
+      },
+      "dialog": {
+        "background": "semantic.elevated",
+        "radius": 16
+      },
+      "sidebar": {
+        "width": 256,
+        "background": "semantic.background"
+      },
+      "inspector": {
+        "width": 225,
+        "background": "semantic.surface"
+      }
+    },
+    "space": [
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      48,
+      64,
+      96
+    ],
+    "radius": [
+      4,
+      8,
+      12,
+      16,
+      24
+    ],
+    "duration": {
+      "micro": 120,
+      "panel": 220,
+      "scene": 480,
+      "ambient": 6000
+    },
+    "font": {
+      "display": "Syne Variable",
+      "body": "DM Sans",
+      "thai": "IBM Plex Sans Thai"
+    }
   },
-  "semantic": {
-    "background": "primitive.background",
-    "surface": "primitive.surface",
-    "elevated": "primitive.elevated",
-    "text": "primitive.text",
-    "muted": "primitive.muted",
-    "border": "primitive.border",
-    "focus": "primitive.accent",
-    "accent": "primitive.accent",
-    "danger": "primitive.danger"
+  "schemaVersion": 3,
+  "brand": {
+    "lime": "#CCFF00",
+    "pink": "#FF2078",
+    "blue": "#001E3C",
+    "violet": "#B44FFF",
+    "cyan": "#00C7E8",
+    "smoke": "#90A4AE",
+    "white": "#FFFFFF",
+    "ink": "#050403"
   },
-  "component": {
-    "composer": {
-      "background": "semantic.surface",
-      "border": "semantic.border",
-      "radius": 12
+  "themes": {
+    "dark": {
+      "background": "#080B12",
+      "sidebar": "#0C101A",
+      "surface": "#111724",
+      "surface2": "#192131",
+      "surface3": "#222D40",
+      "line": "#2B374B",
+      "lineStrong": "#60708B",
+      "text": "#F4F6FB",
+      "muted": "#B0BDD1",
+      "faint": "#95A3BA",
+      "accent": "#CCFF00",
+      "onAccent": "#101600",
+      "focus": "#C887FF",
+      "selected": "#352546",
+      "danger": "#FF9EBC",
+      "success": "#B8E7A0",
+      "warning": "#FFD295",
+      "code": "#0B1220",
+      "shadow": "0 16px 48px #00000026",
+      "cardgrad": "linear-gradient(135deg,#152034,#101625)"
     },
-    "button": {
-      "background": "semantic.elevated",
-      "primary": "semantic.accent",
-      "radius": 8,
-      "minHeight": 42
-    },
-    "dialog": {
-      "background": "semantic.elevated",
-      "radius": 16
-    },
-    "sidebar": {
-      "width": 224,
-      "background": "semantic.background"
-    },
-    "inspector": {
-      "width": 225,
-      "background": "semantic.surface"
+    "light": {
+      "background": "#F3F5FA",
+      "sidebar": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "surface2": "#EAF0F7",
+      "surface3": "#DEE6F1",
+      "line": "#D0D9E7",
+      "lineStrong": "#718097",
+      "text": "#142037",
+      "muted": "#4E6079",
+      "faint": "#586A82",
+      "accent": "#CCFF00",
+      "onAccent": "#101600",
+      "focus": "#7623BC",
+      "selected": "#ECDDFF",
+      "danger": "#B40046",
+      "success": "#276719",
+      "warning": "#885000",
+      "code": "#F4F7FC",
+      "shadow": "0 16px 48px #1325470B",
+      "cardgrad": "linear-gradient(135deg,#FFFFFF,#F0F4FC)"
     }
   },
   "space": [
@@ -54,28 +142,58 @@
     8,
     12,
     16,
+    20,
     24,
     32,
+    40,
     48,
     64,
-    96
+    80,
+    96,
+    128
   ],
-  "radius": [
-    4,
-    8,
-    12,
-    16,
-    24
-  ],
-  "duration": {
-    "micro": 120,
-    "panel": 220,
-    "scene": 480,
-    "ambient": 6000
+  "radius": {
+    "small": 4,
+    "input": 10,
+    "button": 11,
+    "card": 18,
+    "hero": 24,
+    "modal": 22,
+    "pill": 999
   },
-  "font": {
-    "display": "Poppins",
+  "motion": {
+    "micro": 120,
+    "feedback": 200,
+    "panel": 320,
+    "scene": 500,
+    "stiffness": 180,
+    "damping": 22,
+    "mass": 1
+  },
+  "type": {
+    "display": "Syne Variable",
     "body": "DM Sans",
-    "thai": "IBM Plex Sans Thai"
+    "thai": "PlexThai",
+    "mono": "JetBrains Mono",
+    "bodySize": 16,
+    "captionSize": 12
+  },
+  "layout": {
+    "sidebar": 256,
+    "sidebarCompact": 218,
+    "rail": 80,
+    "topbar": 74,
+    "mobileTopbar": 60,
+    "statusbar": 36,
+    "gutterMobile": 15,
+    "gutterTablet": 23,
+    "gutterDesktop": 32,
+    "breakpoints": [
+      640,
+      768,
+      1024,
+      1280,
+      1536
+    ]
   }
 }
