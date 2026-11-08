@@ -17,3 +17,7 @@ Source R1/R2/R3 are actual copied user JPEGs, with original byte dimensions reco
 
 ## Release boundary
 Hosted mode uses browser-local storage, server mode retains SQLite. No auth/payment/provider or collaboration was connected; no access-policy changes or destructive migration. Runtime/source hashes, deployment READY and stable alias mapping are recorded in release evidence once confirmed. Platform verification is distinct from browser interactions through Vercel protection.
+
+## Published runtime
+
+Vercel READY/production, alias error null, exact runtime `d4c53d03ee0dba7261de0ad4418583a2d531abcb`. Deployment `dpl_H64eLwVVyS7mzuYpU4jJhdMn2ngV`; stable alias verified to it. Remote main bundle `app-0bSXSAWN.js` matches local browser output; remote npm audit reports zero known vulnerabilities. Source fingerprint `652f7b42d3796ea358f05a51b87c5b312ac2363c64e7d4cb940a35798613f42c`. Per-file hashes, selected build events, sanitized deployment/alias data are in current evidence. Metadata/doc commits are separate from this runtime. No production-browser interaction or live runtime-log scan claim.

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "product": "ARTYVERSE X",
-  "releaseScope": "V3 merged frontend / personal local Creative Operating Studio",
+  "releaseScope": "Unified reconstructed Visual Engineering Studio / personal local creative tools",
   "designDirection": "Premium Tech Editorial × restrained Neon Brutalist × selective Holographic Glass",
   "sourceOfTruth": [
     "Latest user instructions",
@@ -394,6 +394,23 @@
       "saveBehavior": "Existing SQLite session/note/document entities where relevant; no fabricated cloud data",
       "limitations": "KNOWN_LIMITATIONS.md",
       "verification": "VERIFICATION_REPORT.md (V3 scope)"
+    },
+    {
+      "id": "builder",
+      "name": "Website Builder",
+      "route": "#/builder",
+      "status": "Implemented",
+      "purpose": "Editable local storefront within shared Shell",
+      "primaryTask": "Choose/review template → edit → preview → export or save",
+      "inputOutput": "Validated StorefrontConfig v1 → CodeDocument v2 / standalone HTML/CSS",
+      "emptyState": "Labeled original preset; no user work fabricated",
+      "loadingState": "Actual local brief/save states",
+      "errorState": "Validation errors retain draft; unavailable providers explicit",
+      "saveBehavior": "Browser draft; explicit SQLite/IndexedDB saved CodeDocument according to runtime",
+      "nextAction": "Open in existing Code Studio, then Library",
+      "limitations": "Sample products/prices and bag; no checkout or AI build from arbitrary prose",
+      "implementationLocation": "src/v3/Builder.tsx → src/concept/FramerStudioComponents.tsx",
+      "verification": "tests/evidence/reconstruction/"
     }
   ],
   "components": [
@@ -4596,5 +4613,17 @@
   "generationNote": "V3 runtime tokens are canonical in shared/design.ts. Component inventory/mappings are not production coverage or inherited V3 verification.",
   "v3": {
     "$ref": "docs/v3/RELEASE_SCOPE.json"
+  },
+  "reconstruction": {
+    "specification": "docs/reconstruction/RECONSTRUCTION.md",
+    "verification": "docs/reconstruction/VERIFICATION.md",
+    "references": [
+      "design/references/01-brand-system.jpg",
+      "design/references/02-production-blueprint.jpg",
+      "design/references/03-studio-board.jpg"
+    ],
+    "identity": "Extract. Compose. Ship. / Artist × Multiverse",
+    "fidelity": "Reconstructed from brand boards, not verified pixel-perfect across all app screens",
+    "artwork": "Generated mascot approximation, native reconstructed PrismMark; original 3D/vector master unavailable"
   }
 }

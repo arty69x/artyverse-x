@@ -1,4 +1,6 @@
-# ARTYVERSE X V3 — merged product and frontend specification
+# ARTYVERSE X — unified reconstructed Visual Engineering Studio
+**Latest reconstruction:** R1/R2/R3 in `design/references/` define the Extract / Compose / Ship identity. Main Home, native PrismMark/brand variants, generated decorative ARCYCA and #/builder share the existing shell and tools. See `docs/reconstruction/RECONSTRUCTION.md` and `VERIFICATION.md` for coverage, proposed adaptations and fidelity limits. Earlier figures remain historical.
+
 Hosted release supplement: Vercel uses browser-local IndexedDB/service-worker storage; local Node/SQLite remains available. See docs/v3/HOSTED_EDITION.md and DEPLOYMENT_REPORT.md for current deployment status and separate evidence.
 
 ARTYVERSE = Artist × Multiverse. Creative power with disciplined clarity. Latest direction: Premium Tech Editorial × restrained Neon Brutalist × selective Holographic Glass. Dark creative default; light and system modes use the same semantic roles. ARCYCA is the original friendly helmet/skater interaction anchor. Whisper retains Fade W; legacy Arty remains a scene asset.
@@ -15,6 +17,7 @@ Desktop uses grouped sidebar, breadcrumb/history, global search and create picke
 
 | Route | Primary job | Working output |
 |---|---|---|
+| builder | editable storefront design in shared shell | reviewed presets, persisted draft, native filters/sample bag, independent HTML/CSS export and Code Studio handoff |
 | home | orientation, idea capture, studio entry | persisted conversation, actual counts/recent work, browser portal order |
 | projects / projects/:id | organize a creative world | stable project context, linked work, CRUD/detail/export |
 | copilot | collect questions and choose user evidence | editable local outline, saved interview session, Agent Studio context |

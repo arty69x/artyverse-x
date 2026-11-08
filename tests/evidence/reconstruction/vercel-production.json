@@ -1,0 +1,63 @@
+{
+  "deployment": {
+    "id": "dpl_H64eLwVVyS7mzuYpU4jJhdMn2ngV",
+    "name": "artyverse-x-ai-assistant",
+    "url": "artyverse-x-ai-assistant-p2uckamoa-arty69xs-projects.vercel.app",
+    "type": "LAMBDAS",
+    "state": "READY",
+    "createdAt": 1794149619256,
+    "project": {
+      "id": "prj_IX1ylxFY2Uj4EcDyCr5CAigTkrXG",
+      "name": "artyverse-x-ai-assistant",
+      "framework": "vite"
+    },
+    "meta": {
+      "githubCommitRef": "d4c53d03ee0dba7261de0ad4418583a2d531abcb",
+      "githubCommitSha": "d4c53d03ee0dba7261de0ad4418583a2d531abcb",
+      "githubCommitMessage": "feat(studio): unify reconstructed brand and creative workspace",
+      "githubRepo": "artyverse-x",
+      "githubOrg": "arty69x"
+    },
+    "alias": [
+      "artyverse-x-ai-assistant.vercel.app",
+      "artyverse-x-ai-assistant-arty69xs-projects.vercel.app",
+      "artyverse-x-ai-assistant-git-d4c53d03e-c0b78d-arty69xs-projects.vercel.app"
+    ],
+    "target": "production",
+    "regions": [
+      "iad1"
+    ],
+    "buildingAt": 1794149640142,
+    "ready": 1794149666229,
+    "readyState": "READY",
+    "aliasError": null
+  },
+  "alias": {
+    "alias": "artyverse-x-ai-assistant.vercel.app",
+    "created": "2026-11-08T09:49:17.825Z",
+    "createdAt": 1794131357825,
+    "deletedAt": null,
+    "deployment": {
+      "id": "dpl_H64eLwVVyS7mzuYpU4jJhdMn2ngV",
+      "url": "artyverse-x-ai-assistant-p2uckamoa-arty69xs-projects.vercel.app"
+    },
+    "deploymentId": "dpl_H64eLwVVyS7mzuYpU4jJhdMn2ngV",
+    "projectId": "prj_IX1ylxFY2Uj4EcDyCr5CAigTkrXG",
+    "redirect": null,
+    "redirectStatusCode": null,
+    "uid": "c6ba47f3d19a5a39e58f5312037a09733de4edf7d67eefad1a8a2f6ed17720d75cf04e05347d34d1bec9f6ea3ded654c670f187336de2d67e5903ae17862710d",
+    "updatedAt": 1794149666353
+  },
+  "buildEvents": {
+    "scope": "Selected excerpts, not full logs",
+    "excerpts": [
+      "ype\":\"stdout\",\"text\":\"Cloning github.com/arty69x/artyverse-x (Branch: d4c53d03ee0dba7261de0ad4418583a2d531abcb, Commit: d4c53d0)\",\"info\":{\"type\":\"build\",\"name\":\"bld_qlk9r8akx\",\"entrypoint\":\".\"}},{\"created\":1794149642811,\"date\":1794149642",
+      "{\"created\":1794149649854,\"date\":1794149649854,\"type\":\"stdout\",\"text\":\"found 0 vulnerabilities\",\"info\":{\"type\":\"build\",\"name\":\"bld_qlk9r8akx\",\"entrypoint\":\".\"}},{\"created\":1794149649855,\"date\":1794149649855,\"type\":\"stderr\",\"text\":\"npm warn install-script",
+      "\",\"text\":\"\\u001b[2mdist/\\u001b[22m\\u001b[2massets/\\u001b[22m\\u001b[36mapp-0bSXSAWN.js                                 \\u001b[39m\\u001b[1m\\u001b[2m276.03 kB\\u001b[22m\\u001b[1m\\u001b[22m\\u001b[2m │ gzip: 87.03 kB\\u001b[22m\",\"info\":{\"type\":\"buil",
+      "{\"created\":1794149665413,\"date\":1794149665413,\"type\":\"stderr\",\"text\":\"Build Completed in /vercel/output [22s]\",\"info\":{\"type\":\"build\",\"name\":\"bld_qlk9r8akx\",\"entrypoint\":\".\"}},{\"created\":1794149665437,\"date\":1794149665437,\"type\":\"stdout\",\"text\":",
+      "{\"created\":1794149666306,\"date\":1794149666306,\"type\":\"stdout\",\"text\":\"Deployment completed\",\"info\":{\"type\":\"build\",\"name\":\"bld_qlk9r8akx\",\"entrypoint\":\".\"}},{\"created\":1794149666311,\"date\":1794149666311,\"type\":\"stdout\",\"text\":\"Creating build cache..."
+    ]
+  },
+  "browserVerification": "Local built IndexedDB edition; protected Vercel browser interactions not exercised.",
+  "accessPolicy": "Existing SSO protection retained. No bypass links created."
+}

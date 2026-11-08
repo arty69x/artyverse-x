@@ -1,5 +1,21 @@
 # ARTYVERSE X — Git and Vercel release
-**Latest release — Modern component kit + Storefront Builder (2026-11-08):** Vercel production READY, runtime commit `6896339578f250dc15f120d203cb348d14773a45`, deployment `dpl_3ZwTZNz9P8U2kPinqsN1pmV2712s`. Stable alias confirmed: https://artyverse-x-ai-assistant.vercel.app/#/concept/builder . Home: https://artyverse-x-ai-assistant.vercel.app/#/concept/home .
+**Latest release — Unified reconstructed Visual Engineering Studio (2026-11-08):** production READY, runtime commit `d4c53d03ee0dba7261de0ad4418583a2d531abcb`, deployment `dpl_H64eLwVVyS7mzuYpU4jJhdMn2ngV`. Stable alias confirmed to this deployment; alias error null.
+
+- Home: https://artyverse-x-ai-assistant.vercel.app/#/home
+- Builder inside shared shell: https://artyverse-x-ai-assistant.vercel.app/#/builder
+- Native brand board and tokens: https://artyverse-x-ai-assistant.vercel.app/#/design-system
+- Immutable deployment: https://artyverse-x-ai-assistant-p2uckamoa-arty69xs-projects.vercel.app
+- Runtime fingerprint: `652f7b42d3796ea358f05a51b87c5b312ac2363c64e7d4cb940a35798613f42c`.
+
+Vercel independently cloned the runtime SHA, reported zero known npm vulnerabilities, built `app-0bSXSAWN.js` (same as local browser build), completed and assigned the stable alias. Target/team/project checked before release. Existing SSO/access policy unchanged. Local workflows were browser-tested; protected production interactions and runtime observability were not exercised. No new monitoring integration or claim of clean live runtime logs.
+
+Both builds passed; 20 units passed; 49 unique browser/API cases have accepted passing evidence across 47 initial passes plus 2 corrected/frozen-source retests. 15 visual/axe cases recorded no page overflow or violations; English320 wordmark separately corrected and retested. Actual local IndexedDB draft/brief/export/sandbox handoff verified. See `docs/reconstruction/VERIFICATION.md` and `tests/evidence/reconstruction/` for raw evidence and initial failures. No transferred Lighthouse/FPS/certification/pixel-perfect score.
+
+Rollback: prior deployment `dpl_3ZwTZNz9P8U2kPinqsN1pmV2712s`, recovery branch `recovery/pre-reconstruction-20261108` at `f0fbffb`. No destructive storage migration. Documentation/evidence commits follow the deployed runtime SHA without changing application code. Services remain local/explicitly unavailable according to existing provider boundaries; sample commerce is not connected checkout.
+
+---
+
+**Historical release — Modern component kit + Storefront Builder (2026-11-08):** Vercel production READY, runtime commit `6896339578f250dc15f120d203cb348d14773a45`, deployment `dpl_3ZwTZNz9P8U2kPinqsN1pmV2712s`. Stable alias confirmed: https://artyverse-x-ai-assistant.vercel.app/#/concept/builder . Home: https://artyverse-x-ai-assistant.vercel.app/#/concept/home .
 
 Radix controls, adapted shadcn composition, Motion interactions, original editable storefront templates, independent export, real Studio handoff, and permission-based FFT mascot are included. Sample goods/prices; no checkout or AI generation claim. Existing workspace and access policy preserved.
 
