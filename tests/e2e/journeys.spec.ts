@@ -94,13 +94,13 @@ test("Local workflow validates, runs and saves a reproducible result", async ({
   await page.goto("/#/automate");
   await page.getByRole("button", { name: "Validate & run" }).click();
   await expect(page.getByRole("alert")).toContainText("Add source text");
-  await page.getByLabel("Workflow source").fill("First idea\nSecond idea");
+  await page.getByLabel("Node source text").fill("First idea\nSecond idea");
   await page.getByRole("button", { name: "Validate & run" }).click();
-  await expect(page.locator(".workflow-result")).toContainText(
+  await expect(page.locator(".v2-graph-results")).toContainText(
     "1. First idea\n2. Second idea",
   );
-  await page.getByRole("button", { name: "Save workflow" }).click();
-  await expect(page.getByRole("status")).toContainText("Workflow saved");
+  await page.getByRole("button", { name: "Save", exact:true }).click();
+  await expect(page.locator(".toast")).toContainText("Saved locally");
 });
 test("Motion geometry, preset round trip and reduced motion", async ({
   page,
@@ -224,7 +224,7 @@ test("Home semantics, dialog keyboard and reduced-motion visibility", async ({
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/");
   await expect(
-    page.getByRole("heading", { name: "Intelligence, in motion." }),
+    page.getByRole("heading", { name: "One artist. Infinite worlds." }),
   ).toBeVisible();
   await page.getByRole("button", { name: "Search", exact: true }).click();
   await expect(page.getByRole("dialog")).toBeVisible();

@@ -28,6 +28,6 @@ export default defineConfig({
   },
   reporter: [
     ["list"],
-    ["json", { outputFile: "tests/evidence/playwright-results.json" }],
+    ["json", { outputFile: "tests/evidence/v2/playwright-results.json" }],
   ],
 });

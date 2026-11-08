@@ -32,3 +32,31 @@ flowchart LR
 | Media viewer → Project presentation → Return | Recording modal and document presentation each work | A unified cross-media gallery/presentation return workflow remains in progress |
 
 New outputs use a new UUID intentionally; editing an existing saved item retains its ID. No hidden sample user history is inserted. Browser drafts and SQLite saves are distinct. Full scroll/filter/selection restoration across every workspace is not yet implemented.
+
+## V2 connected journeys
+
+```mermaid
+flowchart LR
+  Home --> Projects
+  Projects --> Agents[Agent Studio]
+  Projects --> Canvas[Create Canvas]
+  Projects --> Code[Code Studio]
+  Projects --> Sound[Sound Lab]
+  Projects --> Dynamics
+  Projects --> Story[Story Studio]
+  Agents -->|real output / sourceId| Canvas
+  Node[Node Studio] -->|local or configured provider step| Agents
+  Node -->|real saved artifacts| Notes[Research notes]
+  Node --> Canvas
+  Sound -->|rendered WAV| Library
+  Code -->|source revisions| Library
+  Dynamics -->|scene source| Library
+  Canvas --> Library
+  Library -->|same document ID| Story
+  Motion[Motion Lab] -->|compatible scene duration| Story
+  Story --> Present[Presentation]
+  Library -->|open correct kind| Code
+  System[System & costs] --> Backup[Persistent backup]
+```
+
+All new work attaches to the selected project. All worlds includes legacy/unassigned work. Library searches/filter/sort operate on the active project context. Stories reference saved documents rather than duplicate them. Saved advanced tools reopen with the same stable ID and revision-keyed browser drafts. Undo/redo is separate session history. Browser source import is validate → preview → apply → explicit save; code runs only on Run. Node runs record actual step completion and retained artifact IDs. Interrupted runs do not invent completed steps. Graph-less V1 workflows retain the legacy compatibility editor.

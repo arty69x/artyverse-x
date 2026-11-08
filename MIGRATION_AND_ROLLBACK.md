@@ -44,3 +44,13 @@ Schema version is 1. Restore accepts only version 1. There is no claimed migrati
 `npm test` runs contract tests. `npm run test:e2e` starts an isolated local application on web 5174/API 4312 with `.test-data` storage. Chromium is configured at `/usr/bin/chromium`; adjust `playwright.config.ts` on other systems. A second temporary SQLite instance on 4313 verifies a real restore into an empty database. Test evidence uses synthetic records/audio, not private user content.
 
 The first verification run created nine synthetic records in the development database. Those records and their database were preserved separately at `.data-initial-verification-20261107` after stopping the server. The final development preview uses a fresh `.data` directory with an empty Library. Subsequent automated runs use isolated `.test-data/run-*` directories. Neither database is included in the source archive or Git.
+
+## V2 migration — 2026-11-08
+
+V2 starting revision: `fafb2cf` on branch `work`; recovery branch `recovery/pre-v2-20261108`. A recovery manifest, online SQLite backup (when a local DB existed), and immutable media copy were created under ignored `.recovery/pre-v2-20261108` before structural edits. These local user-data backups are intentionally excluded from release ZIPs.
+
+Migration is additive: keep Item envelope v1, add advanced data schemas v2 and optional projectId. Existing graph-less workflows route to compatibility mode. Existing IDs, assets and revisions are retained; no remote repository, hosting, domain, or access-policy changes were performed. Project context attaches to new work; legacy work remains visible under All worlds. New payload types are validated during backup restore too.
+
+Before rollback, download a current persistent backup and save browser drafts. Restore V1 source from the recovery branch into a separate checkout, not over uncommitted work. V1 does not support new V2 kinds: restore its pre-V2 database/media snapshot in a separate data directory as well. Keep the V2 backup for return migration; never feed V2-only records into an unmodified V1 server and expect compatibility. Test the restored workspace before switching local URLs/ports.
+
+No public production deployment was attempted. Public release still needs identity/ownership enforcement, cloud infrastructure, migration rehearsals and deployment-specific acceptance. The local built app can be started independently with `PORT=4315 ARTYVERSE_DATA_DIR=<separate-directory> npm start` for verification.

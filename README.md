@@ -1,16 +1,18 @@
-# ARTYVERSE X
+# ARTYVERSE X · Creative Operating Studio V2
 
-A local creative workspace for ideas, research, editable canvases, recordings, presentations and small deterministic workflows. React + TypeScript + Motion, with an Express/SQLite local backend.
+**Artist × Multiverse.** A connected personal workspace for ideas, canvases, code, sound, motion, local agents and stories. React + TypeScript + Vite + Tailwind utilities + Motion for React; Express/SQLite local persistence.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open http://localhost:5173. Requires Node 24+. `npm run build && npm start` serves a local built application at http://localhost:4311.
+Node 24+ required. Open http://localhost:5173. For the built local application: `npm run build && npm start`, then http://localhost:4311. SQLite/media default to `.data`; browser drafts stay in the browser. No provider key is needed for local tools.
 
-Start with [the complete system design](ARTYVERSE_X_MASTER_SPEC.md), [workflow map](WORKFLOW_MAP.md), [verification report](VERIFICATION_REPORT.md), [known limitations](KNOWN_LIMITATIONS.md) and [backup/rollback instructions](MIGRATION_AND_ROLLBACK.md).
+New: Projects, Agent Studio (local tools + optional server adapter, provenance/cost/cache/fallback), editable Node Studio with multi-step agent runs, sandboxed Code Studio + CSS inspector + repair review, Sound Lab + actual WAV, SVG Dynamics + optional gestures/sensors/WebGL, Story Studio + linked-document presentation, System & costs. Existing Canvas/Chat/Research/Voice/Live/Library/Templates/Design OS remain available; graph-less V1 workflows use compatibility mode.
 
-[Editable Framer design companion](https://framer.com/projects/Q9u0Ksh8PgRNuFPtNtGO).
+Read [the complete design](ARTYVERSE_X_MASTER_SPEC.md), [V2 scope](docs/v2/RELEASE_SCOPE.json), [workflow map](WORKFLOW_MAP.md), [verification](VERIFICATION_REPORT.md), [limitations](KNOWN_LIMITATIONS.md), and [migration/rollback](MIGRATION_AND_ROLLBACK.md). Historical V1 specifications/evidence are retained separately.
 
-AI, transcription, cloud sync and external schedules are not connected. Local workflows work without API keys. Templates/scenes are labeled samples; your Library starts with your own saved work.
+`npm test` runs contract tests; `npm run test:e2e` runs isolated browser/API workflows with system Chromium. See Playwright configuration for the executable path. Provider contract checks use a clearly identified local fixture, not live AI inference.
+
+This release is a personal local application. Public multi-user deployment, cloud sync, transcription, billing and external schedules are unavailable. No public deployment or remote deletion was performed.

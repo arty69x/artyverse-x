@@ -1,16 +1,17 @@
 {
   "schemaVersion": 1,
   "primitive": {
-    "background": "#060608",
-    "surface": "#0D0D12",
-    "elevated": "#16161D",
-    "text": "#F0F0F8",
-    "muted": "#A3A3B6",
-    "border": "#2A2A36",
-    "accent": "#CCFF00",
+    "background": "#050708",
+    "surface": "#0B1012",
+    "elevated": "#141B1E",
+    "text": "#F2F6F7",
+    "muted": "#A6B3B8",
+    "border": "#283236",
+    "accent": "#D7E317",
     "cyan": "#43E6FF",
     "violet": "#9B43FF",
-    "danger": "#FF8899"
+    "danger": "#FF8899",
+    "pink": "#D4006A"
   },
   "semantic": {
     "background": "primitive.background",
@@ -33,7 +34,7 @@
       "background": "semantic.elevated",
       "primary": "semantic.accent",
       "radius": 8,
-      "minHeight": 38
+      "minHeight": 42
     },
     "dialog": {
       "background": "semantic.elevated",
@@ -69,11 +70,12 @@
   "duration": {
     "micro": 120,
     "panel": 220,
-    "scene": 480
+    "scene": 480,
+    "ambient": 6000
   },
   "font": {
-    "display": "Space Grotesk",
+    "display": "Poppins",
     "body": "DM Sans",
-    "thai": "Noto Sans Thai"
+    "thai": "IBM Plex Sans Thai"
   }
 }

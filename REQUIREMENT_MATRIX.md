@@ -54,3 +54,18 @@ Each status is limited to the delivered local scope. In-progress sections have a
 | MP-47 | Execution plan | Implemented in local scope |
 | MP-48 | Deliverables | Implemented in local scope |
 | MP-49 | Craft | In progress / subset delivered |
+
+## V2 scope supplement
+
+The MP rows above remain scoped requirements, not a statement that every clause is complete. V2 implementation/acceptance is canonically inventoried in `docs/v2/RELEASE_SCOPE.json`; remaining requirements are in `KNOWN_LIMITATIONS.md`. Actual test evidence is listed in `VERIFICATION_REPORT.md`.
+
+| New scope | Source | Implemented boundary | Remaining |
+|---|---|---|---|
+| Projects / unified open routes | Latest user upgrade + MP-22/38 | projectId relationships, same IDs, scoped Library, kindRoutes | cloud ownership and remote sync |
+| Agent costs / fallback / pipeline | Latest user + MP-02/19/43 | local tools, optional adapter, logged provenance/cost, DAG agent steps | credentialed live inference and provider-specific verification |
+| Code / inspector / fixes | Latest user + MP-39 | explicit iframe Run, visual CSS inspector, review/checkpoint, source import/export | host IDE/package runner and AI semantic repair |
+| Audio / sensors / 3D | Latest user + MP-17/25/32/42 | actual Web Audio/WAV, SVG physics/gestures, optional sensor/WebGL | real-device certification and broad performance budget |
+| Storytelling / presentation | Latest user + MP-18/37 | scripts, linked documents, scene timeline, compatible motion duration | multimedia timeline editing and server render farm |
+| Full production | User craft goal + MP-46 | tested local source/build/export/backup | identity, ownership, infrastructure, live-provider and public release checks |
+
+Requirement sources and conflict reasoning: `docs/v2/CONFLICT_AND_NORMALIZATION.md`. Historical V1 master and component evidence are retained in `docs/v1/`; source claims and verification statuses are never imported as V2 results.

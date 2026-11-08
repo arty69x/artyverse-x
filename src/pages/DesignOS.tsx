@@ -500,7 +500,10 @@ function MotionLab() {
     intensity,
     controls,
     geometry,
-    compatibleTargets: ["motion-preview"],
+    compatibleTargets:
+      category === "Scene Transition"
+        ? ["motion-preview", "story-scene"]
+        : ["motion-preview"],
   });
   function apply(d: any) {
     setCategory(d.category);

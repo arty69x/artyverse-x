@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "product": "ARTYVERSE X",
-  "releaseScope": "Local single-user creative workspace",
+  "releaseScope": "Creative Operating Studio / local V2",
   "designDirection": "Luminous Intelligence / Deep Black Creative Universe",
   "sourceOfTruth": [
     "Latest user instructions",
@@ -21,7 +21,7 @@
   "tokenSource": "shared/schema.ts#theme",
   "generatedTokens": "DESIGN_TOKENS.json",
   "entitySource": "shared/schema.ts",
-  "providerSource": "shared/providers.ts",
+  "providerSource": "server/agent.ts",
   "modules": [
     {
       "id": "home",
@@ -145,18 +145,19 @@
     },
     {
       "id": "automate",
-      "name": "Automate",
+      "name": "automate",
       "route": "#/automate",
-      "status": "Implemented (fixed local pipeline)",
-      "purpose": "Source text → deterministic transform result",
-      "primaryTask": "Source text → deterministic transform result",
+      "status": "Implemented / verification scoped to V2 report",
+      "purpose": "editable DAG; node configuration; connections; cycle validation; branch routing; agent steps; actual artifacts; execution evidence",
+      "primaryTask": "editable DAG",
       "inputOutput": "Source text → deterministic transform result",
-      "emptyState": "Purpose-specific guidance and a working entry action. No fake saved projects.",
-      "loadingState": "Real initial fetch / upload / save states when asynchronous.",
-      "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
-      "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
-      "nextAction": "Save / export",
-      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+      "emptyState": "Working starter or guidance, with no fictional user history",
+      "loadingState": "Actual async operation state only",
+      "errorState": "Visible error with draft retained",
+      "saveBehavior": "Explicit SQLite save and browser drafts where supported",
+      "nextAction": "Open linked editor or Library",
+      "limitations": "KNOWN_LIMITATIONS.md",
+      "implementationLocation": "src/v2/NodeStudio.tsx"
     },
     {
       "id": "library",
@@ -202,22 +203,119 @@
       "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
       "nextAction": "Shared editor / preview",
       "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "projects",
+      "name": "projects",
+      "route": "#/projects",
+      "status": "Implemented / verification scoped to V2 report",
+      "purpose": "create project; active context; linked items; record export",
+      "primaryTask": "create project",
+      "implementationLocation": "src/v2/Projects.tsx",
+      "emptyState": "Working starter or guidance, with no fictional user history",
+      "loadingState": "Actual async operation state only",
+      "errorState": "Visible error with draft retained",
+      "saveBehavior": "Explicit SQLite save and browser drafts where supported",
+      "nextAction": "Open linked editor or Library",
+      "limitations": "KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "agents",
+      "name": "agents",
+      "route": "#/agents",
+      "status": "Implemented / verification scoped to V2 report",
+      "purpose": "local tools; optional provider adapter; request budget estimate; cache; cancel; explicit fallback; run evidence; artifact transfer",
+      "primaryTask": "local tools",
+      "implementationLocation": "src/v2/Agents.tsx",
+      "emptyState": "Working starter or guidance, with no fictional user history",
+      "loadingState": "Actual async operation state only",
+      "errorState": "Visible error with draft retained",
+      "saveBehavior": "Explicit SQLite save and browser drafts where supported",
+      "nextAction": "Open linked editor or Library",
+      "limitations": "KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "code",
+      "name": "code",
+      "route": "#/code",
+      "status": "Implemented / verification scoped to V2 report",
+      "purpose": "HTML CSS JS source; sandbox Run; actual console; CSS inspector; review local fixes; checkpoint undo; HTML export",
+      "primaryTask": "HTML CSS JS source",
+      "implementationLocation": "src/v2/CodeStudio.tsx",
+      "emptyState": "Working starter or guidance, with no fictional user history",
+      "loadingState": "Actual async operation state only",
+      "errorState": "Visible error with draft retained",
+      "saveBehavior": "Explicit SQLite save and browser drafts where supported",
+      "nextAction": "Open linked editor or Library",
+      "limitations": "KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "sound",
+      "name": "sound",
+      "route": "#/sound",
+      "status": "Implemented / verification scoped to V2 report",
+      "purpose": "16-step sequencer; oscillator envelope filter; actual waveform; PCM WAV rendering; save rendered audio; resource cleanup",
+      "primaryTask": "16-step sequencer",
+      "implementationLocation": "src/v2/SoundLab.tsx",
+      "emptyState": "Working starter or guidance, with no fictional user history",
+      "loadingState": "Actual async operation state only",
+      "errorState": "Visible error with draft retained",
+      "saveBehavior": "Explicit SQLite save and browser drafts where supported",
+      "nextAction": "Open linked editor or Library",
+      "limitations": "KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "dynamics",
+      "name": "dynamics",
+      "route": "#/dynamics",
+      "status": "Implemented / verification scoped to V2 report",
+      "purpose": "SVG bodies; spring mass gravity; drag pan pinch; manual inspector; optional sensor events; optional WebGL; static fallback",
+      "primaryTask": "SVG bodies",
+      "implementationLocation": "src/v2/Dynamics.tsx",
+      "emptyState": "Working starter or guidance, with no fictional user history",
+      "loadingState": "Actual async operation state only",
+      "errorState": "Visible error with draft retained",
+      "saveBehavior": "Explicit SQLite save and browser drafts where supported",
+      "nextAction": "Open linked editor or Library",
+      "limitations": "KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "story",
+      "name": "story",
+      "route": "#/story",
+      "status": "Implemented / verification scoped to V2 report",
+      "purpose": "scene list; script; timing; document links; timeline; presentation; compatible motion duration",
+      "primaryTask": "scene list",
+      "implementationLocation": "src/v2/StoryStudio.tsx",
+      "emptyState": "Working starter or guidance, with no fictional user history",
+      "loadingState": "Actual async operation state only",
+      "errorState": "Visible error with draft retained",
+      "saveBehavior": "Explicit SQLite save and browser drafts where supported",
+      "nextAction": "Open linked editor or Library",
+      "limitations": "KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "system",
+      "name": "system",
+      "route": "#/system",
+      "status": "Implemented / verification scoped to V2 report",
+      "purpose": "actual status; known unknown cost; cache fallback counts; persistent backup",
+      "primaryTask": "actual status",
+      "implementationLocation": "src/v2/SystemHub.tsx",
+      "emptyState": "Working starter or guidance, with no fictional user history",
+      "loadingState": "Actual async operation state only",
+      "errorState": "Visible error with draft retained",
+      "saveBehavior": "Explicit SQLite save and browser drafts where supported",
+      "nextAction": "Open linked editor or Library",
+      "limitations": "KNOWN_LIMITATIONS.md"
     }
   ],
-  "componentCounts": {
-    "catalogued": 151,
-    "required": 64,
-    "implementedCatalogMappings": 64,
-    "verifiedWorkflowSmokeMappings": 24,
-    "standaloneComponentCount": null,
-    "warning": "These are catalog-to-native-pattern mappings, not a claim of 151 distinct shipped components or exhaustive state coverage."
-  },
   "components": [
     {
       "id": "catalog-appshell",
       "name": "AppShell",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "layout",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -238,13 +336,14 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#AppShell"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#AppShell",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-page",
       "name": "Page",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "layout",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -265,7 +364,8 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Page"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Page",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-container",
@@ -583,7 +683,7 @@
       "id": "catalog-hero",
       "name": "Hero",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "layout",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -604,7 +704,8 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Hero"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Hero",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-bentogrid",
@@ -634,7 +735,7 @@
       "id": "catalog-sidebar",
       "name": "Sidebar",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "layout",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -655,13 +756,14 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Sidebar"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Sidebar",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-topbar",
       "name": "Topbar",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "layout",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -682,7 +784,8 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Topbar"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Topbar",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-navbar",
@@ -712,7 +815,7 @@
       "id": "catalog-footer",
       "name": "Footer",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "layout",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -733,7 +836,8 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Footer"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Footer",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-breadcrumbs",
@@ -1099,7 +1203,7 @@
       "id": "catalog-modal",
       "name": "Modal",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "overlay",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -1120,13 +1224,14 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Modal"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Modal",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-dialog",
       "name": "Dialog",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "overlay",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -1147,7 +1252,8 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Dialog"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Dialog",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-drawer",
@@ -1201,7 +1307,7 @@
       "id": "catalog-commandpalette",
       "name": "CommandPalette",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "navigation",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -1222,7 +1328,8 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#CommandPalette"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#CommandPalette",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-contextmenu",
@@ -1372,7 +1479,7 @@
       "id": "catalog-button",
       "name": "Button",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "action",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -1393,13 +1500,14 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Button"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Button",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-iconbutton",
       "name": "IconButton",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "action",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -1420,7 +1528,8 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#IconButton"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#IconButton",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-splitbutton",
@@ -2002,7 +2111,7 @@
       "id": "catalog-input",
       "name": "Input",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "form",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -2023,13 +2132,14 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Input"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Input",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-textarea",
       "name": "Textarea",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "form",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -2050,13 +2160,14 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Textarea"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Textarea",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-searchinput",
       "name": "SearchInput",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "form",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -2077,7 +2188,8 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#SearchInput"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#SearchInput",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-passwordinput",
@@ -2107,7 +2219,7 @@
       "id": "catalog-numberinput",
       "name": "NumberInput",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "form",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -2128,7 +2240,8 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#NumberInput"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#NumberInput",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-otpinput",
@@ -2350,7 +2463,7 @@
       "id": "catalog-fileupload",
       "name": "FileUpload",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "form",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -2371,7 +2484,8 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#FileUpload"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#FileUpload",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-dropzone",
@@ -2905,7 +3019,7 @@
       "id": "catalog-audio",
       "name": "Audio",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "media",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -2926,7 +3040,8 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Audio"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Audio",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-player",
@@ -2956,7 +3071,7 @@
       "id": "catalog-carousel",
       "name": "Carousel",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "media",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -2977,7 +3092,8 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Carousel"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Carousel",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-gallery",
@@ -3247,7 +3363,7 @@
       "id": "catalog-chat",
       "name": "Chat",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "ai",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -3268,13 +3384,14 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Chat"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Chat",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-chatinput",
       "name": "ChatInput",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "ai",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -3295,13 +3412,14 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ChatInput"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ChatInput",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-chatmessage",
       "name": "ChatMessage",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "ai",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -3322,13 +3440,14 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ChatMessage"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ChatMessage",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-promptbox",
       "name": "PromptBox",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "ai",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -3349,7 +3468,8 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#PromptBox"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#PromptBox",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-agentstatus",
@@ -3547,7 +3667,7 @@
       "id": "catalog-zoomcontrols",
       "name": "ZoomControls",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "canvas",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -3568,7 +3688,8 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ZoomControls"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ZoomControls",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-parallaxscene",
@@ -3622,7 +3743,7 @@
       "id": "catalog-spatialcard",
       "name": "SpatialCard",
       "scope": "Required now",
-      "status": "Verified (workflow smoke)",
+      "status": "Implemented; historical V1 workflow evidence",
       "purpose": "spatial",
       "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
       "states": [
@@ -3643,7 +3764,8 @@
         "tests/e2e/journeys.spec.ts",
         "tests/evidence/playwright-results.json"
       ],
-      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#SpatialCard"
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#SpatialCard",
+      "v2Evidence": "VERIFICATION_REPORT.md (scope-specific; no automatic carry-over)"
     },
     {
       "id": "catalog-orbitcontrols",
@@ -4320,25 +4442,198 @@
   },
   "capabilities": {
     "local": [
-      "editor",
-      "notes",
-      "conversations",
-      "audio recording",
-      "cue presentation",
-      "deterministic text workflow",
-      "SQLite revisions",
-      "backup/restore",
-      "SVG/JSON/Markdown export",
-      "Motion Lab previews"
+      "Projects",
+      "Canvas",
+      "Research",
+      "Voice recording",
+      "Live cue presentation",
+      "Node DAG and multi-step local agents",
+      "Code sandbox and CSS inspector",
+      "Web Audio synthesis / WAV",
+      "SVG physics / gestures",
+      "Story scenes and presentation",
+      "versioned save / backup / import export",
+      "Design OS / Motion Lab"
     ],
-    "connected": [],
+    "connected": [
+      "Optional provider adapter; not configured for live inference in this delivery"
+    ],
     "unavailable": [
-      "AI inference",
-      "transcription",
-      "cloud sync",
-      "accounts",
-      "external automation",
-      "scheduler"
+      "configured live AI provider in this delivery",
+      "transcription engine",
+      "remote multi-user collaboration",
+      "cloud identity sync billing",
+      "background scheduler",
+      "external automation actions",
+      "host filesystem terminal"
     ]
+  },
+  "productionBoundary": "Personal local application; public multi-user service unavailable",
+  "advancedEntitySource": "shared/v2/contracts.ts",
+  "brand": {
+    "master": "ARTYVERSE",
+    "product": "ARTYVERSE X",
+    "meaning": "Artist × Multiverse",
+    "assistant": "Whisper / Fade W",
+    "principles": [
+      "Creativity",
+      "Transparency",
+      "Measurable Impact"
+    ]
+  },
+  "v2": {
+    "schemaVersion": 2,
+    "product": "ARTYVERSE X",
+    "edition": "Creative Operating Studio / local V2",
+    "productionBoundary": "Personal local application; public multi-user service unavailable",
+    "canonicalContracts": [
+      "shared/schema.ts",
+      "shared/v2/contracts.ts",
+      "shared/v2/graph.ts"
+    ],
+    "modules": [
+      {
+        "id": "projects",
+        "implementation": "src/v2/Projects.tsx",
+        "capabilities": [
+          "create project",
+          "active context",
+          "linked items",
+          "record export"
+        ]
+      },
+      {
+        "id": "agents",
+        "implementation": "src/v2/Agents.tsx",
+        "capabilities": [
+          "local tools",
+          "optional provider adapter",
+          "request budget estimate",
+          "cache",
+          "cancel",
+          "explicit fallback",
+          "run evidence",
+          "artifact transfer"
+        ]
+      },
+      {
+        "id": "automate",
+        "implementation": "src/v2/NodeStudio.tsx",
+        "capabilities": [
+          "editable DAG",
+          "node configuration",
+          "connections",
+          "cycle validation",
+          "branch routing",
+          "agent steps",
+          "actual artifacts",
+          "execution evidence"
+        ]
+      },
+      {
+        "id": "code",
+        "implementation": "src/v2/CodeStudio.tsx",
+        "capabilities": [
+          "HTML CSS JS source",
+          "sandbox Run",
+          "actual console",
+          "CSS inspector",
+          "review local fixes",
+          "checkpoint undo",
+          "HTML export"
+        ]
+      },
+      {
+        "id": "sound",
+        "implementation": "src/v2/SoundLab.tsx",
+        "capabilities": [
+          "16-step sequencer",
+          "oscillator envelope filter",
+          "actual waveform",
+          "PCM WAV rendering",
+          "save rendered audio",
+          "resource cleanup"
+        ]
+      },
+      {
+        "id": "dynamics",
+        "implementation": "src/v2/Dynamics.tsx",
+        "capabilities": [
+          "SVG bodies",
+          "spring mass gravity",
+          "drag pan pinch",
+          "manual inspector",
+          "optional sensor events",
+          "optional WebGL",
+          "static fallback"
+        ]
+      },
+      {
+        "id": "story",
+        "implementation": "src/v2/StoryStudio.tsx",
+        "capabilities": [
+          "scene list",
+          "script",
+          "timing",
+          "document links",
+          "timeline",
+          "presentation",
+          "compatible motion duration"
+        ]
+      },
+      {
+        "id": "system",
+        "implementation": "src/v2/SystemHub.tsx",
+        "capabilities": [
+          "actual status",
+          "known unknown cost",
+          "cache fallback counts",
+          "persistent backup"
+        ]
+      }
+    ],
+    "sharedStudioFeatures": [
+      "explicit local save",
+      "revision-keyed draft",
+      "undo redo",
+      "validated source import",
+      "preview before apply",
+      "JSON export",
+      "missing-item state"
+    ],
+    "unavailable": [
+      "configured live AI provider in this delivery",
+      "transcription engine",
+      "remote multi-user collaboration",
+      "cloud identity sync billing",
+      "background scheduler",
+      "external automation actions",
+      "host filesystem terminal"
+    ],
+    "partial": [
+      "full TH/EN for advanced microcopy",
+      "real-device sensor gesture audio verification",
+      "all Master Prompt motion authoring controls",
+      "advanced Canvas grouping locking snapping",
+      "full state and security coverage"
+    ],
+    "verification": "VERIFICATION_REPORT.md",
+    "historicalEvidence": "V1 reports are retained as historical references, not copied V2 verification"
+  },
+  "historicalV1ComponentCounts": {
+    "catalogued": 151,
+    "required": 64,
+    "implementedCatalogMappings": 64,
+    "verifiedWorkflowSmokeMappings": 24,
+    "standaloneComponentCount": null,
+    "warning": "These are catalog-to-native-pattern mappings, not a claim of 151 distinct shipped components or exhaustive state coverage."
+  },
+  "componentCounts": {
+    "catalogued": 151,
+    "required": 64,
+    "implementedCatalogMappings": 64,
+    "verifiedWorkflowSmokeMappings": null,
+    "standaloneComponentCount": null,
+    "warning": "Mapping counts only. V2 verification is test-specific; no inferred production coverage count."
   }
 }

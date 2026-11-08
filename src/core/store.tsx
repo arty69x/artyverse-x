@@ -42,6 +42,9 @@ type Store = {
   toast: (s: string) => void;
   locale: "en" | "th";
   setLocale: (s: "en" | "th") => void;
+  activeProject: string | null;
+  setActiveProject: (id: string | null) => void;
+  scopedItems: Item[];
   motion: string;
   setMotion: (s: string) => void;
 };
@@ -57,6 +60,9 @@ export function Provider({ children }: { children: React.ReactNode }) {
     [motion, setMotionState] = useState(
       () => localStorage.getItem("av-motion") || "Balanced",
     );
+  const [activeProject, setProject] = useState<string | null>(
+    () => localStorage.getItem("av-active-project") || null,
+  );
   async function refresh() {
     try {
       setItems(await request("/items"));
@@ -88,7 +94,16 @@ export function Provider({ children }: { children: React.ReactNode }) {
     title: string,
     data: Record<string, any>,
   ) {
-    return upsert(await request("/items", { kind, title, data }));
+    return upsert(
+      await request("/items", {
+        kind,
+        title,
+        data:
+          kind !== "project" && activeProject
+            ? { ...data, projectId: activeProject }
+            : data,
+      }),
+    );
   }
   async function save(item: Item) {
     const result = upsert(
@@ -97,7 +112,15 @@ export function Provider({ children }: { children: React.ReactNode }) {
         {
           kind: item.kind,
           title: item.title,
-          data: item.data,
+          data: {
+            ...item.data,
+            ...(items.find((i) => i.id === item.id)?.data.projectId
+              ? {
+                  projectId: items.find((i) => i.id === item.id)!.data
+                    .projectId,
+                }
+              : {}),
+          },
           revision: item.revision,
         },
         "PUT",
@@ -118,6 +141,18 @@ export function Provider({ children }: { children: React.ReactNode }) {
     <Context.Provider
       value={{
         items,
+        activeProject,
+        setActiveProject: (id) => {
+          setProject(id);
+          if (id) localStorage.setItem("av-active-project", id);
+          else localStorage.removeItem("av-active-project");
+        },
+        scopedItems: activeProject
+          ? items.filter(
+              (i) =>
+                i.id === activeProject || i.data.projectId === activeProject,
+            )
+          : items,
         loading,
         error,
         refresh,
@@ -150,6 +185,7 @@ export const useT = () => {
 export function useDraft<T>(
   key: string,
   initial: T,
+  validate?: (value: any) => boolean,
 ): [T, (v: T | ((old: T) => T)) => void, () => void] {
   const { toast } = useStore();
   const [value, setValue] = useState<T>(() => {
@@ -158,7 +194,8 @@ export function useDraft<T>(
       if (!raw) return initial;
       try {
         const parsed = JSON.parse(raw);
-        if (typeof parsed !== typeof initial) throw Error("Invalid draft type");
+        if (typeof parsed !== typeof initial || (validate && !validate(parsed)))
+          throw Error("Invalid draft type or schema");
         return parsed as T;
       } catch {
         try {

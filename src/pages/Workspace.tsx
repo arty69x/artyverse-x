@@ -1,3 +1,4 @@
+import { kindRoutes } from "../../shared/v2/contracts";
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import {
@@ -422,18 +423,7 @@ export function HomePage({ go }: { go: Navigate }) {
   );
 }
 export function openItem(i: Item, go: Navigate) {
-  go(
-    {
-      document: "create",
-      conversation: "chat",
-      note: "research",
-      recording: "library",
-      session: "live",
-      workflow: "automate",
-      preset: "design",
-    }[i.kind],
-    i.id,
-  );
+  go(kindRoutes[i.kind], i.id);
 }
 export function Discover({
   go,
@@ -616,7 +606,7 @@ export function Library({ go }: { go: Navigate }) {
     [view, setView] = useState<Item | null>(null),
     [rename, setRename] = useState<Item | null>(null),
     [name, setName] = useState("");
-  const items = s.items
+  const items = s.scopedItems
     .filter(
       (i) =>
         (filter === "Trash" ? !!i.deletedAt : !i.deletedAt) &&
@@ -672,6 +662,12 @@ export function Library({ go }: { go: Navigate }) {
             "session",
             "workflow",
             "preset",
+            "project",
+            "code",
+            "composition",
+            "scene",
+            "story",
+            "agent-run",
             "Trash",
           ].map((x) => (
             <option key={x}>{x}</option>

@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { advancedSchemas, graphSchema } from "./v2/contracts.ts";
 export const kinds = [
   "document",
   "conversation",
@@ -7,6 +8,12 @@ export const kinds = [
   "session",
   "workflow",
   "preset",
+  "project",
+  "code",
+  "composition",
+  "scene",
+  "story",
+  "agent-run",
 ] as const;
 export const nodeSchema = z.object({
   id: z.string().min(1),
@@ -29,66 +36,91 @@ export const nodeSchema = z.object({
     )
     .optional(),
 });
-export const itemInput = z.object({
-  title: z.string().trim().min(1).max(180),
-  kind: z.enum(kinds),
-  data: z.record(z.string(), z.unknown()).superRefine((data, ctx) => {
-    if ("nodes" in data) {
-      if (!Array.isArray(data.nodes) || data.nodes.length > 300) {
-        ctx.addIssue({ code: "custom", message: "Invalid document nodes" });
-        return;
+export const itemInput = z
+  .object({
+    title: z.string().trim().min(1).max(180),
+    kind: z.enum(kinds),
+    data: z.record(z.string(), z.unknown()).superRefine((data, ctx) => {
+      if ("nodes" in data) {
+        if (!Array.isArray(data.nodes) || data.nodes.length > 300) {
+          ctx.addIssue({ code: "custom", message: "Invalid document nodes" });
+          return;
+        }
+        if (
+          new Set(data.nodes.map((n: any) => n?.id)).size !== data.nodes.length
+        )
+          ctx.addIssue({ code: "custom", message: "Node IDs must be unique" });
+        for (const n of data.nodes)
+          if (!nodeSchema.safeParse(n).success)
+            ctx.addIssue({ code: "custom", message: "Invalid layout node" });
       }
-      if (new Set(data.nodes.map((n: any) => n?.id)).size !== data.nodes.length)
-        ctx.addIssue({ code: "custom", message: "Node IDs must be unique" });
-      for (const n of data.nodes)
-        if (!nodeSchema.safeParse(n).success)
-          ctx.addIssue({ code: "custom", message: "Invalid layout node" });
-    }
-    if (
-      "messages" in data &&
-      (!Array.isArray(data.messages) ||
-        data.messages.length > 5000 ||
-        (data.messages as any[]).some(
-          (m) =>
-            !m ||
-            typeof m.text !== "string" ||
-            typeof m.id !== "string" ||
-            !["user", "note"].includes(m.role),
-        ))
-    )
+      if (
+        "messages" in data &&
+        (!Array.isArray(data.messages) ||
+          data.messages.length > 5000 ||
+          (data.messages as any[]).some(
+            (m) =>
+              !m ||
+              typeof m.text !== "string" ||
+              typeof m.id !== "string" ||
+              !["user", "note"].includes(m.role),
+          ))
+      )
+        ctx.addIssue({
+          code: "custom",
+          message: "Invalid conversation messages",
+        });
+      for (const key of ["body", "source", "tags", "cards", "notes", "result"])
+        if (key in data && typeof data[key] !== "string")
+          ctx.addIssue({
+            code: "custom",
+            message: "Invalid text field " + key,
+          });
+      for (const key of ["width", "height"])
+        if (
+          key in data &&
+          (typeof data[key] !== "number" ||
+            !Number.isFinite(data[key]) ||
+            data[key] < 100 ||
+            data[key] > 4000)
+        )
+          ctx.addIssue({
+            code: "custom",
+            message: "Invalid document dimension",
+          });
+      for (const key of ["elapsed", "duration", "size"])
+        if (
+          key in data &&
+          (typeof data[key] !== "number" ||
+            !Number.isFinite(data[key]) ||
+            data[key] < 0)
+        )
+          ctx.addIssue({ code: "custom", message: "Invalid numeric metadata" });
+      if (
+        "url" in data &&
+        (typeof data.url !== "string" ||
+          !/^\/api\/assets\/[a-z0-9-]{36}$/.test(data.url))
+      )
+        ctx.addIssue({ code: "custom", message: "Invalid media reference" });
+    }),
+    revision: z.number().int().min(0).optional(),
+  })
+  .superRefine((item, ctx) => {
+    const schema = advancedSchemas[item.kind];
+    if (schema && !schema.safeParse(item.data).success)
       ctx.addIssue({
         code: "custom",
-        message: "Invalid conversation messages",
+        message: "Invalid " + item.kind + " data",
       });
-    for (const key of ["body", "source", "tags", "cards", "notes", "result"])
-      if (key in data && typeof data[key] !== "string")
-        ctx.addIssue({ code: "custom", message: "Invalid text field " + key });
-    for (const key of ["width", "height"])
-      if (
-        key in data &&
-        (typeof data[key] !== "number" ||
-          !Number.isFinite(data[key]) ||
-          data[key] < 100 ||
-          data[key] > 4000)
-      )
-        ctx.addIssue({ code: "custom", message: "Invalid document dimension" });
-    for (const key of ["elapsed", "duration", "size"])
-      if (
-        key in data &&
-        (typeof data[key] !== "number" ||
-          !Number.isFinite(data[key]) ||
-          data[key] < 0)
-      )
-        ctx.addIssue({ code: "custom", message: "Invalid numeric metadata" });
+    if (item.data.graph && !graphSchema.safeParse(item.data.graph).success)
+      ctx.addIssue({ code: "custom", message: "Invalid node graph" });
     if (
-      "url" in data &&
-      (typeof data.url !== "string" ||
-        !/^\/api\/assets\/[a-z0-9-]{36}$/.test(data.url))
+      item.data.projectId !== undefined &&
+      (typeof item.data.projectId !== "string" ||
+        !/^[a-z0-9-]{36}$/.test(item.data.projectId))
     )
-      ctx.addIssue({ code: "custom", message: "Invalid media reference" });
-  }),
-  revision: z.number().int().min(0).optional(),
-});
+      ctx.addIssue({ code: "custom", message: "Invalid project reference" });
+  });
 export type LayoutNode = z.infer<typeof nodeSchema>;
 export type Item = {
   id: string;
@@ -110,16 +142,17 @@ export type Message = {
 export const theme = {
   schemaVersion: 1,
   primitive: {
-    background: "#060608",
-    surface: "#0D0D12",
-    elevated: "#16161D",
-    text: "#F0F0F8",
-    muted: "#A3A3B6",
-    border: "#2A2A36",
-    accent: "#CCFF00",
+    background: "#050708",
+    surface: "#0B1012",
+    elevated: "#141B1E",
+    text: "#F2F6F7",
+    muted: "#A6B3B8",
+    border: "#283236",
+    accent: "#D7E317",
     cyan: "#43E6FF",
     violet: "#9B43FF",
     danger: "#FF8899",
+    pink: "#D4006A",
   },
   semantic: {
     background: "primitive.background",
@@ -142,7 +175,7 @@ export const theme = {
       background: "semantic.elevated",
       primary: "semantic.accent",
       radius: 8,
-      minHeight: 38,
+      minHeight: 42,
     },
     dialog: { background: "semantic.elevated", radius: 16 },
     sidebar: { width: 224, background: "semantic.background" },
@@ -150,8 +183,8 @@ export const theme = {
   },
   space: [4, 8, 12, 16, 24, 32, 48, 64, 96],
   radius: [4, 8, 12, 16, 24],
-  duration: { micro: 120, panel: 220, scene: 480 },
-  font: { display: "Space Grotesk", body: "DM Sans", thai: "Noto Sans Thai" },
+  duration: { micro: 120, panel: 220, scene: 480, ambient: 6000 },
+  font: { display: "Poppins", body: "DM Sans", thai: "IBM Plex Sans Thai" },
 };
 export const uid = () => crypto.randomUUID();
 export function defaultNodes(title = "Your next big idea"): LayoutNode[] {

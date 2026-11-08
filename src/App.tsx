@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import { useStore, useT } from "./core/store";
 import { Button, Modal, SearchBox, Mascot } from "./components/UI";
-import { HomePage, Discover, Library, SettingsPage } from "./pages/Workspace";
+import { Discover, Library, SettingsPage } from "./pages/Workspace";
 const Chat = lazy(() =>
   import("./pages/Workflows").then((m) => ({ default: m.Chat })),
 );
@@ -44,8 +44,41 @@ const Voice = lazy(() =>
 const DesignOS = lazy(() =>
   import("./pages/DesignOS").then((m) => ({ default: m.DesignOS })),
 );
+import { kindRoutes } from "../shared/v2/contracts";
+import { HomeV2 } from "./v2/Home";
+const Projects = lazy(() =>
+  import("./v2/Projects").then((m) => ({ default: m.Projects })),
+);
+const Agents = lazy(() =>
+  import("./v2/Agents").then((m) => ({ default: m.Agents })),
+);
+const NodeStudio = lazy(() =>
+  import("./v2/NodeStudio").then((m) => ({ default: m.NodeStudio })),
+);
+const CodeStudio = lazy(() =>
+  import("./v2/CodeStudio").then((m) => ({ default: m.CodeStudio })),
+);
+const SoundLab = lazy(() =>
+  import("./v2/SoundLab").then((m) => ({ default: m.SoundLab })),
+);
+const Dynamics = lazy(() =>
+  import("./v2/Dynamics").then((m) => ({ default: m.Dynamics })),
+);
+const StoryStudio = lazy(() =>
+  import("./v2/StoryStudio").then((m) => ({ default: m.StoryStudio })),
+);
+const SystemHub = lazy(() =>
+  import("./v2/SystemHub").then((m) => ({ default: m.SystemHub })),
+);
 export const routes = [
   ["home", "Home", "หน้าหลัก", Home],
+  ["projects", "Projects", "โปรเจกต์", Folder],
+  ["agents", "Agent Studio", "เอเจนต์", Zap],
+  ["code", "Code Studio", "สตูดิโอโค้ด", Command],
+  ["sound", "Sound Lab", "ห้องทดลองเสียง", Radio],
+  ["dynamics", "Dynamics", "ไดนามิกส์", Compass],
+  ["story", "Story Studio", "สตูดิโอเรื่องเล่า", LayoutTemplate],
+  ["system", "System & costs", "ระบบและต้นทุน", SlidersHorizontal],
   ["chat", "Conversations", "บทสนทนา", MessageSquare],
   ["explore", "Explore", "สำรวจ", Compass],
   ["templates", "Templates", "เทมเพลต", LayoutTemplate],
@@ -98,7 +131,7 @@ export function App() {
   let page;
   switch (route) {
     case "home":
-      page = <HomePage go={go} />;
+      page = <HomeV2 go={go} />;
       break;
     case "explore":
     case "templates":
@@ -119,8 +152,34 @@ export function App() {
     case "live":
       page = <Live key={id || "new"} id={id} />;
       break;
+    case "projects":
+      page = <Projects go={go} />;
+      break;
+    case "agents":
+      page = <Agents key={id || "new"} id={id} go={go} />;
+      break;
+    case "code":
+      page = <CodeStudio key={id || "new"} id={id} />;
+      break;
+    case "sound":
+      page = <SoundLab key={id || "new"} id={id} />;
+      break;
+    case "dynamics":
+      page = <Dynamics key={id || "new"} id={id} />;
+      break;
+    case "story":
+      page = <StoryStudio key={id || "new"} id={id} />;
+      break;
+    case "system":
+      page = <SystemHub />;
+      break;
     case "automate":
-      page = <Automate key={id || "new"} id={id} />;
+      page =
+        id && s.items.some((i) => i.id === id && !i.data.graph) ? (
+          <Automate key={id} id={id} />
+        ) : (
+          <NodeStudio key={id || "new"} id={id} />
+        );
       break;
     case "library":
       page = <Library go={go} />;
@@ -168,10 +227,11 @@ export function App() {
               <small>YOUR CREATIVE UNIVERSE</small>
             </span>
           </a>
-          <button className="workspace-switch" onClick={() => go("library")}>
+          <button className="workspace-switch" onClick={() => go("projects")}>
             <span className="avatar">A</span>
             <span>
-              {t("Personal workspace", "พื้นที่ส่วนตัว")}
+              {s.items.find((i) => i.id === s.activeProject)?.title ||
+                t("All creative worlds", "ทุกโปรเจกต์")}
               <small>{t("LOCAL WORKSPACE", "บันทึกในเครื่อง")}</small>
             </span>
             <ArrowUpRight size={15} />
@@ -183,35 +243,38 @@ export function App() {
           </button>
           <div className="nav-label">{t("WORKSPACE", "พื้นที่ทำงาน")}</div>
           <nav>
-            {routes.slice(0, 10).map(([key, en, th, Icon], i) => (
-              <a
-                key={key}
-                className={route === key ? "active" : ""}
-                href={"#/" + key}
-                aria-current={route === key ? "page" : undefined}
-                onClick={() => setMenu(false)}
-              >
-                <Icon size={18} />
-                <span>{s.locale === "th" ? th : en}</span>
-                {i === 4 && <span className="nav-dot" />}
-              </a>
-            ))}
+            {routes
+              .filter((r) => !["design", "settings", "system"].includes(r[0]))
+              .map(([key, en, th, Icon], i) => (
+                <a
+                  key={key}
+                  className={route === key ? "active" : ""}
+                  href={"#/" + key}
+                  aria-current={route === key ? "page" : undefined}
+                  onClick={() => setMenu(false)}
+                >
+                  <Icon size={18} />
+                  <span>{s.locale === "th" ? th : en}</span>
+                </a>
+              ))}
           </nav>
           <div className="sidebar-bottom">
             <div className="nav-label">
               {t("MAKE IT YOURS", "ปรับให้เป็นคุณ")}
             </div>
             <nav>
-              {routes.slice(10).map(([key, en, th, Icon]) => (
-                <a
-                  key={key}
-                  className={route === key ? "active" : ""}
-                  href={"#/" + key}
-                >
-                  <Icon size={18} />
-                  {s.locale === "th" ? th : en}
-                </a>
-              ))}
+              {routes
+                .filter((r) => ["design", "settings", "system"].includes(r[0]))
+                .map(([key, en, th, Icon]) => (
+                  <a
+                    key={key}
+                    className={route === key ? "active" : ""}
+                    href={"#/" + key}
+                  >
+                    <Icon size={18} />
+                    {s.locale === "th" ? th : en}
+                  </a>
+                ))}
             </nav>
             <div className="local-status">
               <span className="status-dot" />
@@ -369,18 +432,7 @@ export function App() {
                 <button
                   key={i.id}
                   onClick={() => {
-                    go(
-                      {
-                        document: "create",
-                        conversation: "chat",
-                        note: "research",
-                        session: "live",
-                        workflow: "automate",
-                        recording: "library",
-                        preset: "design",
-                      }[i.kind],
-                      i.id,
-                    );
+                    go(kindRoutes[i.kind], i.id);
                     setCommand(false);
                   }}
                 >

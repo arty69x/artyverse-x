@@ -1,24 +1,15 @@
-# Known limitations
+# Known limitations — V2 local edition
 
-This is a runnable local application and a full product design direction. It does not complete every advanced requirement in the original master prompt.
+This is a working personal local application, not a deployed public multi-user SaaS. The implemented scope is in `docs/v2/RELEASE_SCOPE.json` and the actual checks are in `VERIFICATION_REPORT.md`.
 
-- No connected AI inference, speech transcription, cloud sync, authentication, billing, external actions or schedules. Provider contracts intentionally return unavailable.
-- Single personal workspace. Project memberships, sharing and collaboration are not implemented.
-- Localization covers navigation, Home, main page headings and many primary actions. Deep inspectors, help text, errors and several controls remain English. Full TH/EN acceptance is pending.
-- Canvas supports text/rectangles/local images. Grouping, locking, snapping, guides, dedicated pan tool, arbitrary export sizes, rich text/font selection and multi-page documents are not implemented. Native viewport scrolling provides navigation when zoomed. SVG uses system-font fallback outside the app; text metrics may differ. Long text can exceed a node until resized.
-- Editor JSON import validates and previews a replacement of the active browser draft. It accepts the active canvas dimensions and is not an automatic new project import. Save explicitly to create a revision.
-- Automate is a fixed local three-node pipeline with three text transforms. It is not an arbitrary node-graph builder or background automation service.
-- Research supports note/source/tags and transfer. A linked idea map, source crawler and AI research are unavailable.
-- Voice recording/playback is real, but physical devices and all platform codecs have not been tested. Maximum upload is 25 MB; recording is not automatically chunked to permanent storage during capture.
-- Live timer pauses when the view is destroyed; it does not imply a background live session. Cue-card navigation is separate from document presentation.
-- Motion Lab has functional studies across eight categories. Kinetic controls are a supported subset; no pointer/camera/FOV authoring, full 3D renderer or automatic scene-preset application is claimed. Media corridor is a simplified native-scroll study, not the full reference corridor expansion.
-- Theme preview/apply handles accent and displays other foundation values; complete scale editing and global token undo/redo are not implemented.
-- Component catalog mappings include native controls and structural CSS patterns; they are not 151 independent React components. Complete state coverage is not claimed.
-- Advanced Files edits one browser-local JSON virtual file, with full replacement review and a session checkpoint. No archive, multi-file patch selection or host filesystem editing.
-- Library preserves records with soft delete. There is no permanent purge/asset garbage collection, arbitrary import into Library, or full unified image viewer zoom/pan/gallery controls.
-- Draft persistence uses browser storage; unavailable/quota-limited browser storage has not received complete recovery UX. Save to the local server and export important work.
-- Backup includes saved records/revisions/media, not unsaved browser drafts or preferences. Restore request limit is 100 MB; large-media libraries need an archive/streaming implementation.
-- Full scroll/filter/selection context restoration, pinning, provider retry/cancellation and all error states remain incomplete.
-- Security is scoped to a personal local server. It has no multi-user authorization and must not be exposed publicly without additional work.
-- Automated Chromium viewport checks are simulation, not real iPad/iPhone/Android testing. Accessibility checks are scoped automated checks plus keyboard journeys, not WCAG certification. No 60 FPS guarantee or exhaustive performance/device claim.
-- Framer project is an editable visual companion. Its composer is a visual spec, not a second working AI app. No Marketplace resource was bought or imported.
+- **AI**: local tools work. A server-side provider adapter is implemented and tested against a local HTTP fixture; no live paid inference/provider credential was used. Conversations remains an own-content notebook; Agent Studio is the execution surface. Transcription is unavailable. Local repair is deterministic CSS review, not AI auto-fix.
+- **Costs**: estimated request budget uses a byte allowance, not an exact tokenizer or provider billing cap. Actual cost needs supplied rates and usage. Failed attempted calls may cost money and show unknown. Cache hits avoid a new provider call but do not claim a fabricated dollar saving.
+- **Public deployment / collaboration**: authentication, per-user ownership, remote multiplayer, cloud sync, billing, external actions and background scheduler are unavailable. Local Node runs stop with the view; no claim of execution after the browser closes. API binds to loopback; development preview is not a public production access policy.
+- **Code Studio**: browser HTML/CSS/JS preview only. Opaque-origin iframe and CSP protect the host boundary; there is no host terminal, package installation, server-side shell or OS container. Expensive/infinite imported code can consume browser resources. Source import does not execute automatically. HTML exports execute when deliberately opened.
+- **Canvas**: existing single-select layers/geometry editor is retained. Grouping, locking, full snapping/guides and advanced free-form pan are not complete. Export text uses SVG foreignObject and receiver font support varies.
+- **Advanced Studio data**: source JSON imports are validated and previewed. History is session-local, capped at 60 changes, separate from persisted revisions. Project record export is not the full media backup; use persistent Backup in Settings/System for media and revisions. Unsaved browser drafts are not in server backups. Newly created scene/source data is editable starter content, not past user work.
+- **Motion**: Story applies only explicitly compatible scene presets. Kinetic/carousel/corridor authoring still has the detailed V1 limits in `MOTION_COVERAGE.md`. Physics is a bounded spring simulation, not a general collision/rigid-body solver. WebGL is opt-in and may fall back. No sustained 60 FPS guarantee.
+- **Devices**: desktop/headless viewport simulation does not equal real iPad/phone testing. Sensor permission, orientation events, multitouch, microphone and perceived audio loudness depend on browser/device and need real-device validation.
+- **Localization**: shell and existing primary workflows support TH/EN in part; advanced tool microcopy remains mainly English. User text is never automatically translated.
+- **Accessibility/security**: automated checks cover named default states, not WCAG certification, all errors/dialog permutations or a penetration test. Full manual screen-reader, text zoom and public threat-model review remain.
+- **Marketplace/references**: Framer research registry is preserved. No paid Marketplace asset/plugin has been purchased or silently copied. Framer plugins are not installed inside this React application. Exact named V8 originals were not available; reconstructed sources are labeled accurately.

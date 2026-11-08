@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 2,
+  "product": "ARTYVERSE X",
+  "edition": "Creative Operating Studio / local V2",
+  "productionBoundary": "Personal local application; public multi-user service unavailable",
+  "canonicalContracts": ["shared/schema.ts", "shared/v2/contracts.ts", "shared/v2/graph.ts"],
+  "modules": [
+    {"id":"projects","implementation":"src/v2/Projects.tsx","capabilities":["create project","active context","linked items","record export"]},
+    {"id":"agents","implementation":"src/v2/Agents.tsx","capabilities":["local tools","optional provider adapter","request budget estimate","cache","cancel","explicit fallback","run evidence","artifact transfer"]},
+    {"id":"automate","implementation":"src/v2/NodeStudio.tsx","capabilities":["editable DAG","node configuration","connections","cycle validation","branch routing","agent steps","actual artifacts","execution evidence"]},
+    {"id":"code","implementation":"src/v2/CodeStudio.tsx","capabilities":["HTML CSS JS source","sandbox Run","actual console","CSS inspector","review local fixes","checkpoint undo","HTML export"]},
+    {"id":"sound","implementation":"src/v2/SoundLab.tsx","capabilities":["16-step sequencer","oscillator envelope filter","actual waveform","PCM WAV rendering","save rendered audio","resource cleanup"]},
+    {"id":"dynamics","implementation":"src/v2/Dynamics.tsx","capabilities":["SVG bodies","spring mass gravity","drag pan pinch","manual inspector","optional sensor events","optional WebGL","static fallback"]},
+    {"id":"story","implementation":"src/v2/StoryStudio.tsx","capabilities":["scene list","script","timing","document links","timeline","presentation","compatible motion duration"]},
+    {"id":"system","implementation":"src/v2/SystemHub.tsx","capabilities":["actual status","known unknown cost","cache fallback counts","persistent backup"]}
+  ],
+  "sharedStudioFeatures": ["explicit local save","revision-keyed draft","undo redo","validated source import","preview before apply","JSON export","missing-item state"],
+  "unavailable": ["configured live AI provider in this delivery","transcription engine","remote multi-user collaboration","cloud identity sync billing","background scheduler","external automation actions","host filesystem terminal"],
+  "partial": ["full TH/EN for advanced microcopy","real-device sensor gesture audio verification","all Master Prompt motion authoring controls","advanced Canvas grouping locking snapping","full state and security coverage"],
+  "verification": "VERIFICATION_REPORT.md",
+  "historicalEvidence": "V1 reports are retained as historical references, not copied V2 verification"
+}

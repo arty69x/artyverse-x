@@ -42,11 +42,29 @@
       "optimization": "Compact SVG; no raster payload or embedded UI text",
       "bytes": 675,
       "sha256": "b539d4ef7b971df8f078948be6648889e2050aa910de06d50236db6de517af96"
+    },
+    {
+      "id": "whisper-micro-white",
+      "purpose": "Whisper assistant identity at small composer sizes",
+      "format": "SVG",
+      "dimensions": [
+        22,
+        22
+      ],
+      "source": "Derived from supplied Fade W direction; local brand studies in branding/fade-w-studies-v2",
+      "alt": "Whisper",
+      "optimization": "Native SVG; optical Micro geometry",
+      "bytes": 3519,
+      "sha256": "e270b933e51603b14962fc3e61726735f48be9d2b83228039daf62ab249ac121"
     }
   ],
   "runtimeAssets": [
     "CSS planet/rim/orbits and portal geometry in src/style.css",
-    "Unique-ID mascot SVG in src/components/UI.tsx"
+    "Unique-ID mascot SVG in src/components/UI.tsx",
+    "Original orbital world and six bento illustrations in src/v2/Home.tsx and src/v2/style.css",
+    "Custom SVG bodies in src/v2/Dynamics.tsx",
+    "Raymarched procedural light field in src/v2/HoloField.tsx"
   ],
-  "external": "Lucide icons MIT; fonts supplied by Fontsource packages under their bundled font licenses. No Framer Marketplace assets copied."
+  "external": "Lucide icons MIT; fonts supplied by Fontsource packages under their bundled font licenses. No Framer Marketplace assets copied.",
+  "fonts": "public/fonts and their included OFL license files"
 }

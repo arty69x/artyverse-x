@@ -1,0 +1,4344 @@
+{
+  "schemaVersion": 1,
+  "product": "ARTYVERSE X",
+  "releaseScope": "Local single-user creative workspace",
+  "designDirection": "Luminous Intelligence / Deep Black Creative Universe",
+  "sourceOfTruth": [
+    "Latest user instructions",
+    "User master prompt",
+    "Pinned blueprint reconstruction and design extraction",
+    "Current source"
+  ],
+  "sources": {
+    "blueprintRepository": "https://github.com/assadawutz/artyverse-x",
+    "blueprintRevision": "462b7b63e9b065f84721aa31a39f46a8203dabe4",
+    "originalZipGitBlob": "71c4a75d18f306686939f02835a73be8c55a8db7",
+    "externalMaster": "v9.0.0-master",
+    "embeddedMaster": "v10.1.0-master",
+    "exactDesignV8MdProvided": false,
+    "exactDesignMasterV8JsonProvided": false
+  },
+  "tokenSource": "shared/schema.ts#theme",
+  "generatedTokens": "DESIGN_TOKENS.json",
+  "entitySource": "shared/schema.ts",
+  "providerSource": "shared/providers.ts",
+  "modules": [
+    {
+      "id": "home",
+      "name": "Home",
+      "route": "#/home",
+      "status": "Implemented",
+      "purpose": "Idea → saved conversation",
+      "primaryTask": "Idea → saved conversation",
+      "inputOutput": "Idea → saved conversation",
+      "emptyState": "Purpose-specific guidance and a working entry action. No fake saved projects.",
+      "loadingState": "Real initial fetch / upload / save states when asynchronous.",
+      "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
+      "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
+      "nextAction": "Explore or Conversations",
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "chat",
+      "name": "Conversations",
+      "route": "#/chat",
+      "status": "Implemented",
+      "purpose": "User text / text attachments → saved notes",
+      "primaryTask": "User text / text attachments → saved notes",
+      "inputOutput": "User text / text attachments → saved notes",
+      "emptyState": "Purpose-specific guidance and a working entry action. No fake saved projects.",
+      "loadingState": "Real initial fetch / upload / save states when asynchronous.",
+      "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
+      "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
+      "nextAction": "Open in Create",
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "explore",
+      "name": "Explore",
+      "route": "#/explore",
+      "status": "Implemented",
+      "purpose": "Search → matching workspace",
+      "primaryTask": "Search → matching workspace",
+      "inputOutput": "Search → matching workspace",
+      "emptyState": "Purpose-specific guidance and a working entry action. No fake saved projects.",
+      "loadingState": "Real initial fetch / upload / save states when asynchronous.",
+      "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
+      "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
+      "nextAction": "Open workspace",
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "templates",
+      "name": "Templates",
+      "route": "#/templates",
+      "status": "Implemented",
+      "purpose": "Preview → new document",
+      "primaryTask": "Preview → new document",
+      "inputOutput": "Preview → new document",
+      "emptyState": "Purpose-specific guidance and a working entry action. No fake saved projects.",
+      "loadingState": "Real initial fetch / upload / save states when asynchronous.",
+      "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
+      "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
+      "nextAction": "Edit in Create",
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "create",
+      "name": "Create / shared Layout Studio",
+      "route": "#/create",
+      "status": "Implemented (subset)",
+      "purpose": "Text / shape / image → editable document / SVG / JSON",
+      "primaryTask": "Text / shape / image → editable document / SVG / JSON",
+      "inputOutput": "Text / shape / image → editable document / SVG / JSON",
+      "emptyState": "Purpose-specific guidance and a working entry action. No fake saved projects.",
+      "loadingState": "Real initial fetch / upload / save states when asynchronous.",
+      "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
+      "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
+      "nextAction": "Save / Library / Present",
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "route": "#/research",
+      "status": "Implemented (subset)",
+      "purpose": "Notes + source + tags → note / document / conversation",
+      "primaryTask": "Notes + source + tags → note / document / conversation",
+      "inputOutput": "Notes + source + tags → note / document / conversation",
+      "emptyState": "Purpose-specific guidance and a working entry action. No fake saved projects.",
+      "loadingState": "Real initial fetch / upload / save states when asynchronous.",
+      "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
+      "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
+      "nextAction": "Create / Conversations",
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "voice",
+      "name": "Voice",
+      "route": "#/voice",
+      "status": "Implemented",
+      "purpose": "Real microphone → audio recording",
+      "primaryTask": "Real microphone → audio recording",
+      "inputOutput": "Real microphone → audio recording",
+      "emptyState": "Purpose-specific guidance and a working entry action. No fake saved projects.",
+      "loadingState": "Real initial fetch / upload / save states when asynchronous.",
+      "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
+      "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
+      "nextAction": "Playback / Save to Library",
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "live",
+      "name": "Live",
+      "route": "#/live",
+      "status": "Implemented (subset)",
+      "purpose": "Notes + cue cards → saved session",
+      "primaryTask": "Notes + cue cards → saved session",
+      "inputOutput": "Notes + cue cards → saved session",
+      "emptyState": "Purpose-specific guidance and a working entry action. No fake saved projects.",
+      "loadingState": "Real initial fetch / upload / save states when asynchronous.",
+      "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
+      "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
+      "nextAction": "Present / Library",
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "automate",
+      "name": "Automate",
+      "route": "#/automate",
+      "status": "Implemented (fixed local pipeline)",
+      "purpose": "Source text → deterministic transform result",
+      "primaryTask": "Source text → deterministic transform result",
+      "inputOutput": "Source text → deterministic transform result",
+      "emptyState": "Purpose-specific guidance and a working entry action. No fake saved projects.",
+      "loadingState": "Real initial fetch / upload / save states when asynchronous.",
+      "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
+      "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
+      "nextAction": "Save / export",
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "library",
+      "name": "Library",
+      "route": "#/library",
+      "status": "Implemented (subset)",
+      "purpose": "Saved real work → open / rename / duplicate / trash / export",
+      "primaryTask": "Saved real work → open / rename / duplicate / trash / export",
+      "inputOutput": "Saved real work → open / rename / duplicate / trash / export",
+      "emptyState": "Purpose-specific guidance and a working entry action. No fake saved projects.",
+      "loadingState": "Real initial fetch / upload / save states when asynchronous.",
+      "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
+      "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
+      "nextAction": "Editor / viewer",
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "settings",
+      "name": "Settings",
+      "route": "#/settings",
+      "status": "Implemented (subset)",
+      "purpose": "Preferences / backup → local configuration / restore",
+      "primaryTask": "Preferences / backup → local configuration / restore",
+      "inputOutput": "Preferences / backup → local configuration / restore",
+      "emptyState": "Purpose-specific guidance and a working entry action. No fake saved projects.",
+      "loadingState": "Real initial fetch / upload / save states when asynchronous.",
+      "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
+      "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
+      "nextAction": "Resume work",
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+    },
+    {
+      "id": "design",
+      "name": "Design OS / Motion Lab",
+      "route": "#/design",
+      "status": "Implemented (subset)",
+      "purpose": "Tokens / preset data → previews / apply accent / exports",
+      "primaryTask": "Tokens / preset data → previews / apply accent / exports",
+      "inputOutput": "Tokens / preset data → previews / apply accent / exports",
+      "emptyState": "Purpose-specific guidance and a working entry action. No fake saved projects.",
+      "loadingState": "Real initial fetch / upload / save states when asynchronous.",
+      "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
+      "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
+      "nextAction": "Shared editor / preview",
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+    }
+  ],
+  "componentCounts": {
+    "catalogued": 151,
+    "required": 64,
+    "implementedCatalogMappings": 64,
+    "verifiedWorkflowSmokeMappings": 24,
+    "standaloneComponentCount": null,
+    "warning": "These are catalog-to-native-pattern mappings, not a claim of 151 distinct shipped components or exhaustive state coverage."
+  },
+  "components": [
+    {
+      "id": "catalog-appshell",
+      "name": "AppShell",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "layout",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/App.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#AppShell"
+    },
+    {
+      "id": "catalog-page",
+      "name": "Page",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "layout",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/components/UI.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Page"
+    },
+    {
+      "id": "catalog-container",
+      "name": "Container",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "layout",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/style.css",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Container"
+    },
+    {
+      "id": "catalog-section",
+      "name": "Section",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "layout",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/style.css",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Section"
+    },
+    {
+      "id": "catalog-stack",
+      "name": "Stack",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "layout",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Stack"
+    },
+    {
+      "id": "catalog-inline",
+      "name": "Inline",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "layout",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Inline"
+    },
+    {
+      "id": "catalog-spacer",
+      "name": "Spacer",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "layout",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Spacer"
+    },
+    {
+      "id": "catalog-divider",
+      "name": "Divider",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "layout",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/style.css",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Divider"
+    },
+    {
+      "id": "catalog-surface",
+      "name": "Surface",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "layout",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/style.css",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Surface"
+    },
+    {
+      "id": "catalog-card",
+      "name": "Card",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "surface",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workspace.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Card"
+    },
+    {
+      "id": "catalog-cardheader",
+      "name": "CardHeader",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "surface",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workspace.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#CardHeader"
+    },
+    {
+      "id": "catalog-cardbody",
+      "name": "CardBody",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "surface",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workspace.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#CardBody"
+    },
+    {
+      "id": "catalog-cardfooter",
+      "name": "CardFooter",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "surface",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workspace.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#CardFooter"
+    },
+    {
+      "id": "catalog-panel",
+      "name": "Panel",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "surface",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Editor.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Panel"
+    },
+    {
+      "id": "catalog-glasspanel",
+      "name": "GlassPanel",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "surface",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#GlassPanel"
+    },
+    {
+      "id": "catalog-hero",
+      "name": "Hero",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "layout",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workspace.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Hero"
+    },
+    {
+      "id": "catalog-bentogrid",
+      "name": "BentoGrid",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "layout",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#BentoGrid"
+    },
+    {
+      "id": "catalog-sidebar",
+      "name": "Sidebar",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "layout",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/App.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Sidebar"
+    },
+    {
+      "id": "catalog-topbar",
+      "name": "Topbar",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "layout",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/App.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Topbar"
+    },
+    {
+      "id": "catalog-navbar",
+      "name": "Navbar",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "layout",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Navbar"
+    },
+    {
+      "id": "catalog-footer",
+      "name": "Footer",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "layout",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/App.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Footer"
+    },
+    {
+      "id": "catalog-breadcrumbs",
+      "name": "Breadcrumbs",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "navigation",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/App.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Breadcrumbs"
+    },
+    {
+      "id": "catalog-tabs",
+      "name": "Tabs",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "navigation",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/DesignOS.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Tabs"
+    },
+    {
+      "id": "catalog-tablist",
+      "name": "TabList",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "navigation",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/DesignOS.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#TabList"
+    },
+    {
+      "id": "catalog-tab",
+      "name": "Tab",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "navigation",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/DesignOS.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Tab"
+    },
+    {
+      "id": "catalog-tabpanel",
+      "name": "TabPanel",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "navigation",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#TabPanel"
+    },
+    {
+      "id": "catalog-accordion",
+      "name": "Accordion",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "disclosure",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Accordion"
+    },
+    {
+      "id": "catalog-accordionitem",
+      "name": "AccordionItem",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "disclosure",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#AccordionItem"
+    },
+    {
+      "id": "catalog-accordionheader",
+      "name": "AccordionHeader",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "disclosure",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#AccordionHeader"
+    },
+    {
+      "id": "catalog-accordionpanel",
+      "name": "AccordionPanel",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "disclosure",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#AccordionPanel"
+    },
+    {
+      "id": "catalog-disclosure",
+      "name": "Disclosure",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "disclosure",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Disclosure"
+    },
+    {
+      "id": "catalog-popover",
+      "name": "Popover",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "overlay",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Popover"
+    },
+    {
+      "id": "catalog-tooltip",
+      "name": "Tooltip",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "overlay",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Tooltip"
+    },
+    {
+      "id": "catalog-toast",
+      "name": "Toast",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "overlay",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/core/store.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Toast"
+    },
+    {
+      "id": "catalog-toaster",
+      "name": "Toaster",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "overlay",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Toaster"
+    },
+    {
+      "id": "catalog-snackbar",
+      "name": "Snackbar",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "overlay",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Snackbar"
+    },
+    {
+      "id": "catalog-modal",
+      "name": "Modal",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "overlay",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/components/UI.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Modal"
+    },
+    {
+      "id": "catalog-dialog",
+      "name": "Dialog",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "overlay",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/components/UI.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Dialog"
+    },
+    {
+      "id": "catalog-drawer",
+      "name": "Drawer",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "overlay",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/App.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Drawer"
+    },
+    {
+      "id": "catalog-bottomsheet",
+      "name": "BottomSheet",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "overlay",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#BottomSheet"
+    },
+    {
+      "id": "catalog-commandpalette",
+      "name": "CommandPalette",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "navigation",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/App.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#CommandPalette"
+    },
+    {
+      "id": "catalog-contextmenu",
+      "name": "ContextMenu",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "navigation",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ContextMenu"
+    },
+    {
+      "id": "catalog-menu",
+      "name": "Menu",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "navigation",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Menu"
+    },
+    {
+      "id": "catalog-menuitem",
+      "name": "MenuItem",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "navigation",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#MenuItem"
+    },
+    {
+      "id": "catalog-dropdown",
+      "name": "Dropdown",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "overlay",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Dropdown"
+    },
+    {
+      "id": "catalog-select",
+      "name": "Select",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workspace.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Select"
+    },
+    {
+      "id": "catalog-combobox",
+      "name": "Combobox",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Combobox"
+    },
+    {
+      "id": "catalog-button",
+      "name": "Button",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "action",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/components/UI.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Button"
+    },
+    {
+      "id": "catalog-iconbutton",
+      "name": "IconButton",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "action",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/style.css",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#IconButton"
+    },
+    {
+      "id": "catalog-splitbutton",
+      "name": "SplitButton",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "action",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#SplitButton"
+    },
+    {
+      "id": "catalog-togglebutton",
+      "name": "ToggleButton",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "action",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ToggleButton"
+    },
+    {
+      "id": "catalog-buttongroup",
+      "name": "ButtonGroup",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "action",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/style.css",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ButtonGroup"
+    },
+    {
+      "id": "catalog-link",
+      "name": "Link",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "navigation",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/App.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Link"
+    },
+    {
+      "id": "catalog-navlink",
+      "name": "NavLink",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "navigation",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/App.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#NavLink"
+    },
+    {
+      "id": "catalog-badge",
+      "name": "Badge",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "status",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/components/UI.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Badge"
+    },
+    {
+      "id": "catalog-chip",
+      "name": "Chip",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "status",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workflows.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Chip"
+    },
+    {
+      "id": "catalog-tag",
+      "name": "Tag",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "status",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Tag"
+    },
+    {
+      "id": "catalog-avatar",
+      "name": "Avatar",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "status",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/App.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Avatar"
+    },
+    {
+      "id": "catalog-avatargroup",
+      "name": "AvatarGroup",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "status",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#AvatarGroup"
+    },
+    {
+      "id": "catalog-progress",
+      "name": "Progress",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "status",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Progress"
+    },
+    {
+      "id": "catalog-progressbar",
+      "name": "ProgressBar",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "status",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ProgressBar"
+    },
+    {
+      "id": "catalog-spinner",
+      "name": "Spinner",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "status",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Spinner"
+    },
+    {
+      "id": "catalog-skeleton",
+      "name": "Skeleton",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "status",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Skeleton"
+    },
+    {
+      "id": "catalog-step",
+      "name": "Step",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "navigation",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Step"
+    },
+    {
+      "id": "catalog-stepper",
+      "name": "Stepper",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "navigation",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Stepper"
+    },
+    {
+      "id": "catalog-timeline",
+      "name": "Timeline",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "status",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Timeline"
+    },
+    {
+      "id": "catalog-kpi",
+      "name": "Kpi",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "status",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Kpi"
+    },
+    {
+      "id": "catalog-statcard",
+      "name": "StatCard",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "status",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#StatCard"
+    },
+    {
+      "id": "catalog-form",
+      "name": "Form",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workspace.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Form"
+    },
+    {
+      "id": "catalog-field",
+      "name": "Field",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Editor.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Field"
+    },
+    {
+      "id": "catalog-label",
+      "name": "Label",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Editor.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Label"
+    },
+    {
+      "id": "catalog-helptext",
+      "name": "HelpText",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workspace.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#HelpText"
+    },
+    {
+      "id": "catalog-errortext",
+      "name": "ErrorText",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/style.css",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ErrorText"
+    },
+    {
+      "id": "catalog-input",
+      "name": "Input",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Editor.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Input"
+    },
+    {
+      "id": "catalog-textarea",
+      "name": "Textarea",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workflows.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Textarea"
+    },
+    {
+      "id": "catalog-searchinput",
+      "name": "SearchInput",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/components/UI.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#SearchInput"
+    },
+    {
+      "id": "catalog-passwordinput",
+      "name": "PasswordInput",
+      "scope": "Not applicable",
+      "status": "Specified",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#PasswordInput"
+    },
+    {
+      "id": "catalog-numberinput",
+      "name": "NumberInput",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Editor.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#NumberInput"
+    },
+    {
+      "id": "catalog-otpinput",
+      "name": "OtpInput",
+      "scope": "Not applicable",
+      "status": "Specified",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#OtpInput"
+    },
+    {
+      "id": "catalog-checkbox",
+      "name": "Checkbox",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/DesignOS.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Checkbox"
+    },
+    {
+      "id": "catalog-radio",
+      "name": "Radio",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Radio"
+    },
+    {
+      "id": "catalog-switch",
+      "name": "Switch",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Switch"
+    },
+    {
+      "id": "catalog-slider",
+      "name": "Slider",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/DesignOS.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Slider"
+    },
+    {
+      "id": "catalog-rangeslider",
+      "name": "RangeSlider",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#RangeSlider"
+    },
+    {
+      "id": "catalog-datepicker",
+      "name": "DatePicker",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#DatePicker"
+    },
+    {
+      "id": "catalog-timepicker",
+      "name": "TimePicker",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#TimePicker"
+    },
+    {
+      "id": "catalog-calendar",
+      "name": "Calendar",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Calendar"
+    },
+    {
+      "id": "catalog-fileupload",
+      "name": "FileUpload",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/core/store.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#FileUpload"
+    },
+    {
+      "id": "catalog-dropzone",
+      "name": "Dropzone",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "form",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Dropzone"
+    },
+    {
+      "id": "catalog-table",
+      "name": "Table",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Table"
+    },
+    {
+      "id": "catalog-datatable",
+      "name": "DataTable",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#DataTable"
+    },
+    {
+      "id": "catalog-tabletoolbar",
+      "name": "TableToolbar",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#TableToolbar"
+    },
+    {
+      "id": "catalog-pagination",
+      "name": "Pagination",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "navigation",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Pagination"
+    },
+    {
+      "id": "catalog-sortbutton",
+      "name": "SortButton",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#SortButton"
+    },
+    {
+      "id": "catalog-filterbar",
+      "name": "FilterBar",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workspace.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#FilterBar"
+    },
+    {
+      "id": "catalog-columnpicker",
+      "name": "ColumnPicker",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ColumnPicker"
+    },
+    {
+      "id": "catalog-list",
+      "name": "List",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workspace.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#List"
+    },
+    {
+      "id": "catalog-listitem",
+      "name": "ListItem",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workspace.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ListItem"
+    },
+    {
+      "id": "catalog-virtuallist",
+      "name": "VirtualList",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#VirtualList"
+    },
+    {
+      "id": "catalog-tree",
+      "name": "Tree",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Tree"
+    },
+    {
+      "id": "catalog-treeitem",
+      "name": "TreeItem",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#TreeItem"
+    },
+    {
+      "id": "catalog-explorer",
+      "name": "Explorer",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Explorer"
+    },
+    {
+      "id": "catalog-codeeditor",
+      "name": "CodeEditor",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "code",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#CodeEditor"
+    },
+    {
+      "id": "catalog-monacoeditor",
+      "name": "MonacoEditor",
+      "scope": "Not applicable",
+      "status": "Specified",
+      "purpose": "code",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#MonacoEditor"
+    },
+    {
+      "id": "catalog-terminal",
+      "name": "Terminal",
+      "scope": "Not applicable",
+      "status": "Specified",
+      "purpose": "code",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Terminal"
+    },
+    {
+      "id": "catalog-logviewer",
+      "name": "LogViewer",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "code",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#LogViewer"
+    },
+    {
+      "id": "catalog-image",
+      "name": "Image",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "media",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Editor.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Image"
+    },
+    {
+      "id": "catalog-icon",
+      "name": "Icon",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "media",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/App.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Icon"
+    },
+    {
+      "id": "catalog-svgicon",
+      "name": "SvgIcon",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "media",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/components/UI.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#SvgIcon"
+    },
+    {
+      "id": "catalog-video",
+      "name": "Video",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "media",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Video"
+    },
+    {
+      "id": "catalog-audio",
+      "name": "Audio",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "media",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Voice.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Audio"
+    },
+    {
+      "id": "catalog-player",
+      "name": "Player",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "media",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Player"
+    },
+    {
+      "id": "catalog-carousel",
+      "name": "Carousel",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "media",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/DesignOS.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Carousel"
+    },
+    {
+      "id": "catalog-gallery",
+      "name": "Gallery",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "media",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/DesignOS.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Gallery"
+    },
+    {
+      "id": "catalog-lightbox",
+      "name": "Lightbox",
+      "scope": "Supporting",
+      "status": "Specified",
+      "purpose": "overlay",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Lightbox"
+    },
+    {
+      "id": "catalog-map",
+      "name": "Map",
+      "scope": "Not applicable",
+      "status": "Specified",
+      "purpose": "media",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Map"
+    },
+    {
+      "id": "catalog-chart",
+      "name": "Chart",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Chart"
+    },
+    {
+      "id": "catalog-barchart",
+      "name": "BarChart",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#BarChart"
+    },
+    {
+      "id": "catalog-linechart",
+      "name": "LineChart",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#LineChart"
+    },
+    {
+      "id": "catalog-areachart",
+      "name": "AreaChart",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#AreaChart"
+    },
+    {
+      "id": "catalog-piechart",
+      "name": "PieChart",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#PieChart"
+    },
+    {
+      "id": "catalog-sparkline",
+      "name": "Sparkline",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "data",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Sparkline"
+    },
+    {
+      "id": "catalog-notificationcenter",
+      "name": "NotificationCenter",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "status",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#NotificationCenter"
+    },
+    {
+      "id": "catalog-activityfeed",
+      "name": "ActivityFeed",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "status",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ActivityFeed"
+    },
+    {
+      "id": "catalog-chat",
+      "name": "Chat",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "ai",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workflows.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Chat"
+    },
+    {
+      "id": "catalog-chatinput",
+      "name": "ChatInput",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "ai",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workflows.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ChatInput"
+    },
+    {
+      "id": "catalog-chatmessage",
+      "name": "ChatMessage",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "ai",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workflows.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ChatMessage"
+    },
+    {
+      "id": "catalog-promptbox",
+      "name": "PromptBox",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "ai",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workspace.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#PromptBox"
+    },
+    {
+      "id": "catalog-agentstatus",
+      "name": "AgentStatus",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "status",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#AgentStatus"
+    },
+    {
+      "id": "catalog-pipelinestatus",
+      "name": "PipelineStatus",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "status",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#PipelineStatus"
+    },
+    {
+      "id": "catalog-overlaycanvas",
+      "name": "OverlayCanvas",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "canvas",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#OverlayCanvas"
+    },
+    {
+      "id": "catalog-blueprintlayer",
+      "name": "BlueprintLayer",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "canvas",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#BlueprintLayer"
+    },
+    {
+      "id": "catalog-diffheatmap",
+      "name": "DiffHeatmap",
+      "scope": "Not applicable",
+      "status": "Specified",
+      "purpose": "canvas",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#DiffHeatmap"
+    },
+    {
+      "id": "catalog-ruler",
+      "name": "Ruler",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "canvas",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Ruler"
+    },
+    {
+      "id": "catalog-guides",
+      "name": "Guides",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "canvas",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Guides"
+    },
+    {
+      "id": "catalog-minimap",
+      "name": "Minimap",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "canvas",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#Minimap"
+    },
+    {
+      "id": "catalog-zoomcontrols",
+      "name": "ZoomControls",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "canvas",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Editor.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ZoomControls"
+    },
+    {
+      "id": "catalog-parallaxscene",
+      "name": "ParallaxScene",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "spatial",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ParallaxScene"
+    },
+    {
+      "id": "catalog-tiltcard",
+      "name": "TiltCard",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "spatial",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/DesignOS.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#TiltCard"
+    },
+    {
+      "id": "catalog-spatialcard",
+      "name": "SpatialCard",
+      "scope": "Required now",
+      "status": "Verified (workflow smoke)",
+      "purpose": "spatial",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/DesignOS.tsx",
+      "verificationEvidence": [
+        "tests/e2e/journeys.spec.ts",
+        "tests/evidence/playwright-results.json"
+      ],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#SpatialCard"
+    },
+    {
+      "id": "catalog-orbitcontrols",
+      "name": "OrbitControls",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "spatial",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#OrbitControls"
+    },
+    {
+      "id": "catalog-threecanvas",
+      "name": "ThreeCanvas",
+      "scope": "Not applicable",
+      "status": "Specified",
+      "purpose": "spatial",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ThreeCanvas"
+    },
+    {
+      "id": "catalog-splatviewer",
+      "name": "SplatViewer",
+      "scope": "Not applicable",
+      "status": "Specified",
+      "purpose": "spatial",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#SplatViewer"
+    },
+    {
+      "id": "catalog-modelviewer",
+      "name": "ModelViewer",
+      "scope": "Not applicable",
+      "status": "Specified",
+      "purpose": "spatial",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ModelViewer"
+    },
+    {
+      "id": "catalog-authgate",
+      "name": "AuthGate",
+      "scope": "Not applicable",
+      "status": "Specified",
+      "purpose": "account",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#AuthGate"
+    },
+    {
+      "id": "catalog-signin",
+      "name": "SignIn",
+      "scope": "Not applicable",
+      "status": "Specified",
+      "purpose": "account",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#SignIn"
+    },
+    {
+      "id": "catalog-signup",
+      "name": "SignUp",
+      "scope": "Not applicable",
+      "status": "Specified",
+      "purpose": "account",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#SignUp"
+    },
+    {
+      "id": "catalog-usermenu",
+      "name": "UserMenu",
+      "scope": "Future",
+      "status": "Specified",
+      "purpose": "account",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": null,
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#UserMenu"
+    },
+    {
+      "id": "catalog-settingspanel",
+      "name": "SettingsPanel",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "account",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workspace.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#SettingsPanel"
+    },
+    {
+      "id": "catalog-themepicker",
+      "name": "ThemePicker",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "account",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/DesignOS.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#ThemePicker"
+    },
+    {
+      "id": "catalog-languagepicker",
+      "name": "LanguagePicker",
+      "scope": "Required now",
+      "status": "Implemented (subset)",
+      "purpose": "account",
+      "variants": "Native contextual variants; see implementation. Full V8 state contract not claimed.",
+      "states": [
+        "default",
+        "focus",
+        "hover",
+        "disabled where relevant"
+      ],
+      "keyboard": "Native control semantics; dialog Escape; carousel arrows/Home/End; see tests.",
+      "responsive": "Shared shell and 320–1920 simulated layout checks where rendered.",
+      "motion": "Respects global reduced-motion policy where motion is used.",
+      "dependencies": [
+        "React",
+        "native HTML/CSS"
+      ],
+      "implementationLocation": "src/pages/Workspace.tsx",
+      "verificationEvidence": [],
+      "sourceContract": "docs/source/V8_COMPONENT_INVENTORY.json#LanguagePicker"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "MP-00",
+      "requirement": "Source of truth",
+      "source": "User ARTYVERSE X master prompt section 00",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-01",
+      "requirement": "Product vision",
+      "source": "User ARTYVERSE X master prompt section 01",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-02",
+      "requirement": "Honest capabilities",
+      "source": "User ARTYVERSE X master prompt section 02",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-03",
+      "requirement": "Safe migration",
+      "source": "User ARTYVERSE X master prompt section 03",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-04",
+      "requirement": "Art direction",
+      "source": "User ARTYVERSE X master prompt section 04",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-05",
+      "requirement": "Visual restraint",
+      "source": "User ARTYVERSE X master prompt section 05",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-06",
+      "requirement": "Tokens",
+      "source": "User ARTYVERSE X master prompt section 06",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-07",
+      "requirement": "Typography",
+      "source": "User ARTYVERSE X master prompt section 07",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-08",
+      "requirement": "Information architecture",
+      "source": "User ARTYVERSE X master prompt section 08",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-09",
+      "requirement": "Global shell",
+      "source": "User ARTYVERSE X master prompt section 09",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-10",
+      "requirement": "Home",
+      "source": "User ARTYVERSE X master prompt section 10",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-11",
+      "requirement": "Shared composer",
+      "source": "User ARTYVERSE X master prompt section 11",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-12",
+      "requirement": "Chat",
+      "source": "User ARTYVERSE X master prompt section 12",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-13",
+      "requirement": "Explore",
+      "source": "User ARTYVERSE X master prompt section 13",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-14",
+      "requirement": "Templates",
+      "source": "User ARTYVERSE X master prompt section 14",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-15",
+      "requirement": "Create",
+      "source": "User ARTYVERSE X master prompt section 15",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-16",
+      "requirement": "Research",
+      "source": "User ARTYVERSE X master prompt section 16",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-17",
+      "requirement": "Voice",
+      "source": "User ARTYVERSE X master prompt section 17",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-18",
+      "requirement": "Live",
+      "source": "User ARTYVERSE X master prompt section 18",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-19",
+      "requirement": "Automate",
+      "source": "User ARTYVERSE X master prompt section 19",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-20",
+      "requirement": "Library",
+      "source": "User ARTYVERSE X master prompt section 20",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-21",
+      "requirement": "Settings",
+      "source": "User ARTYVERSE X master prompt section 21",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-22",
+      "requirement": "Cross-workspace journeys",
+      "source": "User ARTYVERSE X master prompt section 22",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-23",
+      "requirement": "Card families",
+      "source": "User ARTYVERSE X master prompt section 23",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-24",
+      "requirement": "Assets",
+      "source": "User ARTYVERSE X master prompt section 24",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-25",
+      "requirement": "Living assistant",
+      "source": "User ARTYVERSE X master prompt section 25",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-26",
+      "requirement": "Scroll reveal",
+      "source": "User ARTYVERSE X master prompt section 26",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-27",
+      "requirement": "Text effects",
+      "source": "User ARTYVERSE X master prompt section 27",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-28",
+      "requirement": "Kinetic typography",
+      "source": "User ARTYVERSE X master prompt section 28",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-29",
+      "requirement": "Spatial carousel",
+      "source": "User ARTYVERSE X master prompt section 29",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-30",
+      "requirement": "Cinematic carousel",
+      "source": "User ARTYVERSE X master prompt section 30",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-31",
+      "requirement": "Media corridor",
+      "source": "User ARTYVERSE X master prompt section 31",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-32",
+      "requirement": "SVG motion",
+      "source": "User ARTYVERSE X master prompt section 32",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-33",
+      "requirement": "Motion orchestration",
+      "source": "User ARTYVERSE X master prompt section 33",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-34",
+      "requirement": "Motion Lab",
+      "source": "User ARTYVERSE X master prompt section 34",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-35",
+      "requirement": "Design OS",
+      "source": "User ARTYVERSE X master prompt section 35",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-36",
+      "requirement": "Component coverage",
+      "source": "User ARTYVERSE X master prompt section 36",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-37",
+      "requirement": "Viewer and presentation",
+      "source": "User ARTYVERSE X master prompt section 37",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-38",
+      "requirement": "Data persistence",
+      "source": "User ARTYVERSE X master prompt section 38",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-39",
+      "requirement": "Virtual files",
+      "source": "User ARTYVERSE X master prompt section 39",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-40",
+      "requirement": "Localization/responsive",
+      "source": "User ARTYVERSE X master prompt section 40",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-41",
+      "requirement": "Accessibility",
+      "source": "User ARTYVERSE X master prompt section 41",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-42",
+      "requirement": "Performance",
+      "source": "User ARTYVERSE X master prompt section 42",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-43",
+      "requirement": "Security",
+      "source": "User ARTYVERSE X master prompt section 43",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-44",
+      "requirement": "Verification",
+      "source": "User ARTYVERSE X master prompt section 44",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-45",
+      "requirement": "Acceptance",
+      "source": "User ARTYVERSE X master prompt section 45",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-46",
+      "requirement": "Export/deployment",
+      "source": "User ARTYVERSE X master prompt section 46",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-47",
+      "requirement": "Execution plan",
+      "source": "User ARTYVERSE X master prompt section 47",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-48",
+      "requirement": "Deliverables",
+      "source": "User ARTYVERSE X master prompt section 48",
+      "status": "Implemented in local scope",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    },
+    {
+      "id": "MP-49",
+      "requirement": "Craft",
+      "source": "User ARTYVERSE X master prompt section 49",
+      "status": "In progress / subset delivered",
+      "evidence": "ARTYVERSE_X_MASTER_SPEC.md, source implementation, VERIFICATION_REPORT.md",
+      "limitation": "Full master acceptance is not claimed; see known limitations and motion/component coverage."
+    }
+  ],
+  "framer": {
+    "project": "https://framer.com/projects/Q9u0Ksh8PgRNuFPtNtGO",
+    "role": "Editable visual design companion; not the application backend",
+    "marketplaceAcquisitions": 0,
+    "registry": "docs/source/FRAMER_RESOURCE_REGISTRY.json"
+  },
+  "capabilities": {
+    "local": [
+      "editor",
+      "notes",
+      "conversations",
+      "audio recording",
+      "cue presentation",
+      "deterministic text workflow",
+      "SQLite revisions",
+      "backup/restore",
+      "SVG/JSON/Markdown export",
+      "Motion Lab previews"
+    ],
+    "connected": [],
+    "unavailable": [
+      "AI inference",
+      "transcription",
+      "cloud sync",
+      "accounts",
+      "external automation",
+      "scheduler"
+    ]
+  }
+}

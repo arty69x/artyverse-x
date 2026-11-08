@@ -19,3 +19,17 @@ Geometry names: Helix, Double Helix, Orbital Ring, Spiral Vortex, Sine Ribbon, F
 Spatial authoring units/ranges/defaults are defined by `ranges`/`defaults` in `src/pages/DesignOS.tsx`. Width/height authoring values are separate from runtime preview clamping. Presets are schemaVersion 1 JSON data, validated before preview application. Importing never executes code. Compatibility is explicitly `motion-preview`; a document scene integration is still in progress.
 
 Presets can be saved, duplicated, exported, imported into preview, reset and replayed. Global Full/Balanced/Calm/Off and OS reduced-motion reduce decorative work. Canvas has semantic DOM text. No promise of “zero DOM overhead” or sustained 60 FPS is made.
+
+## V2 additions / superseding notes
+
+The table above describes retained V1 effect engines and their limits. It does not imply exhaustive V2 verification. New behavior:
+
+| Surface | Actual behavior | Limits / evidence |
+|---|---|---|
+| Home orbital world | Native SVG sphere/orbits, restrained pointer tilt, static OS-reduced-motion state | No raster UI; responsive screenshots are art-direction evidence only |
+| Dynamics | Custom SVG bodies, mass/spring/damping/gravity, bounded velocity and dt, drag/pan/pinch, numeric alternatives | No rigid-body collisions; sensor input only after permission and real events; simulated browser checks ≠ real sensors |
+| HoloField | Optional WebGL raymarched 3D light field, 48 steps, bounded resolution/DPR, approximately 30fps scheduling cap, offscreen/hidden pause and static fallback | GPU/browser dependent; cap is not a measured sustained FPS claim |
+| Story Studio | Scene timing from elapsed clock; manual play/pause/next, fade/slide/instant, duration, fullscreen from user action, reduced motion | Scene Transition presets now explicitly support story-scene and apply actual duration; other preset types remain motion-preview |
+| Sound Lab | Actual analyser waveform canvas + real audio sequencer | Audio remains user initiated; timers/context/oscillators stop on leaving or hiding view |
+
+No React state update occurs every frame in the SVG spring integrator or WebGL shader loop. Numeric parameters and pointer camera controls update React state on actual user input. All visual effects can be disabled while the tool remains usable. Shared 120/220/480ms durations originate in the canonical theme; art-specific timing remains configurable and is not forced onto one scale.

@@ -4,6 +4,7 @@ import { mkdirSync, writeFileSync, readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 import { randomUUID } from "node:crypto";
 import { itemInput, type Item } from "../shared/schema.ts";
+import{registerAgent}from"./agent.ts";
 const dir = resolve(process.env.ARTYVERSE_DATA_DIR || ".data");
 mkdirSync(dir, { recursive: true });
 mkdirSync(resolve(dir, "assets"), { recursive: true });
@@ -102,6 +103,7 @@ app.get("/api/assets/:id", (req, res) => {
   res.type(row.mime).sendFile(resolve(dir, "assets", row.id));
 });
 app.use(express.json({ limit: "100mb" }));
+registerAgent(app,db);
 const all = (): Item[] =>
   db
     .prepare("SELECT json FROM items")
@@ -110,7 +112,7 @@ const all = (): Item[] =>
 app.get("/api/status", (_req, res) =>
   res.json({
     storage: "Local SQLite",
-    ai: "unavailable",
+    ai: process.env.ARTYVERSE_AI_KEY&&process.env.ARTYVERSE_AI_MODEL?"configured":"unavailable",
     cloud: "unavailable",
     scheduler: "unavailable",
     bytes: readFileSync(resolve(dir, "workspace.sqlite")).byteLength,
