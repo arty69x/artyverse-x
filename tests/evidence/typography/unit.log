@@ -1,0 +1,16 @@
+
+> artyverse-x@3.0.0-local test
+> vitest run
+
+
+ RUN  v5.1.0 /workspace/artyverse-x
+
+
+ Test Files  4 passed (4)
+      Tests  20 passed (20)
+   Start at  15:22:12
+   Duration  1.17s (import 61%, tests 19%, transform 16%, worker 3%)
+
+    Isolate  4 workers spawned · ~125ms startup each (spawn + environment, per file)
+             at least ~375ms faster with isolate: false — reuses workers across files instead of one per file
+

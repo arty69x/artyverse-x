@@ -1,0 +1,128 @@
+{
+  "timestamp": "2026-11-08T15:22:06.111Z",
+  "browser": "154.0.8037.57",
+  "cases": [
+    {
+      "screen": "design-system",
+      "locale": "en",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "design-system",
+      "locale": "en",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "design-system",
+      "locale": "en",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "design-system",
+      "locale": "en",
+      "theme": "light",
+      "width": 320,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "design-system",
+      "locale": "en",
+      "theme": "light",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "design-system",
+      "locale": "en",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "design-system",
+      "locale": "th",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "design-system",
+      "locale": "th",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "design-system",
+      "locale": "th",
+      "theme": "dark",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "design-system",
+      "locale": "th",
+      "theme": "light",
+      "width": 320,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "design-system",
+      "locale": "th",
+      "theme": "light",
+      "width": 390,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "design-system",
+      "locale": "th",
+      "theme": "light",
+      "width": 1440,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "home",
+      "width": 320,
+      "overflow": false,
+      "clipping": false
+    },
+    {
+      "screen": "home",
+      "width": 390,
+      "overflow": false,
+      "clipping": false
+    },
+    {
+      "screen": "home",
+      "width": 1440,
+      "overflow": false,
+      "clipping": false
+    }
+  ],
+  "interactionChecks": [
+    "real weight200",
+    "underline preview",
+    "keyboard focus outline",
+    "draft reload",
+    "actual token JSON download"
+  ],
+  "errors": []
+}

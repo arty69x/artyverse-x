@@ -1,0 +1,22 @@
+
+> artyverse-x@3.0.0-local test:e2e
+> playwright test --grep Home|Design system|Mobile navigation|Unified|Brand board|No page overflow
+
+[WebServer] (node:78934) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 9 tests using 1 worker
+
+(node:78958) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/journeys.spec.ts:8:1 › Home → conversation → Create → save → Library → reopen (5.1s)
+  ✓  2 tests/e2e/journeys.spec.ts:191:1 › No page overflow at target widths and main routes render without runtime errors (27.1s)
+  ✓  3 tests/e2e/journeys.spec.ts:222:1 › Home semantics, dialog keyboard and reduced-motion visibility (4.3s)
+  ✓  4 tests/e2e/reconstruction.spec.ts:5:1 › Unified Extract Compose Ship entry points navigate to actual workspaces (8.7s)
+  ✓  5 tests/e2e/reconstruction.spec.ts:30:1 › Brand board uses native vector lockups and canonical tokens (3.1s)
+  ✓  6 tests/e2e/v3.spec.ts:40:1 › Home portal order can be changed with keyboard-accessible controls and survives reload (4.7s)
+  ✓  7 tests/e2e/v3.spec.ts:206:1 › Design system has eleven live sections, real contrast pairs, native dialog and roving tabs (3.8s)
+  ✓  8 tests/e2e/v3.spec.ts:228:1 › Mobile navigation drawer, answer sheet, safe area and accessible focus work (4.6s)
+  ✓  9 tests/e2e/v3.spec.ts:273:1 › Home hero is usable while saved data loads, with honest loading metrics and retained input (3.2s)
+
+  9 passed (1.1m)

@@ -43,3 +43,5 @@ The Design System's animation is a labeled specimen with pause. Actual loading e
 ## Modern kit supplement
 
 src/concept/FramerStudioComponents.tsx exports real spring/ease/stagger tokens, viewport/tab shared-layout transitions, tactile controls, in-view component entrance and a secondary SVG rig. The rig uses distinct aa/E/FF/sil geometry from a real user-authorized FFT input estimate; it does not recognize phonemes or capture speech-synthesis output. src/components/kit/motion.tsx enforces OS/Calm/Off/hidden policy; rig IntersectionObserver suspends ambient motion offscreen. New synthetic-media and reduced-motion journeys passed; real-device FPS/audio/sensors remain unverified. See COMPONENT_UPGRADE_REPORT.md and tests/evidence/component-upgrade/.
+
+Typography polish: focus-link quarter underline expands on hover/keyboard focus using existing panel duration; reduced motion removes transition. Outline/marker/chromatic text emphasis is static, not a loop or AI streaming effect. No FPS or animation-fidelity claim. TypographyLab preview controls have actual local effects and exported canonical values.

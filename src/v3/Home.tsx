@@ -283,7 +283,7 @@ export function HomeV3({ go }: { go: Navigate }) {
             <i />
             ARTYVERSE X / CREATIVE WORKSPACE
           </span>
-          <h1 className="recon-manifesto">
+          <h1 className="recon-manifesto" lang="en">
             <span>EXTRACT.</span>
             <mark>COMPOSE.</mark>
             <em>

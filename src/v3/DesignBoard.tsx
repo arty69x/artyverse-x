@@ -1,3 +1,4 @@
+import { TypographyLab } from "./TypographyLab";
 import { BrandPanel } from "./BrandPanel";
 import { useState } from "react";
 import {
@@ -215,17 +216,26 @@ export function DesignBoard() {
           <code>const nextWorld = create(yourIdea);</code>
         </div>
         <div className="v3-type-scale">
-          {[64, 48, 32, 24, 20, 18, 16, 14, 12].map((n) => (
-            <div key={n}>
-              <code>{n}px</code>
+          {designSystem.type.scale.map((v) => (
+            <div key={v.role}>
+              <code>
+                {v.role} / {v.size}:{v.line}
+              </code>
               <span
-                style={{ fontSize: n > 32 ? "clamp(28px,4vw," + n + "px)" : n }}
+                style={{
+                  fontSize: v.fluid,
+                  lineHeight: v.line / v.size,
+                  fontWeight: v.weight,
+                }}
               >
-                Artyverse · สร้างสรรค์
+                {v.role === "code"
+                  ? "const create = () => idea;"
+                  : "Artyverse · สร้างสรรค์"}
               </span>
             </div>
           ))}
         </div>
+        <TypographyLab />
       </section>
       <section id="board-3">
         {heading(

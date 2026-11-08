@@ -1,4 +1,4 @@
-import {format} from "prettier";
+import { format } from "prettier";
 import { theme } from "../shared/schema.ts";
 import { designSystem } from "../shared/design.ts";
 import { writeFileSync } from "node:fs";
@@ -37,4 +37,21 @@ css +=
   ";--brand-violet:" +
   designSystem.brand.violet +
   ";--motion-micro:120ms;--motion-panel:320ms;--motion-scene:500ms}\n";
-writeFileSync("src/v3/tokens.css", await format(css,{parser:"css"}));
+css +=
+  ":root{" +
+  Object.entries(designSystem.type.weights)
+    .map(([k, v]) => `--weight-${k}:${v}`)
+    .join(";") +
+  ";" +
+  Object.entries(designSystem.type.tracking)
+    .map(([k, v]) => `--tracking-${k}:${v}em`)
+    .join(";") +
+  ";" +
+  designSystem.type.scale
+    .map(
+      (v) =>
+        `--type-${v.role}-size:${v.fluid};--type-${v.role}-line:${v.line / v.size};--type-${v.role}-weight:${v.weight};--type-${v.role}-tracking:${v.tracking}em;--type-${v.role}-font:var(--font-${v.family})`,
+    )
+    .join(";") +
+  `;--underline-thickness:${designSystem.type.emphasis.underlineThickness}em;--underline-offset:${designSystem.type.emphasis.underlineOffset}em;--focus-width:${designSystem.type.emphasis.focusWidth}px;--focus-offset:${designSystem.type.emphasis.focusOffset}px;--marker-padding:${designSystem.type.emphasis.markerPaddingInline}em}\n`;
+writeFileSync("src/v3/tokens.css", await format(css, { parser: "css" }));

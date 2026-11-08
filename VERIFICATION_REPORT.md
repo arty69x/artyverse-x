@@ -60,3 +60,6 @@ Package with `python3 scripts/package-v3.py` after committing the reviewed sourc
 
 ## Latest reconstruction evidence
 See docs/reconstruction/VERIFICATION.md and tests/evidence/reconstruction/. This supersedes previous runtime claims for the new home/brand/shell. 49 unique browser/API cases have passing evidence (47 initial passes + 2 accepted retests; initial failures retained transparently), 20 units, 15 visual/axe surface cases, both runtime builds and built IndexedDB handoff. No pixel-perfect/3D/FPS/Lighthouse claim. Historical metrics are not transferred to the reconstruction.
+
+## Typography polish (latest)
+Both builds/TypeScript,20 unit tests and9 affected browser journeys passed.12 TH/EN two-theme typography cases passed axe/page-overflow checks;3 Home sizes passed overflow/clipping checks. Actual weight/effect/focus/draft/export behavior verified. See docs/typography/TYPE_SYSTEM.md and tests/evidence/typography/. Prior full49-case regression belongs to the preceding runtime and is not relabeled as a new full run. No pixel-perfect/Lighthouse/certification claim.
