@@ -222,7 +222,7 @@ export function HomeV3({ go }: { go: Navigate }) {
       ],
     ] as const;
   async function start() {
-    if (!draft.trim() || busy) return;
+    if (!draft.trim() || busy || s.loading) return;
     setBusy(true);
     try {
       if (mode === "agent") {
@@ -375,14 +375,14 @@ export function HomeV3({ go }: { go: Navigate }) {
           <button
             className="v3-send"
             aria-label={t("Start conversation", "เริ่มบทสนทนา")}
-            disabled={!draft.trim() || busy}
+            disabled={!draft.trim() || busy || s.loading}
             onClick={() => void start()}
           >
             <ArrowUp size={21} />
           </button>
         </div>
       </section>
-      <div className="v3-stat-grid">
+      <div className="v3-stat-grid" aria-busy={s.loading}>
         {stats.map(([label, value, Icon], i) => (
           <a
             href={"#/" + ["library", "projects", "research", "agents"][i]}
@@ -390,9 +390,13 @@ export function HomeV3({ go }: { go: Navigate }) {
           >
             <div>
               <span>{label}</span>
-              <strong>{value.toLocaleString(s.locale)}</strong>
+              <strong>
+                {s.loading ? "—" : value.toLocaleString(s.locale)}
+              </strong>
               <small>
-                {t("From your saved work", "จากข้อมูลที่คุณบันทึก")}
+                {s.loading
+                  ? t("Loading saved records…", "กำลังโหลดข้อมูล…")
+                  : t("From your saved work", "จากข้อมูลที่คุณบันทึก")}
               </small>
             </div>
             <Icon size={23} />
@@ -534,7 +538,11 @@ export function HomeV3({ go }: { go: Navigate }) {
             <ArrowUpRight size={17} />
           </a>
         </header>
-        {recent.length ? (
+        {s.loading ? (
+          <div className="v3-recent-empty" role="status">
+            {t("Loading saved work…", "กำลังโหลดงานที่บันทึก…")}
+          </div>
+        ) : recent.length ? (
           <div className="v3-recent-grid">
             {recent.map((i, n) => (
               <a key={i.id} href={"#/" + routeForItem(i) + "/" + i.id}>

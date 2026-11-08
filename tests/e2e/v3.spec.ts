@@ -269,3 +269,41 @@ test("Keyboard tabs in code editor move selection without trapping focus", async
   await page.keyboard.press("End");
   await expect(page.getByRole("tab", { name: "script.js" })).toBeFocused();
 });
+
+test("Home hero is usable while saved data loads, with honest loading metrics and retained input", async ({
+  page,
+}) => {
+  await page.addInitScript(() => localStorage.setItem("av-locale", "en"));
+  let release!: () => void;
+  const gate = new Promise<void>((r) => (release = r));
+  await page.route("**/api/items", async (route) => {
+    await gate;
+    await route.continue();
+  });
+  try {
+    await page.goto("/");
+    await expect(
+      page.getByRole("heading", { name: /One artist/ }),
+    ).toBeVisible();
+    await expect(page.locator(".v3-stat-grid")).toHaveAttribute(
+      "aria-busy",
+      "true",
+    );
+    await page.getByLabel("Your idea", { exact: true }).fill("My early draft");
+    await expect(
+      page.getByRole("button", { name: "Start conversation", exact: true }),
+    ).toBeDisabled();
+  } finally {
+    release();
+  }
+  await expect(page.locator(".v3-stat-grid")).toHaveAttribute(
+    "aria-busy",
+    "false",
+  );
+  await expect(page.getByLabel("Your idea", { exact: true })).toHaveValue(
+    "My early draft",
+  );
+  await expect(
+    page.getByRole("button", { name: "Start conversation", exact: true }),
+  ).toBeEnabled();
+});

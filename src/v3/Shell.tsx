@@ -289,7 +289,7 @@ export function Shell({
             <div className="topbar-actions">
               <button
                 className="v3-top-search"
-                aria-label={t("Search","ค้นหา")}
+                aria-label={t("Search", "ค้นหา")}
                 onClick={() => setCommand(true)}
               >
                 <Search size={17} />
@@ -316,14 +316,18 @@ export function Shell({
               </button>
               <button
                 className="language-button"
-                aria-label={(s.locale==="en"?"EN":"TH")+" · "+t("Change language", "เปลี่ยนภาษา")}
+                aria-label={
+                  (s.locale === "en" ? "EN" : "TH") +
+                  " · " +
+                  t("Change language", "เปลี่ยนภาษา")
+                }
                 onClick={() => s.setLocale(s.locale === "en" ? "th" : "en")}
               >
                 {s.locale === "en" ? "EN" : "TH"}
               </button>
               <button
                 className="v3-create-button"
-                aria-label={t("Create new","สร้างใหม่")}
+                aria-label={t("Create new", "สร้างใหม่")}
                 onClick={() => setCreate(true)}
               >
                 <Plus size={18} />
@@ -351,7 +355,7 @@ export function Shell({
                   )}
                 </p>
               </div>
-            ) : s.loading ? (
+            ) : s.loading && route !== "home" ? (
               <div className="v3-loading" role="status">
                 <span className="v3-loading-orbit" />
                 {t(
