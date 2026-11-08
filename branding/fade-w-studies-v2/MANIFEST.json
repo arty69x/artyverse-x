@@ -184,13 +184,8 @@
     },
     {
       "path": "evidence/eight-logo-studies.png",
-      "bytes": 157824,
-      "sha256": "3f0913a7e86d3ad4d015ebb13bdf7afeec57aa44b900466208840b9a9e282e16"
-    },
-    {
-      "path": "evidence/hero-revised.png",
-      "bytes": 43923,
-      "sha256": "fb1b90322f69c7d58f9c07e679efd6ef8e6d4c3fdf2ced17a4eac06eefad9723"
+      "bytes": 153756,
+      "sha256": "5ef7d0d00ad7c68151866b8bb6a9fca37f80a7f7e51301e7b6195a8105a08c06"
     },
     {
       "path": "evidence/optical-comparison-1x.png",
