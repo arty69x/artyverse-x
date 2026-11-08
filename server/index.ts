@@ -1,3 +1,4 @@
+import compression from "compression";
 import express from "express";
 import { DatabaseSync } from "node:sqlite";
 import { mkdirSync, writeFileSync, readFileSync, existsSync } from "node:fs";
@@ -36,6 +37,7 @@ function validMedia(mime: string, b: Buffer): boolean {
 }
 const app = express();
 app.disable("x-powered-by");
+app.use(compression({threshold:1024,filter:(req,res)=>String(res.getHeader('Content-Type')||'').includes('text/event-stream')?false:compression.filter(req,res)}));
 app.use((req, res, next) => {
   res.setHeader("X-Content-Type-Options", "nosniff");
   if (

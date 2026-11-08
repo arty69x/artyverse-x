@@ -18,7 +18,7 @@ import {
 import { useStore, useT, download } from "../core/store";
 import { PageHead, Button, Modal, Empty, SearchBox } from "../components/UI";
 import { defaultNodes, type Item } from "../../shared/schema";
-import { routeForItem } from "../../shared/v2/contracts";
+import { routeForItem } from "../../shared/routes";
 import type { Navigate } from "../App";
 export function Analytics() {
   const s = useStore(),

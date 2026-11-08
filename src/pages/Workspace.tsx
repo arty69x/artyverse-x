@@ -1,7 +1,7 @@
 import { useUI } from "../v3/i18n";
 import { applyAccent } from "../v3/accent";
 import { useTheme } from "../v3/Theme";
-import { kindRoutes, routeForItem } from "../../shared/v2/contracts";
+import { kindRoutes, routeForItem } from "../../shared/routes";
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import {

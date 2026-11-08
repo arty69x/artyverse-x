@@ -26,7 +26,7 @@ import {
 import { useStore, useT, useDraft } from "../core/store";
 import { Button, Modal } from "../components/UI";
 import type { Navigate } from "../App";
-import { routeForItem } from "../../shared/v2/contracts";
+import { routeForItem } from "../../shared/routes";
 import { Arcyca } from "./Mascot";
 const portals = [
   {

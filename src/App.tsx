@@ -23,7 +23,9 @@ import {
 } from "lucide-react";
 import { useStore, useT } from "./core/store";
 import { Button } from "./components/UI";
-import { Discover, Library, SettingsPage } from "./pages/Workspace";
+const Discover=lazy(()=>import('./pages/Workspace').then(m=>({default:m.Discover})));
+const Library=lazy(()=>import('./pages/Workspace').then(m=>({default:m.Library})));
+const SettingsPage=lazy(()=>import('./pages/Workspace').then(m=>({default:m.SettingsPage})));
 const Chat = lazy(() =>
   import("./pages/Workflows").then((m) => ({ default: m.Chat })),
 );
@@ -45,7 +47,7 @@ const Voice = lazy(() =>
 const DesignOS = lazy(() =>
   import("./pages/DesignOS").then((m) => ({ default: m.DesignOS })),
 );
-import { kindRoutes } from "../shared/v2/contracts";
+
 import { HomeV3 } from "./v3/Home";
 import { Shell } from "./v3/Shell";
 const Projects = lazy(() =>

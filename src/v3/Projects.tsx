@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import { useStore, useT, download } from "../core/store";
 import { PageHead, Button, Modal, Empty, SearchBox } from "../components/UI";
-import { routeForItem } from "../../shared/v2/contracts";
+import { routeForItem } from "../../shared/routes";
 import type { Item } from "../../shared/schema";
 import type { Navigate } from "../App";
 export function ProjectsV3({ go, id }: { go: Navigate; id?: string }) {

@@ -22,7 +22,7 @@ import {
 } from "lucide-react";
 import { routes, type Navigate } from "../App";
 import { useStore, useT } from "../core/store";
-import { kindRoutes, routeForItem } from "../../shared/v2/contracts";
+import { kindRoutes, routeForItem } from "../../shared/routes";
 import { Modal, Button } from "../components/UI";
 import { useTheme } from "./Theme";
 const groups = [
@@ -289,11 +289,11 @@ export function Shell({
             <div className="topbar-actions">
               <button
                 className="v3-top-search"
-                aria-label="Search"
+                aria-label={t("Search","ค้นหา")}
                 onClick={() => setCommand(true)}
               >
                 <Search size={17} />
-                <span>{t("Search your universe", "ค้นหาในจักรวาลของคุณ")}</span>
+                <span>{t("Search", "ค้นหา")}</span>
                 <kbd>⌘ K</kbd>
               </button>
               <button
@@ -316,13 +316,14 @@ export function Shell({
               </button>
               <button
                 className="language-button"
-                aria-label={t("Change language", "เปลี่ยนภาษา")}
+                aria-label={(s.locale==="en"?"EN":"TH")+" · "+t("Change language", "เปลี่ยนภาษา")}
                 onClick={() => s.setLocale(s.locale === "en" ? "th" : "en")}
               >
                 {s.locale === "en" ? "EN" : "TH"}
               </button>
               <button
                 className="v3-create-button"
+                aria-label={t("Create new","สร้างใหม่")}
                 onClick={() => setCreate(true)}
               >
                 <Plus size={18} />

@@ -16,6 +16,7 @@
     "typecheck": "tsc -b"
   },
   "dependencies": {
+    "compression": "^1.8.2",
     "express": "^5.1.0",
     "lucide-react": "^0.468.0",
     "motion": "^12.23.24",
@@ -31,6 +32,7 @@
     "@fontsource/space-grotesk": "^5.2.10",
     "@playwright/test": "^1.56.0",
     "@tailwindcss/vite": "^4.3.5",
+    "@types/compression": "^1.8.1",
     "@types/express": "^5.0.3",
     "@types/node": "^24.10.0",
     "@types/react": "^19.2.0",
