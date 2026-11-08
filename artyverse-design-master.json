@@ -411,6 +411,23 @@
       "limitations": "Sample products/prices and bag; no checkout or AI build from arbitrary prose",
       "implementationLocation": "src/v3/Builder.tsx → src/concept/FramerStudioComponents.tsx",
       "verification": "tests/evidence/reconstruction/"
+    },
+    {
+      "id": "patterns",
+      "name": "Pattern Library",
+      "route": "#/patterns",
+      "status": "Implemented",
+      "purpose": "Turn presentation ideas into original editable layouts",
+      "primaryTask": "Select → edit local draft → request preview → export or create CodeDocument",
+      "inputOutput": "PatternConfig v1 → existing CodeDocument v2 / standalone HTML",
+      "emptyState": "Search with clear filters; original samples labeled; no user records by browsing",
+      "loadingState": "Actual preview/save states only",
+      "errorState": "Validated field/import errors, retained draft",
+      "saveBehavior": "Per-pattern browser draft; explicit new code artifact through existing store",
+      "nextAction": "Existing Code Studio / Library",
+      "limitations": "60 source inventory entries are not60 installed components; native interpretations, no source TSX/media copied",
+      "implementationLocation": "src/v3/PatternLibrary.tsx;shared/patterns.ts",
+      "verification": "tests/evidence/reference-library/"
     }
   ],
   "components": [
@@ -4641,5 +4658,17 @@
     ],
     "evidence": "tests/evidence/typography/",
     "fidelity": "Reference-derived hierarchy with proposed responsive metrics; no fabricated pixel-match score"
+  },
+  "referenceAdoption": {
+    "sourceInventory": "docs/reference-library/REFERENCE_INVENTORY.json",
+    "decisions": "docs/reference-library/ADOPTION.md",
+    "verification": "docs/reference-library/VERIFICATION.md",
+    "runtimeSource": "shared/patterns.ts",
+    "catalogSource": "shared/reference-catalog.json",
+    "originalWorkingLayouts": 8,
+    "artifactStyles": 6,
+    "referenceOnlyCatalogItems": 60,
+    "externalFramerRuntimeCopied": false,
+    "sourceStatusCopiedAsEvidence": false
   }
 }

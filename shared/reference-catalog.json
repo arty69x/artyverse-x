@@ -1,0 +1,422 @@
+[
+  {
+    "id": "reel",
+    "name": "Reel / Orbit Carousel",
+    "category": "Carousel & Sliders",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "velocity-carousel",
+    "name": "Velocity Carousel",
+    "category": "Carousel & Sliders",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "endless-3d-carousel",
+    "name": "Endless 3D Carousel",
+    "category": "Carousel & Sliders",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "spiral-3d-slider",
+    "name": "Spiral 3D Slider",
+    "category": "Carousel & Sliders",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "parallax-h",
+    "name": "Parallax Slider — Horizontal",
+    "category": "Carousel & Sliders",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "parallax-v",
+    "name": "Parallax Slider — Vertical",
+    "category": "Carousel & Sliders",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "dragable-ticker",
+    "name": "Draggable Ticker",
+    "category": "Carousel & Sliders",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "smooth-scroll-lenis",
+    "name": "Eased Smooth Scroll",
+    "category": "Interactions & Animations",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "back-trigger",
+    "name": "Back Trigger Reveal",
+    "category": "Interactions & Animations",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "scroll-sequences",
+    "name": "Scroll Sequence Draw",
+    "category": "Interactions & Animations",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "pixel-distortion",
+    "name": "Pixel Distortion Reveal",
+    "category": "Interactions & Animations",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "text-follow-path",
+    "name": "Text Follow Path",
+    "category": "Interactions & Animations",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "kinetic-wheel",
+    "name": "Kinetic Wheel",
+    "category": "Interactions & Animations",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "animation-loader-pro",
+    "name": "Animation Loader Pro",
+    "category": "Interactions & Animations",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "phone-scroll-pro",
+    "name": "Phone Scroll Pro",
+    "category": "Interactions & Animations",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "media-parallax",
+    "name": "Media Card — Parallax Hover",
+    "category": "Media Effects",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "media-skew",
+    "name": "Media Card — Skew Hover",
+    "category": "Media Effects",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "media-tilt",
+    "name": "Media Card — 3D Tilt",
+    "category": "Media Effects",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "media-3d",
+    "name": "Media Card — 3D Stack",
+    "category": "Media Effects",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "mask-reveal",
+    "name": "Mask Hover Reveal",
+    "category": "Media Effects",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "text-reveal",
+    "name": "Text Reveal on Scroll",
+    "category": "Text & Type",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "typewriter",
+    "name": "Typewriter Text",
+    "category": "Text & Type",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "flip-3d",
+    "name": "3D Flip Card",
+    "category": "Cards & Layout",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "flip-book-3d",
+    "name": "3D Flipping Book",
+    "category": "Cards & Layout",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "fan-deck",
+    "name": "Fan Card Deck",
+    "category": "Cards & Layout",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "confidential-folder",
+    "name": "Confidential Folder",
+    "category": "Cards & Layout",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "open-hours",
+    "name": "Open Hours",
+    "category": "Cards & Layout",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "stacked-flow-cards",
+    "name": "Stacked Flow Cards",
+    "category": "Cards & Layout",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "blog-vertical",
+    "name": "Blog Card Vertical",
+    "category": "Cards & Layout",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "warp-field",
+    "name": "Warp Star Field",
+    "category": "Backgrounds & FX",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "light-sweep",
+    "name": "Light Sweep Button",
+    "category": "Backgrounds & FX",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "progressive-blur",
+    "name": "Progressive Blur Scroll",
+    "category": "Backgrounds & FX",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "halftone-media-fx",
+    "name": "Halftone Media FX",
+    "category": "Backgrounds & FX",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "image-spheres",
+    "name": "Image Spheres",
+    "category": "Backgrounds & FX",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "infinite-gridx",
+    "name": "Infinite GridX",
+    "category": "Data & CMS",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "cms-scroll-gallery-data",
+    "name": "CMS Scroll Gallery",
+    "category": "Data & CMS",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "scroll-progress-util",
+    "name": "Scroll Progress Utility",
+    "category": "Utilities & Tools",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "ghost-loader",
+    "name": "GhostSVG Brand Loader",
+    "category": "Branding",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "sec-hero",
+    "name": "Section — Hero / Intro",
+    "category": "Full Sections",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "sec-stats",
+    "name": "Section — Stats Bar",
+    "category": "Full Sections",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "sec-work",
+    "name": "Section — Work Timeline",
+    "category": "Full Sections",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "sec-skills",
+    "name": "Section — Tech Skills Matrix",
+    "category": "Full Sections",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "sec-capabilities",
+    "name": "Section — Unique Capabilities",
+    "category": "Full Sections",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "sec-achievements",
+    "name": "Section — Achievements",
+    "category": "Full Sections",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "sec-projects",
+    "name": "Section — Projects Showcase (35 Systems)",
+    "category": "Full Sections",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "sec-design",
+    "name": "Section — Design Identity",
+    "category": "Full Sections",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "sec-toolchain",
+    "name": "Section — Toolchain Marquee",
+    "category": "Full Sections",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "sec-contact",
+    "name": "Section — Contact Footer",
+    "category": "Full Sections",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "focus-gallery",
+    "name": "Focus Gallery",
+    "category": "Carousel & Sliders",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "holographic-glass-card",
+    "name": "Holographic Glass Card",
+    "category": "Cards & Layout",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "neon-brutalist-button",
+    "name": "Neon Brutalist Button",
+    "category": "Cards & Layout",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "magnetic-button",
+    "name": "Magnetic Button",
+    "category": "Interactions & Animations",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "mouse-parallax-layers",
+    "name": "Mouse Parallax Layers",
+    "category": "Interactions & Animations",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "counter-fade",
+    "name": "Counter + Fade",
+    "category": "Text & Type",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "grid-reveal",
+    "name": "Grid Reveal",
+    "category": "Backgrounds & FX",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "masonry-stagger",
+    "name": "Masonry Stagger",
+    "category": "Cards & Layout",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "diagonal-split",
+    "name": "Diagonal Split Hover",
+    "category": "Backgrounds & FX",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "svg-connector-standalone",
+    "name": "Animated SVG Connector",
+    "category": "Interactions & Animations",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "donut-chart-live",
+    "name": "Donut Chart (Live)",
+    "category": "Data & CMS",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  },
+  {
+    "id": "react-button-tsx-ref",
+    "name": "React Button (TSX Reference)",
+    "category": "Utilities & Tools",
+    "source": "S07",
+    "status": "Reference inventory only; not installed or verified"
+  }
+]

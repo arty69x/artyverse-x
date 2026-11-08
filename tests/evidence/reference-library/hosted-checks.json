@@ -1,0 +1,10 @@
+{
+  "browser": "154.0.8037.57",
+  "conditions": "Local production browser build; not protected Vercel browser interaction",
+  "checks": [
+    "Built browser edition starts real IndexedDB storage",
+    "Actual pattern draft survives reload",
+    "Saved CodeDocument survives reload and runs a functional original collection inside shared sandbox"
+  ],
+  "errors": []
+}

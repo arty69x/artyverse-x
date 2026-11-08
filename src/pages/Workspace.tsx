@@ -484,6 +484,7 @@ export function Discover({
               )
         }
       />
+      <a className="button" href="#/patterns">Pattern Library · 8 editable web layouts ↗</a>
       <div className="filter-bar">
         <SearchBox
           value={q}

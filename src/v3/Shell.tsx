@@ -59,7 +59,7 @@ const groups = [
   {
     en: "DESIGN & SYSTEM",
     th: "ออกแบบและตั้งค่า",
-    keys: ["design-system", "design", "system", "settings"],
+    keys: ["patterns", "design-system", "design", "system", "settings"],
   },
 ];
 export function Shell({

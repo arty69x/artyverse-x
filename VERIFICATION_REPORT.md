@@ -63,3 +63,6 @@ See docs/reconstruction/VERIFICATION.md and tests/evidence/reconstruction/. This
 
 ## Typography polish (latest)
 Both builds/TypeScript,20 unit tests and9 affected browser journeys passed.12 TH/EN two-theme typography cases passed axe/page-overflow checks;3 Home sizes passed overflow/clipping checks. Actual weight/effect/focus/draft/export behavior verified. See docs/typography/TYPE_SYSTEM.md and tests/evidence/typography/. Prior full49-case regression belongs to the preceding runtime and is not relabeled as a new full run. No pixel-perfect/Lighthouse/certification claim.
+
+## Reference-library adoption (latest)
+24 unit tests,10 new/affected browser workflows,18 gallery/detail/generated-layout checks plus8 maximum-content320px cases passed. Ten visual cases include axe; eight generated desktop and eight generated narrow cases check geometry. Both builds/TypeScript and actual browser IndexedDB save/reload/Studio/filter handoff passed. Full54-case regression, original Framer motion matching and new Lighthouse/FPS are not claimed. All12 source fingerprints, V7 syntax recovery,60 reference-only entries and8 newly authored templates are separated in docs/reference-library/.

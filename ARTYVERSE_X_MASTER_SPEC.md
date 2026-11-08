@@ -18,8 +18,12 @@ Desktop uses grouped sidebar, breadcrumb/history, global search and create picke
 
 ## Workspaces
 
+Latest reference-pack adoption: `docs/reference-library/ADOPTION.md`. New #/patterns has8 original code-layout recipes and6 style variants; source inventory60 is explicitly reference-only. All12 source inputs are fingerprinted; malformed V7 is only syntactically recovered for reference extraction. No source statuses or external Framer scripts are imported as runtime capability.
+
+
 | Route | Primary job | Working output |
 |---|---|---|
+| patterns / patterns/:id | reusable presentation patterns | local draft, user-triggered sandbox preview, reviewed preset import, HTML export or new saved CodeDocument |
 | builder | editable storefront design in shared shell | reviewed presets, persisted draft, native filters/sample bag, independent HTML/CSS export and Code Studio handoff |
 | home | orientation, idea capture, studio entry | persisted conversation, actual counts/recent work, browser portal order |
 | projects / projects/:id | organize a creative world | stable project context, linked work, CRUD/detail/export |

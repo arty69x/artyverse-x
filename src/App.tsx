@@ -101,7 +101,11 @@ const Concept = lazy(() =>
 const UnifiedBuilder = lazy(() =>
   import("./v3/Builder").then((m) => ({ default: m.UnifiedBuilder })),
 );
+const PatternLibrary = lazy(() =>
+  import("./v3/PatternLibrary").then((m) => ({ default: m.PatternLibrary })),
+);
 export const routes = [
+  ["patterns", "Pattern Library", "คลังรูปแบบดีไซน์", LayoutTemplate],
   ["builder", "Website Builder", "ออกแบบเว็บไซต์", Command],
   ["copilot", "Interview Copilot", "ผู้ช่วยสัมภาษณ์", Mic],
   ["practice", "Practice", "ฝึกสัมภาษณ์", MessageSquare],
@@ -196,6 +200,9 @@ export function App() {
       break;
     case "design-system":
       page = <DesignBoard />;
+      break;
+    case "patterns":
+      page = <PatternLibrary id={id} go={go} />;
       break;
     case "builder":
       page = <UnifiedBuilder />;

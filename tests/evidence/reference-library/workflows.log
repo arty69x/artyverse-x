@@ -1,0 +1,23 @@
+
+> artyverse-x@3.0.0-local test:e2e
+> playwright test --grep Ready layouts|Pattern drafts|All eight layouts|Exported sample filtering|Actual HTML download|Home → conversation|Template creates a new|Home semantics|Mobile navigation drawer|Unified Extract
+
+[WebServer] (node:86029) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 10 tests using 1 worker
+
+(node:86151) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/journeys.spec.ts:8:1 › Home → conversation → Create → save → Library → reopen (12.8s)
+  ✓   2 tests/e2e/journeys.spec.ts:46:1 › Template creates a new document; editor undo and SVG export work (8.6s)
+  ✓   3 tests/e2e/journeys.spec.ts:222:1 › Home semantics, dialog keyboard and reduced-motion visibility (7.8s)
+  ✓   4 tests/e2e/pattern-library.spec.ts:10:1 › Ready layouts and source inventory are searchable, separate and do not create work by browsing (4.4s)
+  ✓   5 tests/e2e/pattern-library.spec.ts:36:1 › Pattern drafts validate, survive reload and import through review without running imported code (5.6s)
+  ✓   6 tests/e2e/pattern-library.spec.ts:96:1 › All eight layouts render only on request and remain inside the existing opaque sandbox (6.9s)
+  ✓   7 tests/e2e/pattern-library.spec.ts:120:1 › Exported sample filtering, depth keyboard and chapter navigation have real effects (5.6s)
+  ✓   8 tests/e2e/pattern-library.spec.ts:155:1 › Actual HTML download and saved Code Studio document preserve the selected layout (3.8s)
+  ✓   9 tests/e2e/reconstruction.spec.ts:5:1 › Unified Extract Compose Ship entry points navigate to actual workspaces (5.3s)
+  ✓  10 tests/e2e/v3.spec.ts:228:1 › Mobile navigation drawer, answer sheet, safe area and accessible focus work (2.4s)
+
+  10 passed (1.2m)

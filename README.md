@@ -32,3 +32,7 @@ Open `#/concept/builder` for reviewed local templates, editable native storefron
 ### Unified reconstructed Studio
 
 Open `/#/home` for the Extract / Compose / Ship workspace and `/#/builder` for the existing editable storefront engine within the same navigation. `/#/design-system` includes native prism-A brand variants. Actual user-uploaded boards are preserved under `design/references/`; source authority, module mapping and remaining fidelity limits are in [reconstruction notes](docs/reconstruction/RECONSTRUCTION.md). The mascot hero is an optimized generated reconstruction, not a recovered 3D model. Existing editors, persistence, sandbox and export remain the same shared engines.
+
+### Pattern Library from supplied references
+
+Open `/#/patterns`:8 independently authored editable web layouts,6 artifact-only styles and a separate60-entry reference inventory. Preview on request, edit a local draft, review imported presets, export self-contained HTML or create a new real CodeDocument in the existing Studio. No Framer component package/script/media was copied into runtime. All12 uploaded-source decisions, V7 recovery and source-to-feature mapping: [reference adoption](docs/reference-library/ADOPTION.md).

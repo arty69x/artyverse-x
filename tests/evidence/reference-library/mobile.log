@@ -1,0 +1,58 @@
+[
+  {
+    id: 'editorial',
+    conditions: '320px host, maximum allowed unbroken input lengths, original sample content',
+    hostOverflow: false,
+    frame: { width: 262, scroll: 262 },
+    overflow: false
+  },
+  {
+    id: 'mosaic',
+    conditions: '320px host, maximum allowed unbroken input lengths, original sample content',
+    hostOverflow: false,
+    frame: { width: 262, scroll: 262 },
+    overflow: false
+  },
+  {
+    id: 'focus',
+    conditions: '320px host, maximum allowed unbroken input lengths, original sample content',
+    hostOverflow: false,
+    frame: { width: 262, scroll: 262 },
+    overflow: false
+  },
+  {
+    id: 'chapters',
+    conditions: '320px host, maximum allowed unbroken input lengths, original sample content',
+    hostOverflow: false,
+    frame: { width: 262, scroll: 262 },
+    overflow: false
+  },
+  {
+    id: 'depth',
+    conditions: '320px host, maximum allowed unbroken input lengths, original sample content',
+    hostOverflow: false,
+    frame: { width: 262, scroll: 262 },
+    overflow: false
+  },
+  {
+    id: 'statement',
+    conditions: '320px host, maximum allowed unbroken input lengths, original sample content',
+    hostOverflow: false,
+    frame: { width: 262, scroll: 262 },
+    overflow: false
+  },
+  {
+    id: 'spatial',
+    conditions: '320px host, maximum allowed unbroken input lengths, original sample content',
+    hostOverflow: false,
+    frame: { width: 262, scroll: 262 },
+    overflow: false
+  },
+  {
+    id: 'catalog',
+    conditions: '320px host, maximum allowed unbroken input lengths, original sample content',
+    hostOverflow: false,
+    frame: { width: 262, scroll: 262 },
+    overflow: false
+  }
+]

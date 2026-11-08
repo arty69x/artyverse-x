@@ -271,8 +271,8 @@ export function HomeV3({ go }: { go: Navigate }) {
             )}
           </p>
         </div>
-        <a href="#/design-system" className="v3-text-link">
-          {t("Explore the design system", "สำรวจระบบออกแบบ")}{" "}
+        <a href="#/patterns" className="v3-text-link">
+          {t("Explore the new collection", "สำรวจรูปแบบดีไซน์ใหม่")}{" "}
           <ArrowUpRight size={17} />
         </a>
       </div>

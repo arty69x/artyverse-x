@@ -1,0 +1,291 @@
+{
+  "source": "S01",
+  "recovery": "Derived read-only parse appending two closing braces; original unchanged; semantic nesting not assumed verified",
+  "designStylePresets": {
+    "editorial": {
+      "name": "Editorial",
+      "description": "Clean, refined, magazine-style design with strong typography and generous whitespace.",
+      "tokens": {
+        "color": {
+          "bg": "#ffffff",
+          "surface": "#f8f9fa",
+          "text": "#1a1a2e",
+          "muted": "#64748b",
+          "border": "#e2e8f0",
+          "primary": "#1e293b",
+          "accent": "#c0262d"
+        },
+        "typography": {
+          "family": "Georgia, 'Times New Roman', serif",
+          "scale": "large",
+          "weight": "regular",
+          "lineHeight": "relaxed"
+        },
+        "spacing": {
+          "scale": "generous",
+          "rhythm": "8px"
+        },
+        "radius": {
+          "default": "0",
+          "card": "0",
+          "button": "0"
+        },
+        "shadow": {
+          "default": "none",
+          "card": "0 2px 8px rgba(0,0,0,0.06)"
+        }
+      },
+      "sample": {
+        "classes": [
+          "font-serif",
+          "bg-white",
+          "text-slate-900",
+          "tracking-wide",
+          "leading-relaxed",
+          "max-w-4xl",
+          "mx-auto",
+          "px-6"
+        ]
+      }
+    },
+    "luxury": {
+      "name": "Luxury",
+      "description": "Premium, high-end aesthetic with gold accents, dark backgrounds, and refined typography.",
+      "tokens": {
+        "color": {
+          "bg": "#0a0a0a",
+          "surface": "#141414",
+          "text": "#f5f0eb",
+          "muted": "#a0a0a0",
+          "border": "rgba(255,215,0,0.15)",
+          "primary": "#c9a84c",
+          "accent": "#d4af37"
+        },
+        "typography": {
+          "family": "'Playfair Display', 'Times New Roman', serif",
+          "scale": "large",
+          "weight": "semibold",
+          "lineHeight": "relaxed"
+        },
+        "spacing": {
+          "scale": "generous",
+          "rhythm": "8px"
+        },
+        "radius": {
+          "default": "0",
+          "card": "0",
+          "button": "0"
+        },
+        "shadow": {
+          "default": "0 4px 24px rgba(0,0,0,0.6)",
+          "card": "0 8px 32px rgba(0,0,0,0.8)"
+        }
+      },
+      "sample": {
+        "classes": [
+          "font-serif",
+          "bg-black",
+          "text-[#f5f0eb]",
+          "tracking-wider",
+          "leading-relaxed",
+          "max-w-4xl",
+          "mx-auto",
+          "px-6",
+          "border",
+          "border-[rgba(255,215,0,0.1)]"
+        ]
+      }
+    },
+    "fashion": {
+      "name": "Fashion",
+      "description": "Bold, dynamic, trend-forward design with high contrast, large imagery, and dramatic typography.",
+      "tokens": {
+        "color": {
+          "bg": "#0a0a0a",
+          "surface": "#1a1a1a",
+          "text": "#ffffff",
+          "muted": "#888888",
+          "border": "rgba(255,255,255,0.08)",
+          "primary": "#ff006e",
+          "accent": "#ff006e"
+        },
+        "typography": {
+          "family": "'Helvetica Neue', 'Inter', sans-serif",
+          "scale": "dramatic",
+          "weight": "bold",
+          "lineHeight": "tight"
+        },
+        "spacing": {
+          "scale": "tight",
+          "rhythm": "8px"
+        },
+        "radius": {
+          "default": "0",
+          "card": "0",
+          "button": "0"
+        },
+        "shadow": {
+          "default": "0 8px 32px rgba(255,0,110,0.15)",
+          "card": "0 12px 48px rgba(255,0,110,0.2)"
+        }
+      },
+      "sample": {
+        "classes": [
+          "font-sans",
+          "bg-black",
+          "text-white",
+          "tracking-tight",
+          "leading-tight",
+          "max-w-4xl",
+          "mx-auto",
+          "px-4"
+        ]
+      }
+    },
+    "neon": {
+      "name": "Neon",
+      "description": "Cyberpunk-inspired design with glowing neon colors, dark backgrounds, and futuristic aesthetics.",
+      "tokens": {
+        "color": {
+          "bg": "#0a0a12",
+          "surface": "#12121e",
+          "text": "#e0e0ff",
+          "muted": "#6b6b8a",
+          "border": "rgba(0,255,255,0.08)",
+          "primary": "#00ffff",
+          "accent": "#ff00ff"
+        },
+        "typography": {
+          "family": "'JetBrains Mono', 'Fira Code', monospace",
+          "scale": "moderate",
+          "weight": "regular",
+          "lineHeight": "snug"
+        },
+        "spacing": {
+          "scale": "moderate",
+          "rhythm": "8px"
+        },
+        "radius": {
+          "default": "4px",
+          "card": "8px",
+          "button": "9999px"
+        },
+        "shadow": {
+          "default": "0 0 20px rgba(0,255,255,0.08)",
+          "card": "0 0 40px rgba(0,255,255,0.06)"
+        }
+      },
+      "sample": {
+        "classes": [
+          "font-mono",
+          "bg-[#0a0a12]",
+          "text-[#e0e0ff]",
+          "tracking-wider",
+          "leading-snug",
+          "max-w-4xl",
+          "mx-auto",
+          "px-4",
+          "border",
+          "border-[rgba(0,255,255,0.05)]",
+          "shadow-[0_0_40px_rgba(0,255,255,0.04)]"
+        ]
+      }
+    },
+    "minimal": {
+      "name": "Minimal",
+      "description": "Clean, stripped-down design with maximum whitespace, minimal color, and absolute clarity.",
+      "tokens": {
+        "color": {
+          "bg": "#ffffff",
+          "surface": "#f5f5f5",
+          "text": "#111111",
+          "muted": "#666666",
+          "border": "#e5e5e5",
+          "primary": "#000000",
+          "accent": "#000000"
+        },
+        "typography": {
+          "family": "'Inter', 'Helvetica Neue', sans-serif",
+          "scale": "moderate",
+          "weight": "regular",
+          "lineHeight": "relaxed"
+        },
+        "spacing": {
+          "scale": "generous",
+          "rhythm": "8px"
+        },
+        "radius": {
+          "default": "0",
+          "card": "0",
+          "button": "0"
+        },
+        "shadow": {
+          "default": "none",
+          "card": "0 1px 4px rgba(0,0,0,0.04)"
+        }
+      },
+      "sample": {
+        "classes": [
+          "font-sans",
+          "bg-white",
+          "text-black",
+          "tracking-normal",
+          "leading-relaxed",
+          "max-w-4xl",
+          "mx-auto",
+          "px-6"
+        ]
+      }
+    },
+    "modular": {
+      "name": "Modular Grid",
+      "description": "Systematic grid-based design with clear hierarchy, consistent modularity, and structural clarity.",
+      "tokens": {
+        "color": {
+          "bg": "#f8fafb",
+          "surface": "#ffffff",
+          "text": "#0f172a",
+          "muted": "#64748b",
+          "border": "#e2e8f0",
+          "primary": "#0f172a",
+          "accent": "#3b82f6"
+        },
+        "typography": {
+          "family": "'Inter', 'Helvetica Neue', sans-serif",
+          "scale": "moderate",
+          "weight": "regular",
+          "lineHeight": "relaxed"
+        },
+        "spacing": {
+          "scale": "moderate",
+          "rhythm": "8px"
+        },
+        "radius": {
+          "default": "8px",
+          "card": "12px",
+          "button": "9999px"
+        },
+        "shadow": {
+          "default": "0 2px 8px rgba(0,0,0,0.04)",
+          "card": "0 4px 16px rgba(0,0,0,0.06)"
+        }
+      },
+      "sample": {
+        "classes": [
+          "font-sans",
+          "bg-slate-50",
+          "text-slate-900",
+          "tracking-normal",
+          "leading-relaxed",
+          "grid",
+          "grid-cols-12",
+          "gap-4",
+          "max-w-6xl",
+          "mx-auto",
+          "px-4"
+        ]
+      }
+    }
+  },
+  "scope": "Design reference only; not an executable configuration"
+}

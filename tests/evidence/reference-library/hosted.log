@@ -1,0 +1,8 @@
+{
+  checks: [
+    'Built browser edition starts real IndexedDB storage',
+    'Actual pattern draft survives reload',
+    'Saved CodeDocument survives reload and runs a functional original collection inside shared sandbox'
+  ],
+  errors: []
+}

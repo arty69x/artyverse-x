@@ -87,3 +87,5 @@ Primary app remains hash-routed for existing hosting compatibility. Aliases incl
 
 ## Unified reconstruction entry points
 Home Extract → Research existing notes/sources. Home Compose → #/builder (within shared Shell) → existing local template draft → validated HTML/CSS export or save CodeDocument → Code Studio → Library. Home Ship → Library actual saved artifacts/export. Sidebar and command palette discover Builder. Design System → native brand lockups and shared tokens → Builder. Historical #/concept links remain compatible, but are no longer primary navigation. All original entity IDs, drafts, revisions and data stores retained.
+
+Reference pack adoption: Home / Templates → #/patterns → original layout detail → draft/edit → explicit sandbox preview → validated preset/HTML export or new CodeDocument → Code Studio → Library. #/patterns contains8 original working recipes and a separate searchable60-entry source inventory. Import follows validate/review/apply and never executes imported code. Current source map and boundaries: docs/reference-library/ADOPTION.md.
