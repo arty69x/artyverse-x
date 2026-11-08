@@ -9,6 +9,9 @@ Canonical visual source: `shared/design.ts`; versioned payloads: `shared/schema.
 
 ## Interface contract
 
+Latest typography supplement: `docs/typography/TYPE_SYSTEM.md`. `shared/design.ts.type` now defines12 roles with responsive size, line, weight, tracking, loaded font weights and emphasis/focus values; generated tokens and live TypographyLab share this source. Bold/thin real fonts, underline, marker, static outline/chromatic and keyboard focus are implemented without changing saved artifact styles. See current evidence for scoped verification.
+
+
 Syne 400–800 display, DM Sans UI, IBM Plex Sans Thai and JetBrains Mono. Local font files; documented licenses. Lime #CCFF00, pink #FF2078, structural blue #001E3C, violet #B44FFF, cyan #00C7E8 and ink #050403 are primitives. Semantic text/focus/error roles are adjusted for the theme. Body/control legibility takes precedence over poster fidelity. Original artwork pigments do not become body text tokens.
 
 Desktop uses grouped sidebar, breadcrumb/history, global search and create picker. Sidebar widths 218/256px with optional 80px collapse. Tablet uses a drawer. Phones under 640px have five navigation destinations plus safe-area padding. Tool panels stack intentionally. Page overflow is prohibited; bounded canvas/code/table/timeline scrolling is purposeful.

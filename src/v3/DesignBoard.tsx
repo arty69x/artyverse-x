@@ -224,6 +224,7 @@ export function DesignBoard() {
               <span
                 style={{
                   fontSize: v.fluid,
+                  fontFamily: `var(--font-${v.family})`,
                   lineHeight: v.line / v.size,
                   fontWeight: v.weight,
                 }}

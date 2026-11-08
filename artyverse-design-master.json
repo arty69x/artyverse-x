@@ -4625,5 +4625,21 @@
     "identity": "Extract. Compose. Ship. / Artist × Multiverse",
     "fidelity": "Reconstructed from brand boards, not verified pixel-perfect across all app screens",
     "artwork": "Generated mascot approximation, native reconstructed PrismMark; original 3D/vector master unavailable"
+  },
+  "typography": {
+    "source": "shared/design.ts:type",
+    "specification": "docs/typography/TYPE_SYSTEM.md",
+    "previewRoute": "#/design-system",
+    "implemented": [
+      "12 canonical responsive type roles",
+      "real Latin weight200–800",
+      "Thai200/400/700 fallback",
+      "underline/marker/outline/chromatic",
+      "semantic focus/link reveal",
+      "local draft preview",
+      "actual JSON export"
+    ],
+    "evidence": "tests/evidence/typography/",
+    "fidelity": "Reference-derived hierarchy with proposed responsive metrics; no fabricated pixel-match score"
   }
 }
