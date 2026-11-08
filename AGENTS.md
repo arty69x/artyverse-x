@@ -1,0 +1,14 @@
+# ARTYVERSE X — repository instructions
+
+- This repository is an npm project: React + Vite + TypeScript + Tailwind 4 + Motion for React; Express + built-in SQLite on Node 24+. Keep this stack unless the user requests a migration.
+- Commands: npm ci; npm run dev; npm run typecheck; npm run build; npm test; npm run test:e2e; npm run tokens. No lint command is configured; do not claim lint passed or add a no-op lint script.
+- Canonical interface tokens: shared/design.ts. Generate DESIGN_TOKENS.json and CSS with npm run tokens. shared/schema.ts includes the legacy theme adapter and Item envelope. Preserve saved artifact colors and data.
+- Current shell and new frontend: src/v3. Retained editing/motion/audio engines: src/v2 and src/pages. Reuse these engines instead of adding parallel editors or viewers. Motion is already installed; do not add a duplicate animation runtime.
+- Dark is the creative default. Light/system themes and Thai/English preferences are persisted. Preserve explicit preferences and user-generated text; never translate stored content automatically.
+- ARCYCA is the primary interaction mascot; the Arty ghost remains an existing scene/brand asset; Fade W identifies Whisper. Do not substitute an unrelated brand.
+- Preserve existing URLs, IDs, revisions, media, drafts and uncommitted work. Use a recovery checkpoint before structural changes. Never put user databases, recovery media or secrets into a release archive.
+- AI/provider/cloud/payment/community/presence states must reflect real connections. Local evidence outlines and test fixtures are not AI inference. Do not create fake analytics, scores, credits, orders or saved work.
+- User code runs only after Run in an opaque-origin sandboxed iframe. Do not add allow-same-origin. Validate expected message source, nonce and bounded payload. No secrets enter preview frames.
+- Run checks relevant to each change; run the full regression suite for major migrations. Record actual source fingerprints, conditions and limitations. Do not copy old verification to new runtime or rewrite baselines to conceal defects.
+- Target 320–1536+ responsive layouts, semantic controls, keyboard alternatives, visible focus, dialog focus restoration, safe areas and reduced-motion/lifecycle cleanup. Intentional internal canvas/code scrolling is allowed; unintentional page overflow is not.
+- Vercel project context is linked, but the API's SQLite/media backend is local. Do not publish a temporary serverless SQLite database as durable cloud storage. Preserve access policy and obtain any external-service decisions actually required for a deployment.

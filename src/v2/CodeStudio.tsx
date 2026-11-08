@@ -1,3 +1,5 @@
+import { useUI } from "../v3/i18n";
+import { rovingTabs } from "../v3/a11y";
 import { useEffect, useRef, useState } from "react";
 import {
   Play,
@@ -24,6 +26,8 @@ import {
 import { Button, Modal } from "../components/UI";
 import { download } from "../core/store";
 export function CodeStudio({ id }: { id?: string }) {
+  const ui = useUI();
+
   const st = useStudio<CodeDocument>(
       "code",
       id,
@@ -147,19 +151,20 @@ export function CodeStudio({ id }: { id?: string }) {
           }
         >
           <Download size={15} />
-          Export HTML
+          {ui("Export HTML")}
         </Button>
         <Button variant="primary" onClick={run}>
           <Play size={15} />
-          Run preview
+          {ui("Run preview")}
         </Button>
       </StudioHead>
       <div className="v2-code-toolbar">
-        <div className="v2-file-tabs" role="tablist">
+        <div className="v2-file-tabs" role="tablist" onKeyDown={rovingTabs}>
           {(["html", "css", "js"] as const).map((k) => (
             <button
               role="tab"
               aria-selected={tab === k}
+              tabIndex={tab === k ? 0 : -1}
               className={tab === k ? "selected" : ""}
               key={k}
               onClick={() => setTab(k)}
@@ -195,7 +200,7 @@ export function CodeStudio({ id }: { id?: string }) {
             }}
           >
             <WandSparkles size={15} />
-            Review local fixes
+            {ui("Review local fixes")}
           </Button>
         </div>
       </div>
@@ -271,7 +276,8 @@ export function CodeStudio({ id }: { id?: string }) {
                   action.
                 </p>
                 <Button variant="primary" onClick={run}>
-                  Run the starter scene <Play size={15} />
+                  {ui("Run the starter scene")}
+                  <Play size={15} />
                 </Button>
               </div>
             )}
@@ -304,7 +310,7 @@ export function CodeStudio({ id }: { id?: string }) {
               </p>
               <div className="two-col">
                 <label>
-                  Property
+                  {ui("Property")}
                   <select
                     value={property}
                     onChange={(e) => setProperty(e.target.value)}
@@ -323,16 +329,17 @@ export function CodeStudio({ id }: { id?: string }) {
                   </select>
                 </label>
                 <label>
-                  Value
+                  {ui("Value")}
                   <input
-                    aria-label="CSS property value"
+                    aria-label={ui("CSS property value")}
                     value={propertyValue}
                     onChange={(e) => setPropertyValue(e.target.value)}
                   />
                 </label>
               </div>
               <Button onClick={applyStyle}>
-                Apply property <Check size={15} />
+                {ui("Apply property")}
+                <Check size={15} />
               </Button>
             </>
           ) : (

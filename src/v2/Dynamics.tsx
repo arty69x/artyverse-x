@@ -1,3 +1,4 @@
+import { useUI } from "../v3/i18n";
 import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "motion/react";
 import {
@@ -27,6 +28,8 @@ import { Button } from "../components/UI";
 import { download } from "../core/store";
 type Body = { x: number; y: number; vx: number; vy: number };
 export function Dynamics({ id }: { id?: string }) {
+  const ui = useUI();
+
   const st = useStudio<PhysicsScene>(
       "scene",
       id,
@@ -311,7 +314,7 @@ export function Dynamics({ id }: { id?: string }) {
           }}
         >
           <RotateCcw size={15} />
-          Reset positions
+          {ui("Reset positions")}
         </Button>
       </StudioHead>
       <ErrorNotice message={st.error} />
@@ -449,10 +452,10 @@ export function Dynamics({ id }: { id?: string }) {
               }}
             >
               <Plus size={14} />
-              Add body
+              {ui("Add body")}
             </Button>
             <Button
-              title="Delete selected body"
+              title={ui("Delete selected body")}
               disabled={value.bodies.length <= 1}
               onClick={() => {
                 setValue((v) => ({
@@ -470,7 +473,7 @@ export function Dynamics({ id }: { id?: string }) {
           {body && (
             <>
               <label>
-                Shape
+                {ui("Shape")}
                 <select
                   value={body.shape}
                   onChange={(e) => update({ shape: e.target.value })}
@@ -482,7 +485,7 @@ export function Dynamics({ id }: { id?: string }) {
               </label>
               <div className="two-col">
                 <label>
-                  Mass
+                  {ui("Mass")}
                   <input
                     type="number"
                     min={0.1}
@@ -500,7 +503,7 @@ export function Dynamics({ id }: { id?: string }) {
                   />
                 </label>
                 <label>
-                  Color
+                  {ui("Color")}
                   <input
                     type="color"
                     value={body.color}
@@ -510,7 +513,8 @@ export function Dynamics({ id }: { id?: string }) {
               </div>
               <label className="v2-slider">
                 <span>
-                  Radius<output>{body.radius} px</output>
+                  {ui("Radius")}
+                  <output>{body.radius} px</output>
                 </span>
                 <input
                   aria-label="Body radius"
@@ -574,7 +578,7 @@ export function Dynamics({ id }: { id?: string }) {
               checked={webgl}
               onChange={(e) => setWebgl(e.target.checked)}
             />
-            WebGL holographic light field
+            {ui("WebGL holographic light field")}
           </label>
           <div className="v2-sensor">
             <span className="eyebrow">DEVICE ORIENTATION / {sensor}</span>

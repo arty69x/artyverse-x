@@ -1,3 +1,4 @@
+test.beforeEach(async ({page})=>{await page.addInitScript(()=>localStorage.setItem("av-locale","en"))});
 import { spawn } from "node:child_process";
 import { mkdtempSync, rmSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";

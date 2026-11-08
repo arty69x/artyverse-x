@@ -25,7 +25,13 @@
   font-weight: 700;
   font-display: swap;
 }
-:root { --bg:var(--background); --radius:14px; font-family:"DM Sans",PlexThai,sans-serif; background:var(--background); color:var(--text); }
+:root {
+  --bg: var(--background);
+  --radius: 14px;
+  font-family: "DM Sans", PlexThai, sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
 h1,
 h2,
 h3 {
@@ -1993,9 +1999,109 @@ textarea {
     line-height: 1.8;
   }
 }
-@media(min-width:1201px){.v2-bento-story{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;min-height:245px;column-gap:40px}.v2-bento-story .v2-card-top{grid-column:1/-1}.v2-bento-story .v2-story-art{grid-column:1;max-width:440px}.v2-bento-story .v2-card-bottom{grid-column:2;grid-row:2;align-self:center;margin:0}.v2-bento-story .v2-card-bottom h3{font-size:36px}}
-.v2-pillar-strip button span,.v2-code-art i{color:#8b9a91}.v2-canvas-art small{color:#303b10}.v2-file-tabs button.selected{color:var(--accent);background:#d7e31712}.v2-iframe-container.phone iframe{width:390px;max-width:100%}.v2-story-title-scene{max-width:680px;margin:auto}
-.v2-import-button{cursor:pointer;position:relative}.v2-import-button:focus-within{outline:2px solid var(--accent);outline-offset:3px}.v2-import-preview{max-height:350px;overflow:auto;font:11px/1.7 monospace;padding:20px;background:#080c0f;border:1px solid var(--border);margin:20px 0}.v2-studio-head>.flex{max-width:58%;justify-content:flex-end}
-@media(max-width:900px){.v2-studio-head>.flex{max-width:none;justify-content:flex-start}}
-.v2-page .two-col{grid-template-columns:repeat(2,minmax(0,1fr))}.v2-page .two-col>label{min-width:0}.v2-page .two-col input,.v2-page .two-col select{width:100%}.v2-story-stage{width:100%;min-width:0}.v2-story-content{min-width:0;overflow-wrap:anywhere}.v2-story-layout>*{min-width:0}.v2-page input[type=range]{max-width:100%}
-@media(max-width:390px){.v2-agent-input .two-col{grid-template-columns:1fr}.v2-result-metadata{grid-template-columns:1fr}.v2-agent-principles{justify-content:center}}
+@media (min-width: 1201px) {
+  .v2-bento-story {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 245px;
+    column-gap: 40px;
+  }
+  .v2-bento-story .v2-card-top {
+    grid-column: 1/-1;
+  }
+  .v2-bento-story .v2-story-art {
+    grid-column: 1;
+    max-width: 440px;
+  }
+  .v2-bento-story .v2-card-bottom {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    margin: 0;
+  }
+  .v2-bento-story .v2-card-bottom h3 {
+    font-size: 36px;
+  }
+}
+.v2-pillar-strip button span,
+.v2-code-art i {
+  color: #8b9a91;
+}
+.v2-canvas-art small {
+  color: #303b10;
+}
+.v2-file-tabs button.selected {
+  color: var(--accent);
+  background: #d7e31712;
+}
+.v2-iframe-container.phone iframe {
+  width: 390px;
+  max-width: 100%;
+}
+.v2-story-title-scene {
+  max-width: 680px;
+  margin: auto;
+}
+.v2-import-button {
+  cursor: pointer;
+  position: relative;
+}
+.v2-import-button:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.v2-import-preview {
+  max-height: 350px;
+  overflow: auto;
+  font: 11px/1.7 monospace;
+  padding: 20px;
+  background: #080c0f;
+  border: 1px solid var(--border);
+  margin: 20px 0;
+}
+.v2-studio-head > .flex {
+  max-width: 58%;
+  justify-content: flex-end;
+}
+@media (max-width: 900px) {
+  .v2-studio-head > .flex {
+    max-width: none;
+    justify-content: flex-start;
+  }
+}
+.v2-page .two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.v2-page .two-col > label {
+  min-width: 0;
+}
+.v2-page .two-col input,
+.v2-page .two-col select {
+  width: 100%;
+}
+.v2-story-stage {
+  width: 100%;
+  min-width: 0;
+}
+.v2-story-content {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.v2-story-layout > * {
+  min-width: 0;
+}
+.v2-page input[type="range"] {
+  max-width: 100%;
+}
+@media (max-width: 390px) {
+  .v2-agent-input .two-col {
+    grid-template-columns: 1fr;
+  }
+  .v2-result-metadata {
+    grid-template-columns: 1fr;
+  }
+  .v2-agent-principles {
+    justify-content: center;
+  }
+}

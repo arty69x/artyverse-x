@@ -1,3 +1,4 @@
+import { useUI } from "../v3/i18n";
 import { useEffect, useRef, useState } from "react";
 import {
   Plus,
@@ -33,6 +34,8 @@ import {
 } from "./shared";
 import { download } from "../core/store";
 export function NodeStudio({ id }: { id?: string }) {
+  const ui = useUI();
+
   const st = useStudio(
       "workflow",
       id,
@@ -204,19 +207,19 @@ export function NodeStudio({ id }: { id?: string }) {
         {st.importControl}
         <Button disabled={running} variant="primary" onClick={() => void run()}>
           <Play size={15} />
-          Validate & run graph
+          {ui("Validate & run graph")}
         </Button>
         {running && (
           <Button onClick={() => abort.current?.abort()}>
             <Square size={15} />
-            Cancel
+            {ui("Cancel")}
           </Button>
         )}
       </StudioHead>
       <div className="v2-node-toolbar">
         <div className="button-row">
           <select
-            aria-label="New node type"
+            aria-label={ui("New node type")}
             value={newType}
             onChange={(e) => setNewType(e.target.value as any)}
           >
@@ -226,7 +229,7 @@ export function NodeStudio({ id }: { id?: string }) {
           </select>
           <Button disabled={graph.nodes.length >= 100} onClick={add}>
             <Plus size={15} />
-            Add node
+            {ui("Add node")}
           </Button>
           <Button
             onClick={() =>
@@ -241,13 +244,13 @@ export function NodeStudio({ id }: { id?: string }) {
             }
           >
             <Download size={15} />
-            Export graph
+            {ui("Export graph")}
           </Button>
         </div>
         <label className="v2-zoom">
-          Canvas zoom
+          {ui("Canvas zoom")}
           <input
-            aria-label="Graph zoom"
+            aria-label={ui("Graph zoom")}
             type="range"
             min={0.35}
             max={1.2}
@@ -305,7 +308,7 @@ export function NodeStudio({ id }: { id?: string }) {
                       key={e.id}
                       d={`M${a.x + 225} ${a.y + 70} C${a.x + 285} ${a.y + 70},${b.x - 70} ${b.y + 70},${b.x} ${b.y + 70}`}
                       fill="none"
-                      stroke={e.port === "false" ? "#D4006A" : "#D7E317"}
+                      stroke={e.port === "false" ? "var(--danger)" : "var(--focus)"}
                       strokeWidth="2"
                     />
                   );
@@ -411,7 +414,7 @@ export function NodeStudio({ id }: { id?: string }) {
           {node ? (
             <>
               <label>
-                Label
+                {ui("Label")}
                 <input
                   value={node.label}
                   onChange={(e) =>
@@ -457,9 +460,9 @@ export function NodeStudio({ id }: { id?: string }) {
               </div>
               {node.type === "input" && (
                 <label>
-                  Source text
+                  {ui("Source text")}
                   <textarea
-                    aria-label="Node source text"
+                    aria-label={ui("Node source text")}
                     rows={6}
                     value={String(node.config.text || "")}
                     onChange={(e) => update({ text: e.target.value })}
@@ -469,7 +472,7 @@ export function NodeStudio({ id }: { id?: string }) {
               {node.type === "agent" && (
                 <>
                   <label>
-                    Execution mode
+                    {ui("Execution mode")}
                     <select
                       value={String(node.config.mode || "local")}
                       onChange={(e) => update({ mode: e.target.value })}
@@ -481,7 +484,7 @@ export function NodeStudio({ id }: { id?: string }) {
                     </select>
                   </label>
                   <label>
-                    Agent task
+                    {ui("Agent task")}
                     <select
                       value={String(node.config.tool || "outline")}
                       onChange={(e) => update({ tool: e.target.value })}
@@ -492,7 +495,7 @@ export function NodeStudio({ id }: { id?: string }) {
                     </select>
                   </label>
                   <label>
-                    Request budget / USD
+                    {ui("Request budget / USD")}
                     <input
                       type="number"
                       min={0}
@@ -518,14 +521,14 @@ export function NodeStudio({ id }: { id?: string }) {
               {node.type === "replace" && (
                 <>
                   <label>
-                    Find
+                    {ui("Find")}
                     <input
                       value={String(node.config.find || "")}
                       onChange={(e) => update({ find: e.target.value })}
                     />
                   </label>
                   <label>
-                    Replace with
+                    {ui("Replace with")}
                     <input
                       value={String(node.config.replacement || "")}
                       onChange={(e) => update({ replacement: e.target.value })}
@@ -535,7 +538,7 @@ export function NodeStudio({ id }: { id?: string }) {
               )}
               {node.type === "branch" && (
                 <label>
-                  Contains text
+                  {ui("Contains text")}
                   <input
                     value={String(node.config.contains || "")}
                     onChange={(e) => update({ contains: e.target.value })}
@@ -544,7 +547,7 @@ export function NodeStudio({ id }: { id?: string }) {
               )}
               {["document", "note"].includes(node.type) && (
                 <label>
-                  Artifact title
+                  {ui("Artifact title")}
                   <input
                     value={String(node.config.title || "")}
                     onChange={(e) => update({ title: e.target.value })}
@@ -567,7 +570,7 @@ export function NodeStudio({ id }: { id?: string }) {
                 }}
               >
                 <Trash2 size={14} />
-                Delete node
+                {ui("Delete node")}
               </Button>
             </>
           ) : (
@@ -576,13 +579,13 @@ export function NodeStudio({ id }: { id?: string }) {
           <div className="v2-inspector-divider" />
           <span className="eyebrow">CONNECTIONS</span>
           <label>
-            From
+            {ui("From")}
             <select
-              aria-label="Connection from"
+              aria-label={ui("Connection from")}
               value={from}
               onChange={(e) => setFrom(e.target.value)}
             >
-              <option value="">Select a node</option>
+              <option value="">{ui("Select a node")}</option>
               {graph.nodes.map((n) => (
                 <option key={n.id} value={n.id}>
                   {n.label}
@@ -591,7 +594,7 @@ export function NodeStudio({ id }: { id?: string }) {
             </select>
           </label>
           <label>
-            Output port
+            {ui("Output port")}
             <select
               value={port}
               onChange={(e) => setPort(e.target.value as any)}
@@ -602,13 +605,13 @@ export function NodeStudio({ id }: { id?: string }) {
             </select>
           </label>
           <label>
-            To
+            {ui("To")}
             <select
-              aria-label="Connection to"
+              aria-label={ui("Connection to")}
               value={to}
               onChange={(e) => setTo(e.target.value)}
             >
-              <option value="">Select a node</option>
+              <option value="">{ui("Select a node")}</option>
               {graph.nodes.map((n) => (
                 <option key={n.id} value={n.id}>
                   {n.label}
@@ -618,7 +621,7 @@ export function NodeStudio({ id }: { id?: string }) {
           </label>
           <Button disabled={running} onClick={connect}>
             <Link2 size={14} />
-            Connect nodes
+            {ui("Connect nodes")}
           </Button>
           <div className="v2-edge-list">
             {graph.edges.map((e) => (
@@ -668,7 +671,8 @@ export function NodeStudio({ id }: { id?: string }) {
                     e.artifactId
                   }
                 >
-                  Open saved artifact <ArrowUpRight size={14} />
+                  {ui("Open saved artifact")}
+                  <ArrowUpRight size={14} />
                 </a>
               )}
             </article>

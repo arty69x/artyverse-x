@@ -1,3 +1,4 @@
+test.beforeEach(async ({page})=>{await page.addInitScript(()=>localStorage.setItem("av-locale","en"))});
 import { test, expect } from "@playwright/test";
 import { readFileSync } from "node:fs";
 import AxeBuilder from "@axe-core/playwright";
@@ -45,7 +46,7 @@ test("Code sandbox executes on Run, denies parent access, and persists visual CS
   await expect(frame.locator("em")).toHaveText("possibility.");
   await expect(page.locator(".v2-console")).toContainText("A real interaction");
   await page.getByRole("button", { name: /Inspect/ }).click();
-  await frame.locator("h1").click();
+  await frame.locator("h1").click({position:{x:4,y:4}});
   await expect(page.locator(".v2-css-inspector")).toContainText("h1");
   await page.getByLabel("CSS property value").fill("#ff0000");
   await page.getByRole("button", { name: "Apply property" }).click();
@@ -188,7 +189,7 @@ test("Sound synthesis exports nonzero PCM WAV, saves playable audio, and closes 
   await expect(page.getByRole("status").last()).toContainText(
     "Rendered audio saved",
   );
-  await page.getByRole("link", { name: "Home", exact: true }).click();
+  await page.getByRole("link", { name: "Home", exact: true }).first().click();
   await expect
     .poll(() => page.evaluate(() => (window as any).__audio.at(-1)?.state))
     .toBe("closed");

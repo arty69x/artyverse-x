@@ -1,3 +1,4 @@
+import { useUI } from "../v3/i18n";
 import { useEffect, useState } from "react";
 import {
   ShieldCheck,
@@ -14,6 +15,8 @@ import { PageHead, Button } from "../components/UI";
 import { useStore, request, download } from "../core/store";
 import { ToolNote, ErrorNotice } from "./shared";
 export function SystemHub() {
+  const ui = useUI();
+
   const s = useStore(),
     [status, setStatus] = useState<any>(null),
     [agent, setAgent] = useState<any>(null),
@@ -44,12 +47,12 @@ export function SystemHub() {
     <div className="page v2-page">
       <PageHead
         index="TRANSPARENCY / EVIDENCE / COST"
-        title="System overview"
+        title={ui("System overview")}
         description="What is real, what is connected, what it costs, and where your work lives. No readiness score is invented."
         action={
           <Button onClick={() => void load()}>
             <RotateCcw size={15} />
-            Refresh status
+            {ui("Refresh status")}
           </Button>
         }
       />
@@ -58,7 +61,7 @@ export function SystemHub() {
         <article>
           <Activity size={20} />
           <strong>{runs.length}</strong>
-          <span>Recorded agent executions</span>
+          <span>{ui("Recorded agent executions")}</span>
         </article>
         <article>
           <Coins size={20} />
@@ -68,18 +71,18 @@ export function SystemHub() {
         <article>
           <Link2 size={20} />
           <strong>{cache.length}</strong>
-          <span>Provider calls avoided by cache</span>
+          <span>{ui("Provider calls avoided by cache")}</span>
         </article>
         <article>
           <ShieldCheck size={20} />
           <strong>{fallback.length}</strong>
-          <span>Clearly labeled local fallbacks</span>
+          <span>{ui("Clearly labeled local fallbacks")}</span>
         </article>
       </div>
       <div className="v2-system-grid">
         <section className="control-surface">
           <span className="eyebrow">CAPABILITY CONTRACT</span>
-          <h2>Built to tell you the truth.</h2>
+          <h2>{ui("Built to tell you the truth.")}</h2>
           {[
             ["Projects / Library", "Local SQLite records with stable IDs"],
             [
@@ -131,7 +134,7 @@ export function SystemHub() {
         <div className="flex flex-col gap-5">
           <section className="control-surface">
             <span className="eyebrow">STORAGE / RECOVERY</span>
-            <h2>Your work, saved locally.</h2>
+            <h2>{ui("Your work, saved locally.")}</h2>
             <p>
               {status
                 ? `${status.storage} · ${(status.bytes / 1024).toFixed(1)} KB database (media/WAL excluded)`
@@ -154,7 +157,7 @@ export function SystemHub() {
               }}
             >
               <Download size={15} />
-              Download persistent backup
+              {ui("Download persistent backup")}
             </Button>
             <p className="v2-caption">
               Save browser drafts first. Backups include persistent items,
@@ -163,7 +166,7 @@ export function SystemHub() {
           </section>
           <section className="control-surface">
             <span className="eyebrow">AI CONNECTION / SERVER ONLY</span>
-            <h2>One secure boundary.</h2>
+            <h2>{ui("One secure boundary.")}</h2>
             <p>
               Keys never enter the interface, presets, exports or the client
               bundle. Configure the server environment for provider access.

@@ -1,3 +1,4 @@
+import { WorkspaceBoundary } from "./v3/Boundary";
 import { useEffect, useState, lazy, Suspense } from "react";
 import { MotionConfig } from "motion/react";
 import {
@@ -21,7 +22,7 @@ import {
   X,
 } from "lucide-react";
 import { useStore, useT } from "./core/store";
-import { Button, Modal, SearchBox, Mascot } from "./components/UI";
+import { Button } from "./components/UI";
 import { Discover, Library, SettingsPage } from "./pages/Workspace";
 const Chat = lazy(() =>
   import("./pages/Workflows").then((m) => ({ default: m.Chat })),
@@ -45,9 +46,10 @@ const DesignOS = lazy(() =>
   import("./pages/DesignOS").then((m) => ({ default: m.DesignOS })),
 );
 import { kindRoutes } from "../shared/v2/contracts";
-import { HomeV2 } from "./v2/Home";
+import { HomeV3 } from "./v3/Home";
+import { Shell } from "./v3/Shell";
 const Projects = lazy(() =>
-  import("./v2/Projects").then((m) => ({ default: m.Projects })),
+  import("./v3/Projects").then((m) => ({ default: m.ProjectsV3 })),
 );
 const Agents = lazy(() =>
   import("./v2/Agents").then((m) => ({ default: m.Agents })),
@@ -70,7 +72,28 @@ const StoryStudio = lazy(() =>
 const SystemHub = lazy(() =>
   import("./v2/SystemHub").then((m) => ({ default: m.SystemHub })),
 );
+const Copilot = lazy(() =>
+  import("./v3/Copilot").then((m) => ({ default: m.Copilot })),
+);
+const Analytics = lazy(() =>
+  import("./v3/Platform").then((m) => ({ default: m.Analytics })),
+);
+const QuestionBank = lazy(() =>
+  import("./v3/Platform").then((m) => ({ default: m.QuestionBank })),
+);
+const Marketplace = lazy(() =>
+  import("./v3/Platform").then((m) => ({ default: m.Marketplace })),
+);
+const DesignBoard = lazy(() =>
+  import("./v3/DesignBoard").then((m) => ({ default: m.DesignBoard })),
+);
 export const routes = [
+  ["copilot", "Interview Copilot", "ผู้ช่วยสัมภาษณ์", Mic],
+  ["practice", "Practice", "ฝึกสัมภาษณ์", MessageSquare],
+  ["questions", "Question Bank", "คลังคำถาม", BookOpen],
+  ["marketplace", "Marketplace", "ชุดงานสร้างสรรค์", LayoutTemplate],
+  ["analytics", "Analytics", "ภาพรวมการใช้งาน", SlidersHorizontal],
+  ["design-system", "Design System", "ระบบดีไซน์", SlidersHorizontal],
   ["home", "Home", "หน้าหลัก", Home],
   ["projects", "Projects", "โปรเจกต์", Folder],
   ["agents", "Agent Studio", "เอเจนต์", Zap],
@@ -95,32 +118,30 @@ export type Navigate = (route: string, id?: string) => void;
 export function App() {
   const s = useStore(),
     t = useT();
-  const [path, setPath] = useState(location.hash.slice(1) || "/home"),
-    [menu, setMenu] = useState(false),
-    [command, setCommand] = useState(false),
-    [q, setQ] = useState("");
+  const [path, setPath] = useState(location.hash.slice(1) || "/home");
   const parts = path.split("/").filter(Boolean),
-    route = parts[0] || "home",
+    route =
+      (
+        {
+          assets: "library",
+          pipeline: "automate",
+          canvas: "create",
+          "live-code": "code",
+          components: "design-system",
+          overview: "home",
+          inspector: "code",
+        } as Record<string, string>
+      )[parts[0]] ||
+      parts[0] ||
+      "home",
     id = parts[1];
   const go: Navigate = (r, i) => {
     location.hash = "/" + r + (i ? "/" + i : "");
-    setMenu(false);
   };
   useEffect(() => {
     const f = () => setPath(location.hash.slice(1) || "/home");
     window.addEventListener("hashchange", f);
-    const k = (e: KeyboardEvent) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
-        e.preventDefault();
-        setCommand((x) => !x);
-      }
-      if (e.key === "Escape") setMenu(false);
-    };
-    window.addEventListener("keydown", k);
-    return () => {
-      window.removeEventListener("hashchange", f);
-      window.removeEventListener("keydown", k);
-    };
+    return () => window.removeEventListener("hashchange", f);
   }, []);
   useEffect(() => {
     document.documentElement.lang = s.locale;
@@ -130,8 +151,31 @@ export function App() {
   }, [route, s.locale, s.motion]);
   let page;
   switch (route) {
+    case "copilot":
+    case "practice":
+      page = (
+        <Copilot
+          key={route + ":" + (id || "new")}
+          practice={route === "practice"}
+          go={go}
+          id={id}
+        />
+      );
+      break;
+    case "questions":
+      page = <QuestionBank key={id || "all"} go={go} id={id} />;
+      break;
+    case "marketplace":
+      page = <Marketplace go={go} />;
+      break;
+    case "analytics":
+      page = <Analytics />;
+      break;
+    case "design-system":
+      page = <DesignBoard />;
+      break;
     case "home":
-      page = <HomeV2 go={go} />;
+      page = <HomeV3 go={go} />;
       break;
     case "explore":
     case "templates":
@@ -153,7 +197,7 @@ export function App() {
       page = <Live key={id || "new"} id={id} />;
       break;
     case "projects":
-      page = <Projects go={go} />;
+      page = <Projects key={id || "all"} go={go} id={id} />;
       break;
     case "agents":
       page = <Agents key={id || "new"} id={id} go={go} />;
@@ -204,245 +248,19 @@ export function App() {
         s.motion === "Off" || s.motion === "Calm" ? "always" : "user"
       }
     >
-      <a
-        href="#main"
-        onClick={(e) => {
-          e.preventDefault();
-          document.getElementById("main")?.focus();
-        }}
-        className="skip-link"
-      >
-        {t("Skip to workspace", "ข้ามไปพื้นที่ทำงาน")}
-      </a>
-      <div className="app">
-        <aside
-          className={"sidebar " + (menu ? "open" : "")}
-          id="main-navigation"
-          aria-label={t("Main navigation", "เมนูหลัก")}
+      <Shell route={route} go={go}>
+        <Suspense
+          fallback={
+            <div className="v3-loading" role="status">
+              {t("Opening workspace…", "กำลังเปิดพื้นที่ทำงาน…")}
+            </div>
+          }
         >
-          <a className="brand" href="#/home">
-            <span className="brand-symbol">✳</span>
-            <span>
-              artyverse<span className="accent"> x</span>
-              <small>YOUR CREATIVE UNIVERSE</small>
-            </span>
-          </a>
-          <button className="workspace-switch" onClick={() => go("projects")}>
-            <span className="avatar">A</span>
-            <span>
-              {s.items.find((i) => i.id === s.activeProject)?.title ||
-                t("All creative worlds", "ทุกโปรเจกต์")}
-              <small>{t("LOCAL WORKSPACE", "บันทึกในเครื่อง")}</small>
-            </span>
-            <ArrowUpRight size={15} />
-          </button>
-          <button className="sidebar-search" onClick={() => setCommand(true)}>
-            <Search size={16} />
-            {t("Search anything", "ค้นหาทั้งหมด")}
-            <kbd>⌘ K</kbd>
-          </button>
-          <div className="nav-label">{t("WORKSPACE", "พื้นที่ทำงาน")}</div>
-          <nav>
-            {routes
-              .filter((r) => !["design", "settings", "system"].includes(r[0]))
-              .map(([key, en, th, Icon], i) => (
-                <a
-                  key={key}
-                  className={route === key ? "active" : ""}
-                  href={"#/" + key}
-                  aria-current={route === key ? "page" : undefined}
-                  onClick={() => setMenu(false)}
-                >
-                  <Icon size={18} />
-                  <span>{s.locale === "th" ? th : en}</span>
-                </a>
-              ))}
-          </nav>
-          <div className="sidebar-bottom">
-            <div className="nav-label">
-              {t("MAKE IT YOURS", "ปรับให้เป็นคุณ")}
-            </div>
-            <nav>
-              {routes
-                .filter((r) => ["design", "settings", "system"].includes(r[0]))
-                .map(([key, en, th, Icon]) => (
-                  <a
-                    key={key}
-                    className={route === key ? "active" : ""}
-                    href={"#/" + key}
-                  >
-                    <Icon size={18} />
-                    {s.locale === "th" ? th : en}
-                  </a>
-                ))}
-            </nav>
-            <div className="local-status">
-              <span className="status-dot" />
-              <span>
-                {t("Your ideas stay here", "ไอเดียเก็บไว้ที่นี่")}
-                <small>
-                  {t(
-                    "Local storage · No cloud sync",
-                    "ข้อมูลในเครื่อง · ไม่ซิงก์คลาวด์",
-                  )}
-                </small>
-              </span>
-            </div>
-          </div>
-        </aside>
-        {menu && (
-          <button
-            className="nav-scrim"
-            aria-label="Close navigation"
-            onClick={() => setMenu(false)}
-          />
-        )}
-        <div className="main-shell">
-          <header className="topbar">
-            <div className="topbar-left">
-              <button
-                className="icon-button mobile-toggle"
-                onClick={() => setMenu(!menu)}
-                aria-label="Toggle navigation"
-                aria-controls="main-navigation"
-                aria-expanded={menu}
-              >
-                <Menu />
-              </button>
-              <span className="breadcrumb">
-                {t("Workspace", "พื้นที่ทำงาน")}
-                <span>/</span>
-                <strong>
-                  {routes.find((r) => r[0] === route)?.[
-                    s.locale === "th" ? 2 : 1
-                  ] || route}
-                </strong>
-              </span>
-            </div>
-            <div className="topbar-actions">
-              <span className="local-pill">
-                <span className="status-dot" />
-                {t("LOCAL MODE", "โหมดในเครื่อง")}
-              </span>
-              <button
-                className="icon-button"
-                onClick={() => setCommand(true)}
-                aria-label="Search"
-              >
-                <Search size={18} />
-              </button>
-              <button
-                className="language-button"
-                onClick={() => s.setLocale(s.locale === "en" ? "th" : "en")}
-              >
-                {s.locale === "en" ? "EN" : "TH"}
-              </button>
-              <span className="avatar small">A</span>
-            </div>
-          </header>
-          <main id="main" tabIndex={-1}>
-            {s.error ? (
-              <div className="error-banner" role="alert">
-                {s.error}
-                <Button onClick={() => void s.refresh()}>Retry</Button>
-              </div>
-            ) : s.loading ? (
-              <div className="empty" role="status">
-                {t("Opening your universe…", "กำลังเปิดพื้นที่ทำงาน…")}
-              </div>
-            ) : (
-              <Suspense
-                fallback={
-                  <div className="empty" role="status">
-                    Opening workspace…
-                  </div>
-                }
-              >
-                {page}
-              </Suspense>
-            )}
-          </main>
-          <footer className="app-footer">
-            <span>
-              ARTYVERSE X <span className="muted">/</span>{" "}
-              {t(
-                "A little space for your next big thing.",
-                "พื้นที่เล็ก ๆ สำหรับไอเดียที่ยิ่งใหญ่",
-              )}
-            </span>
-            <span>
-              LOCAL FIRST <span className="accent">↗</span>
-            </span>
-          </footer>
-        </div>
-      </div>
-      {s.notice && (
-        <div className="toast" role="status">
-          {s.notice}
-          <button
-            className="icon-button"
-            aria-label="Dismiss notification"
-            onClick={() => s.toast("")}
-          >
-            <X size={16} />
-          </button>
-        </div>
-      )}
-      {command && (
-        <Modal
-          title={t("Find your next move", "ค้นหาสิ่งที่ต้องการ")}
-          onClose={() => setCommand(false)}
-        >
-          <SearchBox
-            value={q}
-            onChange={setQ}
-            placeholder={t(
-              "Search workspaces and saved work…",
-              "ค้นหาพื้นที่และงานที่บันทึก…",
-            )}
-          />
-          <div className="command-results">
-            <span className="eyebrow">WORKSPACES</span>
-            {routes
-              .filter((r) =>
-                (r[1] + r[2]).toLowerCase().includes(q.toLowerCase()),
-              )
-              .map(([r, en, th, Icon]) => (
-                <button
-                  key={r}
-                  onClick={() => {
-                    go(r);
-                    setCommand(false);
-                  }}
-                >
-                  <Icon size={18} />
-                  {s.locale === "th" ? th : en}
-                  <ArrowUpRight size={15} />
-                </button>
-              ))}
-            <span className="eyebrow">SAVED WORK</span>
-            {s.items
-              .filter(
-                (i) =>
-                  !i.deletedAt &&
-                  i.title.toLowerCase().includes(q.toLowerCase()),
-              )
-              .slice(0, 8)
-              .map((i) => (
-                <button
-                  key={i.id}
-                  onClick={() => {
-                    go(kindRoutes[i.kind], i.id);
-                    setCommand(false);
-                  }}
-                >
-                  {i.title}
-                  <small>{i.kind}</small>
-                </button>
-              ))}
-          </div>
-        </Modal>
-      )}
+          <WorkspaceBoundary key={route + ":" + (id || "")}>
+            {page}
+          </WorkspaceBoundary>
+        </Suspense>
+      </Shell>
     </MotionConfig>
   );
 }

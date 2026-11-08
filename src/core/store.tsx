@@ -55,7 +55,7 @@ export function Provider({ children }: { children: React.ReactNode }) {
     [error, setError] = useState(""),
     [notice, toast] = useState(""),
     [locale, setLocaleState] = useState<"en" | "th">(() =>
-      localStorage.getItem("av-locale") === "th" ? "th" : "en",
+      localStorage.getItem("av-locale") === "en" ? "en" : "th",
     ),
     [motion, setMotionState] = useState(
       () => localStorage.getItem("av-motion") || "Balanced",

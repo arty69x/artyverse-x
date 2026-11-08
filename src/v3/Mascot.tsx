@@ -1,0 +1,178 @@
+import { useStore } from "../core/store";
+import { useId, useRef, useEffect, useState } from "react";
+import { motion, useReducedMotion } from "motion/react";
+export function Arcyca({
+  state = "idle",
+  label = "ARCYCA · creative companion",
+}: {
+  state?: "idle" | "listening" | "thinking" | "success" | "error";
+  label?: string;
+}) {
+  const id = useId().replace(/:/g, ""),
+    reduced = useReducedMotion();
+  const { motion: quality } = useStore(),
+    ref = useRef<SVGSVGElement>(null),
+    [active, setActive] = useState(!document.hidden);
+  useEffect(() => {
+    let visible = true;
+    const update = () => setActive(visible && !document.hidden);
+    const observer = new IntersectionObserver((entries) => {
+      visible = entries[0].isIntersecting;
+      update();
+    });
+    if (ref.current) observer.observe(ref.current);
+    document.addEventListener("visibilitychange", update);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener("visibilitychange", update);
+    };
+  }, []);
+  const calm = !!reduced || ["Off", "Calm"].includes(quality) || !active;
+  return (
+    <motion.svg
+      ref={ref}
+      className={"v3-arcyca " + state}
+      viewBox="0 0 440 440"
+      role="img"
+      aria-label={label + " / " + state}
+      animate={
+        calm ? { y: 0, rotate: 0 } : { y: [0, -7, 0], rotate: [-2, 1, -2] }
+      }
+      transition={
+        calm
+          ? { duration: 0 }
+          : { duration: 7, repeat: Infinity, ease: "easeInOut" }
+      }
+    >
+      <defs>
+        <linearGradient id={id + "body"} x1="0" y1="0" x2="1" y2="1">
+          <stop stopColor="#F4FFA2" />
+          <stop offset=".45" stopColor="#CCFF00" />
+          <stop offset="1" stopColor="#648700" />
+        </linearGradient>
+        <linearGradient id={id + "glass"} x1="0" y1="0" x2=".8" y2="1">
+          <stop stopColor="#33475B" />
+          <stop offset=".5" stopColor="#101C30" />
+          <stop offset="1" stopColor="#050B17" />
+        </linearGradient>
+        <linearGradient id={id + "shoe"}>
+          <stop stopColor="#FF8ABD" />
+          <stop offset="1" stopColor="#FF2078" />
+        </linearGradient>
+        <radialGradient id={id + "glow"}>
+          <stop stopColor="#CCFF00" stopOpacity=".35" />
+          <stop offset="1" stopColor="#CCFF00" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <ellipse cx="220" cy="391" rx="144" ry="25" fill={`url(#${id}glow)`} />
+      <g className="v3-arcyca-board">
+        <path
+          d="M91 362Q72 348 95 343l239-8q28 2 10 16l-223 24q-21 1-30-13"
+          fill="#91A2B8"
+        />
+        <path
+          d="m97 343 236-8q18 1 13 8l-233 24q-22 0-16-24"
+          fill="#14263B"
+          stroke="#657A8F"
+        />
+        <ellipse cx="139" cy="373" rx="13" ry="10" fill="#FF2078" />
+        <ellipse cx="299" cy="356" rx="13" ry="10" fill="#FF2078" />
+      </g>
+      <g className="v3-arcyca-limbs">
+        <path
+          d="m168 283-13 45q-4 16 16 18l36-1q15-2 7-14l-12-14 7-29"
+          fill={`url(#${id}shoe)`}
+          stroke="#E14C8B"
+          strokeWidth="2"
+        />
+        <path
+          d="m248 282 14 34q-5 17 11 19l40-3q12-3 1-13l-16-12-14-38"
+          fill={`url(#${id}shoe)`}
+        />
+        <path
+          d="m154 213-35 35q-15 17-26 2-8-11 5-24l37-45"
+          fill={`url(#${id}body)`}
+        />
+        <path
+          d="m295 186 34-30q17-15 28 1 5 12-10 22l-33 40"
+          fill={`url(#${id}body)`}
+        />
+        <path
+          d="m352 150 1-17m7 20 10-11"
+          stroke="#CCFF00"
+          strokeWidth="10"
+          strokeLinecap="round"
+        />
+      </g>
+      <path
+        d="M134 155q4-76 81-77 87-1 96 78l9 91q1 56-77 57-91 5-106-38Z"
+        fill={`url(#${id}body)`}
+        stroke="#DFFF75"
+        strokeWidth="2"
+      />
+      <path
+        d="M139 153q1-80 77-80 76-2 91 62l4 26-28-10-7-21q-65-32-109 12l-9 25Z"
+        fill="#E6FF85"
+      />
+      <path
+        d="M149 168q8-35 66-38 65-1 81 40l3 48q-3 36-75 39-68-2-73-37Z"
+        fill={`url(#${id}glass)`}
+        stroke="#6E9610"
+        strokeWidth="4"
+      />
+      <path
+        d="M163 165q34-29 80-20"
+        fill="none"
+        stroke="#FFFFFF"
+        strokeWidth="5"
+        opacity=".2"
+        strokeLinecap="round"
+      />
+      <g className="v3-arcyca-eyes">
+        <rect
+          x="183"
+          y="182"
+          width="12"
+          height={state === "success" ? "8" : "22"}
+          rx="6"
+          fill={state === "error" ? "#FF8AAF" : "#CCFF00"}
+        />
+        <rect
+          x="251"
+          y="180"
+          width="12"
+          height={state === "success" ? "8" : "22"}
+          rx="6"
+          fill={state === "error" ? "#FF8AAF" : "#CCFF00"}
+        />
+      </g>
+      <path
+        d="m211 220q14 13 28-2"
+        fill="none"
+        stroke="#CCFF00"
+        strokeWidth="4"
+        strokeLinecap="round"
+      />
+      <circle
+        cx="309"
+        cy="176"
+        r="18"
+        fill="#B44FFF"
+        stroke="#E5D1FF"
+        strokeWidth="3"
+      />
+      <circle cx="309" cy="176" r="7" fill="#1A163A" />
+      <path d="m211 79 5-26" stroke="#839C10" strokeWidth="6" />
+      <circle cx="217" cy="48" r="9" fill="#FF2078" />
+      <rect
+        x="204"
+        y="269"
+        width="37"
+        height="7"
+        rx="3.5"
+        fill="#334800"
+        opacity=".55"
+      />
+    </motion.svg>
+  );
+}

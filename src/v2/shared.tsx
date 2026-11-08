@@ -1,3 +1,4 @@
+import { useUI } from "../v3/i18n";
 import { useRef, useState } from "react";
 import type { Item } from "../../shared/schema";
 import { useStore, useDraft } from "../core/store";
@@ -20,6 +21,8 @@ export function useStudio<T extends Record<string, any>>(
   initial: T,
   defaultTitle: string,
 ) {
+  const ui = useUI();
+
   const s = useStore(),
     item = s.items.find((i) => i.id === id && i.kind === kind && !i.deletedAt),
     [current, setCurrent] = useState(item),
@@ -120,14 +123,14 @@ export function useStudio<T extends Record<string, any>>(
     importControl: (
       <>
         <Button
-          title="Undo studio change"
+          title={ui("Undo studio change")}
           disabled={!past.current.length}
           onClick={undo}
         >
           <Undo2 size={15} />
         </Button>
         <Button
-          title="Redo studio change"
+          title={ui("Redo studio change")}
           disabled={!future.current.length}
           onClick={redo}
         >
@@ -212,12 +215,15 @@ export function downloadBlob(name: string, blob: Blob) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 export function Missing({ kind }: { kind: string }) {
+  const ui = useUI();
+
   return (
     <section className="empty">
       <h1>{kind} not found</h1>
       <p>Check the Library or restore it from Trash.</p>
       <a className="button" href="#/library">
-        Open Library <ArrowUpRight size={16} />
+        {ui("Open Library")}
+        <ArrowUpRight size={16} />
       </a>
     </section>
   );
@@ -237,18 +243,20 @@ function SourceImport({
   title: string;
   onApply: (v: any) => void;
 }) {
+  const ui = useUI();
+
   const [preview, setPreview] = useState<any>(null),
     [error, setError] = useState("");
   return (
     <>
       <label className="button v2-import-button">
         <Upload size={15} />
-        Import source
+        {ui("Import source")}
         <input
           className="sr-only"
           type="file"
           accept=".json,application/json"
-          aria-label="Import studio source"
+          aria-label={ui("Import studio source")}
           onChange={async (e) => {
             const file = e.target.files?.[0];
             e.target.value = "";
@@ -278,13 +286,13 @@ function SourceImport({
         />
       </label>
       <Button
-        title="Export editable source"
+        title={ui("Export editable source")}
         onClick={() =>
           download(title + "-source.json", JSON.stringify(value, null, 2))
         }
       >
         <Download size={15} />
-        Source JSON
+        {ui("Source JSON")}
       </Button>
       {error && (
         <span className="v2-error" role="alert">
@@ -292,7 +300,10 @@ function SourceImport({
         </span>
       )}
       {preview && (
-        <Modal title="Review imported source" onClose={() => setPreview(null)}>
+        <Modal
+          title={ui("Review imported source")}
+          onClose={() => setPreview(null)}
+        >
           <p className="v2-caption">
             Validated {kind} source. Applying replaces the current draft and can
             be undone. Imported code does not execute until Run is pressed.
@@ -307,7 +318,7 @@ function SourceImport({
               setPreview(null);
             }}
           >
-            Apply imported source
+            {ui("Apply imported source")}
           </Button>
         </Modal>
       )}

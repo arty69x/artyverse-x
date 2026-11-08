@@ -1,0 +1,22 @@
+import type { KeyboardEvent } from "react";
+/** Native tab activation supplies the existing selection handler. */
+export function rovingTabs(event: KeyboardEvent<HTMLElement>) {
+  if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+  const tabs = Array.from(
+    event.currentTarget.querySelectorAll<HTMLButtonElement>(
+      '[role="tab"]:not(:disabled)',
+    ),
+  );
+  if (!tabs.length) return;
+  const i = tabs.indexOf(document.activeElement as HTMLButtonElement),
+    next =
+      event.key === "Home"
+        ? 0
+        : event.key === "End"
+          ? tabs.length - 1
+          : (i + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) %
+            tabs.length;
+  event.preventDefault();
+  tabs[next].click();
+  tabs[next].focus();
+}

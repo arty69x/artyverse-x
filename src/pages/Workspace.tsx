@@ -1,4 +1,7 @@
-import { kindRoutes } from "../../shared/v2/contracts";
+import { useUI } from "../v3/i18n";
+import { applyAccent } from "../v3/accent";
+import { useTheme } from "../v3/Theme";
+import { kindRoutes, routeForItem } from "../../shared/v2/contracts";
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import {
@@ -423,7 +426,7 @@ export function HomePage({ go }: { go: Navigate }) {
   );
 }
 export function openItem(i: Item, go: Navigate) {
-  go(kindRoutes[i.kind], i.id);
+  go(routeForItem(i), i.id);
 }
 export function Discover({
   go,
@@ -597,6 +600,8 @@ export function Discover({
   );
 }
 export function Library({ go }: { go: Navigate }) {
+  const ui = useUI();
+
   const s = useStore(),
     t = useT(),
     [q, setQ] = useDraft("library-query", ""),
@@ -738,13 +743,13 @@ export function Library({ go }: { go: Navigate }) {
                   {i.deletedAt ? (
                     <Button onClick={() => void s.trash(i, true)}>
                       <RotateCcw size={14} />
-                      Restore
+                      {ui("Restore")}
                     </Button>
                   ) : (
                     <>
                       <button
                         className="icon-button"
-                        title="Rename"
+                        title={ui("Rename")}
                         aria-label={"Rename " + i.title}
                         onClick={() => {
                           setRename(i);
@@ -853,6 +858,9 @@ export function Library({ go }: { go: Navigate }) {
   );
 }
 export function SettingsPage() {
+  const ui = useUI();
+
+  const appearance = useTheme();
   const s = useStore(),
     t = useT(),
     [status, setStatus] = useState<any>(null),
@@ -875,6 +883,26 @@ export function SettingsPage() {
       />
       <section className="settings-section">
         <h2>{t("Personal preferences", "การตั้งค่าส่วนตัว")}</h2>
+        <label className="setting-row">
+          <span>
+            {t("Theme", "ธีม")}
+            <small>
+              {t(
+                "Dark, light, or follow your system.",
+                "มืด สว่าง หรือตามการตั้งค่าของเครื่อง",
+              )}
+            </small>
+          </span>
+          <select
+            aria-label={t("Theme preference", "การตั้งค่าธีม")}
+            value={appearance.preference}
+            onChange={(e) => appearance.setTheme(e.target.value as any)}
+          >
+            <option value="dark">{t("Dark creative", "มืดสร้างสรรค์")}</option>
+            <option value="light">{t("Light", "สว่าง")}</option>
+            <option value="system">{t("System", "ตามระบบ")}</option>
+          </select>
+        </label>
         <label className="setting-row">
           <span>
             {t("Language", "ภาษา")}
@@ -912,10 +940,7 @@ export function SettingsPage() {
             type="color"
             defaultValue={localStorage.getItem("av-accent") || "#CCFF00"}
             onChange={(e) => {
-              document.documentElement.style.setProperty(
-                "--accent",
-                e.target.value,
-              );
+              applyAccent(e.target.value);
               localStorage.setItem("av-accent", e.target.value);
             }}
           />
@@ -946,10 +971,10 @@ export function SettingsPage() {
             }}
           >
             <Download size={16} />
-            Download complete backup
+            {ui("Download complete backup")}
           </Button>
           <label className="button file-button">
-            Preview restore
+            {ui("Preview restore")}
             <input
               type="file"
               accept="application/json,.json"
@@ -1008,7 +1033,7 @@ export function SettingsPage() {
         ))}
       </section>
       <section className="settings-section">
-        <h2>Keyboard shortcuts</h2>
+        <h2>{ui("Keyboard shortcuts")}</h2>
         <p>
           <kbd>⌘ / Ctrl K</kbd> Search · <kbd>Escape</kbd> Close dialog ·{" "}
           <kbd>Ctrl Z</kbd> Editor undo · <kbd>Shift Enter</kbd> New line
@@ -1037,7 +1062,7 @@ export function SettingsPage() {
               }
             }}
           >
-            Merge backup
+            {ui("Merge backup")}
           </Button>
         </Modal>
       )}

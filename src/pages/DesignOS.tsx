@@ -1,3 +1,5 @@
+import {applyAccent} from "../v3/accent";
+import { rovingTabs } from "../v3/a11y";
 import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import {
@@ -85,7 +87,7 @@ export function DesignOS({ go }: { go: Navigate }) {
           "ภาษาออกแบบเดียวกัน พร้อมพื้นที่ปรับแต่งและทดลอง",
         )}
       />
-      <div className="design-tabs" role="tablist">
+      <div className="design-tabs" role="tablist" onKeyDown={rovingTabs}>
         {[
           "Overview",
           "Tokens",
@@ -99,6 +101,7 @@ export function DesignOS({ go }: { go: Navigate }) {
           <button
             role="tab"
             aria-selected={tab === x}
+            tabIndex={tab === x ? 0 : -1}
             className={tab === x ? "selected" : ""}
             key={x}
             onClick={() => setTab(x)}
@@ -230,7 +233,7 @@ export function DesignOS({ go }: { go: Navigate }) {
 }
 function Tokens() {
   const s = useStore(),
-    [preview, setPreview] = useState(theme.primitive.accent),
+    [preview, setPreview] = useState<string>(theme.primitive.accent),
     [applied, setApplied] = useState(
       localStorage.getItem("av-accent") || theme.primitive.accent,
     ),
@@ -239,7 +242,7 @@ function Tokens() {
   function apply(color: string) {
     setPrevious(applied);
     setApplied(color);
-    document.documentElement.style.setProperty("--accent", color);
+    applyAccent(color);
     localStorage.setItem("av-accent", color);
     s.toast("Accent applied to interface components");
   }
@@ -277,7 +280,7 @@ function Tokens() {
         </div>
         <h3>Typography</h3>
         <h2 className="type-specimen">A universe of ideas.</h2>
-        <p>Space Grotesk · DM Sans · Noto Sans Thai</p>
+        <p>Syne · DM Sans · IBM Plex Sans Thai · JetBrains Mono</p>
         <p>พื้นที่สำหรับความคิดสร้างสรรค์ — ตัวอักษรไทยที่อ่านได้ชัดเจน</p>
       </section>
       <aside className="control-surface">

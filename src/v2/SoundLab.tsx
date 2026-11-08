@@ -1,3 +1,4 @@
+import { useUI } from "../v3/i18n";
 import { useEffect, useRef, useState } from "react";
 import {
   Play,
@@ -32,6 +33,8 @@ const noteName = (m: number) =>
       ] +
       (Math.floor(m / 12) - 1);
 export function SoundLab({ id }: { id?: string }) {
+  const ui = useUI();
+
   const st = useStudio<Composition>(
       "composition",
       id,
@@ -274,7 +277,7 @@ export function SoundLab({ id }: { id?: string }) {
                 16 STEPS / 1 BAR / SIXTEENTH NOTES
               </span>
               <Button onClick={() => set("steps", Array(16).fill(-1))}>
-                Clear steps
+                {ui("Clear steps")}
               </Button>
             </div>
             <div className="v2-step-grid">
@@ -333,7 +336,7 @@ export function SoundLab({ id }: { id?: string }) {
         <aside className="v2-instrument-controls">
           <span className="eyebrow">SOUND DESIGN</span>
           <label>
-            Wave shape
+            {ui("Wave shape")}
             <select
               value={value.wave}
               onChange={(e) => set("wave", e.target.value as any)}
@@ -407,7 +410,7 @@ export function SoundLab({ id }: { id?: string }) {
           ))}
           <Button disabled={rendering} onClick={() => void render(true)}>
             <Save size={15} />
-            Render to Library
+            {ui("Render to Library")}
           </Button>
           <Button
             onClick={() =>
@@ -417,7 +420,7 @@ export function SoundLab({ id }: { id?: string }) {
               )
             }
           >
-            Export composition data
+            {ui("Export composition data")}
           </Button>
           <Button
             onClick={() => {
@@ -426,7 +429,7 @@ export function SoundLab({ id }: { id?: string }) {
             }}
           >
             <RotateCcw size={15} />
-            Reset sound
+            {ui("Reset sound")}
           </Button>
           <ToolNote>
             This is synthesized audio, not speech transcription. Output is

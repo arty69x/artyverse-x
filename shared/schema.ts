@@ -1,3 +1,5 @@
+import { copilotData } from "./interview.ts";
+import { designSystem } from "./design.ts";
 import { z } from "zod";
 import { advancedSchemas, graphSchema } from "./v2/contracts.ts";
 export const kinds = [
@@ -106,6 +108,12 @@ export const itemInput = z
     revision: z.number().int().min(0).optional(),
   })
   .superRefine((item, ctx) => {
+    if (
+      item.kind === "session" &&
+      ["copilot", "practice"].includes(String(item.data.sessionType)) &&
+      !copilotData.safeParse(item.data).success
+    )
+      ctx.addIssue({ code: "custom", message: "Invalid interview session" });
     const schema = advancedSchemas[item.kind];
     if (schema && !schema.safeParse(item.data).success)
       ctx.addIssue({
@@ -142,17 +150,17 @@ export type Message = {
 export const theme = {
   schemaVersion: 1,
   primitive: {
-    background: "#050708",
-    surface: "#0B1012",
-    elevated: "#141B1E",
-    text: "#F2F6F7",
-    muted: "#A6B3B8",
-    border: "#283236",
-    accent: "#D7E317",
-    cyan: "#43E6FF",
-    violet: "#9B43FF",
-    danger: "#FF8899",
-    pink: "#D4006A",
+    background: designSystem.themes.dark.background,
+    surface: designSystem.themes.dark.surface,
+    text: designSystem.themes.dark.text,
+    muted: designSystem.themes.dark.muted,
+    accent: designSystem.themes.dark.accent,
+    danger: designSystem.themes.dark.danger,
+    border: designSystem.themes.dark.line,
+    elevated: designSystem.themes.dark.surface2,
+    pink: designSystem.brand.pink,
+    cyan: designSystem.brand.cyan,
+    violet: designSystem.brand.violet,
   },
   semantic: {
     background: "primitive.background",
@@ -175,16 +183,20 @@ export const theme = {
       background: "semantic.elevated",
       primary: "semantic.accent",
       radius: 8,
-      minHeight: 42,
+      minHeight: 44,
     },
     dialog: { background: "semantic.elevated", radius: 16 },
-    sidebar: { width: 224, background: "semantic.background" },
+    sidebar: { width: 256, background: "semantic.background" },
     inspector: { width: 225, background: "semantic.surface" },
   },
   space: [4, 8, 12, 16, 24, 32, 48, 64, 96],
   radius: [4, 8, 12, 16, 24],
   duration: { micro: 120, panel: 220, scene: 480, ambient: 6000 },
-  font: { display: "Poppins", body: "DM Sans", thai: "IBM Plex Sans Thai" },
+  font: {
+    display: "Syne Variable",
+    body: "DM Sans",
+    thai: "IBM Plex Sans Thai",
+  },
 };
 export const uid = () => crypto.randomUUID();
 export function defaultNodes(title = "Your next big idea"): LayoutNode[] {

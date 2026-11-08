@@ -1,3 +1,4 @@
+import { useUI } from "../v3/i18n";
 import { useState, useRef, useEffect } from "react";
 import {
   Plus,
@@ -44,6 +45,8 @@ export function svgDocument(nodes: LayoutNode[], width = 960, height = 540) {
   return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">${nodes.map((n) => (n.type === "shape" ? `<rect x="${n.x}" y="${n.y}" width="${n.w}" height="${n.h}" fill="${escape(n.color)}"/>` : n.type === "image" ? `<image x="${n.x}" y="${n.y}" width="${n.w}" height="${n.h}" href="${escape(n.asset || "")}" preserveAspectRatio="xMidYMid slice"/>` : `<foreignObject x="${n.x}" y="${n.y}" width="${n.w}" height="${n.h}"><xhtml:div style="font-family:Arial,sans-serif;font-size:${n.size}px;color:${escape(n.color)};line-height:1.12;white-space:pre-wrap;overflow-wrap:anywhere">${escape(n.text)}</xhtml:div></foreignObject>`)).join("")}</svg>`;
 }
 export function Editor({ id, go }: { id?: string; go: Navigate }) {
+  const ui = useUI();
+
   const s = useStore(),
     t = useT(),
     original = s.items.find((i) => i.id === id && !i.deletedAt);
@@ -331,7 +334,9 @@ export function Editor({ id, go }: { id?: string; go: Navigate }) {
       <Empty
         title="Document not found"
         description="Check Library or restore the item from trash."
-        action={<Button onClick={() => go("library")}>Open Library</Button>}
+        action={
+          <Button onClick={() => go("library")}>{ui("Open Library")}</Button>
+        }
       />
     );
   return (
@@ -341,7 +346,7 @@ export function Editor({ id, go }: { id?: string; go: Navigate }) {
           <span className="eyebrow">// CREATE STUDIO</span>
           <input
             className="document-title"
-            aria-label="Document title"
+            aria-label={ui("Document title")}
             value={title}
             maxLength={180}
             onChange={(e) => {
@@ -356,16 +361,16 @@ export function Editor({ id, go }: { id?: string; go: Navigate }) {
           </small>
         </div>
         <div className="button-row">
-          <Button title="Present" onClick={() => setPresent(true)}>
+          <Button title={ui("Present")} onClick={() => setPresent(true)}>
             <Play size={15} />
-            <span>Present</span>
+            <span>{ui("Present")}</span>
           </Button>
-          <Button title="Export SVG" onClick={() => void exportSvg()}>
+          <Button title={ui("Export SVG")} onClick={() => void exportSvg()}>
             <Download size={15} />
-            <span>Export SVG</span>
+            <span>{ui("Export SVG")}</span>
           </Button>
           <Button
-            title="Save"
+            title={ui("Save")}
             variant="primary"
             disabled={busy || !title.trim()}
             onClick={() => void save()}
@@ -388,23 +393,23 @@ export function Editor({ id, go }: { id?: string; go: Navigate }) {
           <span className="separator" />
           <button
             className="icon-button"
-            aria-label="Add text"
+            aria-label={ui("Add text")}
             onClick={() => add("text")}
           >
             <Type size={18} />
           </button>
           <button
             className="icon-button"
-            aria-label="Add shape"
+            aria-label={ui("Add shape")}
             onClick={() => add("shape")}
           >
             <Square size={18} />
           </button>
-          <label className="icon-button file-button" title="Add image">
+          <label className="icon-button file-button" title={ui("Add image")}>
             <Image size={18} />
             <input
               type="file"
-              aria-label="Add image"
+              aria-label={ui("Add image")}
               accept="image/png,image/jpeg,image/webp"
               onChange={async (e) => {
                 const f = e.target.files?.[0];
@@ -435,7 +440,7 @@ export function Editor({ id, go }: { id?: string; go: Navigate }) {
           <button
             className="icon-button"
             disabled={!past.length}
-            aria-label="Undo"
+            aria-label={ui("Undo")}
             onClick={undo}
           >
             <Undo2 size={17} />
@@ -443,7 +448,7 @@ export function Editor({ id, go }: { id?: string; go: Navigate }) {
           <button
             className="icon-button"
             disabled={!future.length}
-            aria-label="Redo"
+            aria-label={ui("Redo")}
             onClick={redo}
           >
             <Redo2 size={17} />
@@ -663,14 +668,14 @@ export function Editor({ id, go }: { id?: string; go: Navigate }) {
                     <label>
                       Text
                       <textarea
-                        aria-label="Selected text content"
+                        aria-label={ui("Selected text content")}
                         rows={5}
                         value={node.text}
                         onChange={(e) => update({ text: e.target.value })}
                       />
                     </label>
                     <label>
-                      Font size
+                      {ui("Font size")}
                       <input
                         type="number"
                         min={8}
@@ -690,7 +695,7 @@ export function Editor({ id, go }: { id?: string; go: Navigate }) {
                 )}
                 {node.type !== "image" && (
                   <label className="setting-row">
-                    Color
+                    {ui("Color")}
                     <input
                       type="color"
                       value={node.color}
@@ -726,14 +731,14 @@ export function Editor({ id, go }: { id?: string; go: Navigate }) {
                 <div className="button-row">
                   <button
                     className="icon-button"
-                    aria-label="Bring forward"
+                    aria-label={ui("Bring forward")}
                     onClick={() => layerMove(1)}
                   >
                     <ArrowUp size={17} />
                   </button>
                   <button
                     className="icon-button"
-                    aria-label="Send backward"
+                    aria-label={ui("Send backward")}
                     onClick={() => layerMove(-1)}
                   >
                     <ArrowDown size={17} />
@@ -756,7 +761,7 @@ export function Editor({ id, go }: { id?: string; go: Navigate }) {
                   </button>
                   <button
                     className="icon-button"
-                    aria-label="Delete node"
+                    aria-label={ui("Delete node")}
                     onClick={() => {
                       commit(nodes.filter((n) => n.id !== selection));
                       setSelection(null);
@@ -940,7 +945,7 @@ export function Editor({ id, go }: { id?: string; go: Navigate }) {
             </svg>
           </div>
           <div className="modal-actions">
-            <Button onClick={() => void exportSvg()}>Export</Button>
+            <Button onClick={() => void exportSvg()}>{ui("Export")}</Button>
             <Button
               onClick={() =>
                 document.fullscreenElement
@@ -950,7 +955,7 @@ export function Editor({ id, go }: { id?: string; go: Navigate }) {
                       .catch(() => s.toast("Fullscreen unavailable"))
               }
             >
-              Fullscreen
+              {ui("Fullscreen")}
             </Button>
           </div>
         </Modal>

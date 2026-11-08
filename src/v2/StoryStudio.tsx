@@ -1,3 +1,4 @@
+import { useUI } from "../v3/i18n";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import {
@@ -25,6 +26,8 @@ import { DocumentScene } from "./DocumentScene";
 import { Button, Modal } from "../components/UI";
 import { download } from "../core/store";
 export function StoryStudio({ id }: { id?: string }) {
+  const ui = useUI();
+
   const st = useStudio<Story>(
       "story",
       id,
@@ -182,11 +185,11 @@ export function StoryStudio({ id }: { id?: string }) {
           }
         >
           <Download size={15} />
-          Export story
+          {ui("Export story")}
         </Button>
         <Button variant="primary" onClick={() => setPresent(true)}>
           <Play size={15} />
-          Present story
+          {ui("Present story")}
         </Button>
       </StudioHead>
       <ErrorNotice message={st.error} />
@@ -221,7 +224,7 @@ export function StoryStudio({ id }: { id?: string }) {
             }}
           >
             <Plus size={15} />
-            Add scene
+            {ui("Add scene")}
           </Button>
         </aside>
         <section className="v2-story-preview">
@@ -230,7 +233,7 @@ export function StoryStudio({ id }: { id?: string }) {
             <Button
               disabled={index === 0}
               onClick={() => navigate(index - 1)}
-              title="Previous scene"
+              title={ui("Previous scene")}
             >
               <ChevronLeft size={16} />
             </Button>
@@ -241,7 +244,7 @@ export function StoryStudio({ id }: { id?: string }) {
             <Button
               disabled={index >= value.scenes.length - 1}
               onClick={() => navigate(index + 1)}
-              title="Next scene"
+              title={ui("Next scene")}
             >
               <ChevronRight size={16} />
             </Button>
@@ -276,18 +279,18 @@ export function StoryStudio({ id }: { id?: string }) {
         <aside className="v2-instrument-controls">
           <span className="eyebrow">SCENE / SCRIPT</span>
           <label>
-            Scene title
+            {ui("Scene title")}
             <input
-              aria-label="Scene title"
+              aria-label={ui("Scene title")}
               value={scene.title}
               maxLength={200}
               onChange={(e) => patch({ title: e.target.value })}
             />
           </label>
           <label>
-            Speaker script
+            {ui("Speaker script")}
             <textarea
-              aria-label="Speaker script"
+              aria-label={ui("Speaker script")}
               rows={6}
               maxLength={10000}
               value={scene.script}
@@ -295,13 +298,13 @@ export function StoryStudio({ id }: { id?: string }) {
             />
           </label>
           <label>
-            Linked document
+            {ui("Linked document")}
             <select
-              aria-label="Linked document"
+              aria-label={ui("Linked document")}
               value={scene.documentId || ""}
               onChange={(e) => patch({ documentId: e.target.value || null })}
             >
-              <option value="">Use title and script</option>
+              <option value="">{ui("Use title and script")}</option>
               {st.s.items
                 .filter((i) => i.kind === "document" && !i.deletedAt)
                 .map((i) => (
@@ -312,7 +315,7 @@ export function StoryStudio({ id }: { id?: string }) {
             </select>
           </label>
           <label>
-            Scene duration / seconds
+            {ui("Scene duration / seconds")}
             <input
               type="number"
               min={1}
@@ -326,7 +329,7 @@ export function StoryStudio({ id }: { id?: string }) {
             />
           </label>
           <label>
-            Transition
+            {ui("Transition")}
             <select
               value={scene.transition}
               onChange={(e) => patch({ transition: e.target.value as any })}
@@ -337,7 +340,7 @@ export function StoryStudio({ id }: { id?: string }) {
             </select>
           </label>
           <label>
-            Transition duration / seconds
+            {ui("Transition duration / seconds")}
             <input
               type="number"
               min={0}
@@ -355,7 +358,7 @@ export function StoryStudio({ id }: { id?: string }) {
             />
           </label>
           <label>
-            Apply compatible Motion Lab preset
+            {ui("Apply compatible Motion Lab preset")}
             <select
               aria-label="Apply scene motion preset"
               defaultValue=""
@@ -371,7 +374,7 @@ export function StoryStudio({ id }: { id?: string }) {
                   });
               }}
             >
-              <option value="">Choose a saved scene preset</option>
+              <option value="">{ui("Choose a saved scene preset")}</option>
               {st.s.items
                 .filter(
                   (i) =>
@@ -390,14 +393,14 @@ export function StoryStudio({ id }: { id?: string }) {
             <Button
               disabled={index === 0}
               onClick={() => move(-1)}
-              title="Move scene earlier"
+              title={ui("Move scene earlier")}
             >
               <ArrowUp size={15} />
             </Button>
             <Button
               disabled={index === value.scenes.length - 1}
               onClick={() => move(1)}
-              title="Move scene later"
+              title={ui("Move scene later")}
             >
               <ArrowDown size={15} />
             </Button>
@@ -412,7 +415,7 @@ export function StoryStudio({ id }: { id?: string }) {
               }}
             >
               <Trash2 size={15} />
-              Delete scene
+              {ui("Delete scene")}
             </Button>
           </div>
         </aside>
@@ -464,7 +467,7 @@ export function StoryStudio({ id }: { id?: string }) {
                   }}
                 >
                   <Maximize size={15} />
-                  Fullscreen
+                  {ui("Fullscreen")}
                 </Button>
               </div>
             </>
@@ -473,7 +476,7 @@ export function StoryStudio({ id }: { id?: string }) {
             <Button onClick={() => setHideChrome(!hideChrome)}>
               {hideChrome ? "Show controls" : "Hide controls"}
             </Button>
-            <Button onClick={close}>Exit presentation</Button>
+            <Button onClick={close}>{ui("Exit presentation")}</Button>
           </div>
         </Modal>
       )}

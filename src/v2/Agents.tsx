@@ -1,3 +1,4 @@
+import { useUI } from "../v3/i18n";
 import { useEffect, useRef, useState } from "react";
 import {
   Play,
@@ -18,6 +19,8 @@ import { ErrorNotice, ToolNote } from "./shared";
 import type { Item } from "../../shared/schema";
 import type { Navigate } from "../App";
 export function Agents({ go, id }: { go: Navigate; id?: string }) {
+  const ui = useUI();
+
   const s = useStore(),
     [prompt, setPrompt] = useDraft("v2:agent:prompt", ""),
     [mode, setMode] = useState("local"),
@@ -101,7 +104,8 @@ export function Agents({ go, id }: { go: Navigate; id?: string }) {
     }
   }
   const estimate = status?.pricing
-    ? ((new TextEncoder().encode(prompt).length + 128) * status.pricing.inputPerMillion +
+    ? ((new TextEncoder().encode(prompt).length + 128) *
+        status.pricing.inputPerMillion +
         limit * status.pricing.outputPerMillion) /
       1e6
     : null;
@@ -109,7 +113,7 @@ export function Agents({ go, id }: { go: Navigate; id?: string }) {
     <div className="page v2-page">
       <PageHead
         index="THINK / ANALYZE / DRIVE"
-        title="Agent Studio"
+        title={ui("Agent Studio")}
         description="Local tools first. Connected intelligence when configured. Every result shows its source, usage and cost boundary."
       />
       <div className="v2-agent-layout">
@@ -125,7 +129,7 @@ export function Agents({ go, id }: { go: Navigate; id?: string }) {
             </span>
           </div>
           <label className="v2-prompt-label">
-            What are you working on?
+            {ui("What are you working on?")}
             <textarea
               aria-label="Agent prompt"
               rows={10}
@@ -137,18 +141,18 @@ export function Agents({ go, id }: { go: Navigate; id?: string }) {
           </label>
           <div className="two-col">
             <label>
-              Execution mode
+              {ui("Execution mode")}
               <select value={mode} onChange={(e) => setMode(e.target.value)}>
-                <option value="local">Local deterministic tools</option>
-                <option value="connected">Connected provider</option>
+                <option value="local">{ui("Local deterministic tools")}</option>
+                <option value="connected">{ui("Connected provider")}</option>
               </select>
             </label>
             <label>
-              Task
+              {ui("Task")}
               <select value={tool} onChange={(e) => setTool(e.target.value)}>
-                <option value="outline">Structure an outline</option>
-                <option value="analyze">Analyze text</option>
-                <option value="brief">Build a brief structure</option>
+                <option value="outline">{ui("Structure an outline")}</option>
+                <option value="analyze">{ui("Analyze text")}</option>
+                <option value="brief">{ui("Build a brief structure")}</option>
               </select>
             </label>
           </div>
@@ -156,7 +160,7 @@ export function Agents({ go, id }: { go: Navigate; id?: string }) {
             <span className="eyebrow">COST & FALLBACK POLICY</span>
             <div className="two-col">
               <label>
-                Request budget / USD
+                {ui("Request budget / USD")}
                 <input
                   aria-label="Request budget"
                   type="number"
@@ -172,7 +176,7 @@ export function Agents({ go, id }: { go: Navigate; id?: string }) {
                 />
               </label>
               <label>
-                Output token cap
+                {ui("Output token cap")}
                 <input
                   type="number"
                   min={32}
@@ -193,7 +197,7 @@ export function Agents({ go, id }: { go: Navigate; id?: string }) {
                 checked={fallback}
                 onChange={(e) => setFallback(e.target.checked)}
               />
-              Use clearly labeled local fallback if provider fails
+              {ui("Use clearly labeled local fallback if provider fails")}
             </label>
             <label className="v2-check">
               <input
@@ -201,7 +205,7 @@ export function Agents({ go, id }: { go: Navigate; id?: string }) {
                 checked={cache}
                 onChange={(e) => setCache(e.target.checked)}
               />
-              Reuse identical responses from this server session
+              {ui("Reuse identical responses from this server session")}
             </label>
             {mode === "connected" && estimate === null && (
               <label className="v2-check">
@@ -210,7 +214,7 @@ export function Agents({ go, id }: { go: Navigate; id?: string }) {
                   checked={unknown}
                   onChange={(e) => setUnknown(e.target.checked)}
                 />
-                I accept that provider price is unknown
+                {ui("I accept that provider price is unknown")}
               </label>
             )}
             <p className="v2-caption">
@@ -238,7 +242,7 @@ export function Agents({ go, id }: { go: Navigate; id?: string }) {
                 }}
               >
                 <Square size={15} />
-                Cancel
+                {ui("Cancel")}
               </Button>
             )}
           </div>
@@ -267,10 +271,11 @@ export function Agents({ go, id }: { go: Navigate; id?: string }) {
               </pre>
               <div className="v2-result-metadata">
                 <span>
-                  Duration<strong>{run.data.elapsedMs} ms</strong>
+                  {ui("Duration")}
+                  <strong>{run.data.elapsedMs} ms</strong>
                 </span>
                 <span>
-                  Provider cost
+                  {ui("Provider cost")}
                   <strong>
                     {run.data.costUsd === null
                       ? "Unknown"
@@ -278,13 +283,13 @@ export function Agents({ go, id }: { go: Navigate; id?: string }) {
                   </strong>
                 </span>
                 <span>
-                  Tokens
+                  {ui("Tokens")}
                   <strong>
                     {run.data.usage?.total_tokens ?? "Not used / unknown"}
                   </strong>
                 </span>
                 <span>
-                  API call avoided
+                  {ui("API call avoided")}
                   <strong>{run.data.cached ? "Yes · cache hit" : "No"}</strong>
                 </span>
               </div>
@@ -293,7 +298,8 @@ export function Agents({ go, id }: { go: Navigate; id?: string }) {
                   disabled={!run.data.text}
                   onClick={() => void artifact()}
                 >
-                  Open in Create <ArrowUpRight size={15} />
+                  {ui("Open in Create")}
+                  <ArrowUpRight size={15} />
                 </Button>
                 <Button
                   onClick={() =>
@@ -301,7 +307,7 @@ export function Agents({ go, id }: { go: Navigate; id?: string }) {
                   }
                 >
                   <Download size={15} />
-                  Export run
+                  {ui("Export run")}
                 </Button>
                 <Button
                   onClick={() =>
@@ -312,7 +318,7 @@ export function Agents({ go, id }: { go: Navigate; id?: string }) {
                   }
                 >
                   <Copy size={15} />
-                  Copy
+                  {ui("Copy")}
                 </Button>
               </div>
             </>
@@ -327,15 +333,15 @@ export function Agents({ go, id }: { go: Navigate; id?: string }) {
               <div className="v2-agent-principles">
                 <span>
                   <ShieldCheck size={16} />
-                  Transparent source
+                  {ui("Transparent source")}
                 </span>
                 <span>
                   <Coins size={16} />
-                  Bounded requests
+                  {ui("Bounded requests")}
                 </span>
                 <span>
                   <Braces size={16} />
-                  Real tool outputs
+                  {ui("Real tool outputs")}
                 </span>
               </div>
             </div>
