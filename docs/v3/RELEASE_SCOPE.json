@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 3,
+  "product": "ARTYVERSE X",
+  "edition": "Hyper-polished local Creative Operating Studio",
+  "canonicalTokens": "shared/design.ts",
+  "itemSchemas": [
+    "shared/schema.ts",
+    "shared/v2/contracts.ts",
+    "shared/interview.ts"
+  ],
+  "newFrontend": [
+    "semantic dark/light/system themes",
+    "Thai-first shell",
+    "grouped navigation and mobile bottom tabs",
+    "keyboard command palette",
+    "reorderable Home portals",
+    "original ARCYCA SVG",
+    "project detail and CRUD",
+    "evidence-first Copilot and Practice",
+    "Question Bank",
+    "original-starter Marketplace",
+    "actual Analytics",
+    "11-section live Design System"
+  ],
+  "retainedEngines": [
+    "Canvas",
+    "Code Studio",
+    "Node Studio",
+    "Agent Studio",
+    "Research",
+    "Voice",
+    "Sound Lab",
+    "Dynamics",
+    "Story Studio",
+    "Live",
+    "Library",
+    "Templates",
+    "Design OS and Motion Lab"
+  ],
+  "savePolicy": "SQLite records/revisions/media on local server; browser drafts/preferences stay local",
+  "externalUnavailable": [
+    "credentialed live inference",
+    "transcription verification against a live engine",
+    "public identity/ownership",
+    "cloud persistence/sync",
+    "remote multiplayer",
+    "commerce/community backend",
+    "background scheduler"
+  ],
+  "verification": "VERIFICATION_REPORT.md",
+  "limitations": "docs/v3/KNOWN_LIMITATIONS.md",
+  "historicalEvidence": [
+    "docs/v1",
+    "docs/v2",
+    "tests/evidence/v2"
+  ]
+}

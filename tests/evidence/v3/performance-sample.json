@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-11-08T09:00:17.414Z",
+  "conditions": "Isolated built V3 app, headless Chromium at 1440×1000 / DPR1. Dragged SVG body, then 179 rAF intervals during settling. WebGL off. No Lighthouse/axe during sample; not a real-device or GPU FPS guarantee.",
+  "browser": "154.0.8037.57",
+  "samples": 179,
+  "medianMs": 16.699999999999818,
+  "p95Ms": 16.700000000000273,
+  "maxMs": 16.800000000000182,
+  "longTasks": [],
+  "heapBytes": 6172311,
+  "dpr": 1
+}

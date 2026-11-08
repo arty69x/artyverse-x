@@ -69,3 +69,7 @@ The MP rows above remain scoped requirements, not a statement that every clause 
 | Full production | User craft goal + MP-46 | tested local source/build/export/backup | identity, ownership, infrastructure, live-provider and public release checks |
 
 Requirement sources and conflict reasoning: `docs/v2/CONFLICT_AND_NORMALIZATION.md`. Historical V1 master and component evidence are retained in `docs/v1/`; source claims and verification statuses are never imported as V2 results.
+
+## V3 frontend acceptance
+
+New implementation scope and explicit limits: `docs/v3/RELEASE_SCOPE.json` and `docs/v3/ACCEPTANCE_MATRIX.md`. This is an intentional redesign with real native UI, not reference-pixel reconstruction. The live 11-section Design System, two semantic themes/system preference, responsive shell, original mascot, Projects CRUD/detail, evidence-first interview tools, original starter catalog and actual analytics are new frontend deliveries. Old local engines, saved artifacts and IDs remain. External cloud/auth/multiplayer/commerce/community services are not implied by frontend completion. V3 evidence must be read separately from historical V1/V2 results.

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 3,
   "assets": [
     {
       "id": "arty-companion",
@@ -56,6 +56,31 @@
       "optimization": "Native SVG; optical Micro geometry",
       "bytes": 3519,
       "sha256": "e270b933e51603b14962fc3e61726735f48be9d2b83228039daf62ab249ac121"
+    },
+    {
+      "id": "arcyca-idle",
+      "purpose": "Portable original ARCYCA helmet/skater companion",
+      "format": "SVG",
+      "dimensions": [
+        440,
+        440
+      ],
+      "source": "Original native vector authored in src/v3/Mascot.tsx; static export from verified browser render",
+      "alt": "ARCYCA creative companion",
+      "optimization": "Native SVG without embedded controls/text",
+      "bytes": 2766,
+      "sha256": "32ef72d15c1733dfab71a11c5497e2b4596223a02f8e0b907221d2964604cbc4"
+    },
+    {
+      "id": "syne-latin-variable",
+      "purpose": "Self-hosted Latin editorial font",
+      "format": "WOFF2",
+      "dimensions": null,
+      "source": "Fontsource Syne variable distribution, OFL in public/fonts/syne-OFL.txt",
+      "alt": null,
+      "optimization": "Latin subset, variable 400–800, font-display swap",
+      "bytes": 34608,
+      "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
     }
   ],
   "runtimeAssets": [
@@ -63,7 +88,9 @@
     "Unique-ID mascot SVG in src/components/UI.tsx",
     "Original orbital world and six bento illustrations in src/v2/Home.tsx and src/v2/style.css",
     "Custom SVG bodies in src/v2/Dynamics.tsx",
-    "Raymarched procedural light field in src/v2/HoloField.tsx"
+    "Raymarched procedural light field in src/v2/HoloField.tsx",
+    "V3 hero/portal composition in src/v3/Home.tsx and semantic interface in src/v3/style.css",
+    "ARCYCA layered SVG with unique gradient IDs and visibility/reduced-motion lifecycle"
   ],
   "external": "Lucide icons MIT; fonts supplied by Fontsource packages under their bundled font licenses. No Framer Marketplace assets copied.",
   "fonts": "public/fonts and their included OFL license files"

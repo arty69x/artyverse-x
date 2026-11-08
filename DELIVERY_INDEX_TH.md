@@ -1,32 +1,35 @@
-# ARTYVERSE X V2 — ชุดส่งมอบรวม
+# ARTYVERSE X V3 — วิธีใช้และขอบเขตส่งมอบ
 
-โปรแกรมรุ่นใหม่: **Creative Operating Studio — Artist × Multiverse**
+ติดตั้ง Node 24 ขึ้นไป แล้วรัน `npm ci` และ `npm run dev`. เปิด http://localhost:5173. หรือใช้ `npm run build && npm start` แล้วเปิด http://localhost:4311. ไม่ต้องมี API key สำหรับเครื่องมือ local.
 
-## เริ่มใช้งาน
+## สิ่งที่เปลี่ยน
 
-ติดตั้ง Node 24 ขึ้นไป แล้วรันในโฟลเดอร์นี้:
+- ระบบภาพใหม่ dark/light/system พร้อมจำการตั้งค่า, typography ไทย–อังกฤษ, sidebar แบ่งกลุ่ม, command palette ใช้ keyboard, drawer/bottom navigation บนมือถือ
+- Home ใหม่พร้อม ARCYCA SVG ต้นฉบับ, composer, actual metrics/recent work และจัดเรียง portal ได้
+- Projects ค้นหา grid/list/detail แก้ชื่อ ทำสำเนารายการ และ trash/undo
+- Copilot / Practice / Question Bank ใช้บทสนทนาและหลักฐานจริง สร้างโครงร่างที่แก้ไขได้ และส่งต่อ Agent Studio
+- Marketplace รวม original starters ที่ preview และสร้างเอกสาร/brief ใหม่ได้จริง; Analytics นับจากรายการที่บันทึก
+- Design System 11 ส่วนจาก tokens/components ที่ใช้จริง พร้อม Design OS/Motion Lab เดิม
+- เครื่องมือ V2 ทั้งหมดและข้อมูลเดิมคงอยู่; แก้ contrast, keyboard และ dialog focus ร่วมกัน
 
-```sh
-npm ci
-npm run dev
-```
+## ความสามารถที่ต้องอ่านตามจริง
 
-เปิด http://localhost:5173. หรือ `npm run build && npm start` แล้วเปิด http://localhost:4311. `dist/` เป็น build ที่ตรวจแล้ว; API/SQLite ยังต้องรันด้วย Node ไม่ใช่อัปโหลด HTML อย่างเดียว. เครื่องมือ local ไม่ต้องมี API key. ไม่มี secrets หรือฐานข้อมูลงานส่วนตัวอยู่ในชุดส่งมอบ.
+Copilot local outline ไม่ใช่ AI inference; ข้อมูลขาดยังเป็น placeholder. Browser STT ต้องได้รับสิทธิ์และอาจใช้บริการออนไลน์ของเบราว์เซอร์; ใช้ข้อความแทนได้. ไม่มีระบบ cloud identity, remote multiplayer, commerce/community backend หรือ scheduler ที่เชื่อมใหม่. Vercel ผูกโปรเจกต์แล้ว แต่การ deploy backend เต็มระบบยังต้อง persistent storage และ identity.
 
-## ของที่รวมไว้
+ชุด ZIP รวม source, build, assets/fonts/ใบอนุญาต, branding เดิม, blueprint/reconstructed/design extraction/Framer research และหลักฐาน V3. ไม่รวมฐานข้อมูลหรือไฟล์งานส่วนตัว, node_modules, secrets หรือ recovery snapshots. ติดตั้ง dependencies ก่อนรัน.
 
-- source และ built assets ของ ARTYVERSE X V2
-- Projects, Agent Studio, Node Studio, Code Studio, Sound Lab, Dynamics, Story Studio, System & costs
-- Canvas, Chat, Research, Voice, Live, Templates, Library, Design OS/Motion Lab ที่รักษาไว้
-- branding เดิมและ Fade W studies พร้อม SVG/fonts/ใบอนุญาตและต้นฉบับที่ผู้ใช้ให้
-- `ARTYVERSE_X_MASTER_SPEC.md`: สรุปแบรนด์ ระบบ หน้าจอ ความสามารถ และขอบเขต
-- `docs/v2/`: สถาปัตยกรรม, scope, requirement decisions และ normalization
-- `VERIFICATION_REPORT.md` และ `tests/evidence/v2/`: ผล build, tests, screenshots, performance sample และ fingerprint
-- `MIGRATION_AND_ROLLBACK.md`: การย้ายและย้อนกลับอย่างปลอดภัย
-- `research/` ใน ZIP รวม: blueprint.zip เดิม, reconstructed archive, design extraction และ Framer research archive จากรอบศึกษาเดิม พร้อม summary/provenance; ไม่ถือเป็นผลทดสอบของแอปใหม่
+ดูผลตรวจจริงใน VERIFICATION_REPORT.md และข้อจำกัดใน KNOWN_LIMITATIONS.md. ภาพที่มี QA fixtures เป็นข้อมูลทดสอบที่ระบุชื่อชัดเจน; แอปติดตั้งใหม่ไม่สร้างประวัติผู้ใช้จำลองให้เอง.
 
-## ผลตรวจและขอบเขต
+## เอกสารและหลักฐาน
 
-Build ผ่าน, unit 10 และ browser/API 27 รายการผ่าน. ตรวจ built app แยก รวม 18 visual/accessibility cases, ภาษาไทยบนมือถือ, Code interaction/save, V2 backup restore และ V1 compatibility. ดูเงื่อนไขและหลักฐานในรายงาน ไม่ตีความเป็น certification.
+- ARTYVERSE_X_MASTER_SPEC.md และ artyverse-design-master.json: ขอบเขตระบบที่รวมแล้ว
+- DESIGN_TOKENS.json: export จาก shared/design.ts
+- COMPONENT_COVERAGE.md และ MOTION_COVERAGE.md: coverage ตามจริง
+- docs/v3/: แผน, workflow, normalization, acceptance และข้อจำกัด
+- tests/evidence/v3/: ผลทดสอบ ภาพหน้าจอ Lighthouse และ source fingerprint
+- MIGRATION_AND_ROLLBACK.md: recovery และขอบเขต deployment
+- docs/v2/VERIFICATION_REPORT.md: หลักฐานรุ่นก่อน แยกจาก V3
 
-นี่คือ personal local release ที่ใช้งานได้ตามขอบเขตข้างต้น. Public multi-user/cloud sync/authentication, transcription, external scheduler และ live AI provider ยังไม่เชื่อม. Advanced tools ยังมี English microcopy และต้องตรวจ sensor/touch/audio บนอุปกรณ์จริงเพิ่ม. รายละเอียดครบใน KNOWN_LIMITATIONS.md.
+แพ็กด้วย `python3 scripts/package-v3.py` หลังตรวจ fingerprint. ชื่อ ZIP: ARTYVERSE_X_V3_HYPER_POLISH.zip.
+
+ผลตรวจสุดท้าย: typecheck/build ผ่าน, unit 16 และ browser/API 37 tests ผ่าน. Lighthouse mobile simulation: Performance 96, Accessibility/Best Practices/SEO 100, LCP 1.3s. ดูเงื่อนไขใน VERIFICATION_REPORT.md.

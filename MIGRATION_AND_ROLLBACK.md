@@ -54,3 +54,13 @@ Migration is additive: keep Item envelope v1, add advanced data schemas v2 and o
 Before rollback, download a current persistent backup and save browser drafts. Restore V1 source from the recovery branch into a separate checkout, not over uncommitted work. V1 does not support new V2 kinds: restore its pre-V2 database/media snapshot in a separate data directory as well. Keep the V2 backup for return migration; never feed V2-only records into an unmodified V1 server and expect compatibility. Test the restored workspace before switching local URLs/ports.
 
 No public production deployment was attempted. Public release still needs identity/ownership enforcement, cloud infrastructure, migration rehearsals and deployment-specific acceptance. The local built app can be started independently with `PORT=4315 ARTYVERSE_DATA_DIR=<separate-directory> npm start` for verification.
+
+## V3 frontend migration — 2026-11-08
+
+Recovery branch: `recovery/pre-v3-hyperpolish-20261108`, based on `20b71bf`. Local recovery manifest plus online SQLite/media snapshot were created under ignored `.recovery/pre-v3-hyperpolish-20261108` before implementation. Pending review documents were preserved. No remote deletion, force push, domain change or public deployment occurred.
+
+V3 is additive: keep the Item envelope, database/media layout and all existing IDs/revisions. New interview/practice sessions reuse the session entity with a validated subtype; saved questions reuse notes. Existing data and document colors are not normalized into UI tokens. Existing hash routes remain, with aliases for assets, pipeline, canvas, live-code, inspector, components and overview.
+
+Rollback: first download a current persistent backup and save browser drafts. Restore V2 source in a separate checkout/data directory using the recovery branch/snapshot. V2 can retain JSON records but lacks V3 specialized interview routes/validation; preserve the V3 backup before switching. Keep theme/home-order preferences separate from server data and verify IDs/media/revisions before replacing a running local workspace. Release archives exclude user databases, browser drafts, recovery snapshots and secrets.
+
+Vercel remains linked to the existing project with its access policy preserved. This frontend upgrade does not migrate SQLite/media into serverless storage or publish a public backend. A durable storage and identity decision is still required for that deployment.

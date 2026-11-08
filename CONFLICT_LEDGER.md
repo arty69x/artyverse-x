@@ -24,3 +24,7 @@ Spacing values outside the base scale are intentional composition or viewport me
 ## V2 superseding decisions
 
 See `docs/v2/CONFLICT_AND_NORMALIZATION.md` for latest source-by-source decisions, brand architecture, typography/palette normalization, V1 compatibility, provider cost/fallback semantics and Framer licensing boundaries. These supersede conflicting earlier implementation decisions; user documents/artifacts retain their own values.
+
+## V3 merged frontend
+
+Latest UX/UI specification determines dark-first themes, primitive palette and Syne editorial direction. Actual repository facts override the earlier Prompt Pack's assumed pnpm monorepo and prototype-only status. Existing SQLite saves, real graph execution, CSS inspector and audio lifecycle remain intact. ARCYCA is the new primary mascot; Arty scene assets and Whisper Fade W are retained with distinct roles. Semantic foregrounds are checked independently of brand fill colors. Full decisions: `docs/v3/BRAND_AND_NORMALIZATION.md`.

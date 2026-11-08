@@ -1,0 +1,38 @@
+[
+  {
+    "theme": "dark",
+    "width": 390,
+    "route": "home",
+    "checkedAt": "2026-11-08T09:00:20.792Z",
+    "violations": [],
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "theme": "dark",
+    "width": 1440,
+    "route": "home",
+    "checkedAt": "2026-11-08T09:00:23.491Z",
+    "violations": [],
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "theme": "light",
+    "width": 390,
+    "route": "home",
+    "checkedAt": "2026-11-08T09:00:26.076Z",
+    "violations": [],
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "theme": "light",
+    "width": 1440,
+    "route": "home",
+    "checkedAt": "2026-11-08T09:00:28.811Z",
+    "violations": [],
+    "overflow": false,
+    "errors": []
+  }
+]

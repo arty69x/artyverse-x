@@ -1,0 +1,13 @@
+[WebServer] (node:38388) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:38414) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/journeys.spec.ts:106:1 › Motion geometry, preset round trip and reduced motion (3.4s)
+  ✓  2 tests/e2e/v2.spec.ts:139:1 › Graph connections reject cycles and save executed artifacts (2.3s)
+  ✓  3 tests/e2e/v2.spec.ts:447:1 › Multi-step local agent graph records two independent runs and a saved note (3.2s)
+  ✓  4 tests/e2e/v3.spec.ts:120:1 › Copilot → actual user evidence → editable outline → Question Bank → Practice → saved session (4.2s)
+
+  4 passed (15.7s)

@@ -1,18 +1,18 @@
-# ARTYVERSE X · Creative Operating Studio V2
+# ARTYVERSE X V3 · Hyper Polish
 
-**Artist × Multiverse.** A connected personal workspace for ideas, canvases, code, sound, motion, local agents and stories. React + TypeScript + Vite + Tailwind utilities + Motion for React; Express/SQLite local persistence.
+**Artist × Multiverse.** A Thai-first local creative studio with a new semantic dark/light/system design, original ARCYCA SVG mascot, responsive navigation, evidence-first interview workspace and retained creative engines.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Node 24+ required. Open http://localhost:5173. For the built local application: `npm run build && npm start`, then http://localhost:4311. SQLite/media default to `.data`; browser drafts stay in the browser. No provider key is needed for local tools.
+Node 24+ required. Open http://localhost:5173. Built local application: `npm run build && npm start`, then http://localhost:4311. Keep SQLite/media under `.data`; browser drafts remain in the browser. No API key is needed for local tools.
 
-New: Projects, Agent Studio (local tools + optional server adapter, provenance/cost/cache/fallback), editable Node Studio with multi-step agent runs, sandboxed Code Studio + CSS inspector + repair review, Sound Lab + actual WAV, SVG Dynamics + optional gestures/sensors/WebGL, Story Studio + linked-document presentation, System & costs. Existing Canvas/Chat/Research/Voice/Live/Library/Templates/Design OS remain available; graph-less V1 workflows use compatibility mode.
+New frontend: Projects search/grid/list/detail/rename/duplicate/trash-undo; Copilot manual transcript/evidence/outline; Practice and Question Bank; original-starter Marketplace; actual Analytics; live 11-section Design System at `#/design-system`; keyboard command palette; mobile bottom tabs and native drawers/dialogs; persisted Home arrangement. Canvas/Code/Node/Agent/Research/Voice/Sound/Dynamics/Story/Live/Library/Design OS are preserved and themed.
 
-Read [the complete design](ARTYVERSE_X_MASTER_SPEC.md), [V2 scope](docs/v2/RELEASE_SCOPE.json), [workflow map](WORKFLOW_MAP.md), [verification](VERIFICATION_REPORT.md), [limitations](KNOWN_LIMITATIONS.md), and [migration/rollback](MIGRATION_AND_ROLLBACK.md). Historical V1 specifications/evidence are retained separately.
+Read [the merged design](ARTYVERSE_X_MASTER_SPEC.md), [V3 decisions](docs/v3/IMPLEMENTATION_PLAN_TH.md), [verification](VERIFICATION_REPORT.md), [known limitations](KNOWN_LIMITATIONS.md), and [migration/rollback](MIGRATION_AND_ROLLBACK.md). Repository instructions are in AGENTS.md.
 
-`npm test` runs contract tests; `npm run test:e2e` runs isolated browser/API workflows with system Chromium. See Playwright configuration for the executable path. Provider contract checks use a clearly identified local fixture, not live AI inference.
+`npm run tokens` generates UI token exports; `npm run typecheck`, `npm test`, and `npm run test:e2e` verify the code and workflows. Browser tests use system Chromium as specified in playwright.config.ts. Versioned evidence is kept separate; changes invalidate affected runtime fingerprints.
 
-This release is a personal local application. Public multi-user deployment, cloud sync, transcription, billing and external schedules are unavailable. No public deployment or remote deletion was performed.
+Copilot outlines are deterministic local structures, not AI inference. Optional browser STT may use the browser vendor’s service and needs user permission; manual text always works. Provider adapter, real voice recording, synthesis and local workflows remain available within their documented capabilities. Public cloud/multiplayer/commerce/community services are not connected by this frontend upgrade. Vercel is linked; complete hosted persistence and identity remain a separate deployment task.

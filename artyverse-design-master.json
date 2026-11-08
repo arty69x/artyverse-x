@@ -1,8 +1,8 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "product": "ARTYVERSE X",
-  "releaseScope": "Creative Operating Studio / local V2",
-  "designDirection": "Luminous Intelligence / Deep Black Creative Universe",
+  "releaseScope": "V3 merged frontend / personal local Creative Operating Studio",
+  "designDirection": "Premium Tech Editorial × restrained Neon Brutalist × selective Holographic Glass",
   "sourceOfTruth": [
     "Latest user instructions",
     "User master prompt",
@@ -18,7 +18,7 @@
     "exactDesignV8MdProvided": false,
     "exactDesignMasterV8JsonProvided": false
   },
-  "tokenSource": "shared/schema.ts#theme",
+  "tokenSource": "shared/design.ts",
   "generatedTokens": "DESIGN_TOKENS.json",
   "entitySource": "shared/schema.ts",
   "providerSource": "server/agent.ts",
@@ -36,7 +36,9 @@
       "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
       "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
       "nextAction": "Explore or Conversations",
-      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md",
+      "implementationLocation": "src/v3/Home.tsx",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "chat",
@@ -51,7 +53,8 @@
       "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
       "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
       "nextAction": "Open in Create",
-      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "explore",
@@ -66,7 +69,8 @@
       "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
       "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
       "nextAction": "Open workspace",
-      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "templates",
@@ -81,7 +85,8 @@
       "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
       "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
       "nextAction": "Edit in Create",
-      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "create",
@@ -96,7 +101,8 @@
       "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
       "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
       "nextAction": "Save / Library / Present",
-      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "research",
@@ -111,7 +117,8 @@
       "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
       "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
       "nextAction": "Create / Conversations",
-      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "voice",
@@ -126,7 +133,8 @@
       "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
       "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
       "nextAction": "Playback / Save to Library",
-      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "live",
@@ -141,7 +149,8 @@
       "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
       "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
       "nextAction": "Present / Library",
-      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "automate",
@@ -157,7 +166,8 @@
       "saveBehavior": "Explicit SQLite save and browser drafts where supported",
       "nextAction": "Open linked editor or Library",
       "limitations": "KNOWN_LIMITATIONS.md",
-      "implementationLocation": "src/v2/NodeStudio.tsx"
+      "implementationLocation": "src/v2/NodeStudio.tsx",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "library",
@@ -172,7 +182,8 @@
       "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
       "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
       "nextAction": "Editor / viewer",
-      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "settings",
@@ -187,7 +198,8 @@
       "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
       "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
       "nextAction": "Resume work",
-      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "design",
@@ -202,7 +214,8 @@
       "errorState": "Visible error, input kept where draft persistence applies. Provider unavailable explicitly shown.",
       "saveBehavior": "Explicit SQLite save; browser drafts for text/editor; no cloud sync.",
       "nextAction": "Shared editor / preview",
-      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md"
+      "limitations": "See ARTYVERSE_X_MASTER_SPEC.md and KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "projects",
@@ -211,13 +224,14 @@
       "status": "Implemented / verification scoped to V2 report",
       "purpose": "create project; active context; linked items; record export",
       "primaryTask": "create project",
-      "implementationLocation": "src/v2/Projects.tsx",
+      "implementationLocation": "src/v3/Projects.tsx",
       "emptyState": "Working starter or guidance, with no fictional user history",
       "loadingState": "Actual async operation state only",
       "errorState": "Visible error with draft retained",
       "saveBehavior": "Explicit SQLite save and browser drafts where supported",
       "nextAction": "Open linked editor or Library",
-      "limitations": "KNOWN_LIMITATIONS.md"
+      "limitations": "KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "agents",
@@ -232,7 +246,8 @@
       "errorState": "Visible error with draft retained",
       "saveBehavior": "Explicit SQLite save and browser drafts where supported",
       "nextAction": "Open linked editor or Library",
-      "limitations": "KNOWN_LIMITATIONS.md"
+      "limitations": "KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "code",
@@ -247,7 +262,8 @@
       "errorState": "Visible error with draft retained",
       "saveBehavior": "Explicit SQLite save and browser drafts where supported",
       "nextAction": "Open linked editor or Library",
-      "limitations": "KNOWN_LIMITATIONS.md"
+      "limitations": "KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "sound",
@@ -262,7 +278,8 @@
       "errorState": "Visible error with draft retained",
       "saveBehavior": "Explicit SQLite save and browser drafts where supported",
       "nextAction": "Open linked editor or Library",
-      "limitations": "KNOWN_LIMITATIONS.md"
+      "limitations": "KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "dynamics",
@@ -277,7 +294,8 @@
       "errorState": "Visible error with draft retained",
       "saveBehavior": "Explicit SQLite save and browser drafts where supported",
       "nextAction": "Open linked editor or Library",
-      "limitations": "KNOWN_LIMITATIONS.md"
+      "limitations": "KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "story",
@@ -292,7 +310,8 @@
       "errorState": "Visible error with draft retained",
       "saveBehavior": "Explicit SQLite save and browser drafts where supported",
       "nextAction": "Open linked editor or Library",
-      "limitations": "KNOWN_LIMITATIONS.md"
+      "limitations": "KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     },
     {
       "id": "system",
@@ -307,7 +326,74 @@
       "errorState": "Visible error with draft retained",
       "saveBehavior": "Explicit SQLite save and browser drafts where supported",
       "nextAction": "Open linked editor or Library",
-      "limitations": "KNOWN_LIMITATIONS.md"
+      "limitations": "KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
+    },
+    {
+      "id": "copilot",
+      "name": "copilot",
+      "route": "#/copilot",
+      "purpose": "Evidence-first interview workspace",
+      "status": "Implemented local scope; see V3 verification",
+      "implementationLocation": "src/v3/Copilot.tsx",
+      "saveBehavior": "Existing SQLite session/note/document entities where relevant; no fabricated cloud data",
+      "limitations": "KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
+    },
+    {
+      "id": "practice",
+      "name": "practice",
+      "route": "#/practice",
+      "purpose": "Rehearse saved questions with real evidence",
+      "status": "Implemented local scope; see V3 verification",
+      "implementationLocation": "src/v3/Copilot.tsx",
+      "saveBehavior": "Existing SQLite session/note/document entities where relevant; no fabricated cloud data",
+      "limitations": "KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
+    },
+    {
+      "id": "questions",
+      "name": "questions",
+      "route": "#/questions",
+      "purpose": "Save and edit original questions and answers",
+      "status": "Implemented local scope; see V3 verification",
+      "implementationLocation": "src/v3/Platform.tsx",
+      "saveBehavior": "Existing SQLite session/note/document entities where relevant; no fabricated cloud data",
+      "limitations": "KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
+    },
+    {
+      "id": "marketplace",
+      "name": "marketplace",
+      "route": "#/marketplace",
+      "purpose": "Preview original starters and create editable copies",
+      "status": "Implemented local scope; see V3 verification",
+      "implementationLocation": "src/v3/Platform.tsx",
+      "saveBehavior": "Existing SQLite session/note/document entities where relevant; no fabricated cloud data",
+      "limitations": "KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
+    },
+    {
+      "id": "analytics",
+      "name": "analytics",
+      "route": "#/analytics",
+      "purpose": "Inspect actual saved-record activity",
+      "status": "Implemented local scope; see V3 verification",
+      "implementationLocation": "src/v3/Platform.tsx",
+      "saveBehavior": "Existing SQLite session/note/document entities where relevant; no fabricated cloud data",
+      "limitations": "KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
+    },
+    {
+      "id": "design-system",
+      "name": "design-system",
+      "route": "#/design-system",
+      "purpose": "11-section live semantic design board",
+      "status": "Implemented local scope; see V3 verification",
+      "implementationLocation": "src/v3/DesignBoard.tsx",
+      "saveBehavior": "Existing SQLite session/note/document entities where relevant; no fabricated cloud data",
+      "limitations": "KNOWN_LIMITATIONS.md",
+      "verification": "VERIFICATION_REPORT.md (V3 scope)"
     }
   ],
   "components": [
@@ -4479,6 +4565,13 @@
       "Creativity",
       "Transparency",
       "Measurable Impact"
+    ],
+    "mascot": "ARCYCA primary; Arty retained scene asset",
+    "defaultTheme": "dark",
+    "themeModes": [
+      "dark",
+      "light",
+      "system"
     ]
   },
   "v2": {
@@ -4500,5 +4593,8 @@
     "standaloneComponentCount": null,
     "warning": "Mapping counts only. V2 verification is test-specific; no inferred production coverage count."
   },
-  "generationNote": "V2 module summaries reference the canonical V2 scope inventory; runtime schemas remain authoritative for fields. Historical component mappings are not V2 verification."
+  "generationNote": "V3 runtime tokens are canonical in shared/design.ts. Component inventory/mappings are not production coverage or inherited V3 verification.",
+  "v3": {
+    "$ref": "docs/v3/RELEASE_SCOPE.json"
+  }
 }

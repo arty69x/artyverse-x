@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-11-08T08:38:19.401Z",
+  "conditions": "Built local API, isolated QA data; restore into empty temporary SQLite; no user database modified.",
+  "projectId": "ef5f0e4b-0889-430d-aa40-b2518bbe6e89",
+  "evidenceId": "5aaa5b2c-e141-4064-a29a-4af214c47b78",
+  "sessionId": "f18c8df2-c6e7-497a-a3d0-c37ba42f4c05",
+  "exactRecordsPreserved": true,
+  "evidenceRelationshipPreserved": true,
+  "revisionCount": 2,
+  "restore": {
+    "imported": 3,
+    "policy": "Merge by stable ID; existing items preserved"
+  }
+}

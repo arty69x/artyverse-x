@@ -39,3 +39,14 @@ Canonical validation: `shared/v2/contracts.ts`, invoked by `shared/schema.ts` on
 | agent-run | prompt/output, provenance, status, duration, usage, known/unknown cost, fallback reason | projectId; downstream document.sourceId |
 
 Source JSON import: max 2 MB → schema validation → preview → apply to draft → explicit save. Imported code never executes automatically. Studio drafts are keyed by item ID and base revision; invalid drafts are preserved under av-recovery and fall back safely. Browser history, temporary preview, server revisions and provider-session cache are separate. Media bytes stay outside localStorage.
+
+## V3 additive frontend contracts
+
+- Interface tokens: `shared/design.ts`, schemaVersion 3. Theme preference lives at `artyverse-theme` (dark/light/system); existing explicit language, accent, motion and draft preferences are retained.
+- Interview data: `shared/interview.ts` validates sessionType copilot/practice, transcript turns with stable IDs/manual speaker labels/timestamps, current question, editable answer, evidenceIds and self-review notes. API item validation invokes the same schema; Item envelope remains v1.
+- Question Bank: existing note entity with noteType question, source question text, body answer and evidence references. No new incompatible database table is needed.
+- `routeForItem` is the shared resolver for specialized sessions/notes, used by Library, command search, Projects and Home recent work. Legacy live sessions and ordinary notes keep their original routes.
+- Analytics derives saved-record counts/dates from actual accessible project data. It does not create score, billing or population entities.
+- Home portal ordering is a validated browser preference, separate from user document layout/history.
+
+V3 routing helpers: `shared/routes.ts` is the pure route resolver; `shared/v2/contracts.ts` re-exports it for compatibility without changing IDs or entities.

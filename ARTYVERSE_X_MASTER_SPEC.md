@@ -1,47 +1,40 @@
-# ARTYVERSE X V2 — Creative Operating Studio
+# ARTYVERSE X V3 — merged product and frontend specification
 
-Artist × Multiverse คือแกนแบรนด์: หนึ่งคนสร้างสรรค์ได้หลายโลก โดยใช้ Creativity, Transparency และ Measurable Impact เป็นเกณฑ์ตัดสินใจ. Think → Create → Analyze → Hyper-Polish → Drive เป็นวงจรงาน. ARTYVERSE เป็น master brand; ARTYVERSE X เป็นผลิตภัณฑ์; Fade W + pink dot เป็นสัญลักษณ์ Whisper assistant ที่ใช้ใน composer. ไม่บิด W ให้หมายถึง A.
+ARTYVERSE = Artist × Multiverse. Creative power with disciplined clarity. Latest direction: Premium Tech Editorial × restrained Neon Brutalist × selective Holographic Glass. Dark creative default; light and system modes use the same semantic roles. ARCYCA is the original friendly helmet/skater interaction anchor. Whisper retains Fade W; legacy Arty remains a scene asset.
 
-## โปรแกรมรุ่นใหม่
+Canonical visual source: `shared/design.ts`; versioned payloads: `shared/schema.ts`, `shared/v2/contracts.ts`, `shared/interview.ts`. Source decisions: `docs/v3/BRAND_AND_NORMALIZATION.md`. Existing user artifacts, IDs, revisions and local media are preserved.
 
-| เครื่องมือ | Input → การทำงาน → Output | บันทึก / ขั้นต่อไป |
+## Interface contract
+
+Syne 400–800 display, DM Sans UI, IBM Plex Sans Thai and JetBrains Mono. Local font files; documented licenses. Lime #CCFF00, pink #FF2078, structural blue #001E3C, violet #B44FFF, cyan #00C7E8 and ink #050403 are primitives. Semantic text/focus/error roles are adjusted for the theme. Body/control legibility takes precedence over poster fidelity. Original artwork pigments do not become body text tokens.
+
+Desktop uses grouped sidebar, breadcrumb/history, global search and create picker. Sidebar widths 218/256px with optional 80px collapse. Tablet uses a drawer. Phones under 640px have five navigation destinations plus safe-area padding. Tool panels stack intentionally. Page overflow is prohibited; bounded canvas/code/table/timeline scrolling is purposeful.
+
+## Workspaces
+
+| Route | Primary job | Working output |
 |---|---|---|
-| Projects | brief → แยก creative context → project ID | เชื่อมงานใหม่ด้วย projectId; Library กรองตามโปรเจกต์ |
-| Agent Studio | prompt → local outline/statistics/brief หรือ optional provider → run record | provenance, usage, elapsed time, unknown/known cost; เปิดผลใน Create |
-| Node Studio | graph → validate DAG / branch / transform / agent step / artifact → execution | workflow + execution; note/document จริงเข้า Library |
-| Code Studio | HTML/CSS/JS → explicit sandbox Run → live preview + console | save revisions, source JSON, standalone HTML; inspect element แล้วแก้ CSS |
-| Sound Lab | 16 steps + oscillator/filter/envelope → Web Audio → actual sound | composition, PCM WAV, rendered recording ใน Library |
-| Dynamics | custom SVG bodies + spring/mass/gravity → bounded simulation | scene JSON, drag/pan/pinch, manual controls; sensor ขออนุญาตก่อนและรอ events จริง |
-| Story Studio | scene list + saved documents + script + timing → timeline/presentation | story JSON, source relationships, play/pause/next/return |
-| System & costs | server status + persisted agent runs → actual counts/cost boundary | backup; connection truth; ไม่มี readiness score ที่คิดขึ้นเอง |
+| home | orientation, idea capture, studio entry | persisted conversation, actual counts/recent work, browser portal order |
+| projects / projects/:id | organize a creative world | stable project context, linked work, CRUD/detail/export |
+| copilot | collect questions and choose user evidence | editable local outline, saved interview session, Agent Studio context |
+| practice / questions | retain and rehearse questions | saved Question Bank notes, practice sessions and self-review |
+| chat / research | capture ideas and source notes | conversations, notes, editable document transfer |
+| create / code | visual layers or web source | saved documents/code, SVG/JSON/HTML export, sandbox/CSS inspector |
+| agents / automate | transparent local or configured-provider tasks | actual run evidence, validated graph execution and artifacts |
+| voice / sound | record or synthesize audio | actual media assets, recordings, compositions and WAV |
+| dynamics / story / live | explore motion and present | SVG physics scenes, scripts, timelines, cue sessions |
+| marketplace | preview original free starters | separate editable document or Research brief; no checkout |
+| analytics | inspect actual activity | saved-record counts/export; no fabricated quality score |
+| library | discover and reopen work | type-aware saved-item routing, search/sort/trash/revisions |
+| design-system / design | inspect the shared visual system | 11 live sections, token export, existing Design OS/Motion Lab |
+| system / settings | configure and understand capabilities | real costs/status, language/theme/motion, backup/restore |
 
-Chat, Canvas, Research, Voice, Live, Templates, Library และ Design OS ใช้ระบบ persistence เดิมต่อ. Workflow V1 ที่ไม่มี graph เปิด compatibility editor ตาม ID; งานใหม่ใช้ Node Studio. Motion Lab Scene Transition บันทึก compatible target story-scene แล้ว Story ใช้ duration จริง. Effect อื่นไม่ถูกอ้างว่าใช้กับ scene ได้ทุกชนิด.
+Copilot uses manual speaker labels. Browser speech recognition is optional and user initiated; it can depend on a vendor network service. Evidence matching uses keyword overlap and stable note IDs. Unknown facts remain placeholders. Local structure is never presented as AI inference; live provider use remains in Agent Studio with provenance/cost/fallback logs. No calibrated confidence or automatic interview quality scoring is invented.
 
-## UX / UI / typography
+## Shared quality contract
 
-Deep black + lime #D7E317 + pink #D4006A; cyan/violet ใช้เป็นแสงรอง. Home เป็น editorial asymmetric bento มีโลก orbital native SVG เป็นจุดเด่นเดียว; native composer/buttons/text ไม่ฝังในภาพ. Poppins 200/800 สร้างจังหวะ thin/bold; IBM Plex Sans Thai รองรับภาษาไทย; body ใช้ DM Sans. เก็บฟอนต์และใบอนุญาตใน public/fonts. Brand studies ต้นฉบับยังอยู่ branding/.
+Native controls, keyboard command navigation, roving code/Design OS tabs, native modal focus restoration, appropriate empty/loading/error/missing states, versioned saves, safe import review, browser drafts and preserved artifact relationships. Mascot animation responds to visibility, OS reduced motion and Full/Balanced/Calm/Off preferences. Fixed/mobile navigation does not replace controls or cover the main workspace.
 
-Desktop ใช้ sidebar + breadcrumb + contextual inspector. Mobile ใช้ drawer, panels วางซ้อนตามงาน และพื้นที่ graph เลื่อนภายในเฉพาะ canvas. CSS utilities จาก Tailwind 4 เสริม React/Vite โดยไม่เพิ่ม Next.js และไม่ reset UI เดิมด้วย preflight. Motion for React เป็นแพ็กเกจ motion ที่รวม Framer Motion runtime อยู่จริง.
+## Evidence and remaining work
 
-## Data / integration boundaries
-
-- `shared/schema.ts`: Item envelope v1 + theme canonical. เอกสาร V1 ยังใช้ IDs/revisions เดิม.
-- `shared/v2/contracts.ts`: graph/code/composition/scene/story/project data schema v2 และ kind→route mapping.
-- `shared/v2/graph.ts`: pure local DAG execution, cancellation, branch route, injected artifact/agent adapters.
-- `src/v2/shared.tsx`: explicit save, revision-keyed drafts, undo/redo, import validation→preview→apply. Undo เก็บใน session ไม่ปะปนกับ saved revisions.
-- SQLite + media files อยู่เครื่องที่รัน server. Browser localStorage เก็บ draft/preferences เท่านั้น. ไม่เรียกว่า cloud sync.
-- Code ใช้ opaque-origin iframe `sandbox=allow-scripts` ไม่อนุญาต same-origin, forms, popups หรือ host access; CSP ปิด fetch/connect/resources ภายนอก. ไม่ใช่ OS container หรือ backend shell/terminal. โค้ดหนักยังใช้ทรัพยากร browser ได้.
-- Web Audio เริ่มด้วย user gesture, ปิด context/oscillators/timers เมื่อออกหรือซ่อนหน้า. WebGL เปิดแบบ opt-in มี bounded quality/static fallback และหยุด offscreen.
-- API keys server-only; ไม่มีการจัดหา key หรือเรียก inference จริงในงานส่งมอบนี้. Adapter tests ใช้ fixture HTTP ในเครื่องและระบุว่าไม่ใช่ AI inference.
-
-## Cost / agent fallback
-
-Local tools ไม่มี API charge. Connected requests มี output cap, estimated request budget, opt-in unknown price, session cache ขนาดไม่เกิน 50 รายการ และ explicit fallback. ประมาณ input ด้วย UTF-8 byte allowance + overhead ไม่ใช่ tokenizer หรือ hard billing cap. Actual usage × configured actual rates ใช้ได้เมื่อ provider ส่ง token counts; ไม่เช่นนั้น cost unknown. Provider ส่งแล้วล้มเหลว cost unknown แม้ local fallback สำเร็จ. Cache hit คิด provider request ใหม่เป็นศูนย์และระบุ source เดิม. แต่ละ agent step ใน graph เก็บ run evidence จริง. Budget ไม่ใช่ billing control ของผู้ให้บริการ.
-
-## สิ่งที่ยังต้องมีสำหรับ public production
-
-Identity/authentication, per-user authorization/ownership, cloud storage/sync, remote collaboration conflict protocol, distributed execution/scheduler, rate limits และ deployment-specific recovery/security tests. ไม่แสดงผู้ร่วมงานหรือ cloud success จำลอง. TH/EN เครื่องมือเดิมและ shell มีส่วนที่แปลแล้ว; advanced tools ยังมี English microcopy. Sensor/gesture/audio บนอุปกรณ์จริงยังต้องตรวจเพิ่ม. ไม่ถือว่าแอปครบ production SaaS เพราะ build หรือ automated checks ผ่าน.
-
-## เอกสารประกอบ
-
-Canonical release registry: `artyverse-design-master.json`; detailed V2 scope: `docs/v2/RELEASE_SCOPE.json`; source decisions: `docs/v2/CONFLICT_AND_NORMALIZATION.md`; verification: `VERIFICATION_REPORT.md`; historical V1 specification: `docs/v1/ARTYVERSE_X_MASTER_SPEC.md`.
+Actual results: `VERIFICATION_REPORT.md`; acceptance: `docs/v3/ACCEPTANCE_MATRIX.md`; workflow map: `docs/v3/WORKFLOW_MAP.md`; limits: `KNOWN_LIMITATIONS.md`; rollback: `MIGRATION_AND_ROLLBACK.md`. V1/V2 reports are historical, not copied verification. No public deployment, cloud database, auth, remote collaboration, payment, community service or live paid inference was added without a real connection. Exact reference files named by the earlier Prompt Pack were not available; this is a deliberate merged redesign, not pixel reconstruction.

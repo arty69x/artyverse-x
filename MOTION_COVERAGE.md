@@ -33,3 +33,9 @@ The table above describes retained V1 effect engines and their limits. It does n
 | Sound Lab | Actual analyser waveform canvas + real audio sequencer | Audio remains user initiated; timers/context/oscillators stop on leaving or hiding view |
 
 No React state update occurs every frame in the SVG spring integrator or WebGL shader loop. Numeric parameters and pointer camera controls update React state on actual user input. All visual effects can be disabled while the tool remains usable. Shared 120/220/480ms durations originate in the canonical theme; art-specific timing remains configurable and is not forced onto one scale.
+
+## V3 visual and lifecycle upgrade
+
+ARCYCA is an original layered SVG in `src/v3/Mascot.tsx`; portable idle asset in `public/assets/arcyca-idle.svg`. Hero and Copilot use restrained float; animation stops for OS reduced motion, Calm/Off, hidden documents and offscreen observation. States are explicit preview/capture/TTS UI states; no AI work is inferred from mascot motion. The mascot is illustrative, not audio lip-sync or a rigid-body character solver.
+
+The Design System's animation is a labeled specimen with pause. Actual loading example computes SHA-256, rather than waiting on an invented timer. Home portal hover, command/dialog transitions and workbench interactions use the shared design language. V2 physics, kinetic geometries and media engines remain with their documented authoring limits. Themes change UI controls rather than recoloring saved art.
