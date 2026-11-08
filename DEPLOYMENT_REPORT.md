@@ -1,5 +1,18 @@
 # ARTYVERSE X — Git and Vercel release
-**Latest release — Typography polish (2026-11-08):** runtime `79a60c763ede429b9ed97eabedaee9add1c65e9c`; final deployment `dpl_GBrFYYwByJ8DSsKygsy2cCYEQx2a`. Live typography controls: https://artyverse-x-ai-assistant.vercel.app/#/design-system (Typography section); Home: https://artyverse-x-ai-assistant.vercel.app/#/home .
+**Latest release — Reference-driven Pattern Library (2026-11-08):** runtime `d3069e8b0c0be3d1b7d5448b118aade359898cfc`; deployment `dpl_3FmZdx2LCt4V1JbSbnbFb6HvVdMo`.
+
+- Library: https://artyverse-x-ai-assistant.vercel.app/#/patterns
+- Depth example: https://artyverse-x-ai-assistant.vercel.app/#/patterns/depth
+- Chapters example: https://artyverse-x-ai-assistant.vercel.app/#/patterns/chapters
+- Scope:8 original editable code layouts,6 artifact-only styles,60 explicitly reference-only inventory entries. All12 source files inventoried; no source statuses, vendor scripts or stock media copied as runtime capability.
+
+Current checks:24 unit tests;10 selected new/affected browser workflows;18 gallery/detail/generated cases plus8 narrow maximum-content cases. Ten cases include axe; others check geometry. Both builds/TypeScript passed, plus local production browser IndexedDB draft/save/reload/Code Studio/filter handoff. No new full54-case regression, FPS/Lighthouse, source-motion or pixel-perfect score. Raw evidence: tests/evidence/reference-library/; decisions: docs/reference-library/ADOPTION.md.
+
+Source fingerprint `8cf487d9e2cbd36f094c6e285c74756f185c875a9581cd065ddc783cfe6ae3cf`. Prior stable rollback `dpl_GBrFYYwByJ8DSsKygsy2cCYEQx2a`; recovery branch `recovery/pre-reference-library-20261108` at9d5b4ba. No data migration, provider/key/payment/cloud changes or access-policy relaxation. Platform READY/build/alias confirmation is recorded below once verified; protected production-browser interaction remains distinct from local built-browser tests. Documentation commits follow the exact deployed runtime SHA.
+
+---
+
+**Historical release — Typography polish (2026-11-08):** runtime `79a60c763ede429b9ed97eabedaee9add1c65e9c`; final deployment `dpl_GBrFYYwByJ8DSsKygsy2cCYEQx2a`. Live typography controls: https://artyverse-x-ai-assistant.vercel.app/#/design-system (Typography section); Home: https://artyverse-x-ai-assistant.vercel.app/#/home .
 
 12 canonical type roles, real Latin200–800 weights/800italic, Thai200/400/700 fallback, emphasis/focus values, actual editable previews and JSON export. Both builds passed;20 units,9 affected journeys and15 visual/layout cases passed.12 of the visual cases include automated axe checks;3 Home cases check geometry/clipping. No new full49-case regression, Lighthouse or pixel-perfect claim. Source fingerprint `e3724b893cd2943d3109ac0ea5245aae79a7ec0fce170799e8e58456f931bd00`; per-file/build hashes and current evidence: tests/evidence/typography/.
 
@@ -86,3 +99,5 @@ Continuation plan: `docs/v3/NEXT_ACTIONS_TH.md`; architecture: `docs/v3/HOSTED_E
 Package the final source/research and browser build with `python3 scripts/package-hosted.py`. Its runtime/build hash checks intentionally reject stale artifacts; the older V3 ZIP and evidence remain separate historical deliverables.
 
 Typography final platform confirmation: `dpl_GBrFYYwByJ8DSsKygsy2cCYEQx2a` READY/production, alias error null, stable alias points to it; remote `app-EcxjKEBR.js` matches local browser build and npm reports0 known vulnerabilities. Protected production browser interactions/runtime logs were not exercised. No new monitoring/paid integration installed. Evidence/docs commits follow runtime79a60c7.
+
+Reference-library final confirmation: production READY, alias error null; stable alias maps to dpl_3FmZdx2LCt4V1JbSbnbFb6HvVdMo. Git source d3069e8; app-i27OuK4H.js matches local browser build. Remote npm reports0 known vulnerabilities; Build Completed/Deployment completed recorded. Current source/build fingerprints and sanitized metadata are in tests/evidence/reference-library/. No protected production-browser/runtime error scan claim; existing SSO policy retained.
