@@ -268,8 +268,8 @@ export function HomeV3({ go }: { go: Navigate }) {
             )}
           </p>
         </div>
-        <a href="#/projects" className="v3-text-link">
-          {t("Open your projects", "เปิดโปรเจกต์ของคุณ")}{" "}
+        <a href="#/concept/home" className="v3-text-link">
+          {t("Preview the new direction", "ดูแนวทางหน้าจอใหม่")}{" "}
           <ArrowUpRight size={17} />
         </a>
       </div>

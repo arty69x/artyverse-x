@@ -1,0 +1,10 @@
+{
+  checks: [
+    'Built browser edition renders home',
+    'Built browser edition renders copilot',
+    'Built browser edition renders studio',
+    'Explicit Run creates isolated preview with real ready event; parent access denied',
+    'Explicit handoff creates editable code document in IndexedDB and survives reload'
+  ],
+  errors: []
+}

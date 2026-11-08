@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-11-08T10:52:24.822Z",
+  "base": "http://127.0.0.1:4320",
+  "browser": "154.0.8037.57",
+  "checks": [
+    "Built browser edition renders home",
+    "Built browser edition renders copilot",
+    "Built browser edition renders studio",
+    "Explicit Run creates isolated preview with real ready event; parent access denied",
+    "Explicit handoff creates editable code document in IndexedDB and survives reload"
+  ],
+  "errors": [],
+  "conditions": "Built VITE_STORAGE_MODE=browser edition on isolated static preview. No live AI/auth/cloud credentials; not remote Vercel browser verification."
+}

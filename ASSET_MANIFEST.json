@@ -81,6 +81,18 @@
       "optimization": "Latin subset, variable 400–800, font-display swap",
       "bytes": 34608,
       "sha256": "68b623f0e45b905041b2edb9b2e4f563a505f13db1cd06b5f1946eb2e1f47048"
+    },
+    {
+      "id": "concept-workspace-vectors",
+      "purpose": "Four original decorative portal compositions in the Prompt Pack preview",
+      "format": "Inline SVG",
+      "dimensions": [
+        260,
+        135
+      ],
+      "source": "Original code-authored vector family in src/concept/Concept.tsx; no external artwork",
+      "alt": "Decorative; linked native card headings provide the accessible name",
+      "optimization": "Native shapes and unique gradient IDs; no embedded UI text or raster payload"
     }
   ],
   "runtimeAssets": [

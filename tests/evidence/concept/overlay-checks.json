@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-11-08T10:51:53.006Z",
+  "cases": [
+    {
+      "screen": "home",
+      "overlay": "drawer",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "home",
+      "overlay": "search",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "studio",
+      "overlay": "drawer",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "screen": "studio",
+      "overlay": "search",
+      "width": 390,
+      "violations": []
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+
+> artyverse-x@3.0.0-local test
+> vitest run
+
+
+ RUN  v5.1.0 /workspace/artyverse-x
+
+
+ Test Files  3 passed (3)
+      Tests  16 passed (16)
+   Start at  10:42:38
+   Duration  858ms (import 74%, tests 18%, transform 5%, worker 3%)
+

@@ -28,3 +28,5 @@ See `docs/v2/CONFLICT_AND_NORMALIZATION.md` for latest source-by-source decision
 ## V3 merged frontend
 
 Latest UX/UI specification determines dark-first themes, primitive palette and Syne editorial direction. Actual repository facts override the earlier Prompt Pack's assumed pnpm monorepo and prototype-only status. Existing SQLite saves, real graph execution, CSS inspector and audio lifecycle remain intact. ARCYCA is the new primary mascot; Arty scene assets and Whisper Fade W are retained with distinct roles. Semantic foregrounds are checked independently of brand fill colors. Full decisions: `docs/v3/BRAND_AND_NORMALIZATION.md`.
+
+Latest Prompt Pack concept: user asked to simulate the proposal. Created scoped Light/Cyber Studio preview instead of overwriting repository AGENTS.md or downgrading the working npm/Node 24 stack. Missing reference files prevent pixel-match claims. Sample content remains labeled and separate from saved work; HMAC/air-gap/cloud/AI capabilities are not inferred from the prompt. See docs/v3/CONCEPT_PREVIEW_TH.md.

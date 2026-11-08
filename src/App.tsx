@@ -23,9 +23,15 @@ import {
 } from "lucide-react";
 import { useStore, useT } from "./core/store";
 import { Button } from "./components/UI";
-const Discover=lazy(()=>import('./pages/Workspace').then(m=>({default:m.Discover})));
-const Library=lazy(()=>import('./pages/Workspace').then(m=>({default:m.Library})));
-const SettingsPage=lazy(()=>import('./pages/Workspace').then(m=>({default:m.SettingsPage})));
+const Discover = lazy(() =>
+  import("./pages/Workspace").then((m) => ({ default: m.Discover })),
+);
+const Library = lazy(() =>
+  import("./pages/Workspace").then((m) => ({ default: m.Library })),
+);
+const SettingsPage = lazy(() =>
+  import("./pages/Workspace").then((m) => ({ default: m.SettingsPage })),
+);
 const Chat = lazy(() =>
   import("./pages/Workflows").then((m) => ({ default: m.Chat })),
 );
@@ -89,6 +95,9 @@ const Marketplace = lazy(() =>
 const DesignBoard = lazy(() =>
   import("./v3/DesignBoard").then((m) => ({ default: m.DesignBoard })),
 );
+const Concept = lazy(() =>
+  import("./concept/Concept").then((m) => ({ default: m.Concept })),
+);
 export const routes = [
   ["copilot", "Interview Copilot", "ผู้ช่วยสัมภาษณ์", Mic],
   ["practice", "Practice", "ฝึกสัมภาษณ์", MessageSquare],
@@ -151,6 +160,14 @@ export function App() {
     document.title = `${routes.find((r) => r[0] === route)?.[1] || "Workspace"} · ARTYVERSE X`;
     document.getElementById("main")?.focus({ preventScroll: true });
   }, [route, s.locale, s.motion]);
+  if (route === "concept")
+    return (
+      <Suspense
+        fallback={<div className="v3-loading">Loading design preview…</div>}
+      >
+        <Concept screen={id} />
+      </Suspense>
+    );
   let page;
   switch (route) {
     case "copilot":
