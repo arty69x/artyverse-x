@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-08T09:42:42.845Z",
+  "timestamp": "2026-11-08T09:47:11.483Z",
   "baseURL": "http://127.0.0.1:4320",
   "browser": "154.0.8037.57",
   "conditions": "Built browser edition on static Vite preview, isolated fresh Playwright contexts. IndexedDB/service-worker real interactions, synthetic binary WAV fixture, no cloud backend or live AI. Automated axe default Home states; not real-device or WCAG certification.",

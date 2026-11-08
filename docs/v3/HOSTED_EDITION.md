@@ -24,3 +24,7 @@ Repository: https://github.com/arty69x/artyverse-x (initial remote main was 0ca7
 Local recovery branch: `recovery/pre-hosted-20261108` at `2423698`. Prior Vercel READY deployment: `dpl_C6FAqSyYaoFwV3zZyY4xAM68tzDs`. Preserve that deployment for rollback. A hosted frontend rollback does not delete IndexedDB. Back up important work before transferring domains or changing schemas.
 
 Release checks: both build modes, existing unit/browser/API regression, and `node scripts/verify-hosted.mjs` against a static browser build. Raw current evidence lives in `tests/evidence/deployment/`; original V3 Lighthouse scores retain the earlier runtime revision and must not be presented as measurements of the service-worker boot path.
+
+## Dependency remediation
+
+Initial Vercel build exposed 3 npm advisories in test-only Vitest/mocker/tinypool. Updated Vitest 3 to 5.1.0 (compatible with Node 24 and Vite 7); reran 16 unit tests, browser build and 12 hosted verification scenarios. Current npm audit reports zero known vulnerabilities at the recorded run. No blind `audit fix --force` or app framework migration was used.
