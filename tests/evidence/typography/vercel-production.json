@@ -1,0 +1,62 @@
+{
+  "deployment": {
+    "id": "dpl_GBrFYYwByJ8DSsKygsy2cCYEQx2a",
+    "name": "artyverse-x-ai-assistant",
+    "url": "artyverse-x-ai-assistant-c9jssnhoy-arty69xs-projects.vercel.app",
+    "type": "LAMBDAS",
+    "state": "READY",
+    "createdAt": 1794151618907,
+    "project": {
+      "id": "prj_IX1ylxFY2Uj4EcDyCr5CAigTkrXG",
+      "name": "artyverse-x-ai-assistant",
+      "framework": "vite"
+    },
+    "meta": {
+      "githubCommitRef": "79a60c763ede429b9ed97eabedaee9add1c65e9c",
+      "githubCommitSha": "79a60c763ede429b9ed97eabedaee9add1c65e9c",
+      "githubCommitMessage": "fix(type): bind live specimens to canonical font families",
+      "githubRepo": "artyverse-x",
+      "githubOrg": "arty69x"
+    },
+    "alias": [
+      "artyverse-x-ai-assistant.vercel.app",
+      "artyverse-x-ai-assistant-arty69xs-projects.vercel.app",
+      "artyverse-x-ai-assistant-git-79a60c763-385212-arty69xs-projects.vercel.app"
+    ],
+    "target": "production",
+    "regions": [
+      "iad1"
+    ],
+    "buildingAt": 1794151625355,
+    "ready": 1794151652119,
+    "readyState": "READY",
+    "aliasError": null
+  },
+  "alias": {
+    "alias": "artyverse-x-ai-assistant.vercel.app",
+    "created": "2026-11-08T09:49:17.825Z",
+    "createdAt": 1794131357825,
+    "deletedAt": null,
+    "deployment": {
+      "id": "dpl_GBrFYYwByJ8DSsKygsy2cCYEQx2a",
+      "url": "artyverse-x-ai-assistant-c9jssnhoy-arty69xs-projects.vercel.app"
+    },
+    "deploymentId": "dpl_GBrFYYwByJ8DSsKygsy2cCYEQx2a",
+    "projectId": "prj_IX1ylxFY2Uj4EcDyCr5CAigTkrXG",
+    "redirect": null,
+    "redirectStatusCode": null,
+    "uid": "c6ba47f3d19a5a39e58f5312037a09733de4edf7d67eefad1a8a2f6ed17720d75cf04e05347d34d1bec9f6ea3ded654c670f187336de2d67e5903ae17862710d",
+    "updatedAt": 1794151652258
+  },
+  "buildEvents": {
+    "scope": "Selected excerpts, not full logs",
+    "excerpts": [
+      "ype\":\"stdout\",\"text\":\"Cloning github.com/arty69x/artyverse-x (Branch: 79a60c763ede429b9ed97eabedaee9add1c65e9c, Commit: 79a60c7)\",\"info\":{\"type\":\"build\",\"name\":\"bld_4egca8awb\",\"entrypoint\":\".\"}},{\"created\":1794151628537,\"date\":1794151628",
+      "{\"created\":1794151635336,\"date\":1794151635336,\"type\":\"stdout\",\"text\":\"found 0 vulnerabilities\",\"info\":{\"type\":\"build\",\"name\":\"bld_4egca8awb\",\"entrypoint\":\".\"}},{\"created\":1794151635337,\"date\":1794151635337,\"type\":\"stderr\",\"text\":\"npm warn install-script",
+      "\",\"text\":\"\\u001b[2mdist/\\u001b[22m\\u001b[2massets/\\u001b[22m\\u001b[36mapp-EcxjKEBR.js                                 \\u001b[39m\\u001b[1m\\u001b[2m276.04 kB\\u001b[22m\\u001b[1m\\u001b[22m\\u001b[2m │ gzip: 87.04 kB\\u001b[22m\",\"info\":{\"type\":\"buil",
+      "{\"created\":1794151651279,\"date\":1794151651279,\"type\":\"stderr\",\"text\":\"Build Completed in /vercel/output [21s]\",\"info\":{\"type\":\"build\",\"name\":\"bld_4egca8awb\",\"entrypoint\":\".\"}},{\"created\":1794151651303,\"date\":1794151651303,\"type\":\"stdout\",\"text\":",
+      "{\"created\":1794151652201,\"date\":1794151652201,\"type\":\"stdout\",\"text\":\"Deployment completed\",\"info\":{\"type\":\"build\",\"name\":\"bld_4egca8awb\",\"entrypoint\":\".\"}},{\"created\":1794151652206,\"date\":1794151652206,\"type\":\"stdout\",\"text\":\"Creating build cache..."
+    ]
+  },
+  "verificationLimit": "Local browser workflows and platform build/alias verified. Protected production browser interaction/runtime log scan not exercised. Existing SSO unchanged."
+}

@@ -1,5 +1,13 @@
 # ARTYVERSE X — Git and Vercel release
-**Latest release — Unified reconstructed Visual Engineering Studio (2026-11-08):** production READY, runtime commit `d4c53d03ee0dba7261de0ad4418583a2d531abcb`, deployment `dpl_H64eLwVVyS7mzuYpU4jJhdMn2ngV`. Stable alias confirmed to this deployment; alias error null.
+**Latest release — Typography polish (2026-11-08):** runtime `79a60c763ede429b9ed97eabedaee9add1c65e9c`; final deployment `dpl_GBrFYYwByJ8DSsKygsy2cCYEQx2a`. Live typography controls: https://artyverse-x-ai-assistant.vercel.app/#/design-system (Typography section); Home: https://artyverse-x-ai-assistant.vercel.app/#/home .
+
+12 canonical type roles, real Latin200–800 weights/800italic, Thai200/400/700 fallback, emphasis/focus values, actual editable previews and JSON export. Both builds passed;20 units,9 affected journeys and15 visual/layout cases passed.12 of the visual cases include automated axe checks;3 Home cases check geometry/clipping. No new full49-case regression, Lighthouse or pixel-perfect claim. Source fingerprint `e3724b893cd2943d3109ac0ea5245aae79a7ec0fce170799e8e58456f931bd00`; per-file/build hashes and current evidence: tests/evidence/typography/.
+
+Prior stable rollback: `dpl_H64eLwVVyS7mzuYpU4jJhdMn2ngV`; source recovery `recovery/pre-typography-polish-20261108` at `31a2b3d`. No storage migration, provider/payment change or access-policy relaxation. Runtime/docs commits remain separate.
+
+---
+
+**Historical release — Unified reconstructed Visual Engineering Studio (2026-11-08):** production READY, runtime commit `d4c53d03ee0dba7261de0ad4418583a2d531abcb`, deployment `dpl_H64eLwVVyS7mzuYpU4jJhdMn2ngV`. Stable alias confirmed to this deployment; alias error null.
 
 - Home: https://artyverse-x-ai-assistant.vercel.app/#/home
 - Builder inside shared shell: https://artyverse-x-ai-assistant.vercel.app/#/builder
@@ -76,3 +84,5 @@ The first preview promotion API call returned HTTP 422. Recovered by building th
 Continuation plan: `docs/v3/NEXT_ACTIONS_TH.md`; architecture: `docs/v3/HOSTED_EDITION.md`. No paid integrations, provider keys or personal SQLite/media were uploaded.
 
 Package the final source/research and browser build with `python3 scripts/package-hosted.py`. Its runtime/build hash checks intentionally reject stale artifacts; the older V3 ZIP and evidence remain separate historical deliverables.
+
+Typography final platform confirmation: `dpl_GBrFYYwByJ8DSsKygsy2cCYEQx2a` READY/production, alias error null, stable alias points to it; remote `app-EcxjKEBR.js` matches local browser build and npm reports0 known vulnerabilities. Protected production browser interactions/runtime logs were not exercised. No new monitoring/paid integration installed. Evidence/docs commits follow runtime79a60c7.
