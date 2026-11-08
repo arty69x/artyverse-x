@@ -20,3 +20,7 @@ Copilot outlines are deterministic local structures, not AI inference. Optional 
 ## Vercel / browser edition
 
 `vercel.json` builds with `VITE_STORAGE_MODE=browser`. On Vercel, items/media/revisions live in this browser's IndexedDB, not a shared cloud database. Use Settings → Backup before clearing site data or moving to another origin/device. AI remains unavailable in this edition; deterministic local tools work. Existing Node/SQLite mode remains the default when running locally. See [hosted architecture](docs/v3/HOSTED_EDITION.md) and deployment evidence under `tests/evidence/deployment/`.
+
+## Prompt Pack design preview
+
+Open `#/concept/home`, `#/concept/copilot`, or `#/concept/studio` (also linked from Home). Three native, responsive concept screens use labeled examples. Code editing/Run/export and explicit handoff to saved Studio work locally; no sample AI/auth/collaboration success is implied. See [concept scope and evidence](docs/v3/CONCEPT_PREVIEW_TH.md).

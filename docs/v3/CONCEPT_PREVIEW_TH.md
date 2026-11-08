@@ -39,3 +39,7 @@ Sandbox reuse core เดิม: `allow-scripts`, ไม่มี `allow-same-or
 - Built browser edition: render 3 screens, actual Run/opaque-origin parent denial และ explicit save-to-Studio/reload persistence ผ่าน; ไม่มี page errors ที่สังเกตได้.
 - รอบก่อน freeze เคยพบ dev hot reload ระหว่าง synthetic recording ทำให้ test การหยุด/backup ต่อเนื่องล้มเหลว; หยุดแก้ source ระหว่าง full regression และรันซ้ำแล้วผ่าน 41 รายการ. เป็นหลักฐานรอบใหม่ ไม่แทนผลล้มเหลวด้วยการเปลี่ยน baseline.
 - ไม่มีการทดสอบ TTS voice quality, microphone live STT, real-device gestures, provider inference หรือ production browser interaction หลัง protection ในรอบนี้.
+
+## Deployment
+
+Production READY: `dpl_FHqyYQTgDNPcJ6MjmiBu6aQFDLNH`, runtime `867eaa7acba2cb98578f6433d189f1a7a0fa0c59`. URL: https://artyverse-x-ai-assistant.vercel.app/#/concept/home. Alias และ build ตรวจผ่าน connected Vercel tools; ไม่ได้ปิด protection หรือสร้าง bypass/share link. Production browser interaction ยังไม่ได้ตรวจจาก workspace นี้.

@@ -1,0 +1,41 @@
+{
+  "result": {
+    "deployment": {
+      "id": "dpl_FHqyYQTgDNPcJ6MjmiBu6aQFDLNH",
+      "name": "artyverse-x-ai-assistant",
+      "url": "artyverse-x-ai-assistant-hd16wvwz7-arty69xs-projects.vercel.app",
+      "type": "LAMBDAS",
+      "state": "READY",
+      "createdAt": 1794135229995,
+      "creator": {
+        "uid": "9dwhZaJe4LAEGTjVOIjjpOb4",
+        "username": "arty69xx-4705"
+      },
+      "project": {
+        "id": "prj_IX1ylxFY2Uj4EcDyCr5CAigTkrXG",
+        "name": "artyverse-x-ai-assistant",
+        "framework": "vite"
+      },
+      "meta": {
+        "githubCommitRef": "867eaa7acba2cb98578f6433d189f1a7a0fa0c59",
+        "githubCommitSha": "867eaa7acba2cb98578f6433d189f1a7a0fa0c59",
+        "githubCommitMessage": "feat(design): add interactive Light Copilot and Cyber Studio concept preview",
+        "githubRepo": "artyverse-x",
+        "githubOrg": "arty69x"
+      },
+      "alias": [
+        "artyverse-x-ai-assistant.vercel.app",
+        "artyverse-x-ai-assistant-arty69xs-projects.vercel.app",
+        "artyverse-x-ai-assistant-git-867eaa7ac-c736d5-arty69xs-projects.vercel.app"
+      ],
+      "target": "production",
+      "regions": [
+        "iad1"
+      ],
+      "buildingAt": 1794135245818,
+      "ready": 1794135272876,
+      "readyState": "READY",
+      "aliasError": null
+    }
+  }
+}

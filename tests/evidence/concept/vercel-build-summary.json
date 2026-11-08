@@ -1,0 +1,84 @@
+{
+  "result": {
+    "selectedBuildEvents": [
+      {
+        "created": 1794135245621,
+        "date": 1794135245621,
+        "type": "stdout",
+        "text": "Cloning github.com/arty69x/artyverse-x (Branch: 867eaa7acba2cb98578f6433d189f1a7a0fa0c59, Commit: 867eaa7)",
+        "info": {
+          "type": "build",
+          "name": "bld_zz3v65j9g",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794135254627,
+        "date": 1794135254627,
+        "type": "stdout",
+        "text": "found 0 vulnerabilities",
+        "info": {
+          "type": "build",
+          "name": "bld_zz3v65j9g",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794135271813,
+        "date": 1794135271813,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mConcept-Cm4GXMLg.js                             \u001b[39m\u001b[1m\u001b[2m 35.36 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip: 10.49 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_zz3v65j9g",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794135271813,
+        "date": 1794135271813,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mapp-CsY9zTcv.js                                 \u001b[39m\u001b[1m\u001b[2m271.38 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip: 85.77 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_zz3v65j9g",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794135272016,
+        "date": 1794135272016,
+        "type": "stderr",
+        "text": "Build Completed in /vercel/output [23s]",
+        "info": {
+          "type": "build",
+          "name": "bld_zz3v65j9g",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794135272960,
+        "date": 1794135272960,
+        "type": "stdout",
+        "text": "Deployment completed",
+        "info": {
+          "type": "build",
+          "name": "bld_zz3v65j9g",
+          "entrypoint": "."
+        }
+      }
+    ]
+  },
+  "truncated": true,
+  "truncation": {
+    "arrays": 1,
+    "omittedArrayItems": 75,
+    "objects": 0,
+    "omittedObjectKeys": 0,
+    "strings": 0,
+    "omittedStringChars": 0,
+    "depth": 0,
+    "budget": 0
+  },
+  "scope": "Selected platform build events; not complete console output"
+}
