@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WhisperX Rebrand System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@200;300;600;700&family=Poppins:wght@100;200;300;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--lime:#D7E317;--pink:#D4006A;--ink:#1A1A1A;--g100:#E8E8E8;--g500:#767676;--g700:#424242;--font:'Poppins','IBM Plex Sans Thai',system-ui,sans-serif;--box:#000;--x:#D7E317}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#fff;color:var(--ink);font-family:var(--font);font-weight:300;line-height:1.7;padding-top:env(safe-area-inset-top,0);-webkit-font-smoothing:antialiased}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+b{font-weight:700}.t{font-weight:200}
+.bar{display:block;width:25%;height:.09em;min-height:5px;background:var(--pink);margin-top:.14em}
+.mark{background:var(--lime);padding:0 .12em;margin:0 -.12em}
+h1,h2{font-weight:800;letter-spacing:-.05em;line-height:1}
+h1{font-size:clamp(44px,8.5vw,112px)}h2{font-size:clamp(32px,4.6vw,58px)}
+h1 span.l{display:block;width:fit-content}
+section{padding:clamp(56px,8vw,112px) 0;border-top:1px solid var(--g100)}
+.row{display:grid;grid-template-columns:repeat(12,1fr);gap:32px 24px}
+.lead{grid-column:1/6}.body{grid-column:7/13}
+.lead p,.body p{color:var(--g700);margin-top:14px;max-width:44ch}
+.k{font-size:13px;color:var(--g500)}
+/* symbol picker */
+.pick{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.pick button{display:flex;align-items:center;gap:10px;height:56px;padding:0 18px 0 10px;border:2px solid var(--g100);border-radius:999px;background:#fff;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.pick button:hover{border-color:#000}
+.pick button[aria-pressed=true]{border-color:#000;background:#000;color:#fff}
+.pick svg{width:36px;height:36px;overflow:visible}
+.big{display:grid;grid-template-columns:1fr 1.4fr;gap:20px;margin-top:20px}
+.big>div{border:1px solid var(--g100);border-radius:6px;min-height:260px;display:grid;place-items:center;padding:28px}
+.big .dk{background:#000;--box:#D7E317;--x:#000}
+.big svg{width:min(190px,40vw);height:auto;overflow:visible}
+.why{margin-top:20px;max-width:60ch;color:var(--g700)}
+/* lockups */
+.lg{font-size:var(--s,50px);letter-spacing:-.05em;font-weight:200;line-height:1;display:inline-flex;align-items:center;gap:.06em;white-space:nowrap;color:#000}
+.lg b{font-weight:800}.lg .p{color:var(--pink)}
+.lg .sy{width:.9em;height:.9em;overflow:visible;margin-top:-.04em}
+.st{flex-direction:column;align-items:flex-start;gap:0;line-height:.9}.st span:last-child{font-weight:800}
+.ul{flex-direction:column;align-items:flex-start;gap:.05em}.ul .bar{width:25%;height:.07em;min-height:5px;margin:0}
+.sp{width:.82em;height:.82em;color:#000}
+.mono{display:inline-grid;place-items:center;width:1.7em;height:1.7em;background:#000;border-radius:.3em;font-size:.9em;letter-spacing:-.08em;display:inline-flex;justify-content:center}
+.mono span{color:#fff;font-weight:200;font-size:1.2em}.mono b{color:var(--lime);font-size:1.2em}
+.ct{flex-direction:column;gap:.2em}.ct .sy{width:1.1em;height:1.1em}.ct span{font-size:.6em}
+.roles{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.role:nth-child(3n+2){margin-top:32px}
+.role .stage{border:1px solid var(--g100);border-radius:6px;min-height:190px;display:grid;place-items:center;padding:24px}
+.role h3{font-size:18px;font-weight:700;letter-spacing:-.03em;margin-top:12px}
+.role p{font-size:14px;color:var(--g700)}
+/* applications */
+.apps{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;margin-top:56px;align-items:start}
+.a1{grid-column:1/6}.a2{grid-column:6/13;margin-top:40px}.a3{grid-column:2/8}.a4{grid-column:8/13;margin-top:24px}
+.panel{border:1px solid var(--g100);border-radius:6px;padding:28px}
+.icons{display:flex;align-items:end;gap:20px}
+.app-ic{background:#000;display:grid;place-items:center;--box:#000;--x:#D7E317}
+.app-ic svg{width:78%;height:78%;overflow:visible}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.hdr nav{display:flex;gap:22px;font-size:14px}
+.btn{height:46px;padding:0 24px;border:0;border-bottom:2px solid #000;background:none;font:inherit;font-weight:600;font-size:15px;cursor:pointer}
+.btn:hover{color:var(--pink);border-color:var(--pink)}
+.pcard .th{aspect-ratio:4/3;background:#F5F5F5;border-radius:6px;display:grid;place-items:center;margin-bottom:12px}
+.pcard .th svg{width:30%;overflow:visible}
+.pcard h4{font-size:18px;letter-spacing:-.03em;font-weight:700}
+.tok{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:20px;font-size:14px}
+.tok i{display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:8px;vertical-align:-2px;border:1px solid var(--g100)}
+@media(max-width:860px){.lead,.body{grid-column:1/-1}.big{grid-template-columns:1fr}.roles{grid-template-columns:1fr 1fr}.role:nth-child(n){margin-top:0}.a1,.a2,.a3,.a4{grid-column:1/-1;margin-top:0}}
+@media(max-width:520px){.roles{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="s1" viewBox="0 0 100 100"><rect width="100" height="100" rx="24" fill="var(--box)"/><path d="M50 16Q54 46 84 50Q54 54 50 84Q46 54 16 50Q46 46 50 16Z" fill="var(--x)"/><circle cx="80" cy="20" r="6" fill="#D4006A"/></symbol>
+<symbol id="s2" viewBox="0 0 100 100"><rect width="100" height="100" rx="24" fill="var(--box)"/><rect x="20" y="22" width="16" height="56" rx="8" fill="var(--x)"/><rect x="43" y="32" width="11" height="36" rx="5.5" fill="var(--x)"/><rect x="61" y="40" width="7" height="20" rx="3.5" fill="var(--x)"/><circle cx="82" cy="50" r="4" fill="#D4006A"/></symbol>
+<symbol id="s3" viewBox="0 0 100 100"><path d="M26 0H74A26 26 0 0 1 100 26V62A26 26 0 0 1 74 88H44L18 100V86A26 26 0 0 1 0 62V26A26 26 0 0 1 26 0Z" fill="var(--box)"/><path d="M32 22L68 66" stroke="var(--x)" stroke-width="13" stroke-linecap="round"/><path d="M68 22L32 66" stroke="var(--x)" stroke-width="4" stroke-linecap="round"/><circle cx="84" cy="14" r="6" fill="#D4006A"/></symbol>
+<symbol id="s4" viewBox="0 0 100 100"><rect width="100" height="100" rx="24" fill="var(--box)"/><path d="M28 72L72 28" stroke="var(--x)" stroke-width="15" stroke-linecap="round"/><path d="M28 28L43 43M57 57L72 72" stroke="var(--x)" stroke-width="4" stroke-linecap="round"/><circle cx="50" cy="50" r="5" fill="#D4006A"/></symbol>
+<symbol id="s5" viewBox="0 0 100 100"><rect width="76" height="76" rx="20" fill="var(--box)"/><rect x="24" y="24" width="76" height="76" rx="20" fill="var(--x)"/><path d="M48 48L76 76" stroke="var(--box)" stroke-width="12" stroke-linecap="round"/><path d="M76 48L48 76" stroke="var(--box)" stroke-width="4" stroke-linecap="round"/><circle cx="90" cy="10" r="6" fill="#D4006A"/></symbol>
+<symbol id="sp" viewBox="0 0 100 100"><path d="M50 0Q54 46 100 50Q54 54 50 100Q46 54 0 50Q46 46 50 0Z" fill="currentColor"/><circle cx="84" cy="16" r="9" fill="#D4006A"/></symbol>
+</svg>
+
+<main>
+<section style="border:0;padding-top:clamp(48px,8vw,100px)"><div class="wrap">
+  <h1><span class="l t">Re</span><span class="l" style="margin-left:clamp(0px,12%,150px)"><span class="mark">brand</span></span><span class="l" style="margin-left:clamp(0px,26%,330px)"><span class="t">system</span> <span style="color:var(--pink)">X</span><span class="bar"></span></span></h1>
+  <p class="k" style="margin-top:56px;max-width:50ch">เลือก 6 แบบจากรอบก่อน (01 02 03 05 06 08) และออกแบบสัญลักษณ์ใหม่ 5 แบบ กดสลับสัญลักษณ์ด้านล่าง ทุกตัวอย่างในหน้านี้เปลี่ยนตามทันที</p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="row"><div class="lead"><h2><span class="t">สัญลักษณ์</span><br>ใหม่ 5 แบบ<span class="bar"></span></h2></div><div class="body"><p>ทุกแบบวาดด้วยเส้นโค้งล้วน ไม่พึ่งฟอนต์ ใช้เป็นไฟล์ SVG ได้ทันที ประกายชมพูเป็นจุดเดียวที่ขยับตำแหน่งได้</p></div></div>
+  <div class="pick" id="pick" role="group" aria-label="เลือกสัญลักษณ์"></div>
+  <div class="big"><div><svg><use class="sym" href="#s3"/></svg></div><div class="dk"><svg><use class="sym" href="#s3"/></svg></div></div>
+  <p class="why" id="why"></p>
+</div></section>
+
+<section><div class="wrap">
+  <div class="row"><div class="lead"><h2><span class="t">โลโก้</span><br>6 บทบาท<span class="bar"></span></h2></div><div class="body"><p>แต่ละแบบมีหน้าที่ต่างกัน ไม่ใช้สลับตามใจ เพื่อให้แบรนด์เหมือนเดิมทุกจุดสัมผัส</p></div></div>
+  <div class="roles">
+    <div class="role"><div class="stage"><span class="lg"><span>whisper</span><svg class="sy"><use class="sym" href="#s3"/></svg></span></div><h3>01 โลโก้หลัก</h3><p>หัวเว็บ เอกสาร พื้นที่แนวนอน</p></div>
+    <div class="role"><div class="stage"><span class="lg st"><span>whis</span><span>per<i style="font-style:normal;color:var(--pink)">X</i></span></span></div><h3>02 แนวตั้งสองบรรทัด</h3><p>ป้าย สินค้า พื้นที่แคบ</p></div>
+    <div class="role"><div class="stage"><span class="lg ul"><span>whisper<b class="p">X</b></span><span class="bar"></span></span></div><h3>03 ตัวอักษรล้วน</h3><p>ท้ายเอกสาร ข้อความในแอป</p></div>
+    <div class="role"><div class="stage"><span class="lg">whisper<svg class="sp"><use href="#sp"/></svg></span></div><h3>05 ประกายย่อ</h3><p>ลายน้ำ ชื่อบัญชีโซเชียล</p></div>
+    <div class="role"><div class="stage"><span class="lg"><span class="mono"><span>w</span><b>X</b></span></span></div><h3>06 โมโนแกรม</h3><p>ไอคอนแอป รูปโปรไฟล์ favicon</p></div>
+    <div class="role"><div class="stage"><span class="lg ct"><svg class="sy"><use class="sym" href="#s3"/></svg><span>whisper</span></span></div><h3>08 กึ่งกลาง</h3><p>หน้าเปิดแอป โปสเตอร์ งานพิมพ์</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="row"><div class="lead"><h2><span class="t">ใช้งาน</span><br>จริง<span class="bar"></span></h2></div></div>
+  <div class="apps">
+    <div class="panel a1"><p class="k" style="margin-bottom:16px">ไอคอนแอปและ favicon</p><div class="icons">
+      <div class="app-ic" style="width:96px;height:96px;border-radius:22px"><svg><use class="sym" href="#s3"/></svg></div>
+      <div class="app-ic" style="width:56px;height:56px;border-radius:13px"><svg><use class="sym" href="#s3"/></svg></div>
+      <div class="app-ic" style="width:32px;height:32px;border-radius:8px"><svg><use class="sym" href="#s3"/></svg></div>
+      <div class="app-ic" style="width:16px;height:16px;border-radius:4px"><svg><use class="sym" href="#s3"/></svg></div></div></div>
+    <div class="panel a2"><p class="k" style="margin-bottom:16px">หัวเว็บ</p><div class="hdr"><span class="lg" style="--s:30px"><span>whisper</span><svg class="sy"><use class="sym" href="#s3"/></svg></span><nav><a>สินค้า</a><a>ผู้ขาย</a><a>ช่วยเหลือ</a></nav><button class="btn">ตะกร้า</button></div></div>
+    <div class="panel a3 pcard"><p class="k" style="margin-bottom:16px">การ์ดสินค้า</p><div class="th"><svg><use class="sym" href="#s3"/></svg></div><p class="k">UI Kit</p><h4>Admin Dashboard Kit</h4><p style="font-weight:200;font-size:18px">฿<b>1,290</b></p></div>
+    <div class="panel a4"><p class="k">โทเคนหลัก</p><div class="tok"><span><i style="background:#fff"></i>#FFFFFF</span><span><i style="background:#000"></i>#000000</span><span><i style="background:#1A1A1A"></i>#1A1A1A</span><span><i style="background:#D7E317"></i>#D7E317</span><span><i style="background:#D4006A"></i>#D4006A</span></div><p class="k" style="margin-top:20px">Poppins 200 / 800 · IBM Plex Sans Thai 200 / 700<br>เส้นใต้ 25% · รัศมีมุม 6 / 24 px</p></div>
+  </div>
+</div></section>
+</main>
+
+<script>
+const S=[["s1","ประกาย","ประกายสี่แฉกในกล่อง อ่านง่ายที่สุด แต่ไม่มีตัว X ชัดเจน"],["s2","คลื่นเสียง","แท่งสามเส้นเล็กลงเรื่อย ๆ เหมือนเสียงกระซิบ เล่าชื่อแบรนด์ตรงตัว แต่ห่างจาก X"],["s3","ฟองคำพูด X","ฟองสนทนาหางซ้ายล่าง ใส่ X ขีดหนา–บาง สื่อทั้งการพูดและ X ในรูปเดียว (แนะนำ)"],["s4","X เปิดกลาง","ขีดหนาไม่ขาด ขีดบางขาดตรงกลางเป็นจุดชมพู เด่นเมื่อใช้ขนาดใหญ่ ไม่เหมาะ 16 px"],["s5","แผ่นซ้อน","สี่เหลี่ยมสองแผ่นซ้อนเหลื่อม สื่อ marketplace และการต่อกัน"]];
+const P=document.getElementById("pick"),W=document.getElementById("why");
+P.innerHTML=S.map((s,i)=>`<button data-i="${i}" aria-pressed="${i===2}"><svg style="--box:#000;--x:#D7E317"><use href="#${s[0]}"/></svg>${s[1]}</button>`).join("");
+function go(i){document.querySelectorAll("use.sym").forEach(u=>u.setAttribute("href","#"+S[i][0]));P.querySelectorAll("button").forEach((b,j)=>{b.setAttribute("aria-pressed",j===i);b.querySelector("svg").style.cssText=j===i?"--box:#D7E317;--x:#000":"--box:#000;--x:#D7E317"});W.textContent=S[i][2]}
+P.addEventListener("click",e=>{const b=e.target.closest("button");if(b)go(+b.dataset.i)});go(2);
+</script>
+</body>
+</html>

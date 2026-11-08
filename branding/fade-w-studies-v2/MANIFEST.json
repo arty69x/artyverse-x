@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 2,
+  "scope": "Standalone Fade W brand studies; main application unchanged",
+  "coverage": {
+    "sourceFilesPreserved": 6,
+    "studyCards": 8,
+    "symbolSVGs": 6,
+    "outlinedLockupSVGs": 14,
+    "readyPNGIcons": 5,
+    "themes": 3,
+    "viewportChecks": 6
+  },
+  "verification": "evidence/verification.json",
+  "files": [
+    {
+      "path": "GUIDELINE_TH.md",
+      "bytes": 10361,
+      "sha256": "d1d86e5349f33830731b3aea48b98d987316458c26977090d40588d774bcc910"
+    },
+    {
+      "path": "assets/artyverse-architecture.svg",
+      "bytes": 10694,
+      "sha256": "1de4de096ba74d397b3f5a1cb5ff22a80cf9739af198ac7a64de0778562c26c0"
+    },
+    {
+      "path": "assets/artyverse-centered.svg",
+      "bytes": 6827,
+      "sha256": "190d74ecec1499f6c770b030911e2b18a10d6bdb47c7052ad2bbf850c10f9d94"
+    },
+    {
+      "path": "assets/artyverse-horizontal.svg",
+      "bytes": 6842,
+      "sha256": "ab797d087b6cbb2bf5a7e5218f01675da504defbbef786d1e4d909938bbb2886"
+    },
+    {
+      "path": "assets/artyverse-mono.svg",
+      "bytes": 3739,
+      "sha256": "8197e16ab9c35e530c7dd99b51804481e6cb9397f418e1002377d618ef05716e"
+    },
+    {
+      "path": "assets/artyverse-orbit.svg",
+      "bytes": 6969,
+      "sha256": "fe89862272fc5084022aed4253978952666e11db46b58e26f77ac4e8be87e5f8"
+    },
+    {
+      "path": "assets/artyverse-stacked.svg",
+      "bytes": 6704,
+      "sha256": "996a30473ac97804fcc38ea18f5c082b3716b33d54a83b36025db25700c599ea"
+    },
+    {
+      "path": "assets/artyverse-underline.svg",
+      "bytes": 6903,
+      "sha256": "3be9d85032cb8c51d02202d7625500b727acb6d693198c2445c9ad5025d955d0"
+    },
+    {
+      "path": "assets/fade-w-auto-128.png",
+      "bytes": 3280,
+      "sha256": "e61a041ed2c44124533bd7983d645f14df764d3a71124fa519d9646233ab3941"
+    },
+    {
+      "path": "assets/fade-w-auto-16.png",
+      "bytes": 368,
+      "sha256": "356277591ae223b428fe7c3034bfa6fca0a88c8833311e949a62f1e633268cd1"
+    },
+    {
+      "path": "assets/fade-w-auto-24.png",
+      "bytes": 562,
+      "sha256": "010391d1a1dbe0235e02cfe823ee7b06c5596564b3b04077cb24b2d9b012b8ad"
+    },
+    {
+      "path": "assets/fade-w-auto-32.png",
+      "bytes": 721,
+      "sha256": "505f48ea85672ca65d42917b4303286690ad5b98693a62938a349c76d0863ed2"
+    },
+    {
+      "path": "assets/fade-w-auto-64.png",
+      "bytes": 1467,
+      "sha256": "da47b59f76f0306b9fe2833358e7a0de04642c411245a0d6da2d2efaadd690a7"
+    },
+    {
+      "path": "assets/fade-w-display-black.svg",
+      "bytes": 3522,
+      "sha256": "b88e468a05b8ecd458e6c5389fb5279a4d00be8684aa287d18231592e115f221"
+    },
+    {
+      "path": "assets/fade-w-display-white.svg",
+      "bytes": 3522,
+      "sha256": "257607b5e3e714f13f5267e0d5b119ba128fb68d6c58a6c66981ccfb3321d8e0"
+    },
+    {
+      "path": "assets/fade-w-micro-black.svg",
+      "bytes": 3519,
+      "sha256": "b11e277b728069e4835902aab2a1f9d97cf748b1db5661a792fa00a3062af17f"
+    },
+    {
+      "path": "assets/fade-w-micro-white.svg",
+      "bytes": 3519,
+      "sha256": "e270b933e51603b14962fc3e61726735f48be9d2b83228039daf62ab249ac121"
+    },
+    {
+      "path": "assets/fade-w-source-black.svg",
+      "bytes": 410,
+      "sha256": "4cf01a999194f7fd51bd154bf45ae85fa00daac09b61c2f5dfd59c6ea865d440"
+    },
+    {
+      "path": "assets/fade-w-source-white.svg",
+      "bytes": 410,
+      "sha256": "dcc0d21712a755e588bad8717dc1bd4918824db2a732470952d12695cf7d66b9"
+    },
+    {
+      "path": "assets/whisper-architecture.svg",
+      "bytes": 10694,
+      "sha256": "1de4de096ba74d397b3f5a1cb5ff22a80cf9739af198ac7a64de0778562c26c0"
+    },
+    {
+      "path": "assets/whisper-centered.svg",
+      "bytes": 6315,
+      "sha256": "30f43a751c166a3e1de383c11a559b094eed41d252361b0a38278f7778230d59"
+    },
+    {
+      "path": "assets/whisper-horizontal.svg",
+      "bytes": 6330,
+      "sha256": "b1428c2b2501555325a1ff768410a30502be771da8d6ee4a2a0606cf9dc3a19e"
+    },
+    {
+      "path": "assets/whisper-mono.svg",
+      "bytes": 3739,
+      "sha256": "8197e16ab9c35e530c7dd99b51804481e6cb9397f418e1002377d618ef05716e"
+    },
+    {
+      "path": "assets/whisper-orbit.svg",
+      "bytes": 6457,
+      "sha256": "a6cfe7309697924643647f5164ed3699b0fcccfca6a872ffad223a23ecf5b5d7"
+    },
+    {
+      "path": "assets/whisper-stacked.svg",
+      "bytes": 6191,
+      "sha256": "6de6b24d0260c0f037e892a011e1d85e79453151791b400ab68e166c7fc087cd"
+    },
+    {
+      "path": "assets/whisper-underline.svg",
+      "bytes": 6391,
+      "sha256": "c2c111b9bbd373946a62a9cd44fcc0887a37707ccb8df1639288d04b869185eb"
+    },
+    {
+      "path": "build.py",
+      "bytes": 6269,
+      "sha256": "55113c762a283f4a6ff9bceaf29d47d1bd68b201122bd03683469c29c51d1095"
+    },
+    {
+      "path": "contrast.json",
+      "bytes": 1072,
+      "sha256": "1ab9d5bb5b3c3f6c9de88fcddef3095d55a5fcfb647d21108ea23307e3f438d4"
+    },
+    {
+      "path": "design-data.js",
+      "bytes": 55360,
+      "sha256": "f544862d6d92d794b27268c5398c1ea4461f6eb1495d121b52a7af3ca02254f2"
+    },
+    {
+      "path": "design-data.json",
+      "bytes": 55771,
+      "sha256": "c3b4140ed3298f7892dcb003f7204fce626155b80dcbfc28399f22e7efc090ec"
+    },
+    {
+      "path": "evidence/board-dark-1440.png",
+      "bytes": 350462,
+      "sha256": "4b672bcc4daa07cec9827faf616949534f2170220c274ba48c9a6435f1394a45"
+    },
+    {
+      "path": "evidence/board-light-1440.png",
+      "bytes": 349602,
+      "sha256": "0d202726b5f1040b001174ad56c58ae2634da75a14e8d65cc7a9b2ea1a2bf1d7"
+    },
+    {
+      "path": "evidence/board-lime-1440.png",
+      "bytes": 383190,
+      "sha256": "c264225ada309f3cf24ead5851b7740ec9eda54fbb885681e123a23e5c9a3348"
+    },
+    {
+      "path": "evidence/board-mobile-390.png",
+      "bytes": 254148,
+      "sha256": "0d51e54372d68db445cc0889df828948097579177499eba782ba3dad67e048f7"
+    },
+    {
+      "path": "evidence/eight-logo-studies.png",
+      "bytes": 157824,
+      "sha256": "3f0913a7e86d3ad4d015ebb13bdf7afeec57aa44b900466208840b9a9e282e16"
+    },
+    {
+      "path": "evidence/hero-revised.png",
+      "bytes": 43923,
+      "sha256": "fb1b90322f69c7d58f9c07e679efd6ef8e6d4c3fdf2ced17a4eac06eefad9723"
+    },
+    {
+      "path": "evidence/optical-comparison-1x.png",
+      "bytes": 23002,
+      "sha256": "e2e5767269ce66d516af060ebe0b524f9c3b5db78ffe36be3928a3f2f67a241b"
+    },
+    {
+      "path": "evidence/verification.json",
+      "bytes": 686,
+      "sha256": "093118c1ef523ea7cdcca9aaf4de3a0f8a913afcec4a8ea62c1097896e4442af"
+    },
+    {
+      "path": "fonts/ibm-plex-sans-thai-OFL.txt",
+      "bytes": 4796,
+      "sha256": "0eda9417087c7f8fd73ef70d2598e66bbf2e5fabc121fe796fa2e36b9eb16789"
+    },
+    {
+      "path": "fonts/ibm-plex-sans-thai-thai-200-normal.woff2",
+      "bytes": 12036,
+      "sha256": "c132f366cb65596bab0716351727b65ae57909fc6dd1cf8294a1bc4a16654cda"
+    },
+    {
+      "path": "fonts/ibm-plex-sans-thai-thai-400-normal.woff2",
+      "bytes": 11804,
+      "sha256": "2d66381c26d32bf2a95bfe559d1a5ed5475fcdac3fa128e45a33301010d42056"
+    },
+    {
+      "path": "fonts/ibm-plex-sans-thai-thai-700-normal.woff2",
+      "bytes": 11944,
+      "sha256": "0862e44c00761da16f929a078d2c6d5ed302b9eef84b143bc1c5a1c8a3a31878"
+    },
+    {
+      "path": "fonts/poppins-OFL.txt",
+      "bytes": 6175,
+      "sha256": "5c4a92c8f8ce0ab211f4c72889d82383c9644546115d9ba39a4f2d5b8f37014b"
+    },
+    {
+      "path": "fonts/poppins-latin-200-normal.woff",
+      "bytes": 10524,
+      "sha256": "93209e23ab5d9ff4965f4d7c35660df687306a2ce732f2f0b086b006cf632ea6"
+    },
+    {
+      "path": "fonts/poppins-latin-200-normal.woff2",
+      "bytes": 7932,
+      "sha256": "6f0c572590421075878908e0b380c5a6d404f72aa7d6d125385943be658f8399"
+    },
+    {
+      "path": "fonts/poppins-latin-800-normal.woff",
+      "bytes": 10436,
+      "sha256": "8b426242e956348365744cdf29dad1278d40e1070829e4af65a2d9443093aed4"
+    },
+    {
+      "path": "fonts/poppins-latin-800-normal.woff2",
+      "bytes": 7824,
+      "sha256": "60bf0aba6526436f3930c58c12047687fbb6bff4dd180cce4613458ed3439ea2"
+    },
+    {
+      "path": "index.html",
+      "bytes": 6574,
+      "sha256": "506a8386e8f77829aa3370fb97ed161edf60efe1f9d98a3c8e2b7205c78f2112"
+    },
+    {
+      "path": "requirements-build.txt",
+      "bytes": 18,
+      "sha256": "0a8925c5f22f12bc861ede834b5a555900fb288c740b7ccdda93cfcb1928ee9b"
+    },
+    {
+      "path": "sources/1-WhisperX-Brand-Guideline-1-.html",
+      "bytes": 15010,
+      "sha256": "237de2735d3cf603e228b6a2d11688a069ab284341f315bc32e683d1d288b94b"
+    },
+    {
+      "path": "sources/2-WhisperX-สัญลักษณ์ใหม่.html",
+      "bytes": 10183,
+      "sha256": "67be658bc342c3aaa7bbdc1778c20537e4388c09660d2c42e92e52c32d740bd9"
+    },
+    {
+      "path": "sources/3-wpx-logo.svg",
+      "bytes": 1030,
+      "sha256": "9166a8399f4fc49a37cbcc2eb916b5757ae0a5e857394f7286e33a0a1c3de510"
+    },
+    {
+      "path": "sources/4-WhisperX-10-Logo-Options-1-.html",
+      "bytes": 9431,
+      "sha256": "3fb9db25f14797be11eb81c4b9d17bde41823c66e11ba40ba6d6a3cb6ec94db9"
+    },
+    {
+      "path": "sources/5-WhisperX-Rebrand-System-1-.html",
+      "bytes": 14883,
+      "sha256": "a961811c1a49110a5ba40a09e545e7d9a1342406f894f842a06a3f624dcd9a11"
+    },
+    {
+      "path": "sources/6-whisperx-new-1-fade-w.svg",
+      "bytes": 8152,
+      "sha256": "9d3321d7d34d855277a45311e9e2d4387c49e949e452a6b54580a69835548e47"
+    },
+    {
+      "path": "studio.js",
+      "bytes": 8671,
+      "sha256": "d8629e56d14656dc51f8c43e50c6e8be06984d1ddd8ef0691d9ef2d279cde9cc"
+    },
+    {
+      "path": "style.css",
+      "bytes": 10637,
+      "sha256": "f73c709d8d15e6d13154cab30921c63e240d07292092190dd895433dd9c1362b"
+    },
+    {
+      "path": "verify.mjs",
+      "bytes": 4016,
+      "sha256": "ec796470ec78f6bea0a4b55be38c91be9af3f113431a26be701ca0903aec7f8d"
+    }
+  ]
+}

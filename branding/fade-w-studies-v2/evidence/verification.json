@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-11-08T03:18:09.288Z",
+  "browser": "154.0.8037.57",
+  "conditions": "Headless Linux Chromium; DPR 1; native browser vector rasterization; physical devices not tested",
+  "checks": [
+    "8 selectable study cards",
+    "No page overflow at 6 viewport widths; the small-size comparison table scrolls internally",
+    "White, black and lime themes render",
+    "Both brand previews / all 8 selections / outlined SVG download",
+    "PNG exports at exact 16/24/32/64/128 pixel dimensions; Auto selects Micro at <=24"
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "scope": "Brand comparison studio only; not a full application regression or logo trademark clearance"
+}

@@ -1,0 +1,47 @@
+{
+  "method": "WCAG relative luminance for solid hex color pairs only; not a full accessibility certification",
+  "pairs": [
+    {
+      "foreground": "black",
+      "background": "white",
+      "ratio": 21.0,
+      "normalTextAA": true,
+      "largeTextOrNonText3to1": true
+    },
+    {
+      "foreground": "white",
+      "background": "black",
+      "ratio": 21.0,
+      "normalTextAA": true,
+      "largeTextOrNonText3to1": true
+    },
+    {
+      "foreground": "black",
+      "background": "lime",
+      "ratio": 14.889,
+      "normalTextAA": true,
+      "largeTextOrNonText3to1": true
+    },
+    {
+      "foreground": "pink",
+      "background": "white",
+      "ratio": 5.24,
+      "normalTextAA": true,
+      "largeTextOrNonText3to1": true
+    },
+    {
+      "foreground": "pink",
+      "background": "black",
+      "ratio": 4.008,
+      "normalTextAA": false,
+      "largeTextOrNonText3to1": true
+    },
+    {
+      "foreground": "pink",
+      "background": "lime",
+      "ratio": 3.715,
+      "normalTextAA": false,
+      "largeTextOrNonText3to1": true
+    }
+  ]
+}

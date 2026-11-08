@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WhisperX — สัญลักษณ์ใหม่</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@200;300;600;700&family=Poppins:wght@200;300;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#D4006A;--g100:#E8E8E8;--g500:#767676;--g700:#424242;--font:'Poppins','IBM Plex Sans Thai',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fff;color:#1A1A1A;font-family:var(--font);font-weight:300;line-height:1.7;padding-top:env(safe-area-inset-top,0);-webkit-font-smoothing:antialiased}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+b{font-weight:700}.t{font-weight:200}
+.bar{display:block;width:25%;height:.09em;min-height:5px;background:var(--pink);margin-top:.14em}
+h1{font-size:clamp(44px,8vw,104px);font-weight:800;letter-spacing:-.05em;line-height:1;padding:clamp(48px,8vw,100px) 0 24px}
+h1 span.l{display:block;width:fit-content}
+.k{font-size:13px;color:var(--g500)}
+p.in{color:var(--g700);max-width:48ch;margin-left:auto}
+section{padding:clamp(48px,7vw,96px) 0;border-top:1px solid var(--g100)}
+h2{font-size:clamp(28px,3.6vw,44px);font-weight:800;letter-spacing:-.05em;line-height:1.05;margin-bottom:36px}
+/* picker */
+.pick{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.pick button{border:2px solid var(--g100);border-radius:6px;background:#fff;padding:20px 8px 14px;font:inherit;font-size:14px;font-weight:600;cursor:pointer;display:grid;justify-items:center;gap:10px;--ink:#000;--lm:#D7E317}
+.pick button:hover{border-color:#000}
+.pick button[aria-pressed=true]{border-color:#000;box-shadow:inset 0 0 0 1px #000}
+.pick svg{width:64px;height:64px;overflow:visible}
+.three{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px;margin-top:20px}
+.bg{border-radius:6px;min-height:240px;display:grid;place-items:center;padding:28px;border:1px solid var(--g100)}
+.bg svg{width:min(150px,32vw);height:auto;overflow:visible}
+.bw{--ink:#000;--lm:#D7E317}.bk{background:#000;--ink:#fff;--lm:#D7E317;border-color:#000}.bl{background:#D7E317;--ink:#000;--lm:#fff;border-color:#D7E317}
+.why{margin-top:20px;max-width:62ch;color:var(--g700)}
+/* lockup */
+.lg{font-size:var(--s,56px);letter-spacing:-.05em;font-weight:200;line-height:1;display:inline-flex;align-items:center;gap:.1em;color:var(--ink)}
+.lg svg{width:1em;height:1em;overflow:visible}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.two .bg{min-height:150px}
+.two .bg:nth-child(2){margin-top:28px}
+/* size test */
+.sizes{display:flex;flex-wrap:wrap;align-items:end;gap:28px 36px}
+.sizes figure{display:grid;gap:8px;justify-items:start}
+.ic{background:#000;display:grid;place-items:center;--ink:#fff;--lm:#D7E317}
+.ic svg{width:70%;height:70%;overflow:visible}
+@media(max-width:760px){.pick{grid-template-columns:repeat(3,1fr)}.three,.two{grid-template-columns:1fr}.two .bg:nth-child(2){margin-top:0}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="s1" viewBox="0 0 100 100"><g fill="none" stroke="var(--ink)" stroke-linecap="round"><path d="M12 22L28 78" stroke-width="16"/><path d="M28 78L48 36" stroke-width="12"/><path d="M48 36L68 78" stroke-width="8"/><path d="M68 78L84 40" stroke-width="5"/></g><circle cx="92" cy="22" r="6" fill="#D4006A"/></symbol>
+<symbol id="s2" viewBox="0 0 100 100"><circle cx="38" cy="50" r="30" fill="var(--ink)"/><circle cx="62" cy="50" r="30" fill="var(--lm)"/><path d="M50 22.5A30 30 0 0 1 50 77.5A30 30 0 0 1 50 22.5Z" fill="#D4006A"/></symbol>
+<symbol id="s3" viewBox="0 0 100 100"><g fill="none" stroke="var(--ink)" stroke-linecap="round"><path d="M42 28.5A28 28 0 0 1 42 71.5" stroke-width="12"/><path d="M53.6 14.8A46 46 0 0 1 53.6 85.2" stroke-width="8"/><path d="M62.6 4A60 60 0 0 1 62.6 96" stroke-width="5"/></g><circle cx="24" cy="50" r="11" fill="#D4006A"/></symbol>
+<symbol id="s4" viewBox="0 0 100 100"><circle cx="24" cy="24" r="24" fill="var(--ink)"/><rect x="52" y="0" width="48" height="48" rx="6" fill="var(--lm)"/><rect x="0" y="52" width="48" height="48" rx="6" fill="var(--lm)"/><circle cx="76" cy="76" r="24" fill="var(--ink)"/><circle cx="50" cy="50" r="6" fill="#D4006A"/></symbol>
+<symbol id="s5" viewBox="0 0 100 100"><g fill="none" stroke="var(--ink)"><ellipse cx="50" cy="50" rx="46" ry="18" transform="rotate(-45 50 50)" stroke-width="7"/><ellipse cx="50" cy="50" rx="46" ry="18" transform="rotate(45 50 50)" stroke-width="4.5"/></g><circle cx="50" cy="50" r="10" fill="var(--ink)"/><circle cx="82.5" cy="17.5" r="6.5" fill="#D4006A"/></symbol>
+</svg>
+
+<main class="wrap">
+  <h1 aria-label="ออกแบบใหม่"><span class="l t">ออกแบบ</span><span class="l" style="margin-left:clamp(0px,14%,160px)">ใหม่<span class="bar"></span></span></h1>
+  <p class="in">รอบก่อนผมแค่แปลงกล่อง X เดิม รอบนี้ตัดกล่อง X ออกทั้งหมด วาดสัญลักษณ์ใหม่ 5 แบบจากความหมายของชื่อ: เสียงกระซิบ การพบกันของสองความคิด และ X ที่เกิดจากการวางซ้อน</p>
+
+  <section>
+    <h2><span class="t">เลือก</span> สัญลักษณ์</h2>
+    <div class="pick" id="pick" role="group" aria-label="เลือกสัญลักษณ์"></div>
+    <div class="three"><div class="bg bw"><svg><use class="sym" href="#s1"/></svg></div><div class="bg bk"><svg><use class="sym" href="#s1"/></svg></div><div class="bg bl"><svg><use class="sym" href="#s1"/></svg></div></div>
+    <p class="why" id="why"></p>
+  </section>
+
+  <section>
+    <h2><span class="t">คู่กับ</span> ชื่อแบรนด์</h2>
+    <div class="two"><div class="bg bw"><span class="lg"><svg><use class="sym" href="#s1"/></svg><span>whisper<b style="font-weight:800;color:var(--pink)">X</b></span></span></div><div class="bg bk"><span class="lg"><svg><use class="sym" href="#s1"/></svg><span>whisper<b style="font-weight:800;color:#D7E317">X</b></span></span></div></div>
+  </section>
+
+  <section>
+    <h2><span class="t">ทดสอบ</span> ขนาดเล็ก</h2>
+    <div class="sizes">
+      <figure><div class="ic" style="width:120px;height:120px;border-radius:27px"><svg><use class="sym" href="#s1"/></svg></div><span class="k">ไอคอนแอป 120</span></figure>
+      <figure><div class="ic" style="width:64px;height:64px;border-radius:15px"><svg><use class="sym" href="#s1"/></svg></div><span class="k">64</span></figure>
+      <figure><div class="ic" style="width:32px;height:32px;border-radius:8px"><svg><use class="sym" href="#s1"/></svg></div><span class="k">32</span></figure>
+      <figure><div class="ic" style="width:16px;height:16px;border-radius:4px"><svg><use class="sym" href="#s1"/></svg></div><span class="k">16 favicon</span></figure>
+    </div>
+    <p class="why">ขนาด 16 px เป็นตัวตัดสิน ถ้าเส้นบางหายไปหรือกลายเป็นก้อน แสดงว่าต้องทำเวอร์ชันเส้นหนาสำหรับ favicon โดยเฉพาะ</p>
+  </section>
+</main>
+
+<script>
+const S=[["s1","Fade W","ตัว w เส้นเดียวที่ค่อย ๆ บางลงจากซ้ายไปขวา เหมือนเสียงกระซิบเบาลง จุดชมพูคือเสียงที่ยังเหลือ สื่อชื่อแบรนด์ตรงที่สุด และเป็นตัวเดียวที่ไม่ต้องมีกล่อง (แนะนำ) ปลายเส้นบางที่สุดจะเล็กมากที่ 16 px"],["s2","Lens","วงกลมสองวงซ้อนกัน ตรงกลางคือช่วงที่สองความคิดมาเจอกัน สื่อ marketplace ระหว่างผู้ซื้อกับผู้ขาย อ่านชัดทุกขนาด แต่ไม่มีตัว w หรือ x"],["s3","Ripple","จุดชมพูส่งเสียงออกเป็นคลื่นที่เล็กลงเรื่อย ๆ อ่านเป็นเสียงและสัญญาณ ใกล้กับไอคอน Wi‑Fi ต้องระวังการสับสน"],["s4","Checker X","วงกลมกับสี่เหลี่ยมวางสลับแนวทแยง ช่องว่างตรงกลางสร้างตัว X ขึ้นเอง ใช้เป็นลายพื้นผิวแบรนด์ได้ดี แต่อ่านเป็นตัวอักษรยากที่สุด"],["s5","Orbit X","วงรีสองวงไขว้กันเป็น X วงหนึ่งหนาอีกวงบาง จุดกลางคือแกนความคิด ดูเป็นเทคโนโลยีที่สุด แต่เส้นบางเสี่ยงหายที่ขนาดเล็ก"]];
+const P=document.getElementById("pick"),W=document.getElementById("why");
+P.innerHTML=S.map((s,i)=>`<button data-i="${i}" aria-pressed="${i===0}"><svg><use href="#${s[0]}"/></svg>${s[1]}</button>`).join("");
+function go(i){document.querySelectorAll("use.sym").forEach(u=>u.setAttribute("href","#"+S[i][0]));[...P.children].forEach((b,j)=>b.setAttribute("aria-pressed",j===i));W.textContent=S[i][2]}
+P.addEventListener("click",e=>{const b=e.target.closest("button");if(b)go(+b.dataset.i)});go(0);
+</script>
+</body>
+</html>

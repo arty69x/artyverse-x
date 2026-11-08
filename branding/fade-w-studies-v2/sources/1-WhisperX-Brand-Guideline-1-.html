@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WhisperX Brand Guideline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@200;300;400;600;700&family=Poppins:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--white:#fff;--lime:#D7E317;--pink:#D4006A;--ink:#1A1A1A;--jet:#000;--g50:#F5F5F5;--g100:#E8E8E8;--g500:#767676;--g700:#424242;--font:'Poppins','IBM Plex Sans Thai',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--ink);font-family:var(--font);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;padding-top:env(safe-area-inset-top,0)}
+:focus-visible{outline:3px solid var(--pink);outline-offset:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+b{font-weight:700}.thin{font-weight:200}.pink{color:var(--pink)}
+.bar{display:block;width:25%;height:.09em;min-height:5px;background:var(--pink);margin-top:.14em}
+.mark{background:var(--lime);padding:0 .12em;margin:0 -.12em}
+h1,h2{font-weight:800;letter-spacing:-.05em;line-height:1}
+h1{font-size:clamp(46px,9vw,120px)}
+h2{font-size:clamp(34px,5vw,64px)}
+h1 .l{display:block;width:fit-content}
+h1 .l2{margin-left:clamp(0px,12%,150px)}
+section{padding:clamp(56px,9vw,120px) 0;border-top:1px solid var(--g100)}
+.row{display:grid;grid-template-columns:repeat(12,1fr);gap:32px 24px}
+.lead{grid-column:1/6}
+.body{grid-column:7/13}
+.body p,.lead p{color:var(--g700);margin-top:16px;max-width:46ch}
+.full{grid-column:1/-1}
+small.k{display:block;font-size:13px;color:var(--g500);margin-top:10px}
+
+/* logo lockup */
+.lock{display:inline-flex;align-items:center;gap:.08em;font-size:var(--s,64px);letter-spacing:-.05em;font-weight:200;line-height:1;color:var(--fg,#000)}
+.lock .mk{width:.9em;height:.9em;overflow:visible;margin-top:-.04em}
+.tile{display:grid;place-items:center;min-height:200px;border-radius:6px;padding:28px;background:var(--bg,#fff);--box:#000;--x:#D7E317;--spark:#D4006A}
+.t-w{border:1px solid var(--g100)}
+.t-b{--bg:#000;--fg:#fff;--box:#D7E317;--x:#000}
+.t-l{--bg:#D7E317;--fg:#000;--box:#000;--x:#fff}
+.tri{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:20px}
+.tri .tile:nth-child(2){margin-top:48px}.tri .tile:nth-child(3){margin-top:24px}
+
+/* clear space + min size */
+.clear{position:relative;padding:44px;border:1px dashed var(--g500);width:fit-content}
+.clear::after{content:"";position:absolute;inset:44px;border:1px solid var(--pink);pointer-events:none}
+.mins{display:flex;align-items:end;gap:36px;margin-top:8px}
+
+/* misuse */
+.mis{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.mis .tile{min-height:120px;padding:12px;overflow:hidden}
+.no{font-size:13px;margin-top:10px;color:var(--g700)}
+.no::before{content:"✕";color:var(--pink);font-weight:700;margin-right:6px}
+
+/* color */
+.cols{display:flex;height:260px;border-radius:6px;overflow:hidden}
+.c{display:flex;flex-direction:column;justify-content:flex-end;padding:16px;font-size:13px;line-height:1.5}
+.c b{font-size:16px}.c span{opacity:.75}
+.ratio{display:flex;height:14px;margin-top:18px;border-radius:2px;overflow:hidden}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}
+td,th{padding:10px 0;border-bottom:1px solid var(--g100);text-align:left;font-weight:300}
+th{font-weight:700}td:last-child,th:last-child{text-align:right}
+.ok{font-weight:700}.bad{color:var(--pink);font-weight:700}
+
+/* type */
+.aa{font-size:clamp(100px,18vw,220px);font-weight:800;letter-spacing:-.06em;line-height:.9}
+.aa span{font-weight:200}
+.scale>div{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--g100)}
+.scale small{font-size:13px;color:var(--g500);white-space:nowrap}
+
+footer{background:#000;color:#fff;padding:56px 0}
+footer p{color:#B3B3B3;font-weight:200;margin-top:12px}
+@media(max-width:860px){.lead,.body{grid-column:1/-1}.tri{grid-template-columns:1fr}.tri .tile:nth-child(n){margin-top:0}.mis{grid-template-columns:repeat(2,1fr)}.cols{flex-direction:column;height:auto}.c{min-height:90px;flex:none!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="m" viewBox="0 0 100 100"><rect width="100" height="100" rx="24" fill="var(--box)"/><path d="M30 30L70 70" stroke="var(--x)" stroke-width="15" stroke-linecap="round"/><path d="M70 30L30 70" stroke="var(--x)" stroke-width="4" stroke-linecap="round"/><path d="M100-12Q101 1 114 2Q101 3 100 16Q99 3 86 2Q99 1 100-12Z" fill="var(--spark)"/></symbol></svg>
+
+<header class="wrap" style="padding:28px clamp(20px,5vw,56px) 0">
+  <span class="lock" style="--s:26px"><span>whisper</span><svg class="mk" style="--box:#000;--x:#D7E317;--spark:#D4006A"><use href="#m"/></svg></span>
+</header>
+
+<main>
+<section style="border:0;padding-top:clamp(56px,9vw,110px)"><div class="wrap">
+  <h1 aria-label="Where ideas come alive."><span class="l thin">Where</span><span class="l l2"><span class="mark">ideas</span></span><span class="l" style="margin-left:clamp(0px,26%,330px)"><span class="thin">come</span> <span class="pink">alive.</span><span class="bar"></span></span></h1>
+  <div class="row" style="margin-top:72px"><div class="body" style="grid-column:7/13"><p>คู่มือแบรนด์ WhisperX ครอบคลุมโลโก้ สี ตัวอักษร และวิธีใช้บล็อกสีกับเส้นใต้เฉพาะคำสำคัญ เพื่อให้ทุกหน้าเล่าเรื่องเดียวกัน</p></div></div>
+</div></section>
+
+<section id="logo"><div class="wrap">
+  <div class="row"><div class="lead"><h2><span class="thin">โลโก้</span><br>หลัก<span class="bar"></span></h2><p>ตัวหนังสือ whisper น้ำหนักบาง ต่อด้วยกล่อง X ที่ขีดหนึ่งหนาหนึ่งบาง เป็นภาพย่อของหลักหนา–บางทั้งแบรนด์ ประกายสีชมพูมุมขวาบนคือจุดเดียวที่ขยับได้</p></div></div>
+  <div class="tri" style="margin-top:56px">
+    <div><div class="tile t-w"><span class="lock" style="--s:64px"><span>whisper</span><svg class="mk"><use href="#m"/></svg></span></div><small class="k">พื้นขาว (หลัก)</small></div>
+    <div><div class="tile t-b"><span class="lock" style="--s:44px"><span>whisper</span><svg class="mk"><use href="#m"/></svg></span></div><small class="k">พื้นดำ</small></div>
+    <div><div class="tile t-l"><span class="lock" style="--s:44px"><span>whisper</span><svg class="mk"><use href="#m"/></svg></span></div><small class="k">พื้น Lime (เน้น)</small></div>
+  </div>
+
+  <div class="row" style="margin-top:96px">
+    <div class="lead"><h2 style="font-size:clamp(28px,3.4vw,44px)"><b>พื้นที่</b> <span class="thin">รอบโลโก้</span></h2><p>เว้นระยะรอบด้านอย่างน้อยเท่ากับความสูงของกล่อง X ครึ่งหนึ่ง ไม่วางข้อความหรือภาพภายในกรอบ</p></div>
+    <div class="body"><div class="clear"><span class="lock" style="--s:52px"><span>whisper</span><svg class="mk" style="--box:#000;--x:#D7E317;--spark:#D4006A"><use href="#m"/></svg></span></div>
+      <div class="mins"><span class="lock" style="--s:24px"><span>whisper</span><svg class="mk" style="--box:#000;--x:#D7E317;--spark:#D4006A"><use href="#m"/></svg></span><small class="k" style="margin:0">ขนาดต่ำสุด 24 px บนหน้าจอ</small></div></div>
+  </div>
+
+  <div style="margin-top:96px"><h2 style="font-size:clamp(28px,3.4vw,44px)"><span class="thin">ห้าม</span> <b>ทำ</b></h2></div>
+  <div class="mis" style="margin-top:28px">
+    <div><div class="tile t-w"><span class="lock" style="--s:26px;--box:#D4006A;--x:#fff"><span>whisper</span><svg class="mk" style="--box:#D4006A;--x:#fff"><use href="#m"/></svg></span></div><p class="no">เปลี่ยนสี</p></div>
+    <div><div class="tile t-w"><span class="lock" style="--s:26px;transform:scaleX(1.45)"><span>whisper</span><svg class="mk"><use href="#m"/></svg></span></div><p class="no">ยืดหรือบีบ</p></div>
+    <div><div class="tile t-w"><span class="lock" style="--s:26px;filter:drop-shadow(4px 4px 3px rgba(0,0,0,.5))"><span>whisper</span><svg class="mk"><use href="#m"/></svg></span></div><p class="no">ใส่เงาหรือเอฟเฟกต์</p></div>
+    <div><div class="tile t-w"><span class="lock" style="--s:26px;font-family:Georgia,serif;font-weight:700"><span>whisper</span><svg class="mk"><use href="#m"/></svg></span></div><p class="no">เปลี่ยนฟอนต์</p></div>
+    <div><div class="tile" style="background:repeating-linear-gradient(45deg,#D7E317 0 10px,#D4006A 10px 20px)"><span class="lock" style="--s:26px"><span>whisper</span><svg class="mk"><use href="#m"/></svg></span></div><p class="no">วางบนพื้นที่รบกวน</p></div>
+  </div>
+</div></section>
+
+<section id="color"><div class="wrap">
+  <div class="row"><div class="lead"><h2><span class="thin">สี</span><br>ห้าสี<span class="bar"></span></h2><p>พื้นขาวและดำเป็นหลัก สี Lime และ Deep Pink ใช้เฉพาะคำสำคัญ ไม่ใช้ตกแต่งทั้งหน้า</p></div></div>
+  <div class="cols" style="margin-top:56px">
+    <div class="c" style="flex:4;background:#fff;border:1px solid var(--g100)"><b>Pure White</b><span>#FFFFFF</span></div>
+    <div class="c" style="flex:2;background:#E8E8E8"><b>Mist</b><span>#E8E8E8</span></div>
+    <div class="c" style="flex:2;background:#1A1A1A;color:#fff"><b>Dark Gray</b><span>#1A1A1A</span></div>
+    <div class="c" style="flex:2;background:#000;color:#fff"><b>Jet Black</b><span>#000000</span></div>
+    <div class="c" style="flex:1.3;background:#D7E317"><b>Neon Lime</b><span>#D7E317</span></div>
+    <div class="c" style="flex:1.3;background:#D4006A;color:#fff"><b>Deep Pink</b><span>#D4006A</span></div>
+  </div>
+  <div class="ratio" aria-label="สัดส่วนการใช้สี"><i style="flex:70;background:#fff;border:1px solid #E8E8E8"></i><i style="flex:22;background:#000"></i><i style="flex:5;background:#D7E317"></i><i style="flex:3;background:#D4006A"></i></div>
+  <small class="k">สัดส่วนแนะนำ: ขาว 70 · ดำ 22 · Lime 5 · Pink 3</small>
+  <div class="row" style="margin-top:56px"><div class="body" style="grid-column:5/13">
+    <table><tr><th>คู่สี</th><th>คอนทราสต์ (คำนวณเอง)</th><th>ใช้เป็นข้อความ</th></tr>
+    <tr><td>ดำ / ขาว</td><td>21 : 1</td><td class="ok">ได้</td></tr>
+    <tr><td>Deep Pink / ขาว</td><td>ราว 5.2 : 1</td><td class="ok">ได้</td></tr>
+    <tr><td>ดำ / Lime</td><td>ราว 15 : 1</td><td class="ok">ได้</td></tr>
+    <tr><td>Lime / ขาว</td><td>ราว 1.4 : 1</td><td class="bad">ห้าม ใช้เป็นพื้นเท่านั้น</td></tr>
+    <tr><td>Deep Pink / ดำ</td><td>ราว 4.0 : 1</td><td class="bad">เฉพาะตัวอักษรใหญ่</td></tr></table>
+  </div></div>
+</div></section>
+
+<section id="type"><div class="wrap">
+  <div class="row"><div class="lead"><div class="aa">A<span>a</span></div></div>
+  <div class="body"><h2 style="font-size:clamp(28px,3.4vw,44px)"><b>Poppins</b> <span class="thin">+ IBM Plex Sans Thai</span></h2><p>Poppins สำหรับอังกฤษและตัวเลข IBM Plex Sans Thai สำหรับภาษาไทย ใช้น้ำหนักสุดทาง 200 กับ 700–800 ตัดกัน ไม่ใช้น้ำหนักกลางในหัวข้อ</p></div></div>
+  <div class="scale" style="margin-top:56px;max-width:860px;margin-left:auto">
+    <div><span style="font-size:clamp(40px,6.5vw,84px);letter-spacing:-.05em;line-height:1"><span class="thin">Where</span> <b style="font-weight:800">ideas</b></span><small>Display · 200 / 800</small></div>
+    <div><span style="font-size:36px;letter-spacing:-.04em"><span class="thin">สินค้า</span> <b>ขายดี</b></span><small>Title · 200 / 700</small></div>
+    <div><span style="font-size:18px">ข้อความอ่านยาว ใช้ความสูงบรรทัด 1.6 ขึ้นไป</span><small>Body · 300 · 1.7</small></div>
+    <div><span style="font-size:14px;font-weight:600">เพิ่มลงตะกร้า</span><small>Label · 600</small></div>
+  </div>
+</div></section>
+
+<section id="devices"><div class="wrap">
+  <div class="row"><div class="lead"><h2><span class="thin">กฎ</span><br>คำสำคัญ<span class="bar"></span></h2><p>บล็อกสีและเส้นใต้มีได้เฉพาะคำสำคัญ ต่อหนึ่งหน้าจอไม่เกินสองจุด</p></div>
+  <div class="body">
+    <p style="font-size:30px;letter-spacing:-.04em;line-height:1.2;margin-top:0"><span class="thin">ส่งงาน</span> <span class="mark"><b>เร็วขึ้น</b></span></p><small class="k">บล็อก Lime หลังคำ ใช้กับคำที่เป็นประโยชน์หลัก</small>
+    <p style="font-size:30px;letter-spacing:-.04em;line-height:1.2;margin-top:36px"><span style="display:inline-block"><span class="thin">ใช้ได้</span> <b class="pink">ตลอด</b><span class="bar"></span></span></p><small class="k">เส้นใต้ Deep Pink กว้าง 25% ของบล็อกหัวข้อ ชิดซ้าย</small>
+    <p style="margin-top:36px">หัวข้อหลายบรรทัดวางเยื้องไปทางขวาทีละขั้น เพื่อพาสายตาจากบนลงล่างตามลำดับเรื่อง Where → ideas → come alive.</p>
+  </div></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span class="lock" style="--s:28px;--fg:#fff"><span>whisper</span><svg class="mk" style="--box:#D7E317;--x:#000;--spark:#D4006A"><use href="#m"/></svg></span><p>Where ideas come alive.</p></div></footer>
+</body>
+</html>
