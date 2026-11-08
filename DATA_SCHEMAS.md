@@ -50,3 +50,5 @@ Source JSON import: max 2 MB → schema validation → preview → apply to draf
 - Home portal ordering is a validated browser preference, separate from user document layout/history.
 
 V3 routing helpers: `shared/routes.ts` is the pure route resolver; `shared/v2/contracts.ts` re-exports it for compatibility without changing IDs or entities.
+
+Hosted edition uses IndexedDB database `artyverse-hosted-workspace` v1 with items (id), revisions ([id, revision]), and assets (id + Blob). Item envelope remains v1 and uses the same itemInput validator; no server data is silently migrated. Backup format v1 is compatible with the local edition. See DEPLOYMENT_REPORT.md for actual round-trip evidence.

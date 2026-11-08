@@ -1,0 +1,1124 @@
+{
+  "result": {
+    "events": [
+      {
+        "created": 1794131336874,
+        "date": 1794131336874,
+        "type": "stdout",
+        "text": "Running build in Washington, D.C., USA (East) – iad1",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131336875,
+        "date": 1794131336875,
+        "type": "stdout",
+        "text": "Build machine configuration: 2 cores, 8 GB",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131336979,
+        "date": 1794131336979,
+        "type": "stdout",
+        "text": "Cloning github.com/arty69x/artyverse-x (Branch: 230d3716c78dcd09ad3d62df4bd05b9e0299a374, Commit: 230d371)",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131336980,
+        "date": 1794131336980,
+        "type": "stdout",
+        "text": "Previous build caches not available.",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131337920,
+        "date": 1794131337920,
+        "type": "stdout",
+        "text": "Cloning completed: 941.000ms",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131338360,
+        "date": 1794131338360,
+        "type": "stdout",
+        "text": "Running \"vercel build\"",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131338370,
+        "date": 1794131338370,
+        "type": "stderr",
+        "text": "Vercel CLI 65.11.0",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131338981,
+        "date": 1794131338981,
+        "type": "stderr",
+        "text": "Warning: Detected \"engines\": { \"node\": \">=24\" } in your `package.json` that will automatically upgrade when a new major Node.js Version is released. Learn More: https://vercel.link/node-version",
+        "level": "warning",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131338987,
+        "date": 1794131338987,
+        "type": "stdout",
+        "text": "Running \"install\" command: `npm ci`...",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131339731,
+        "date": 1794131339731,
+        "type": "stderr",
+        "text": "npm warn Unknown env config \"cache-dir\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.",
+        "level": "warning",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131343124,
+        "date": 1794131343124,
+        "type": "stdout",
+        "text": "",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131343124,
+        "date": 1794131343124,
+        "type": "stdout",
+        "text": "added 159 packages, and audited 166 packages in 4s",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131343125,
+        "date": 1794131343125,
+        "type": "stdout",
+        "text": "",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131343125,
+        "date": 1794131343125,
+        "type": "stdout",
+        "text": "52 packages are looking for funding",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131343125,
+        "date": 1794131343125,
+        "type": "stdout",
+        "text": "  run `npm fund` for details",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131343125,
+        "date": 1794131343125,
+        "type": "stdout",
+        "text": "",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131343125,
+        "date": 1794131343125,
+        "type": "stdout",
+        "text": "found 0 vulnerabilities",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131343126,
+        "date": 1794131343126,
+        "type": "stderr",
+        "text": "npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:",
+        "level": "warning",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131343126,
+        "date": 1794131343126,
+        "type": "stderr",
+        "text": "npm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)",
+        "level": "warning",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131343127,
+        "date": 1794131343127,
+        "type": "stderr",
+        "text": "npm warn install-scripts",
+        "level": "warning",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131343127,
+        "date": 1794131343127,
+        "type": "stderr",
+        "text": "npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.",
+        "level": "warning",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131343394,
+        "date": 1794131343394,
+        "type": "stderr",
+        "text": "npm warn Unknown env config \"cache-dir\". This will stop working in the next major version of npm. See `npm help npmrc` for supported config options.",
+        "level": "warning",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131343407,
+        "date": 1794131343407,
+        "type": "stdout",
+        "text": "",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131343407,
+        "date": 1794131343407,
+        "type": "stdout",
+        "text": "> artyverse-x@3.0.0-local build",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131343407,
+        "date": 1794131343407,
+        "type": "stdout",
+        "text": "> tsc -b && vite build",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131343407,
+        "date": 1794131343407,
+        "type": "stdout",
+        "text": "",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131351363,
+        "date": 1794131351363,
+        "type": "stdout",
+        "text": "\u001b[36mvite v7.3.7 \u001b[32mbuilding client environment for production...\u001b[36m\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131351470,
+        "date": 1794131351470,
+        "type": "stdout",
+        "text": "transforming...",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353212,
+        "date": 1794131353212,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/components/AnimatePresence/PopChild.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/components/AnimatePresence/PopChild.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353215,
+        "date": 1794131353215,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/components/AnimatePresence/PresenceChild.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/components/AnimatePresence/PresenceChild.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353216,
+        "date": 1794131353216,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/components/LayoutGroup/index.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/components/LayoutGroup/index.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353217,
+        "date": 1794131353217,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/components/LazyMotion/index.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/components/LazyMotion/index.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353218,
+        "date": 1794131353218,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/components/MotionConfig/index.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/components/MotionConfig/index.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353221,
+        "date": 1794131353221,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/motion/utils/use-visual-state.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/motion/utils/use-visual-state.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353236,
+        "date": 1794131353236,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/utils/use-force-update.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/utils/use-force-update.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353237,
+        "date": 1794131353237,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/utils/use-isomorphic-effect.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/utils/use-isomorphic-effect.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353237,
+        "date": 1794131353237,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/utils/use-unmount-effect.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/utils/use-unmount-effect.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353238,
+        "date": 1794131353238,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/render/dom/features-animation.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/render/dom/features-animation.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353238,
+        "date": 1794131353238,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/render/dom/features-max.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/render/dom/features-max.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353239,
+        "date": 1794131353239,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/render/dom/features-min.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/render/dom/features-min.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353239,
+        "date": 1794131353239,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/utils/use-motion-value-event.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/utils/use-motion-value-event.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353239,
+        "date": 1794131353239,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/value/use-motion-template.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/value/use-motion-template.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353240,
+        "date": 1794131353240,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/value/use-motion-value.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/value/use-motion-value.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353240,
+        "date": 1794131353240,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/value/use-scroll.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/value/use-scroll.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353242,
+        "date": 1794131353242,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/value/use-follow-value.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/value/use-follow-value.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353242,
+        "date": 1794131353242,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/value/use-spring.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/value/use-spring.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353243,
+        "date": 1794131353243,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/value/use-time.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/value/use-time.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353243,
+        "date": 1794131353243,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/value/use-transform.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/value/use-transform.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353244,
+        "date": 1794131353244,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/value/use-velocity.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/value/use-velocity.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131353244,
+        "date": 1794131353244,
+        "type": "stderr",
+        "text": "\u001b[33mnode_modules/framer-motion/dist/es/value/use-will-change/index.mjs (1:0): Module level directives cause errors when bundled, \"use client\" in \"node_modules/framer-motion/dist/es/value/use-will-change/index.mjs\" was ignored.\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356642,
+        "date": 1794131356642,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mchevron-right-C3-d5cxf.js                       \u001b[39m\u001b[1m\u001b[2m  0.20 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.17 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356642,
+        "date": 1794131356642,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mpause-hysLg4Yh.js                               \u001b[39m\u001b[1m\u001b[2m  0.21 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.16 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356643,
+        "date": 1794131356643,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mcopy-ZySphyEF.js                                \u001b[39m\u001b[1m\u001b[2m  0.23 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.20 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356643,
+        "date": 1794131356643,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mlink-2-BF1JMxD-.js                              \u001b[39m\u001b[1m\u001b[2m  0.24 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.20 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356643,
+        "date": 1794131356643,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mmouse-pointer-2-qUEEBTF5.js                     \u001b[39m\u001b[1m\u001b[2m  0.24 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.21 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356648,
+        "date": 1794131356648,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mmonitor-2IBRFkHh.js                             \u001b[39m\u001b[1m\u001b[2m  0.25 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.20 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356648,
+        "date": 1794131356648,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mdownload-Bx5wledt.js                            \u001b[39m\u001b[1m\u001b[2m  0.26 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.21 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356649,
+        "date": 1794131356649,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mbraces-B7Xzo1FP.js                              \u001b[39m\u001b[1m\u001b[2m  0.27 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.20 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356649,
+        "date": 1794131356649,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mcoins-Dmf9fZhh.js                               \u001b[39m\u001b[1m\u001b[2m  0.27 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.22 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356649,
+        "date": 1794131356649,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36msave-6irWv8bQ.js                                \u001b[39m\u001b[1m\u001b[2m  0.32 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.22 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356650,
+        "date": 1794131356650,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mtrash-2-ZOniyseh.js                             \u001b[39m\u001b[1m\u001b[2m  0.35 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.24 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356650,
+        "date": 1794131356650,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mundo-2-wqwPswdF.js                              \u001b[39m\u001b[1m\u001b[2m  0.36 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.23 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356650,
+        "date": 1794131356650,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36ma11y-nDtnvH7q.js                                \u001b[39m\u001b[1m\u001b[2m  0.38 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.28 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356650,
+        "date": 1794131356650,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mmaximize-DaA81A7Q.js                            \u001b[39m\u001b[1m\u001b[2m  0.40 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.25 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356651,
+        "date": 1794131356651,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mlist-DFUQlc0a.js                                \u001b[39m\u001b[1m\u001b[2m  0.59 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  0.27 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356651,
+        "date": 1794131356651,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mdesign-oynBoAQa.js                              \u001b[39m\u001b[1m\u001b[2m  1.72 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  1.02 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356651,
+        "date": 1794131356651,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36minterview-DqM4DINR.js                           \u001b[39m\u001b[1m\u001b[2m  2.47 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  1.38 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356651,
+        "date": 1794131356651,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mcontracts-DrbGc16b.js                           \u001b[39m\u001b[1m\u001b[2m  2.94 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  1.25 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356651,
+        "date": 1794131356651,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mreact-B17b3psR.js                               \u001b[39m\u001b[1m\u001b[2m  3.97 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  1.44 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356651,
+        "date": 1794131356651,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mshared-Dsx1XNj2.js                              \u001b[39m\u001b[1m\u001b[2m  4.90 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  2.25 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356652,
+        "date": 1794131356652,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mschema-B7egbpP7.js                              \u001b[39m\u001b[1m\u001b[2m  4.95 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  2.07 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356652,
+        "date": 1794131356652,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mVoice-DDBeJ6vm.js                               \u001b[39m\u001b[1m\u001b[2m  5.54 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  2.55 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356652,
+        "date": 1794131356652,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mSystemHub-Cy_Uhgob.js                           \u001b[39m\u001b[1m\u001b[2m  5.59 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  2.52 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356652,
+        "date": 1794131356652,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mAgents-CsfobViM.js                              \u001b[39m\u001b[1m\u001b[2m  7.99 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  3.19 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356653,
+        "date": 1794131356653,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[36mbrowser-worker.js                                      \u001b[39m\u001b[1m\u001b[2m  8.79 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  3.57 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356653,
+        "date": 1794131356653,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mSoundLab-Cg1NB5HB.js                            \u001b[39m\u001b[1m\u001b[2m  9.30 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  4.07 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356653,
+        "date": 1794131356653,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mStoryStudio-BbWl8dZu.js                         \u001b[39m\u001b[1m\u001b[2m  9.59 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  3.51 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356653,
+        "date": 1794131356653,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mi18n-B2IJRd8A.js                                \u001b[39m\u001b[1m\u001b[2m  9.88 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  3.37 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356653,
+        "date": 1794131356653,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mProjects-D0E9Bejl.js                            \u001b[39m\u001b[1m\u001b[2m 10.97 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  3.83 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356653,
+        "date": 1794131356653,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mPlatform-COTeeOZY.js                            \u001b[39m\u001b[1m\u001b[2m 13.40 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  4.90 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356654,
+        "date": 1794131356654,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mCodeStudio-CXtJhBq6.js                          \u001b[39m\u001b[1m\u001b[2m 13.76 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  5.69 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356654,
+        "date": 1794131356654,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mDynamics-BfWTA_PV.js                            \u001b[39m\u001b[1m\u001b[2m 14.54 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  5.78 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356654,
+        "date": 1794131356654,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mDesignBoard-D0yx8C0c.js                         \u001b[39m\u001b[1m\u001b[2m 15.33 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  5.86 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356654,
+        "date": 1794131356654,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mNodeStudio-CF2haYeq.js                          \u001b[39m\u001b[1m\u001b[2m 15.42 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  5.61 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356654,
+        "date": 1794131356654,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mWorkflows-CfjBE3eW.js                           \u001b[39m\u001b[1m\u001b[2m 17.55 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  6.12 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356654,
+        "date": 1794131356654,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mEditor-SLsafgNd.js                              \u001b[39m\u001b[1m\u001b[2m 17.62 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  6.47 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356655,
+        "date": 1794131356655,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mCopilot-ajST1xIV.js                             \u001b[39m\u001b[1m\u001b[2m 20.01 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  7.07 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356655,
+        "date": 1794131356655,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mWorkspace-CkLJCe1v.js                           \u001b[39m\u001b[1m\u001b[2m 24.23 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip:  8.04 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356655,
+        "date": 1794131356655,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mDesignOS-CDklZNk_.js                            \u001b[39m\u001b[1m\u001b[2m 33.16 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip: 11.87 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356655,
+        "date": 1794131356655,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mschemas-CtAsX72S.js                             \u001b[39m\u001b[1m\u001b[2m 91.79 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip: 26.10 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356655,
+        "date": 1794131356655,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mmotion-D5PbxWo3.js                              \u001b[39m\u001b[1m\u001b[2m135.76 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip: 44.93 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356655,
+        "date": 1794131356655,
+        "type": "stdout",
+        "text": "\u001b[2mdist/\u001b[22m\u001b[2massets/\u001b[22m\u001b[36mapp-rwz_r7T3.js                                 \u001b[39m\u001b[1m\u001b[2m270.79 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m │ gzip: 85.52 kB\u001b[22m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356655,
+        "date": 1794131356655,
+        "type": "stdout",
+        "text": "\u001b[32m✓ built in 5.24s\u001b[39m",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356858,
+        "date": 1794131356858,
+        "type": "stderr",
+        "text": "Build Completed in /vercel/output [18s]",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131356889,
+        "date": 1794131356889,
+        "type": "stdout",
+        "text": "Deploying outputs...",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131357804,
+        "date": 1794131357804,
+        "type": "stdout",
+        "text": "Deployment completed",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131357808,
+        "date": 1794131357808,
+        "type": "stdout",
+        "text": "Creating build cache...",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131363621,
+        "date": 1794131363621,
+        "type": "stdout",
+        "text": "Created build cache: 6s",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131363621,
+        "date": 1794131363621,
+        "type": "stdout",
+        "text": "Uploading build cache [45.64 MB]",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1794131364199,
+        "date": 1794131364199,
+        "type": "stdout",
+        "text": "Build cache uploaded: 578.000ms",
+        "info": {
+          "type": "build",
+          "name": "bld_vz6cw8ydf",
+          "entrypoint": "."
+        }
+      }
+    ]
+  },
+  "truncated": true,
+  "truncation": {
+    "arrays": 1,
+    "omittedArrayItems": 68,
+    "objects": 0,
+    "omittedObjectKeys": 0,
+    "strings": 0,
+    "omittedStringChars": 0,
+    "depth": 0,
+    "budget": 0
+  }
+}

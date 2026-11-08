@@ -33,3 +33,7 @@ Copilot local outline ไม่ใช่ AI inference; ข้อมูลขา�
 แพ็กด้วย `python3 scripts/package-v3.py` หลังตรวจ fingerprint. ชื่อ ZIP: ARTYVERSE_X_V3_HYPER_POLISH.zip.
 
 ผลตรวจสุดท้าย: typecheck/build ผ่าน, unit 16 และ browser/API 37 tests ผ่าน. Lighthouse mobile simulation: Performance 96, Accessibility/Best Practices/SEO 100, LCP 1.3s. ดูเงื่อนไขใน VERIFICATION_REPORT.md.
+
+## รุ่น Git/Vercel ต่อจาก ZIP เดิม
+
+ดู DEPLOYMENT_REPORT.md สำหรับ URL และ release commit ปัจจุบัน. บน Vercel งานอยู่ใน IndexedDB ของเบราว์เซอร์ ต้อง backup ก่อนล้างข้อมูลหรือย้าย origin. SQLite server edition ยังใช้ได้. แผนงานต่อและ checkpoint: docs/v3/NEXT_ACTIONS_TH.md. ชุดใหม่แพ็กด้วย scripts/package-hosted.py; ZIP เดิมเป็น baseline ก่อน hosted edition.

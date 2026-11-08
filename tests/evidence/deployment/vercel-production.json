@@ -1,0 +1,41 @@
+{
+  "result": {
+    "deployment": {
+      "id": "dpl_Ani56twRcWrJjSEcRtaoEz7daazK",
+      "name": "artyverse-x-ai-assistant",
+      "url": "artyverse-x-ai-assistant-nq2v5lei8-arty69xs-projects.vercel.app",
+      "type": "LAMBDAS",
+      "state": "READY",
+      "createdAt": 1794131336008,
+      "creator": {
+        "uid": "9dwhZaJe4LAEGTjVOIjjpOb4",
+        "username": "arty69xx-4705"
+      },
+      "project": {
+        "id": "prj_IX1ylxFY2Uj4EcDyCr5CAigTkrXG",
+        "name": "artyverse-x-ai-assistant",
+        "framework": "vite"
+      },
+      "meta": {
+        "githubCommitRef": "230d3716c78dcd09ad3d62df4bd05b9e0299a374",
+        "githubCommitSha": "230d3716c78dcd09ad3d62df4bd05b9e0299a374",
+        "githubCommitMessage": "fix(deps): update Vitest to resolve test-tool advisories",
+        "githubRepo": "artyverse-x",
+        "githubOrg": "arty69x"
+      },
+      "alias": [
+        "artyverse-x-ai-assistant.vercel.app",
+        "artyverse-x-ai-assistant-arty69xs-projects.vercel.app",
+        "artyverse-x-ai-assistant-git-230d3716c-cd1364-arty69xs-projects.vercel.app"
+      ],
+      "target": "production",
+      "regions": [
+        "iad1"
+      ],
+      "buildingAt": 1794131337156,
+      "ready": 1794131357718,
+      "readyState": "READY",
+      "aliasError": null
+    }
+  }
+}

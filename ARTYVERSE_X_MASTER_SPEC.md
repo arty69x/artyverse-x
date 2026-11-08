@@ -1,4 +1,5 @@
 # ARTYVERSE X V3 — merged product and frontend specification
+Hosted release supplement: Vercel uses browser-local IndexedDB/service-worker storage; local Node/SQLite remains available. See docs/v3/HOSTED_EDITION.md and DEPLOYMENT_REPORT.md for current deployment status and separate evidence.
 
 ARTYVERSE = Artist × Multiverse. Creative power with disciplined clarity. Latest direction: Premium Tech Editorial × restrained Neon Brutalist × selective Holographic Glass. Dark creative default; light and system modes use the same semantic roles. ARCYCA is the original friendly helmet/skater interaction anchor. Whisper retains Fade W; legacy Arty remains a scene asset.
 

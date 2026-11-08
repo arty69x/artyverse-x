@@ -1,0 +1,18 @@
+{
+  "result": {
+    "alias": "artyverse-x-ai-assistant.vercel.app",
+    "created": "2026-11-08T09:49:17.825Z",
+    "createdAt": 1794131357825,
+    "deletedAt": null,
+    "deployment": {
+      "id": "dpl_Ani56twRcWrJjSEcRtaoEz7daazK",
+      "url": "artyverse-x-ai-assistant-nq2v5lei8-arty69xs-projects.vercel.app"
+    },
+    "deploymentId": "dpl_Ani56twRcWrJjSEcRtaoEz7daazK",
+    "projectId": "prj_IX1ylxFY2Uj4EcDyCr5CAigTkrXG",
+    "redirect": null,
+    "redirectStatusCode": null,
+    "uid": "c6ba47f3d19a5a39e58f5312037a09733de4edf7d67eefad1a8a2f6ed17720d75cf04e05347d34d1bec9f6ea3ded654c670f187336de2d67e5903ae17862710d",
+    "updatedAt": 1794131357825
+  }
+}

@@ -19,3 +19,5 @@ Canonical interface: shared/design.ts. Current implementation inventory below; h
 | Error boundary | preserve shell and saved records when a workspace fails | src/v3/Boundary.tsx |
 
 The original 151-name inventory remains a planning catalog. No percentage, component verification count, or full-production status is inferred from the catalog or the number of passing tests.
+
+Hosted browser storage adapter: implemented; 12 verification scenarios in tests/evidence/deployment/hosted-verification.json. Server regression retains 37 passing cases. Backend mode is explicit and cloud identity/sync remain unavailable.
