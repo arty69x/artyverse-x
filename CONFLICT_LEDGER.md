@@ -20,3 +20,7 @@
 | Full master vs delivered implementation | Per-module subset statuses and explicit follow-up backlog | Local release is useful without claiming every advanced option is done | All reports |
 
 Spacing values outside the base scale are intentional composition or viewport measurements (e.g. 224px sidebar, 960×540 document, 665px hero floor). They are not forced onto an arbitrary scale when that breaks the composition.
+
+## V2 superseding decisions
+
+See `docs/v2/CONFLICT_AND_NORMALIZATION.md` for latest source-by-source decisions, brand architecture, typography/palette normalization, V1 compatibility, provider cost/fallback semantics and Framer licensing boundaries. These supersede conflicting earlier implementation decisions; user documents/artifacts retain their own values.

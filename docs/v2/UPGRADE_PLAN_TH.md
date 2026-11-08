@@ -6,18 +6,18 @@ Artist × Multiverse เป็น master brand; Creativity, Transparency, Measur
 
 ## Scope / acceptance matrix
 
-| พื้นที่ | รุ่นใหม่ที่ต้องส่งมอบ | เงื่อนไขยอมรับ | เริ่มงาน |
+| พื้นที่ | รุ่นใหม่ที่ต้องส่งมอบ | เงื่อนไขยอมรับ | สถานะ local delivery |
 |---|---|---|---|
-| Foundation | shared schemas, project relationships, versioned save, recovery | IDs เดิมเปิด/สำรอง/กู้ได้ | In progress |
-| Shell / Home | mobile-first navigation, project switch, asymmetric bento, brand typography, command search | ทุก action มีปลายทางจริง; ไม่มี overflow ที่ขนาดเป้าหมาย | In progress |
-| Agent Studio | local tool execution + optional server AI adapter, budgets, actual run logs, cancellation/cache/fallback | ไม่จำลอง AI; unknown cost แสดง unknown; secrets ไม่ออก client | Specified |
-| Node Studio | editable DAG, add/remove/connect/configure, validation, execution states, artifacts | ตรวจ cycle/missing input; run จริง; save/open graph | Specified |
-| Code Studio | HTML/CSS/JS editor, sandbox preview, selected-element inspector, deterministic repair review, export | sandbox ไม่มี same-origin/host access; run จาก user action; fixes undo ได้ | Specified |
-| Sound Lab | user-initiated Web Audio synth/sequencer, ADSR/filter, composition save, WAV export | เสียงจริง; stop/cleanup; WAV dimensions/content จริง | Specified |
-| Dynamics | spring-mass SVG nodes, drag/gestures, optional sensor input, WebGL background | มี static/reduced-motion fallback; sensor แสดงสถานะจริง; save scene | Specified |
-| Story Studio | editable scenes, scripts, playback/timing, document relationships, presentation/export | pause/next/return/save เปิดต่อได้ | Specified |
-| Existing workspaces | Chat/Create/Research/Voice/Library/Design OS | regression journeys + project context | Retain and upgrade |
-| Security / release | local access boundary, import validation, optional access gate, report | ไม่มี public production claim เมื่อ auth/infrastructure ยังไม่พร้อม | Specified |
+| Foundation | shared schemas, project relationships, versioned save, recovery | IDs เดิมเปิด/สำรอง/กู้ได้ | Implemented; scoped tests passed |
+| Shell / Home | mobile-first navigation, project switch, asymmetric bento, brand typography, command search | ทุก action มีปลายทางจริง; ไม่มี overflow ที่ขนาดเป้าหมาย | Implemented; scoped tests passed |
+| Agent Studio | local tool execution + optional server AI adapter, budgets, actual run logs, cancellation/cache/fallback | ไม่จำลอง AI; unknown cost แสดง unknown; secrets ไม่ออก client | Implemented; scoped tests passed |
+| Node Studio | editable DAG, add/remove/connect/configure, validation, execution states, artifacts | ตรวจ cycle/missing input; run จริง; save/open graph | Implemented; scoped tests passed |
+| Code Studio | HTML/CSS/JS editor, sandbox preview, selected-element inspector, deterministic repair review, export | sandbox ไม่มี same-origin/host access; run จาก user action; fixes undo ได้ | Implemented; scoped tests passed |
+| Sound Lab | user-initiated Web Audio synth/sequencer, ADSR/filter, composition save, WAV export | เสียงจริง; stop/cleanup; WAV dimensions/content จริง | Implemented; scoped tests passed |
+| Dynamics | spring-mass SVG nodes, drag/gestures, optional sensor input, WebGL background | มี static/reduced-motion fallback; sensor แสดงสถานะจริง; save scene | Implemented; scoped tests passed |
+| Story Studio | editable scenes, scripts, playback/timing, document relationships, presentation/export | pause/next/return/save เปิดต่อได้ | Implemented; scoped tests passed |
+| Existing workspaces | Chat/Create/Research/Voice/Library/Design OS | regression journeys + project context | Retained; regression tests passed |
+| Security / release | local access boundary, import validation, explicit local access boundary, report | ไม่มี public production claim เมื่อ auth/infrastructure ยังไม่พร้อม | Implemented; scoped tests passed |
 
 ## Migration strategy
 
@@ -30,3 +30,7 @@ Tailwind utilities extend Vite/React without adding Next.js or replacing the exi
 ## Production boundary
 
 This upgrade can deliver local working tools and integration boundaries. Public multi-user SaaS, real-device sensor behavior and live provider inference require their own configured services and evidence. “Production-grade” is a quality goal with a stated scope, not a label to copy onto an unverified service.
+
+## Checkpoint
+
+Runtime checkpoint `a15909f` (2026-11-08). Build + 10 unit + 27 browser/API tests passed. Built-app visual/restore check is separately recorded in the final verification report. Changed files are preserved in git; recovery branch stays intact. Remaining public-service/device/localization and advanced authoring scope is listed in KNOWN_LIMITATIONS.md.

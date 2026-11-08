@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-11-08T06:30:42.928Z",
+  "fixture": true,
+  "conditions": "Built V2 application; graph-less V1 payload, actual UI run/save, stable ID and project relationship",
+  "itemId": "48f93cac-8968-4b43-b6d8-fef3d5294269",
+  "revision": 2,
+  "projectPreserved": true,
+  "result": "1. An existing idea\n2. Another idea"
+}

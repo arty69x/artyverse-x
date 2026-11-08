@@ -1,0 +1,91 @@
+{
+  "cases": 18,
+  "errors": [],
+  "timing": {
+    "samples": 119,
+    "medianMs": 16.700000000000728,
+    "p95Ms": 16.799999999999272,
+    "maxMs": 16.80000000000291,
+    "dpr": 1,
+    "heapBytes": 52204989,
+    "longTasks": [
+      {
+        "start": 151.80000000447035,
+        "duration": 94
+      },
+      {
+        "start": 416.80000000447035,
+        "duration": 75
+      },
+      {
+        "start": 492.80000000447035,
+        "duration": 62
+      },
+      {
+        "start": 1155.8999999985099,
+        "duration": 64
+      },
+      {
+        "start": 4909.20000000298,
+        "duration": 60
+      },
+      {
+        "start": 6320.39999999851,
+        "duration": 210
+      },
+      {
+        "start": 7991.5,
+        "duration": 53
+      },
+      {
+        "start": 10696.5,
+        "duration": 86
+      },
+      {
+        "start": 13329.30000000447,
+        "duration": 56
+      },
+      {
+        "start": 16528.70000000298,
+        "duration": 66
+      },
+      {
+        "start": 18400,
+        "duration": 173
+      },
+      {
+        "start": 20912.20000000298,
+        "duration": 72
+      },
+      {
+        "start": 22500.20000000298,
+        "duration": 63
+      },
+      {
+        "start": 23643.10000000149,
+        "duration": 52
+      }
+    ]
+  },
+  "webgl": {
+    "canvas": true,
+    "fallback": false
+  },
+  "builtSmoke": {
+    "codeId": "3d17a7ad-c79a-4568-9208-79708a17b25b",
+    "actualInteraction": true,
+    "save": true,
+    "restoredKinds": [
+      "project",
+      "code",
+      "composition",
+      "scene",
+      "story",
+      "workflow"
+    ],
+    "restoreResult": {
+      "imported": 12,
+      "policy": "Merge by stable ID; existing items preserved"
+    }
+  }
+}

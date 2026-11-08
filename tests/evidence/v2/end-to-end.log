@@ -1,0 +1,40 @@
+
+> artyverse-x@2.0.0-local test:e2e
+> playwright test
+
+[WebServer] (node:21042) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 27 tests using 1 worker
+
+(node:21068) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/journeys.spec.ts:7:1 › Home → conversation → Create → save → Library → reopen (4.2s)
+  ✓   2 tests/e2e/journeys.spec.ts:45:1 › Template creates a new document; editor undo and SVG export work (2.3s)
+  ✓   3 tests/e2e/journeys.spec.ts:68:1 › Research drafts survive navigation and selected material creates document (2.6s)
+  ✓   4 tests/e2e/journeys.spec.ts:91:1 › Local workflow validates, runs and saves a reproducible result (2.1s)
+  ✓   5 tests/e2e/journeys.spec.ts:105:1 › Motion geometry, preset round trip and reduced motion (3.2s)
+  ✓   6 tests/e2e/journeys.spec.ts:146:1 › API revision conflicts, trash restore, backup validation and origins (64ms)
+  ✓   7 tests/e2e/journeys.spec.ts:190:1 › No page overflow at target widths and main routes render without runtime errors (23.9s)
+  ✓   8 tests/e2e/journeys.spec.ts:221:1 › Home semantics, dialog keyboard and reduced-motion visibility (3.2s)
+  ✓   9 tests/e2e/journeys.spec.ts:244:1 › Synthetic microphone → stop → playback → save → Library; tracks stop (3.5s)
+  ✓  10 tests/e2e/journeys.spec.ts:283:1 › Live timer pause, cue presentation and session save (4.2s)
+  ✓  11 tests/e2e/journeys.spec.ts:303:1 › Backup round trip into an empty second database preserves documents, revisions and media (501ms)
+  ✓  12 tests/e2e/journeys.spec.ts:369:1 › Document JSON export → validate → preview → apply → save round trip (3.0s)
+  ✓  13 tests/e2e/journeys.spec.ts:406:1 › Motion Lab controls have accessible names (3.9s)
+  ✓  14 tests/e2e/journeys.spec.ts:420:1 › Newer saved revision wins over stale browser cache without losing the draft (2.9s)
+  ✓  15 tests/e2e/v2.spec.ts:5:1 › Project → code source → saved revision → scoped Library → reopen (3.6s)
+  ✓  16 tests/e2e/v2.spec.ts:37:1 › Code sandbox executes on Run, denies parent access, and persists visual CSS edits (2.7s)
+  ✓  17 tests/e2e/v2.spec.ts:65:1 › Source import is validated and reviewed; undo/redo restore the document (2.4s)
+  ✓  18 tests/e2e/v2.spec.ts:103:1 › Local agent and unavailable-provider fallback have honest provenance and retained artifacts (2.2s)
+  ✓  19 tests/e2e/v2.spec.ts:138:1 › Graph connections reject cycles and save executed artifacts (2.6s)
+  ✓  20 tests/e2e/v2.spec.ts:159:1 › Sound synthesis exports nonzero PCM WAV, saves playable audio, and closes AudioContext (3.0s)
+  ✓  21 tests/e2e/v2.spec.ts:197:1 › Dynamics parameters save and restore; sensor starts only on request (2.9s)
+  ✓  22 tests/e2e/v2.spec.ts:215:1 › Story scripts, timeline, linked documents and presentation share saved sources (3.9s)
+  ✓  23 tests/e2e/v2.spec.ts:253:1 › New workspaces render without page overflow or runtime errors across six widths (16.2s)
+  ✓  24 tests/e2e/v2.spec.ts:285:1 › New workbench controls pass automated WCAG checks in static states (11.8s)
+  ✓  25 tests/e2e/v2.spec.ts:315:1 › Provider adapter contract: priced fixture response, cache, budget block, failure fallback and cancellation (602ms)
+  ✓  26 tests/e2e/v2.spec.ts:446:1 › Multi-step local agent graph records two independent runs and a saved note (3.0s)
+  ✓  27 tests/e2e/v2.spec.ts:523:1 › Corrupt advanced draft recovers safely and wrong-kind deep link shows missing state (1.7s)
+
+  27 passed (2.0m)

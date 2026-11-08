@@ -1,56 +1,43 @@
-# Verification report — ARTYVERSE X
+# Verification report — ARTYVERSE X V2
 
-Recorded 2026-11-07. Scope: local single-user release; redesign/art-direction verification. No pixel-perfect, WCAG certification or public production-readiness claim.
+Recorded 2026-11-08. Scope: personal local Creative Operating Studio, redesign/art-direction review. No public-production, pixel-perfect, WCAG certification or sustained FPS claim.
 
 ## Source and conditions
 
-Tested runtime commit: `18d8194`. Runtime fingerprint: `a8f6d4524b452abce45ca6da1356c92b5df11203d2e8a19d508e6aa48ebaf1bd`. Exact hashes are in `tests/evidence/source-manifest.json`; documentation/evidence may be added later without changing this runtime. Runtime changes invalidate relevant evidence.
+Runtime revision: `a15909f17c146a5652e09c37f80d7b6c39134332`. Runtime fingerprint: `2675dd267a9d94f78fe8e5a66637aa275e904690bc2deab0195488893cdcee84`. File hashes: `tests/evidence/v2/source-manifest.json`. Documentation/test tooling/evidence added later do not change this runtime. Relevant source changes invalidate the affected evidence.
 
-Node 24.19.0, Linux, headless Chromium 154.0.8037.57, Playwright with `/usr/bin/chromium`. Versions come from this installation and package-lock.json, not the blueprint. E2E uses isolated web 5174/API 4312 and a new `.test-data/run-*` directory; restore uses an empty temporary database on 4313. Built-app smoke uses `npm start` on 4315. Viewports are simulation, not real-device tests.
+Node 24.19.0; Linux; Chromium 154.0.8037.57; system executable `/usr/bin/chromium`. E2E uses isolated web 5174/API 4312 and fresh `.test-data/run-*`; V1 restore uses 4313; provider adapter test uses local HTTP fixture + isolated API 4316. Built-app checks use `npm start` on 4315 with separate data and restore into an empty temporary database on 4317. No live provider key or paid inference was used. Viewport simulation is not real-device testing.
 
-## Results
+## Recorded results
 
 | Check | Result | Evidence |
 |---|---|---|
-| TypeScript + Vite build | Passed | tests/evidence/build.log |
-| Contract tests | 3 passed | tests/evidence/unit.log |
-| End-to-end journeys | 14 passed; zero skipped, unexpected or flaky | tests/evidence/playwright-results.json and end-to-end.log |
-| Main-route layout | 10 routes × 6 widths passed, 320/390/768/1024/1440/1920 px | E2E route test |
-| Visual cases | 27 cases, no recorded page overflow/runtime errors | tests/evidence/visual-audit.json |
-| Automated accessibility | 24 default route/viewport axe scans at 390/1440 passed; Home and Motion Lab also asserted in E2E | visual-audit.json + journey tests |
-| Thai Home | 390px, no page overflow | tests/evidence/home-thai-390.png |
-| Built application | Browser → template → editor → API → SQLite revision passed | tests/evidence/production-smoke.json |
-| Framer companion | Native desktop/phone renders visually inspected; final mutations returned no diagnostics | tests/evidence/framer-evidence.json |
+| TypeScript + Vite build | Passed | tests/evidence/v2/build.log |
+| Unit contracts | 10 passed in 2 files | tests/evidence/v2/unit.log |
+| Browser/API journeys | 27 passed; 0 skipped, unexpected or flaky | tests/evidence/v2/playwright-results.json; end-to-end.log |
+| Existing route layout | 10 routes × 6 widths, no overflow/runtime errors in test | journeys.spec.ts |
+| New route layout | 8 routes × 6 widths, no overflow/runtime errors in test | v2.spec.ts |
+| Built default-state visual/axe audit | 9 routes × 2 widths = 18 cases, 0 recorded violations/overflow/page errors | tests/evidence/v2/built-visual-audit.json; matching PNGs |
+| Thai Home | 390px, no page overflow | home-th-390.png; built-visual-audit.json |
+| Built artifact workflow | Code Run → actual preview button interaction → SQLite save | built-visual-audit.json |
+| V2 backup/restore | project/code/composition/scene/story/workflow stable IDs and exact data restored into empty DB; 12 fixture records merged | built-visual-audit.json |
+| V1 compatibility | Graph-less workflow opens retained editor; actual run/save; same ID, revision and project preserved | tests/evidence/v2/legacy-compatibility.json |
+| Provider adapter | Fixture response/usage/cost, exact cache, budget block, HTTP failure with unknown cost fallback, cancellation | v2.spec.ts; explicitly a fixture, not AI inference |
+| Multi-step agents | Two actual local agent run records → saved note, graph reload retains execution | v2.spec.ts |
+| Code boundary | No auto-run; visual inspector applied CSS; parent document denied in iframe; source review and undo/redo | v2.spec.ts |
+| Sound | WAV RIFF/44.1kHz and nonzero PCM, rendered Library recording, AudioContext closed on view exit | v2.spec.ts |
+| Data recovery | Corrupt studio draft retained under recovery key; safe default; wrong-kind deep link gives missing state | v2.spec.ts |
 
-Build has upstream notices about ignored Motion `use client` directives and Zod pure-annotation comments. They are not TypeScript/runtime failures. Main entry: 485.93 kB minified / 152.32 kB gzip. Editor, Voice, Workflows and Design OS have lazy chunks. Exact sizes are in the build log.
+Main entry: 364.96 kB minified / 112.44 kB gzip. Motion has a separate 135.76 kB / 44.93 kB gzip chunk; workspaces are lazy loaded. Exact output sizes are in build.log. Upstream Motion `use client` directives and Zod annotation warnings are recorded build notices, not ignored test failures.
 
-## Verified stories
+## Performance sample
 
-1. Home idea → own-content conversation → Create → save → Library → reopen/reload.
-2. Template preview → new document → edit → undo/redo → SVG download.
-3. Research draft survives navigation → save → material transfer to Create.
-4. Local workflow validation → deterministic execution → saved result.
-5. Kinetic geometry + Thai text → preset save/export/import/preview apply → spatial keyboard navigation.
-6. API stale revision returns 409; trash/restore works; invalid backup and foreign origin rejected.
-7. Main routes render without page errors at six widths.
-8. Reduced-motion Home remains readable; native dialog Escape works; Home axe scan passes.
-9. Chromium synthetic microphone → actual MediaRecorder bytes → stop → playback → Library; captured tracks end. Physical microphones were not tested.
-10. Live timer pause stays stable → cue presentation keyboard navigation → session save.
-11. Backup restores into an empty second database. Documents, revisions, media metadata and exact audio bytes match. Invalid restore preserves the item count.
-12. Document JSON export → validate → preview → explicit apply → save/reload retains Thai/English content.
-13. Motion Lab initial controls pass the scoped axe scan.
-14. A newer saved revision supersedes stale browser cache; the older unsaved draft stays downloadable.
+Isolated built-app Dynamics, 1440×1000 / DPR1 / headless Chromium / WebGL off. An SVG body was dragged 90×30 viewport pixels before sampling spring settling. 179 rAF intervals: median 16.70 ms, p95 16.80 ms, maximum 16.80 ms; 0 long tasks during the sample; observed JS heap 6927218 bytes. `tests/evidence/v2/performance-sample.json` records conditions. These are scheduling intervals in one short run, not GPU frame completion or a sustained real-device FPS guarantee. The earlier longTasks array in the multi-route visual audit includes axe/screenshots/navigation workload and must not be attributed to the app alone. The isolated profile excludes that workload.
 
-## Visual review and performance
+Opt-in WebGL created a canvas and did not show its unavailable fallback in the headless built-app check. This does not certify real-device GPU performance, context recovery or all shaders on all browsers.
 
-Home desktop/mobile, Create mobile, Motion Lab, Thai Home and Framer desktop/phone images were inspected. Mobile template cards changed to one column after a clipped word was found. Editor gained a mobile layer strip and explicit names for icon-only actions. Canvas geometry has accessible alternatives through Layers, Inspector and semantic DOM text.
+## Limits and evidence invalidation
 
-The initial kinetic rAF sample ran alongside other browser work and had a high tail; it is retained in the JSON. A targeted follow-up sampled 179 frames at DPR 1: median 16.70 ms, p95 16.80 ms, maximum 16.80 ms between callbacks. This short headless sample is not a sustained 60 FPS guarantee, GPU benchmark or device certification.
+Automated accessibility scans cover default states and selected dialogs/controls only. Manual screen-reader, 200% zoom, every error state, full TH/EN, real iPad/phone multitouch/sensors/microphone and public security/deployment checks remain. A screenshot is appearance evidence, not proof of motion or workflow. Public multi-user infrastructure, live AI inference, transcription, cloud sync and external schedules were not verified or connected.
 
-Geometry tests confirm finite and distinct sampled formulas for all 16 paths. Screenshots do not prove motion timelines. Exhaustive duration/pause/reverse/choreography testing of every effect remains pending.
-
-## Limits and data hygiene
-
-No live AI, transcription, cloud, scheduler or public deployment was tested or claimed. No exhaustive screen-reader/manual accessibility audit, long-duration memory soak, all custom-accent contrast checks or physical mobile tests. Localization and advanced editor/workflow/media/motion requirements remain incomplete; see KNOWN_LIMITATIONS.md.
-
-The 151-name source catalog is inventory, not 151 verified standalone components. Initial synthetic test records were preserved in `.data-initial-verification-20261107`; the final development preview uses a fresh empty Library. Subsequent tests use isolated storage. Some test screenshots intentionally show agent-created verification records.
+V1 evidence remains in `tests/evidence` and `docs/v1/VERIFICATION_REPORT.md` as historical records. New evidence lives in `tests/evidence/v2`. No source archive buildVerified, versions, scores or component coverage were copied into V2 results. Reports become stale when the hashed runtime changes; rerun the relevant commands and regenerate the manifest before relying on them again.
