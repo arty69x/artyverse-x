@@ -76,3 +76,11 @@ All new work attaches to the selected project. All worlds includes legacy/unassi
 - Command palette searches real workspaces and accessible scoped items; saved-item resolver routes specialized sessions/notes correctly.
 
 Primary app remains hash-routed for existing hosting compatibility. Aliases include assets→library, pipeline→automate, canvas→create, live-code/inspector→code and components→design-system. Existing URLs remain available. No new external public service is claimed.
+
+## Modern Builder workflows
+
+- Home concept → Builder → preset preview → apply to draft → edit / validate / Undo → HTML/CSS/config export.
+- Builder → explicit save as new code item → existing Code Studio → deliberate Run → native storefront in opaque-origin iframe → Library/revisions.
+- Builder brief → existing local brief tool → actual saved agent-run with local-tool provenance.
+- Storefront preview → category → product detail → sample bag → remove/clear; no order or checkout.
+- Rig specimen → consent → actual microphone FFT → stop/navigation cleanup; no audio recording, upload or transcription.

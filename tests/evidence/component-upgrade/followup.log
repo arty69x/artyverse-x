@@ -1,0 +1,15 @@
+[WebServer] (node:66691) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 1 worker
+
+(node:66824) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/component-kit.spec.ts:9:1 › Builder draft survives reload, validates required content and applies reviewed presets with undo (6.6s)
+  ✓  2 tests/e2e/component-kit.spec.ts:54:1 › Responsive Motion viewport, Radix keyboard tabs and shopping selection retain their state (5.0s)
+  ✓  3 tests/e2e/component-kit.spec.ts:114:1 › Real HTML export and saved Studio handoff preserve a functional, isolated storefront (5.0s)
+  ✓  4 tests/e2e/component-kit.spec.ts:150:1 › Radix switches change real preview settings; local brief result has honest saved provenance (6.4s)
+  ✓  5 tests/e2e/component-kit.spec.ts:188:1 › Microphone rig is gesture-only and releases real synthetic tracks and AudioContexts on stop and navigation (5.3s)
+  ✓  6 tests/e2e/component-kit.spec.ts:272:1 › Permission denial is recoverable and reduced-motion keeps the live rig static (3.6s)
+
+  6 passed (36.2s)

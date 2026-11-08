@@ -21,3 +21,16 @@ Canonical interface: shared/design.ts. Current implementation inventory below; h
 The original 151-name inventory remains a planning catalog. No percentage, component verification count, or full-production status is inferred from the catalog or the number of passing tests.
 
 Hosted browser storage adapter: implemented; 12 verification scenarios in tests/evidence/deployment/hosted-verification.json. Server regression retains 37 passing cases. Backend mode is explicit and cloud identity/sync remain unavailable.
+
+## Modern component kit supplement
+
+| Family | Implementation | Actual behavior |
+|---|---|---|
+| Accessible Tabs / Switch | src/components/kit/primitives.tsx | Adapted shadcn composition, actual Radix semantics/keyboard, tokenized styling |
+| Motion policy | src/components/kit/motion.tsx | OS reduced motion + app Calm/Off + hidden awareness |
+| Storefront Builder / templates | src/concept/FramerStudioComponents.tsx; shared/storefront.ts | Draft edit/validation/Undo, measured viewport, reviewed presets, files/export and explicit editor handoff |
+| Catalog / detail / sample bag | FramerStudioComponents.tsx | Real local filtering and selection; labeled sample goods/prices; no checkout |
+| SVG rig / audio input | FramerStudioComponents.tsx; src/core/useSpectrum.ts | Distinct mouth states, gesture-only real FFT visualization, resource cleanup |
+| Type / focus / color block | studio-kit.css and shared PageHead/button styles | Bold, editorial underline, readable marker and keyboard focus |
+
+These families are not a claim that the historical 151-item inventory is implemented. Evidence and limitations are recorded separately in COMPONENT_UPGRADE_REPORT.md.

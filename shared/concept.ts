@@ -1,3 +1,4 @@
+import { designSystem } from "./design";
 /** Visual exploration of the user's latest Prompt Pack, isolated from applied themes. */
 export const conceptPalette = {
   paper: "#F4F6F9",
@@ -6,9 +7,9 @@ export const conceptPalette = {
   muted: "#566377",
   line: "#D8DEE8",
   soft: "#EAEFF5",
-  lime: "#CCFF00",
+  lime: designSystem.brand.lime,
   onLime: "#122000",
-  pink: "#FF2078",
+  pink: designSystem.brand.pink,
   pinkText: "#C90061",
   violet: "#7440D4",
   cyan: "#00E5FF",
@@ -24,4 +25,10 @@ export const conceptEvidence = {
   id: "sample-story-01",
   label: "ตัวอย่าง · Project story",
   body: "ฉันพัฒนาเว็บแอปจัดการงานสร้างสรรค์ด้วย React และ TypeScript โดยแยกส่วนแสดงผลออกจากข้อมูล และทดสอบเส้นทางสร้าง แก้ไข บันทึก และเปิดงานซ้ำ",
+};
+
+export const conceptMotion = {
+  spring: { type: "spring" as const, stiffness: 420, damping: 26, mass: 0.8 },
+  smooth: { duration: 0.32, ease: [0, 0, 0.2, 1] as const },
+  stagger: 0.08,
 };

@@ -52,3 +52,5 @@ Source JSON import: max 2 MB → schema validation → preview → apply to draf
 V3 routing helpers: `shared/routes.ts` is the pure route resolver; `shared/v2/contracts.ts` re-exports it for compatibility without changing IDs or entities.
 
 Hosted edition uses IndexedDB database `artyverse-hosted-workspace` v1 with items (id), revisions ([id, revision]), and assets (id + Blob). Item envelope remains v1 and uses the same itemInput validator; no server data is silently migrated. Backup format v1 is compatible with the local edition. See DEPLOYMENT_REPORT.md for actual round-trip evidence.
+
+Modern Builder: shared/storefront.ts defines version-1 StorefrontConfig, a permissive-incomplete draft validator and stricter export validator. Only known text/accent/banner properties enter exported markup; executable/unknown config fields are stripped. Native preview and exported CSS use one source. Explicit handoff creates the existing CodeDocument v2 inside an unchanged Item v1 envelope. No database migration is required. Preview bag/Undo are session state; the configuration/brief draft is browser-local; explicit local brief/save actions create real existing entities.

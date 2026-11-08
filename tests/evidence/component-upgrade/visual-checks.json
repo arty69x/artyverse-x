@@ -1,0 +1,232 @@
+{
+  "timestamp": "2026-11-08T14:06:24.390Z",
+  "base": "http://127.0.0.1:5320",
+  "browser": "154.0.8037.57",
+  "cases": [
+    {
+      "screen": "home",
+      "width": 320,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "copilot",
+      "width": 320,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "studio",
+      "width": 320,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "builder",
+      "width": 320,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "home",
+      "width": 360,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "copilot",
+      "width": 360,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "studio",
+      "width": 360,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "builder",
+      "width": 360,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "home",
+      "width": 390,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "copilot",
+      "width": 390,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "studio",
+      "width": 390,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "builder",
+      "width": 390,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "home",
+      "width": 768,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "copilot",
+      "width": 768,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "studio",
+      "width": 768,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "builder",
+      "width": 768,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "home",
+      "width": 1024,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "copilot",
+      "width": 1024,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "studio",
+      "width": 1024,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "builder",
+      "width": 1024,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "home",
+      "width": 1280,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "copilot",
+      "width": 1280,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "studio",
+      "width": 1280,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "builder",
+      "width": 1280,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "home",
+      "width": 1440,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "copilot",
+      "width": 1440,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "studio",
+      "width": 1440,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "builder",
+      "width": 1440,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "home",
+      "width": 1536,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "copilot",
+      "width": 1536,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "studio",
+      "width": 1536,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "screen": "builder",
+      "width": 1536,
+      "heroTextClipped": false,
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "errors": []
+}

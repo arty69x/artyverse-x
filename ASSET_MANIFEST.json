@@ -93,6 +93,30 @@
       "source": "Original code-authored vector family in src/concept/Concept.tsx; no external artwork",
       "alt": "Decorative; linked native card headings provide the accessible name",
       "optimization": "Native shapes and unique gradient IDs; no embedded UI text or raster payload"
+    },
+    {
+      "id": "storefront-product-vectors",
+      "purpose": "Six original local sample product illustrations, reused by React preview and independent HTML export",
+      "format": "Inline SVG",
+      "dimensions": [
+        300,
+        300
+      ],
+      "source": "Original authored paths in shared/storefront.ts; no marketplace imagery or generated brand assets",
+      "alt": "Decorative images; native product names describe each card",
+      "optimization": "One shared SVG path source; no raster or network dependencies"
+    },
+    {
+      "id": "secondary-spectrum-rig",
+      "purpose": "Secondary motion/audio specimen; ARCYCA remains primary mascot",
+      "format": "Inline SVG",
+      "dimensions": [
+        100,
+        100
+      ],
+      "source": "Original adapted rig study in src/concept/FramerStudioComponents.tsx based on user-provided concept",
+      "alt": "Live SVG rig state and estimated input mouth shape",
+      "optimization": "Unique gradient IDs, in-view suspension, static fallback"
     }
   ],
   "runtimeAssets": [

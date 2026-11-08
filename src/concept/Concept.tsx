@@ -1,3 +1,9 @@
+import { motion } from "motion/react";
+import {
+  PreviewMotionProvider,
+  usePreviewMotion,
+} from "../components/kit/motion";
+import { lazy, Suspense } from "react";
 import { rovingTabs } from "../v3/a11y";
 import {
   useEffect,
@@ -54,9 +60,19 @@ import { Modal } from "../components/UI";
 import { download, useStore } from "../core/store";
 import { buildPreview, exportCode, starterCode } from "../v2/sandbox";
 import type { CodeDocument } from "../../shared/v2/contracts";
-import { conceptPalette, conceptEvidence } from "../../shared/concept";
+import {
+  conceptPalette,
+  conceptEvidence,
+  conceptMotion,
+} from "../../shared/concept";
 import "./concept.css";
-type Screen = "home" | "copilot" | "studio";
+import "./studio-kit.css";
+const FramerStudioBuilder = lazy(() =>
+  import("./FramerStudioComponents").then((m) => ({
+    default: m.FramerStudioBuilder,
+  })),
+);
+type Screen = "home" | "copilot" | "studio" | "builder";
 const vars = Object.fromEntries(
   Object.entries(conceptPalette).map(([key, value]) => ["--cp-" + key, value]),
 ) as CSSProperties;
@@ -74,8 +90,13 @@ function Button({
   variant?: string;
   disabled?: boolean;
 }) {
+  const enabled = usePreviewMotion();
   return (
-    <button
+    <motion.button
+      type="button"
+      whileHover={enabled && !disabled ? { y: -1 } : undefined}
+      whileTap={enabled && !disabled ? { scale: 0.98 } : undefined}
+      transition={conceptMotion.spring}
       className={
         "cp-button " + (variant === "outline" ? "cp-outline" : variant)
       }
@@ -83,7 +104,7 @@ function Button({
       disabled={disabled}
     >
       {children}
-    </button>
+    </motion.button>
   );
 }
 function Mark() {
@@ -107,8 +128,9 @@ const menu = [
   ["library", "Assets", Image],
   ["analytics", "Analytics", BarChart3],
 ] as const;
-export function Concept({ screen: raw }: { screen?: string }) {
-  const screen: Screen = raw === "copilot" || raw === "studio" ? raw : "home",
+function ConceptFrame({ screen: raw }: { screen?: string }) {
+  const screen: Screen =
+      raw === "copilot" || raw === "studio" || raw === "builder" ? raw : "home",
     s = useStore(),
     [drawer, setDrawer] = useState(false),
     [info, setInfo] = useState(""),
@@ -122,6 +144,7 @@ export function Concept({ screen: raw }: { screen?: string }) {
     const shortcut = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
         e.preventDefault();
+        if (document.querySelector("dialog[open]")) return;
         setDrawer(false);
         setSearchOpen((open) => !open);
       }
@@ -162,12 +185,16 @@ export function Concept({ screen: raw }: { screen?: string }) {
                   : "#/" + route
             }
             className={
-              screen === route || (screen === "studio" && route === "projects")
+              screen === route ||
+              ((screen === "studio" || screen === "builder") &&
+                route === "projects")
                 ? "active"
                 : ""
             }
             aria-current={
-              screen === route || (screen === "studio" && route === "projects")
+              screen === route ||
+              ((screen === "studio" || screen === "builder") &&
+                route === "projects")
                 ? "page"
                 : undefined
             }
@@ -200,9 +227,12 @@ export function Concept({ screen: raw }: { screen?: string }) {
   );
   return (
     <div
-      className={"cp-root " + (screen === "studio" ? "cp-studio-theme" : "")}
+      className={
+        "cp-root " +
+        (screen === "studio" || screen === "builder" ? "cp-studio-theme" : "")
+      }
       style={
-        screen === "studio"
+        screen === "studio" || screen === "builder"
           ? ({
               ...vars,
               "--cp-paper": conceptPalette.night,
@@ -229,6 +259,7 @@ export function Concept({ screen: raw }: { screen?: string }) {
             ["home", "Home"],
             ["copilot", "Copilot"],
             ["studio", "Studio"],
+            ["builder", "Builder"],
           ].map(([key, label]) => (
             <a
               key={key}
@@ -268,7 +299,9 @@ export function Concept({ screen: raw }: { screen?: string }) {
                 ? "Overview"
                 : screen === "copilot"
                   ? "Live Conversation"
-                  : "Creative Studio"}
+                  : screen === "builder"
+                    ? "Storefront Builder"
+                    : "Creative Studio"}
             </strong>
           </div>
           <button
@@ -309,8 +342,14 @@ export function Concept({ screen: raw }: { screen?: string }) {
             <HomeConcept />
           ) : screen === "copilot" ? (
             <CopilotConcept onInfo={setInfo} />
-          ) : (
+          ) : screen === "studio" ? (
             <StudioConcept onInfo={setInfo} />
+          ) : (
+            <Suspense
+              fallback={<div className="v3-loading">Opening Builder…</div>}
+            >
+              <FramerStudioBuilder onInfo={setInfo} />
+            </Suspense>
           )}
         </main>
         <footer className="cp-footer">
@@ -344,9 +383,12 @@ export function Concept({ screen: raw }: { screen?: string }) {
           <Braces size={19} />
           <span>Studio</span>
         </a>
-        <a href="#/library">
-          <Folder size={19} />
-          <span>Library</span>
+        <a
+          href="#/concept/builder"
+          aria-current={screen === "builder" ? "page" : undefined}
+        >
+          <ShoppingBag size={19} />
+          <span>Builder</span>
         </a>
         <button onClick={() => setDrawer(true)}>
           <Menu size={19} />
@@ -517,7 +559,8 @@ function HomeConcept() {
         <div>
           <span className="cp-kicker">YOUR CREATIVE OPERATING SYSTEM</span>
           <h1>
-            พื้นที่สำหรับทุกความเป็นไปได้
+            พื้นที่สำหรับทุก
+            <strong className="ax-editorial-underline">ความเป็นไปได้</strong>
             <span aria-hidden="true">
               <Sparkles size={22} />
             </span>
@@ -531,7 +574,7 @@ function HomeConcept() {
             <i /> NEXT GEN INTERVIEW COPILOT
           </span>
           <h2>
-            Speak
+            <strong className="cp-bold-word">Speak</strong>
             <br />
             <em>Smarter.</em>
           </h2>
@@ -609,7 +652,7 @@ function HomeConcept() {
         </aside>
       </div>
       <div className="cp-home-secondary">
-        <a className="cp-promo cp-promo-lime" href="#/concept/studio">
+        <a className="cp-promo cp-promo-lime" href="#/concept/builder">
           <span>IDEA → SOMETHING REAL</span>
           <h3>
             Turn your next
@@ -666,7 +709,7 @@ function HomeConcept() {
             [
               "AI Website Builder",
               "จากไอเดียสู่เว็บไซต์ที่แก้ไขได้",
-              "#/concept/studio",
+              "#/concept/builder",
             ],
             ["Templates", "เริ่มต้นด้วยโครงสร้างที่ดี", "#/templates"],
             ["Marketplace", "วัตถุดิบสำหรับงานชิ้นต่อไป", "#/marketplace"],
@@ -1359,5 +1402,13 @@ function StudioConcept({ onInfo }: { onInfo: (s: string) => void }) {
         <span>ARTYVERSE X / STUDIO</span>
       </div>
     </div>
+  );
+}
+
+export function Concept(props: { screen?: string }) {
+  return (
+    <PreviewMotionProvider>
+      <ConceptFrame {...props} />
+    </PreviewMotionProvider>
   );
 }

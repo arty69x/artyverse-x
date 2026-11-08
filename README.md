@@ -24,3 +24,7 @@ Copilot outlines are deterministic local structures, not AI inference. Optional 
 ## Prompt Pack design preview
 
 Open `#/concept/home`, `#/concept/copilot`, or `#/concept/studio` (also linked from Home). Three native, responsive concept screens use labeled examples. Code editing/Run/export and explicit handoff to saved Studio work locally; no sample AI/auth/collaboration success is implied. See [concept scope and evidence](docs/v3/CONCEPT_PREVIEW_TH.md).
+
+## Modern component kit / storefront builder
+
+Open `#/concept/builder` for reviewed local templates, editable native storefront, responsive Motion viewport, Radix keyboard tabs/switches, product/detail/sample-bag controls, HTML/CSS/config export and real Code Studio handoff. The component suite below it demonstrates bold/underline/color blocks, tactile controls and gesture-only microphone SVG visualization. Goods/prices are samples; no checkout or AI-generation service is implied. See [release checks](COMPONENT_UPGRADE_REPORT.md) and [library choices/licenses](docs/v3/COMPONENT_LIBRARY_DECISIONS.md).

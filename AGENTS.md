@@ -12,3 +12,6 @@
 - Run checks relevant to each change; run the full regression suite for major migrations. Record actual source fingerprints, conditions and limitations. Do not copy old verification to new runtime or rewrite baselines to conceal defects.
 - Target 320–1536+ responsive layouts, semantic controls, keyboard alternatives, visible focus, dialog focus restoration, safe areas and reduced-motion/lifecycle cleanup. Intentional internal canvas/code scrolling is allowed; unintentional page overflow is not.
 - Vercel project context is linked, but the API's SQLite/media backend is local. Do not publish a temporary serverless SQLite database as durable cloud storage. Preserve access policy and obtain any external-service decisions actually required for a deployment.
+
+- Modern scoped kit: src/components/kit (adapted shadcn composition with actual Radix Switch/Tabs), src/concept/FramerStudioComponents.tsx, shared/storefront.ts. Keep MIT attributions. Reuse installed motion/react; do not install a second animation runtime.
+- Hosted Vercel edition uses browser-local IndexedDB and a service worker; ordinary npm dev/build+start uses the Node/SQLite server. Preserve both modes and use tests/evidence/component-upgrade for the latest kit evidence; older V3 scores are historical.
