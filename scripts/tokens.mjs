@@ -1,3 +1,4 @@
+import {format} from "prettier";
 import { theme } from "../shared/schema.ts";
 import { designSystem } from "../shared/design.ts";
 import { writeFileSync } from "node:fs";
@@ -36,4 +37,4 @@ css +=
   ";--brand-violet:" +
   designSystem.brand.violet +
   ";--motion-micro:120ms;--motion-panel:320ms;--motion-scene:500ms}\n";
-writeFileSync("src/v3/tokens.css", css);
+writeFileSync("src/v3/tokens.css", await format(css,{parser:"css"}));
