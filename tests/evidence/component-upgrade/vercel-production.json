@@ -1,0 +1,62 @@
+{
+  "deployment": {
+    "id": "dpl_3ZwTZNz9P8U2kPinqsN1pmV2712s",
+    "name": "artyverse-x-ai-assistant",
+    "url": "artyverse-x-ai-assistant-m5xxtb7r4-arty69xs-projects.vercel.app",
+    "type": "LAMBDAS",
+    "state": "READY",
+    "createdAt": 1794147154834,
+    "project": {
+      "id": "prj_IX1ylxFY2Uj4EcDyCr5CAigTkrXG",
+      "name": "artyverse-x-ai-assistant",
+      "framework": "vite"
+    },
+    "meta": {
+      "githubCommitRef": "6896339578f250dc15f120d203cb348d14773a45",
+      "githubCommitSha": "6896339578f250dc15f120d203cb348d14773a45",
+      "githubCommitMessage": "feat(ui): add Radix Motion kit and editable storefront studio",
+      "githubRepo": "artyverse-x",
+      "githubOrg": "arty69x"
+    },
+    "alias": [
+      "artyverse-x-ai-assistant.vercel.app",
+      "artyverse-x-ai-assistant-arty69xs-projects.vercel.app",
+      "artyverse-x-ai-assistant-git-689633957-ed2ade-arty69xs-projects.vercel.app"
+    ],
+    "target": "production",
+    "regions": [
+      "iad1"
+    ],
+    "buildingAt": 1794147166126,
+    "ready": 1794147192562,
+    "readyState": "READY",
+    "aliasError": null
+  },
+  "alias": {
+    "alias": "artyverse-x-ai-assistant.vercel.app",
+    "created": "2026-11-08T09:49:17.825Z",
+    "createdAt": 1794131357825,
+    "deletedAt": null,
+    "deployment": {
+      "id": "dpl_3ZwTZNz9P8U2kPinqsN1pmV2712s",
+      "url": "artyverse-x-ai-assistant-m5xxtb7r4-arty69xs-projects.vercel.app"
+    },
+    "deploymentId": "dpl_3ZwTZNz9P8U2kPinqsN1pmV2712s",
+    "projectId": "prj_IX1ylxFY2Uj4EcDyCr5CAigTkrXG",
+    "redirect": null,
+    "redirectStatusCode": null,
+    "uid": "c6ba47f3d19a5a39e58f5312037a09733de4edf7d67eefad1a8a2f6ed17720d75cf04e05347d34d1bec9f6ea3ded654c670f187336de2d67e5903ae17862710d",
+    "updatedAt": 1794147192710
+  },
+  "buildEvidence": {
+    "scope": "Selected excerpts from Vercel build events, not full logs",
+    "excerpts": [
+      "qd5tvop3l\",\"entrypoint\":\".\"}},{\"created\":1794147175488,\"date\":1794147175488,\"type\":\"stdout\",\"text\":\"found 0 vulnerabilities\",\"info\":{\"type\":\"build\",\"name\":\"bld_qd5tvop3l\",\"entrypoint\":\".\"}},{\"created\":1794147175489,\"date\":1794147175489,\"type\":\"stderr\",\"text\":\"npm warn install-scripts 1 package has inst",
+      "\":1794147191536,\"type\":\"stdout\",\"text\":\"\\u001b[2mdist/\\u001b[22m\\u001b[2massets/\\u001b[22m\\u001b[36mFramerStudioComponents-BukHhjSD.js              \\u001b[39m\\u001b[1m\\u001b[2m 77.75 kB\\u001b[22m\\u001b[1m\\u001b[22m\\u001b[2m │ gzip: 25.44 kB\\u001b[22m\",\"info\":{\"type\":\"build\",\"name\":\"bld_qd5tvop3l\",\"ent",
+      "\":1794147191537,\"type\":\"stdout\",\"text\":\"\\u001b[2mdist/\\u001b[22m\\u001b[2massets/\\u001b[22m\\u001b[36mapp-C51XHvNi.js                                 \\u001b[39m\\u001b[1m\\u001b[2m271.45 kB\\u001b[22m\\u001b[1m\\u001b[22m\\u001b[2m │ gzip: 85.80 kB\\u001b[22m\",\"info\":{\"type\":\"build\",\"name\":\"bld_qd5tv",
+      "qd5tvop3l\",\"entrypoint\":\".\"}},{\"created\":1794147191718,\"date\":1794147191718,\"type\":\"stderr\",\"text\":\"Build Completed in /vercel/output [22s]\",\"info\":{\"type\":\"build\",\"name\":\"bld_qd5tvop3l\",\"entrypoint\":\".\"}},{\"created\":1794147191759,\"date\":1794147191759,\"type\":\"stdout\",\"text\":\"Deploying outputs..",
+      "qd5tvop3l\",\"entrypoint\":\".\"}},{\"created\":1794147192648,\"date\":1794147192648,\"type\":\"stdout\",\"text\":\"Deployment completed\",\"info\":{\"type\":\"build\",\"name\":\"bld_qd5tvop3l\",\"entrypoint\":\".\"}},{\"created\":1794147192654,\"date\":1794147192654,\"type\":\"stdout\",\"text\":\"Creating build cache...\",\"info\":{\"type\":\"bu"
+    ]
+  },
+  "verificationLimit": "Local browser verification; remote platform READY/build/alias verified. Protected production interactions not exercised."
+}

@@ -1,5 +1,15 @@
 # ARTYVERSE X — Git and Vercel release
-**Latest release — Prompt Pack concept preview (2026-11-08):** production READY at runtime commit `867eaa7acba2cb98578f6433d189f1a7a0fa0c59`, deployment `dpl_FHqyYQTgDNPcJ6MjmiBu6aQFDLNH`. Stable alias mapping confirmed. Open https://artyverse-x-ai-assistant.vercel.app/#/concept/home (Copilot / Studio tabs). This adds a labeled, interactive design preview; the original workspace and browser persistence remain available. Previous release details below are historical.
+**Latest release — Modern component kit + Storefront Builder (2026-11-08):** Vercel production READY, runtime commit `6896339578f250dc15f120d203cb348d14773a45`, deployment `dpl_3ZwTZNz9P8U2kPinqsN1pmV2712s`. Stable alias confirmed: https://artyverse-x-ai-assistant.vercel.app/#/concept/builder . Home: https://artyverse-x-ai-assistant.vercel.app/#/concept/home .
+
+Radix controls, adapted shadcn composition, Motion interactions, original editable storefront templates, independent export, real Studio handoff, and permission-based FFT mascot are included. Sample goods/prices; no checkout or AI generation claim. Existing workspace and access policy preserved.
+
+Evidence: `tests/evidence/component-upgrade/`, `COMPONENT_UPGRADE_REPORT.md`. Both builds passed; 20 unit tests and 47 browser/API regression tests passed, with 6 affected journeys repeated; 32 responsive and 7 overlay checks recorded no axe violations or page overflow. Vercel independently built `app-C51XHvNi.js`, reported zero known npm vulnerabilities and completed deployment; alias error null. Browser workflows were verified locally, not through protected production. No new Lighthouse/FPS/WCAG certification claim.
+
+Rollback: prior production `dpl_FHqyYQTgDNPcJ6MjmiBu6aQFDLNH`; recovery branch `recovery/pre-component-upgrade-20261108` at `2286811`. Documentation/evidence commits follow the runtime SHA without altering deployed code.
+
+---
+
+**Historical release — Prompt Pack concept preview (2026-11-08):** production READY at runtime commit `867eaa7acba2cb98578f6433d189f1a7a0fa0c59`, deployment `dpl_FHqyYQTgDNPcJ6MjmiBu6aQFDLNH`. Stable alias mapping confirmed. Open https://artyverse-x-ai-assistant.vercel.app/#/concept/home (Copilot / Studio tabs). This adds a labeled, interactive design preview; the original workspace and browser persistence remain available. Previous release details below are historical.
 
 Current evidence: `tests/evidence/concept/` and `docs/v3/CONCEPT_PREVIEW_TH.md`. Source/build fingerprints recorded; 41 unique regression cases passed, followed by 4 concept-specific checks after final isolated UI changes; 24 responsive screen states and 4 overlays passed default-state axe checks. The final browser build's sandbox/IndexedDB handoff was exercised locally. Vercel reports READY, 0 known npm vulnerabilities, and generated `app-CsY9zTcv.js` / `Concept-Cm4GXMLg.js` matching local build names. No new production-browser interaction claim is made; existing protection and execution-network limits remain.
 
