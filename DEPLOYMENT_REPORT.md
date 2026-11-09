@@ -1,4 +1,16 @@
-# Latest release — Primary domain and workspace transfer (2026-11-09)
+# Latest release — Editorial Studio (2026-11-09)
+
+https://artyverse-x.vercel.app — READY deployment `dpl_E9sKif7BuSYb3VdAH6CSASFECavw`, exact runtime revision `9c2b47f05ac72a418ec0e8ff3deaa677954427e5`. Alias and Git SHA verified. Build output app-plAV7eNz.js matches local production build (277.69KB /87.54KB gzip); these are build sizes, not performance scores. Build completed and found0 vulnerabilities in platform install output.
+
+Scope: deliberate editorial redesign across28 routes; eight primary links,19 specialist destinations, new native orbital Home artwork and shared controls/materials. Existing artifact data and workflows remain.29 units,56 accepted browser tests,65 static route/theme/viewport checks and local production-browser persistence smoke passed. Source fingerprint: f2cf2d896601adc5bc2f67d87aa9720f95490b88d5c23ba4fcd65044f5336b56. Detailed limits: docs/editorial-redesign/VERIFICATION.md.
+
+SSO enabled/all_except_custom_domains remains unchanged on both projects. Legacy alias retains migration deployment `dpl_9oi96N8rCr8sh7AhRVkHs5w2Ynho`; old browser data is not moved or removed. Protected production UI was not browser-tested; local built-browser tests and platform deployment evidence are separate.
+
+Rollback primary to `dpl_2XZdjpw1mCRjzUsnoSUKGMreWuiS`; source checkpoint recovery/pre-editorial-redesign-20261109. No data schema migration. Source/build and sanitized platform artifacts: tests/evidence/editorial-redesign/. A later evidence-only documentation commit does not change runtime.
+
+---
+
+# Previous release — Primary domain and workspace transfer (2026-11-09)
 
 Canonical: https://artyverse-x.vercel.app. Runtime source `2ab80b17725394cfb6e793dad869a4609a77e159`, pushed to GitHub main; recovery branch `recovery/pre-primary-domain-20261108` preserves db475e1.
 

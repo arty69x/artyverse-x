@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-11-09T04:44:48.087Z",
+  "sourceRevision": "9c2b47f05ac72a418ec0e8ff3deaa677954427e5",
+  "deployment": {
+    "id": "dpl_E9sKif7BuSYb3VdAH6CSASFECavw",
+    "state": "READY",
+    "url": "artyverse-cpr67y6l5-arty69xs-projects.vercel.app"
+  },
+  "primaryAlias": {
+    "alias": "artyverse-x.vercel.app",
+    "deploymentId": "dpl_E9sKif7BuSYb3VdAH6CSASFECavw",
+    "projectId": "prj_PhP5npiJbwWMGXFhsO5zWoFJpm3w"
+  },
+  "legacyAlias": {
+    "alias": "artyverse-x-ai-assistant.vercel.app",
+    "deploymentId": "dpl_9oi96N8rCr8sh7AhRVkHs5w2Ynho",
+    "projectId": "prj_IX1ylxFY2Uj4EcDyCr5CAigTkrXG"
+  },
+  "projects": [
+    {
+      "id": "prj_PhP5npiJbwWMGXFhsO5zWoFJpm3w",
+      "name": "artyverse-x",
+      "ssoProtection": {
+        "enabled": true,
+        "deploymentType": "all_except_custom_domains"
+      }
+    },
+    {
+      "id": "prj_IX1ylxFY2Uj4EcDyCr5CAigTkrXG",
+      "name": "artyverse-x-ai-assistant",
+      "ssoProtection": {
+        "enabled": true,
+        "deploymentType": "all_except_custom_domains"
+      }
+    }
+  ],
+  "rollbackDeploymentId": "dpl_2XZdjpw1mCRjzUsnoSUKGMreWuiS",
+  "buildLogExcerpts": [
+    "found 0 vulnerabilities",
+    "dist/assets/app-plAV7eNz.js                                 277.69 kB │ gzip: 87.54 kB",
+    "Build Completed in /vercel/output [21s]",
+    "Deployment completed"
+  ],
+  "limitations": "Platform READY/SHA/build/alias/access-policy checks; production interaction behind SSO was not browser-tested. Local production browser smoke is recorded separately."
+}
