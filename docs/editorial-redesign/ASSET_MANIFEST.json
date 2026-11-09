@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "editorial-orbital-sculpture",
+      "implementation": "src/v3/OrbitalArtwork.tsx",
+      "purpose": "Decorative multiverse sculpture on Home",
+      "format": "native SVG",
+      "viewBox": [0, 0, 600, 620],
+      "provenance": "Original programmatic artwork for this redesign; not a recovered 3D model or sampled reference",
+      "accessibility": "Decorative aria-hidden, no UI text or controls embedded",
+      "optimization": "No network asset, no animation loop, local unique gradient/filter IDs"
+    },
+    {
+      "id": "arcyca-composer-companion",
+      "implementation": "src/v3/Mascot.tsx",
+      "purpose": "Existing ARCYCA companion reused at the Home composer",
+      "format": "native SVG",
+      "provenance": "Existing project asset, retained",
+      "accessibility": "Named image, reduced-motion and hidden/offscreen lifecycle retained"
+    }
+  ]
+}

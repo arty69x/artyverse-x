@@ -69,3 +69,7 @@ Both builds/TypeScript,20 unit tests and9 affected browser journeys passed.12 TH
 
 ## Canonical domain / safe browser transfer
 29 unit tests;54 normal app browser/API regression cases; real two-origin isolated IndexedDB/service-worker migration with records/WAV/revisions/drafts, conflicts/idempotency/receipt URL mapping, tamper rejection, explicit forwarding and recovery bypass; legacy gate +4 destination widths checked with axe. See docs/domain-migration/VERIFICATION.md. Platform checks are separate from user-local data: no actual user's personal browser storage has been claimed migrated by Vercel API.
+
+## Editorial Studio — 2026-11-09
+
+Deliberate visual redesign across28 routes; shared neutral materials, simplified navigation and a new Home. Accepted56 browser regression cases (54 retained +2 new),29 units, server/browser builds and local production-browser persistence smoke passed.65 route/theme/viewport conditions show no unintended overflow, pageerrors or axe findings in tested states. These checks do not establish source pixel fidelity, physical-device performance or WCAG certification. Evidence: tests/evidence/editorial-redesign; detailed limits/initial diagnostics: docs/editorial-redesign/VERIFICATION.md. Existing historical evidence was preserved.

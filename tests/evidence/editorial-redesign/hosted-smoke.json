@@ -1,0 +1,10 @@
+{
+  "conditions": "Local production browser build, real IndexedDB/service worker, isolated browser fixture",
+  "draftReload": true,
+  "createConversation": true,
+  "savedMessageReload": true,
+  "specialistDirectoryLinks": 19,
+  "focusRestoration": true,
+  "savedFixtureRoute": "#/chat/b596c4d3-6652-4b34-96f0-ec132b0fa775",
+  "errors": []
+}

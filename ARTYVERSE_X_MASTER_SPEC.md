@@ -49,3 +49,7 @@ Native controls, keyboard command navigation, roving code/Design OS tabs, native
 ## Evidence and remaining work
 
 Actual results: `VERIFICATION_REPORT.md`; acceptance: `docs/v3/ACCEPTANCE_MATRIX.md`; workflow map: `docs/v3/WORKFLOW_MAP.md`; limits: `KNOWN_LIMITATIONS.md`; rollback: `MIGRATION_AND_ROLLBACK.md`. V1/V2 reports are historical, not copied verification. No public deployment, cloud database, auth, remote collaboration, payment, community service or live paid inference was added without a real connection. Exact reference files named by the earlier Prompt Pack were not available; this is a deliberate merged redesign, not pixel reconstruction.
+
+## 2026-11-09 — editorial studio redesign
+
+Latest user direction requests a calmer, more coherent modern interface across every workspace. docs/editorial-redesign/SYSTEM.md defines the implemented navigation, visual system, screen coverage and preserved workflows. Home now uses original native orbital artwork and one composer; eight sidebar entries and All tools retain every existing route. Shared semantic surfaces are neutral graphite/green rather than blue. Source reference boards remain available; this redesign is evaluated as art direction rather than source pixel reconstruction. No new cloud/AI capabilities are implied by visual completion.

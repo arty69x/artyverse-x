@@ -1,0 +1,211 @@
+[WebServer] (node:7551) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 54 tests using 1 worker
+
+(node:7575) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/component-kit.spec.ts:9:1 › Builder draft survives reload, validates required content and applies reviewed presets with undo (5.2s)
+  ✓   2 tests/e2e/component-kit.spec.ts:54:1 › Responsive Motion viewport, Radix keyboard tabs and shopping selection retain their state (4.5s)
+  ✓   3 tests/e2e/component-kit.spec.ts:114:1 › Real HTML export and saved Studio handoff preserve a functional, isolated storefront (3.5s)
+  ✓   4 tests/e2e/component-kit.spec.ts:150:1 › Radix switches change real preview settings; local brief result has honest saved provenance (3.3s)
+  ✓   5 tests/e2e/component-kit.spec.ts:188:1 › Microphone rig is gesture-only and releases real synthetic tracks and AudioContexts on stop and navigation (4.1s)
+  ✓   6 tests/e2e/component-kit.spec.ts:272:1 › Permission denial is recoverable and reduced-motion keeps the live rig static (4.1s)
+  ✓   7 tests/e2e/concept.spec.ts:2:1 › Concept screens are labeled samples, use scoped themes and leave saved work unchanged (3.3s)
+  ✓   8 tests/e2e/concept.spec.ts:27:1 › Sample transcript, format keyboard, evidence and tone controls have real local effects (4.0s)
+  ✓   9 tests/e2e/concept.spec.ts:55:1 › Concept Studio runs only on request, captures actual events, blocks parent DOM and transfers editable source (4.3s)
+  ✓  10 tests/e2e/concept.spec.ts:94:1 › Mobile concept navigation, drawer and command search keep focus and route correctly (3.7s)
+  ✓  11 tests/e2e/journeys.spec.ts:8:1 › Home → conversation → Create → save → Library → reopen (11.7s)
+  ✓  12 tests/e2e/journeys.spec.ts:46:1 › Template creates a new document; editor undo and SVG export work (5.0s)
+  ✓  13 tests/e2e/journeys.spec.ts:69:1 › Research drafts survive navigation and selected material creates document (4.7s)
+  ✓  14 tests/e2e/journeys.spec.ts:92:1 › Local workflow validates, runs and saves a reproducible result (4.6s)
+  ✓  15 tests/e2e/journeys.spec.ts:106:1 › Motion geometry, preset round trip and reduced motion (5.5s)
+  ✓  16 tests/e2e/journeys.spec.ts:147:1 › API revision conflicts, trash restore, backup validation and origins (523ms)
+  ✘  17 tests/e2e/journeys.spec.ts:191:1 › No page overflow at target widths and main routes render without runtime errors (25.0s)
+(node:9045) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  18 tests/e2e/journeys.spec.ts:222:1 › Home semantics, dialog keyboard and reduced-motion visibility (9.2s)
+(node:9246) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  19 tests/e2e/journeys.spec.ts:245:1 › Synthetic microphone → stop → playback → save → Library; tracks stop (7.9s)
+  ✓  20 tests/e2e/journeys.spec.ts:284:1 › Live timer pause, cue presentation and session save (5.8s)
+  ✓  21 tests/e2e/journeys.spec.ts:304:1 › Backup round trip into an empty second database preserves documents, revisions and media (2.0s)
+  ✓  22 tests/e2e/journeys.spec.ts:370:1 › Document JSON export → validate → preview → apply → save round trip (5.9s)
+  ✓  23 tests/e2e/journeys.spec.ts:407:1 › Motion Lab controls have accessible names (6.3s)
+  ✓  24 tests/e2e/journeys.spec.ts:421:1 › Newer saved revision wins over stale browser cache without losing the draft (5.3s)
+  ✓  25 tests/e2e/pattern-library.spec.ts:11:1 › Ready layouts and source inventory are searchable, separate and do not create work by browsing (5.2s)
+  ✓  26 tests/e2e/pattern-library.spec.ts:37:1 › Pattern drafts validate, survive reload and import through review without running imported code (6.1s)
+  ✓  27 tests/e2e/pattern-library.spec.ts:97:1 › All eight layouts render only on request and remain inside the existing opaque sandbox (6.4s)
+  ✓  28 tests/e2e/pattern-library.spec.ts:121:1 › Exported sample filtering, depth keyboard and chapter navigation have real effects (4.7s)
+  ✓  29 tests/e2e/pattern-library.spec.ts:156:1 › Actual HTML download and saved Code Studio document preserve the selected layout (3.4s)
+  ✓  30 tests/e2e/reconstruction.spec.ts:5:1 › Unified Extract Compose Ship entry points navigate to actual workspaces (6.1s)
+  ✓  31 tests/e2e/reconstruction.spec.ts:30:1 › Brand board uses native vector lockups and canonical tokens (2.9s)
+  ✓  32 tests/e2e/v2.spec.ts:6:1 › Project → code source → saved revision → scoped Library → reopen (5.5s)
+  ✓  33 tests/e2e/v2.spec.ts:38:1 › Code sandbox executes on Run, denies parent access, and persists visual CSS edits (3.9s)
+  ✓  34 tests/e2e/v2.spec.ts:66:1 › Source import is validated and reviewed; undo/redo restore the document (2.3s)
+  ✓  35 tests/e2e/v2.spec.ts:104:1 › Local agent and unavailable-provider fallback have honest provenance and retained artifacts (2.1s)
+  ✓  36 tests/e2e/v2.spec.ts:139:1 › Graph connections reject cycles and save executed artifacts (2.5s)
+  ✘  37 tests/e2e/v2.spec.ts:160:1 › Sound synthesis exports nonzero PCM WAV, saves playable audio, and closes AudioContext (10.0s)
+(node:10585) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  38 tests/e2e/v2.spec.ts:198:1 › Dynamics parameters save and restore; sensor starts only on request (8.0s)
+  ✓  39 tests/e2e/v2.spec.ts:216:1 › Story scripts, timeline, linked documents and presentation share saved sources (4.8s)
+  ✓  40 tests/e2e/v2.spec.ts:254:1 › New workspaces render without page overflow or runtime errors across six widths (14.7s)
+  ✓  41 tests/e2e/v2.spec.ts:286:1 › New workbench controls pass automated WCAG checks in static states (21.7s)
+  ✓  42 tests/e2e/v2.spec.ts:316:1 › Provider adapter contract: priced fixture response, cache, budget block, failure fallback and cancellation (3.2s)
+  ✓  43 tests/e2e/v2.spec.ts:447:1 › Multi-step local agent graph records two independent runs and a saved note (6.7s)
+  ✓  44 tests/e2e/v2.spec.ts:524:1 › Corrupt advanced draft recovers safely and wrong-kind deep link shows missing state (3.5s)
+  ✓  45 tests/e2e/v3.spec.ts:3:1 › Thai-first dashboard, theme preference and system theme persist without changing saved artifacts (4.1s)
+  ✓  46 tests/e2e/v3.spec.ts:21:1 › Command palette supports filtering, arrows, Enter and restores focus (3.9s)
+  ✓  47 tests/e2e/v3.spec.ts:40:1 › Home portal order can be changed with keyboard-accessible controls and survives reload (3.9s)
+  ✓  48 tests/e2e/v3.spec.ts:58:1 › Project rename, search, duplication and trash undo preserve the original project (4.6s)
+  ✓  49 tests/e2e/v3.spec.ts:120:1 › Copilot → actual user evidence → editable outline → Question Bank → Practice → saved session (5.9s)
+  ✓  50 tests/e2e/v3.spec.ts:187:1 › Marketplace starter preview creates a new editable document; no checkout is claimed (3.0s)
+  ✓  51 tests/e2e/v3.spec.ts:206:1 › Design system has eleven live sections, real contrast pairs, native dialog and roving tabs (5.1s)
+  ✘  52 tests/e2e/v3.spec.ts:228:1 › Mobile navigation drawer, answer sheet, safe area and accessible focus work (45.4s)
+(node:12110) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  53 tests/e2e/v3.spec.ts:256:1 › Keyboard tabs in code editor move selection without trapping focus (2.7s)
+  ✓  54 tests/e2e/v3.spec.ts:273:1 › Home hero is usable while saved data loads, with honest loading metrics and retained input (3.0s)
+
+
+  1) tests/e2e/journeys.spec.ts:191:1 › No page overflow at target widths and main routes render without runtime errors 
+
+    Error: page.evaluate: Execution context was destroyed, most likely because of a navigation
+
+      211 |       await page.waitForTimeout(300);
+      212 |       expect(
+    > 213 |         await page.evaluate(
+          |                    ^
+      214 |           () => document.documentElement.scrollWidth <= innerWidth + 1,
+      215 |         ),
+      216 |         `${route} at ${width}`,
+        at /workspace/artyverse-x/tests/e2e/journeys.spec.ts:213:20
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/journeys-No-page-overflow--3c053-nder-without-runtime-errors/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/journeys-No-page-overflow--3c053-nder-without-runtime-errors/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/journeys-No-page-overflow--3c053-nder-without-runtime-errors/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/journeys-No-page-overflow--3c053-nder-without-runtime-errors/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests/e2e/journeys.spec.ts:222:1 › Home semantics, dialog keyboard and reduced-motion visibility 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  -  1
+    + Received  + 10
+
+    - Array []
+    + Array [
+    +   Object {
+    +     "id": "color-contrast",
+    +     "nodes": Array [
+    +       Array [
+    +         "strong > em",
+    +       ],
+    +     ],
+    +   },
+    + ]
+
+      240 |       nodes: v.nodes.map((n) => n.target),
+      241 |     })),
+    > 242 |   ).toEqual([]);
+          |     ^
+      243 | });
+      244 |
+      245 | test("Synthetic microphone → stop → playback → save → Library; tracks stop", async ({
+        at /workspace/artyverse-x/tests/e2e/journeys.spec.ts:242:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/journeys-Home-semantics-di-549f8-d-reduced-motion-visibility/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/journeys-Home-semantics-di-549f8-d-reduced-motion-visibility/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/journeys-Home-semantics-di-549f8-d-reduced-motion-visibility/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/journeys-Home-semantics-di-549f8-d-reduced-motion-visibility/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) tests/e2e/v2.spec.ts:160:1 › Sound synthesis exports nonzero PCM WAV, saves playable audio, and closes AudioContext 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "closed"
+    Received: undefined
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      193 |   await expect
+      194 |     .poll(() => page.evaluate(() => (window as any).__audio.at(-1)?.state))
+    > 195 |     .toBe("closed");
+          |      ^
+      196 | });
+      197 |
+      198 | test("Dynamics parameters save and restore; sensor starts only on request", async ({
+        at /workspace/artyverse-x/tests/e2e/v2.spec.ts:195:6
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v2-Sound-synthesis-exports-f7d9c-dio-and-closes-AudioContext/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/v2-Sound-synthesis-exports-f7d9c-dio-and-closes-AudioContext/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v2-Sound-synthesis-exports-f7d9c-dio-and-closes-AudioContext/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/v2-Sound-synthesis-exports-f7d9c-dio-and-closes-AudioContext/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) tests/e2e/v3.spec.ts:228:1 › Mobile navigation drawer, answer sheet, safe area and accessible focus work 
+
+    Test timeout of 45000ms exceeded.
+
+    Error: locator.click: Test timeout of 45000ms exceeded.
+    Call log:
+      - waiting for getByRole('dialog').getByRole('link', { name: /Interview Copilot/ })
+
+
+      239 |     page.getByRole("navigation", { name: "Quick navigation" }),
+      240 |   ).toBeVisible();
+    > 241 |   await page.getByRole("button", { name: "More workspaces" }).click();
+          |      ^
+      242 |   await page
+      243 |     .getByRole("dialog")
+      244 |     .getByRole("button", { name: "All tools" })
+        at /workspace/artyverse-x/tests/e2e/v3.spec.ts:241:6
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/v3-Mobile-navigation-drawe-0a0b7-a-and-accessible-focus-work/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/v3-Mobile-navigation-drawe-0a0b7-a-and-accessible-focus-work/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/v3-Mobile-navigation-drawe-0a0b7-a-and-accessible-focus-work/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/v3-Mobile-navigation-drawe-0a0b7-a-and-accessible-focus-work/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    tests/e2e/journeys.spec.ts:191:1 › No page overflow at target widths and main routes render without runtime errors 
+    tests/e2e/journeys.spec.ts:222:1 › Home semantics, dialog keyboard and reduced-motion visibility 
+    tests/e2e/v2.spec.ts:160:1 › Sound synthesis exports nonzero PCM WAV, saves playable audio, and closes AudioContext 
+    tests/e2e/v3.spec.ts:228:1 › Mobile navigation drawer, answer sheet, safe area and accessible focus work 
+  50 passed (6.0m)

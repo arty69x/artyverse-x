@@ -1,3 +1,5 @@
+Current visual system: **Editorial Studio** — a quieter Home, eight primary destinations and a grouped All tools directory, with shared light/dark surfaces across existing workspaces. Design decisions and real verification: [docs/editorial-redesign/SYSTEM.md](docs/editorial-redesign/SYSTEM.md). Existing records, drafts and editor workflows are preserved.
+
 # ARTYVERSE X · Visual Engineering Studio
 
 **Main site: https://artyverse-x.vercel.app** · [Move old browser work](https://artyverse-x.vercel.app/#/transfer) · [Recovery](https://artyverse-x-ai-assistant.vercel.app/?recovery=1#/transfer)

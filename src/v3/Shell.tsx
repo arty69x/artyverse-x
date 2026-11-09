@@ -22,6 +22,7 @@ import {
   Check,
   Monitor,
   ChevronDown,
+  SlidersHorizontal,
 } from "lucide-react";
 import { routes, type Navigate } from "../App";
 import { useStore, useT } from "../core/store";
@@ -31,37 +32,39 @@ import { useTheme } from "./Theme";
 import { PrismMark } from "./Brand";
 const groups = [
   {
-    en: "THINK & CONNECT",
-    th: "คิดและเชื่อมโยง",
-    keys: ["copilot", "practice", "chat", "research", "agents"],
+    en: "WORKSPACE",
+    th: "พื้นที่ทำงาน",
+    keys: ["home", "projects", "chat", "library"],
   },
   {
-    en: "MAKE SOMETHING",
-    th: "พื้นที่สร้างสรรค์",
+    en: "CREATE",
+    th: "สร้างสรรค์",
+    keys: ["builder", "create", "templates", "patterns"],
+  },
+];
+const advancedGroups = [
+  {
+    en: "Think & research",
+    th: "คิดและค้นคว้า",
+    keys: ["research", "copilot", "practice", "questions", "agents"],
+  },
+  {
+    en: "Specialist studios",
+    th: "สตูดิโอเฉพาะทาง",
+    keys: ["code", "sound", "voice", "dynamics", "story", "live", "automate"],
+  },
+  {
+    en: "Discover & system",
+    th: "สำรวจและระบบ",
     keys: [
-      "builder",
-      "create",
-      "code",
-      "sound",
-      "dynamics",
-      "story",
-      "templates",
+      "explore",
+      "marketplace",
+      "analytics",
+      "design-system",
+      "design",
+      "system",
+      "transfer",
     ],
-  },
-  {
-    en: "YOUR WORKSPACE",
-    th: "จัดการงานของคุณ",
-    keys: ["home", "projects", "library", "automate", "voice", "live"],
-  },
-  {
-    en: "DISCOVER",
-    th: "ค้นพบสิ่งใหม่",
-    keys: ["explore", "marketplace", "analytics"],
-  },
-  {
-    en: "DESIGN & SYSTEM",
-    th: "ออกแบบและตั้งค่า",
-    keys: ["patterns", "design-system", "design", "system", "settings"],
   },
 ];
 export function Shell({
@@ -77,6 +80,7 @@ export function Shell({
     t = useT(),
     theme = useTheme(),
     [menu, setMenu] = useState(false),
+    [tools, setTools] = useState(false),
     [command, setCommand] = useState(false),
     [create, setCreate] = useState(false),
     [query, setQuery] = useState(""),
@@ -201,13 +205,37 @@ export function Shell({
                     >
                       <Icon size={19} />
                       <span>{s.locale === "th" ? r[2] : r[1]}</span>
-                      {key === "copilot" && <i className="v3-nav-new">NEW</i>}
                     </a>
                   );
                 })}
               </nav>
             </div>
           ))}
+        </div>
+        <div className="studio-nav-bottom">
+          <button
+            className={
+              "studio-tools-trigger " +
+              (advancedGroups.some((g) => g.keys.includes(route))
+                ? "active"
+                : "")
+            }
+            onClick={() => {
+              setMenu(false);
+              setTools(true);
+            }}
+          >
+            <Sparkles size={18} />
+            <span>{t("All tools", "เครื่องมือทั้งหมด")}</span>
+            <ArrowUpRight size={15} />
+          </button>
+          <a
+            href="#/settings"
+            aria-current={route === "settings" ? "page" : undefined}
+          >
+            <SlidersHorizontal size={18} />
+            <span>{t("Settings", "ตั้งค่า")}</span>
+          </a>
         </div>
         <div className="v3-sidebar-note">
           <span className="status-dot" />
@@ -449,6 +477,44 @@ export function Shell({
           onClose={() => setMenu(false)}
         >
           <div className="v3-drawer">{navigation()}</div>
+        </Modal>
+      )}
+      {tools && (
+        <Modal
+          wide
+          title={t("Your creative toolkit", "ทุกเครื่องมือในสตูดิโอ")}
+          onClose={() => {
+            setTools(false);
+            if (matchMedia("(max-width: 1023px)").matches)
+              requestAnimationFrame(() => menuTrigger.current?.focus());
+          }}
+        >
+          <div className="studio-tool-directory">
+            {advancedGroups.map((g) => (
+              <section key={g.en}>
+                <h3>{t(g.en, g.th)}</h3>
+                <div>
+                  {g.keys.map((key) => {
+                    const entry = routes.find((r) => r[0] === key);
+                    if (!entry) return null;
+                    const Icon = entry[3];
+                    return (
+                      <a
+                        key={key}
+                        href={"#/" + key}
+                        aria-current={route === key ? "page" : undefined}
+                        onClick={() => setTools(false)}
+                      >
+                        <Icon size={20} />
+                        <span>{t(entry[1], entry[2])}</span>
+                        <ArrowUpRight size={15} />
+                      </a>
+                    );
+                  })}
+                </div>
+              </section>
+            ))}
+          </div>
         </Modal>
       )}
       {command && (

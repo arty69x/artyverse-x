@@ -225,7 +225,7 @@ test("Home semantics, dialog keyboard and reduced-motion visibility", async ({
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/");
   await expect(
-    page.getByRole("heading", { name: "EXTRACT. COMPOSE. SHIP." }),
+    page.getByRole("heading", { name: "A little idea. An entirely new universe." }),
   ).toBeVisible();
   await page.getByRole("button", { name: "Search", exact: true }).click();
   await expect(page.getByRole("dialog")).toBeVisible();

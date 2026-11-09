@@ -1,0 +1,448 @@
+{
+  "conditions": "Chromium simulated viewports, isolated local server data; screenshots are redesign review, not pixel reconstruction",
+  "checks": [
+    {
+      "route": "home",
+      "width": 390,
+      "overflow": false,
+      "title": "Home · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "projects",
+      "width": 390,
+      "overflow": false,
+      "title": "Projects · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "chat",
+      "width": 390,
+      "overflow": false,
+      "title": "Conversations · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "library",
+      "width": 390,
+      "overflow": false,
+      "title": "Your library · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "builder",
+      "width": 390,
+      "overflow": false,
+      "title": "Website Builder · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "create",
+      "width": 390,
+      "overflow": false,
+      "title": "Create · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "templates",
+      "width": 390,
+      "overflow": false,
+      "title": "Templates · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "patterns",
+      "width": 390,
+      "overflow": false,
+      "title": "Pattern Library · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "research",
+      "width": 390,
+      "overflow": false,
+      "title": "Research · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "copilot",
+      "width": 390,
+      "overflow": false,
+      "title": "Interview Copilot · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "practice",
+      "width": 390,
+      "overflow": false,
+      "title": "Practice · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "questions",
+      "width": 390,
+      "overflow": false,
+      "title": "Question Bank · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "agents",
+      "width": 390,
+      "overflow": false,
+      "title": "Agent Studio · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "code",
+      "width": 390,
+      "overflow": false,
+      "title": "Code Studio · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "sound",
+      "width": 390,
+      "overflow": false,
+      "title": "Sound Lab · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "voice",
+      "width": 390,
+      "overflow": false,
+      "title": "Voice studio · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "dynamics",
+      "width": 390,
+      "overflow": false,
+      "title": "Dynamics · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "story",
+      "width": 390,
+      "overflow": false,
+      "title": "Story Studio · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "live",
+      "width": 390,
+      "overflow": false,
+      "title": "Live & present · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "automate",
+      "width": 390,
+      "overflow": false,
+      "title": "Automate · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "explore",
+      "width": 390,
+      "overflow": false,
+      "title": "Explore · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "marketplace",
+      "width": 390,
+      "overflow": false,
+      "title": "Marketplace · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "analytics",
+      "width": 390,
+      "overflow": false,
+      "title": "Analytics · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "design-system",
+      "width": 390,
+      "overflow": false,
+      "title": "Design System · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "design",
+      "width": 390,
+      "overflow": false,
+      "title": "Design OS · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "system",
+      "width": 390,
+      "overflow": false,
+      "title": "System & costs · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "settings",
+      "width": 390,
+      "overflow": false,
+      "title": "Settings · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "transfer",
+      "width": 390,
+      "overflow": false,
+      "title": "Move workspace · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "home",
+      "width": 1440,
+      "overflow": false,
+      "title": "Home · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "projects",
+      "width": 1440,
+      "overflow": false,
+      "title": "Projects · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "chat",
+      "width": 1440,
+      "overflow": false,
+      "title": "Conversations · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "library",
+      "width": 1440,
+      "overflow": false,
+      "title": "Your library · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "builder",
+      "width": 1440,
+      "overflow": false,
+      "title": "Website Builder · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "create",
+      "width": 1440,
+      "overflow": false,
+      "title": "Create · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "templates",
+      "width": 1440,
+      "overflow": false,
+      "title": "Templates · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "patterns",
+      "width": 1440,
+      "overflow": false,
+      "title": "Pattern Library · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "research",
+      "width": 1440,
+      "overflow": false,
+      "title": "Research · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "copilot",
+      "width": 1440,
+      "overflow": false,
+      "title": "Interview Copilot · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "practice",
+      "width": 1440,
+      "overflow": false,
+      "title": "Practice · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "questions",
+      "width": 1440,
+      "overflow": false,
+      "title": "Question Bank · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "agents",
+      "width": 1440,
+      "overflow": false,
+      "title": "Agent Studio · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "code",
+      "width": 1440,
+      "overflow": false,
+      "title": "Code Studio · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "sound",
+      "width": 1440,
+      "overflow": false,
+      "title": "Sound Lab · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "voice",
+      "width": 1440,
+      "overflow": false,
+      "title": "Voice studio · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "dynamics",
+      "width": 1440,
+      "overflow": false,
+      "title": "Dynamics · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "story",
+      "width": 1440,
+      "overflow": false,
+      "title": "Story Studio · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "live",
+      "width": 1440,
+      "overflow": false,
+      "title": "Live & present · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "automate",
+      "width": 1440,
+      "overflow": false,
+      "title": "Automate · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "explore",
+      "width": 1440,
+      "overflow": false,
+      "title": "Explore · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "marketplace",
+      "width": 1440,
+      "overflow": false,
+      "title": "Marketplace · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "analytics",
+      "width": 1440,
+      "overflow": false,
+      "title": "Analytics · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "design-system",
+      "width": 1440,
+      "overflow": false,
+      "title": "Design System · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "design",
+      "width": 1440,
+      "overflow": false,
+      "title": "Design OS · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "system",
+      "width": 1440,
+      "overflow": false,
+      "title": "System & costs · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "settings",
+      "width": 1440,
+      "overflow": false,
+      "title": "Settings · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "transfer",
+      "width": 1440,
+      "overflow": false,
+      "title": "Move workspace · ARTYVERSE X",
+      "violations": []
+    },
+    {
+      "route": "home",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "route": "home",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "route": "home",
+      "width": 1024,
+      "overflow": false
+    },
+    {
+      "route": "home",
+      "width": 1920,
+      "overflow": false
+    },
+    {
+      "route": "home",
+      "width": 1440,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "route": "templates",
+      "width": 1440,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "route": "chat",
+      "width": 1440,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "route": "settings",
+      "width": 1440,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "route": "copilot",
+      "width": 1440,
+      "theme": "light",
+      "violations": []
+    }
+  ],
+  "errors": []
+}

@@ -47,3 +47,5 @@ void boot().catch((e) => {
 import "./v3/reconstruction.css";
 
 import "./v3/typography.css";
+
+import "./v3/editorial.css";

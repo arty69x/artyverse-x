@@ -7,7 +7,7 @@ test("Unified Extract Compose Ship entry points navigate to actual workspaces", 
 }) => {
   await page.goto("/#/home");
   await expect(
-    page.getByRole("heading", { name: "EXTRACT. COMPOSE. SHIP." }),
+    page.getByRole("heading", { name: "A little idea. An entirely new universe." }),
   ).toBeVisible();
   await page.locator(".recon-flow button").nth(0).click();
   await expect(page).toHaveURL(/#\/research/);

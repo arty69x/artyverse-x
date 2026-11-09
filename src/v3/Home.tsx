@@ -2,11 +2,7 @@ import { useState } from "react";
 import {
   ArrowUp,
   ArrowUpRight,
-  Plus,
   Play,
-  Sparkles,
-  Command,
-  Mic,
   AudioLines,
   Workflow,
   Layers,
@@ -27,8 +23,9 @@ import { useStore, useT, useDraft } from "../core/store";
 import { Button, Modal } from "../components/UI";
 import type { Navigate } from "../App";
 import { routeForItem } from "../../shared/routes";
+
 import { Arcyca } from "./Mascot";
-import { StudioLaunchpad } from "./StudioLaunchpad";
+import { OrbitalArtwork } from "./OrbitalArtwork";
 
 const portals = [
   {
@@ -180,7 +177,6 @@ export function HomeV3({ go }: { go: Navigate }) {
   const s = useStore(),
     t = useT(),
     [draft, setDraft] = useDraft("home-composer", ""),
-    [artFailed, setArtFailed] = useState(false),
     [mode, setMode] = useState("notebook"),
     [busy, setBusy] = useState(false),
     [tour, setTour] = useState(false),
@@ -261,102 +257,60 @@ export function HomeV3({ go }: { go: Navigate }) {
   }
   return (
     <div className="v3-home">
-      <div className="v3-home-intro">
-        <div>
-          <span className="eyebrow">// VISUAL ENGINEERING STUDIO</span>
-          <p>
-            {t(
-              "Reverse. Remix. Rebuild.",
-              "ถอดแนวคิด ผสมความคิดสร้างสรรค์ แล้วสร้างให้เกิดขึ้นจริง",
-            )}
-          </p>
-        </div>
-        <a href="#/patterns" className="v3-text-link">
-          {t("Explore the new collection", "สำรวจรูปแบบดีไซน์ใหม่")}{" "}
-          <ArrowUpRight size={17} />
-        </a>
-      </div>
-      <section className="v3-hero">
-        <div className="v3-hero-grid" />
-        <div className="v3-hero-copy">
-          <span className="v3-live-label">
-            <i />
-            ARTYVERSE X / CREATIVE WORKSPACE
+      <section className="studio-hero">
+        <div className="studio-hero-copy">
+          <span className="studio-kicker">
+            <i /> ARTIST × MULTIVERSE
           </span>
-          <h1 className="recon-manifesto" lang="en">
-            <span>EXTRACT.</span>
-            <mark>COMPOSE.</mark>
-            <em>
-              SHIP.
-              <i aria-hidden="true" />
-            </em>
+          <h1 lang="en">
+            A little idea.
+            <br />
+            <span>An entirely</span>
+            <br />
+            <em>new universe.</em>
           </h1>
           <p>
             {t(
-              "Reverse. Remix. Rebuild.",
-              "ถอดแนวคิด ผสานจินตนาการ สร้างผลงานในแบบคุณ",
-            )}
-            <br />
-            {t(
-              "Ideas, code, sound and motion. One connected studio.",
-              "ไอเดีย โค้ด เสียง และการเคลื่อนไหว ในสตูดิโอเดียว",
+              "A connected space to think, build and bring your ideas to life. Make something only you could make.",
+              "พื้นที่ที่เชื่อมความคิด งานออกแบบ และเครื่องมือสร้างสรรค์ เพื่อสร้างสิ่งที่เป็นคุณอย่างแท้จริง",
             )}
           </p>
-          <div className="v3-hero-actions">
+          <div className="studio-hero-actions">
             <Button variant="primary" onClick={() => go("create")}>
-              <Plus size={18} />
               {t("Start creating", "เริ่มสร้างสรรค์")}
+              <ArrowUpRight size={18} />
             </Button>
-            <button className="v3-hero-tour" onClick={() => setTour(true)}>
-              <Play size={15} />
-              {t("Explore the process", "ดูขั้นตอนการทำงาน")}
+            <button className="studio-tour" onClick={() => setTour(true)}>
+              <Play size={14} />
+              {t("How it works", "รู้จักสตูดิโอ")}
             </button>
           </div>
+          <div className="studio-hero-caption">
+            <div className="studio-process recon-flow">
+              {[
+                ["research", "EXTRACT"],
+                ["builder", "COMPOSE"],
+                ["library", "SHIP"],
+              ].map(([r, label]) => (
+                <button key={r} onClick={() => go(r)}>
+                  {label}
+                  <ArrowUpRight size={11} />
+                </button>
+              ))}
+            </div>
+            <span>YOUR NEXT CHAPTER ↗</span>
+          </div>
         </div>
-        <div className="v3-hero-character">
-          <div className="v3-orbit-ring a" />
-          <div className="v3-orbit-ring b" />
-          {artFailed ? (
-            <Arcyca />
-          ) : (
-            <img
-              className="recon-arcyca-art"
-              src="/assets/arcyca-reconstructed.webp"
-              alt="ARCYCA · creative companion"
-              width="960"
-              height="886"
-              fetchPriority="high"
-              onError={() => setArtFailed(true)}
-            />
-          )}
-          <span className="v3-floating-chip chip-one">
-            <Sparkles size={15} />
-            Think. Create. Analyze.
-          </span>
-          <span className="v3-floating-chip chip-two">
-            <Command size={15} />
-            Hyper-Polish. Drive.
-          </span>
-          <span className="v3-hero-caption">
-            ARCYCA / YOUR CREATIVE COMPANION
-          </span>
-        </div>
-        <div className="v3-hero-index">
-          01 — THINK. CREATE. ANALYZE. HYPER-POLISH. DRIVE.
-        </div>
+        <OrbitalArtwork />
       </section>
-      <StudioLaunchpad go={go} />
       <section
         className="v3-composer"
         aria-label={t("Start an idea", "เริ่มต้นไอเดีย")}
       >
         <div className="v3-composer-text">
-          <img
-            src="/assets/whisper-micro-white.svg"
-            alt="Whisper assistant"
-            width="26"
-            height="26"
-          />
+          <span className="studio-composer-companion">
+            <Arcyca />
+          </span>
           <label className="sr-only" htmlFor="v3-idea">
             {t("Your idea", "ไอเดียของคุณ")}
           </label>
@@ -508,39 +462,6 @@ export function HomeV3({ go }: { go: Navigate }) {
             </Button>
           </div>
         )}
-      </section>
-      <section className="v3-copilot-banner">
-        <div>
-          <span className="eyebrow">// NEXT GEN INTERVIEW WORKSPACE</span>
-          <h2>
-            Speak <em>smarter.</em>
-          </h2>
-          <p>
-            {t(
-              "Bring your evidence. Find your words. Practice with purpose.",
-              "นำประสบการณ์จริงมาเรียบเรียงคำตอบ แล้วฝึกอย่างมีเป้าหมาย",
-            )}
-          </p>
-          <a href="#/copilot">
-            {t("Open Interview Copilot", "เปิด Interview Copilot")}
-            <ArrowUpRight size={18} />
-          </a>
-        </div>
-        <div className="v3-banner-steps">
-          <span>
-            <i>01</i>
-            {t("Your question", "คำถามของคุณ")}
-          </span>
-          <span>
-            <i>02</i>
-            {t("Your evidence", "ประสบการณ์จริง")}
-          </span>
-          <span>
-            <i>03</i>
-            {t("Your answer", "คำตอบในแบบคุณ")}
-          </span>
-          <Mic size={45} />
-        </div>
       </section>
       <section className="v3-section">
         <header className="v3-section-head">

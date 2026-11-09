@@ -1,0 +1,115 @@
+{
+  "basis": "Proposed redesign, not sampled reference values",
+  "changes": [
+    {
+      "original": "#080B12",
+      "proposed": "#090A0B",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#0C101A",
+      "proposed": "#0D0F10",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#111724",
+      "proposed": "#121516",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#192131",
+      "proposed": "#1A1E20",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#222D40",
+      "proposed": "#242A2D",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#2B374B",
+      "proposed": "#293033",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#60708B",
+      "proposed": "#657579",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#F4F6FB",
+      "proposed": "#F2F5F2",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#B0BDD1",
+      "proposed": "#B2BDBB",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#95A3BA",
+      "proposed": "#97A5A2",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#352546",
+      "proposed": "#243029",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#0B1220",
+      "proposed": "#0D1112",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#F3F5FA",
+      "proposed": "#F4F5F1",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#EAF0F7",
+      "proposed": "#EBEEE7",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#DEE6F1",
+      "proposed": "#DFE5DC",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#D0D9E7",
+      "proposed": "#D2DAD1",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#718097",
+      "proposed": "#73806F",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#142037",
+      "proposed": "#18211C",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#4E6079",
+      "proposed": "#4E6057",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#586A82",
+      "proposed": "#56675D",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#ECDDFF",
+      "proposed": "#E3EDD8",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    },
+    {
+      "original": "#F4F7FC",
+      "proposed": "#F4F6F0",
+      "reason": "Neutral graphite/green material unification; semantic text contrast tested"
+    }
+  ]
+}
