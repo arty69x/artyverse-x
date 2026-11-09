@@ -1,5 +1,19 @@
+# Latest release — Primary domain and workspace transfer (2026-11-09)
+
+Canonical: https://artyverse-x.vercel.app. Runtime source `2ab80b17725394cfb6e793dad869a4609a77e159`, pushed to GitHub main; recovery branch `recovery/pre-primary-domain-20261108` preserves db475e1.
+
+Both production deployments READY with exact source SHA and aliases verified: primary `dpl_FfZC8GtPdLfsGkiqzACKk6J6whyW`; legacy `dpl_9oi96N8rCr8sh7AhRVkHs5w2Ynho`. Both build app-Gl3VX_PN.js, matching the local production build. SSO remains enabled/all_except_custom_domains on both. Legacy ignore-build update (`exit 0`) was accepted after READY to retain the transfer release; no domain removed and no blanket redirect.
+
+29 unit tests,54 existing regression cases and real two-origin IndexedDB/browser transfer checks passed. See docs/domain-migration/VERIFICATION.md and tests/evidence/domain-migration/. Production interaction behind SSO was not browser-tested; platform READY/alias evidence is separate. No real user's browser data has been moved by the agent. Users export from the old browser/profile and review/import on main; old `?recovery=1` remains available. Guide: docs/domain-migration/GUIDE_TH.md.
+
+Rollback primary to `dpl_CvbGYTDhJ8o5xGJerLbKwKrRGHKZ`, legacy to `dpl_3FmZdx2LCt4V1JbSbnbFb6HvVdMo`; clear legacy ignore-build setting when resuming legacy builds. Deployment rollback does not undo browser records; retain source and destination backup files. Source/build fingerprints and sanitized platform checks are committed separately from runtime. Later documentation commits do not change runtime.
+
+ZIP v15/v12 inventoried only; not executed or merged because the latest attachment supplied no requested operation.
+
+---
+
 # ARTYVERSE X — Git and Vercel release
-**Latest release — Reference-driven Pattern Library (2026-11-08):** runtime `d3069e8b0c0be3d1b7d5448b118aade359898cfc`; deployment `dpl_3FmZdx2LCt4V1JbSbnbFb6HvVdMo`.
+**Previous release — Reference-driven Pattern Library (2026-11-08):** runtime `d3069e8b0c0be3d1b7d5448b118aade359898cfc`; deployment `dpl_3FmZdx2LCt4V1JbSbnbFb6HvVdMo`.
 
 - Library: https://artyverse-x-ai-assistant.vercel.app/#/patterns
 - Depth example: https://artyverse-x-ai-assistant.vercel.app/#/patterns/depth

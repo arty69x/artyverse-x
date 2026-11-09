@@ -1,0 +1,50 @@
+{
+  "revision": "2ab80b17725394cfb6e793dad869a4609a77e159",
+  "checkedAt": "2026-11-09T02:11:16.845Z",
+  "deployments": [
+    {
+      "id": "dpl_FfZC8GtPdLfsGkiqzACKk6J6whyW",
+      "state": "READY",
+      "url": "artyverse-4yomk0pv2-arty69xs-projects.vercel.app",
+      "sha": "2ab80b17725394cfb6e793dad869a4609a77e159"
+    },
+    {
+      "id": "dpl_9oi96N8rCr8sh7AhRVkHs5w2Ynho",
+      "state": "READY",
+      "url": "artyverse-x-ai-assistant-lvzm3mc62-arty69xs-projects.vercel.app",
+      "sha": "2ab80b17725394cfb6e793dad869a4609a77e159"
+    }
+  ],
+  "projects": [
+    {
+      "id": "prj_PhP5npiJbwWMGXFhsO5zWoFJpm3w",
+      "name": "artyverse-x",
+      "ssoProtection": {
+        "enabled": true,
+        "deploymentType": "all_except_custom_domains"
+      }
+    },
+    {
+      "id": "prj_IX1ylxFY2Uj4EcDyCr5CAigTkrXG",
+      "name": "artyverse-x-ai-assistant",
+      "ssoProtection": {
+        "enabled": true,
+        "deploymentType": "all_except_custom_domains"
+      }
+    }
+  ],
+  "aliases": [
+    {
+      "alias": "artyverse-x.vercel.app",
+      "projectId": "prj_PhP5npiJbwWMGXFhsO5zWoFJpm3w",
+      "deploymentId": "dpl_FfZC8GtPdLfsGkiqzACKk6J6whyW",
+      "redirect": null
+    },
+    {
+      "alias": "artyverse-x-ai-assistant.vercel.app",
+      "projectId": "prj_IX1ylxFY2Uj4EcDyCr5CAigTkrXG",
+      "deploymentId": "dpl_9oi96N8rCr8sh7AhRVkHs5w2Ynho",
+      "redirect": null
+    }
+  ]
+}

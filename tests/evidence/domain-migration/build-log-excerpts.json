@@ -1,0 +1,17 @@
+{
+  "note": "Selected platform build excerpts, not complete logs",
+  "excerpts": {
+    "dpl_FfZC8GtPdLfsGkiqzACKk6J6whyW": [
+      "found 0 vulnerabilities",
+      "dist/assets/app-Gl3VX_PN.js                                 279.02 kB │ gzip: 88.05 kB",
+      "Build Completed in /vercel/output [19s]",
+      "Deployment completed"
+    ],
+    "dpl_9oi96N8rCr8sh7AhRVkHs5w2Ynho": [
+      "found 0 vulnerabilities",
+      "dist/assets/app-Gl3VX_PN.js                                 279.02 kB │ gzip: 88.05 kB",
+      "Build Completed in /vercel/output [19s]",
+      "Deployment completed"
+    ]
+  }
+}
