@@ -1,0 +1,46 @@
+{
+  "archives": [
+    {
+      "file": "1-ARTYVERSE_X_HYPER_NODE_STUDIO_v15_COMPLETE.zip",
+      "sha256": "555da1f99f9896d9ea96ded3d4088e9d241245d4a7791b30c98eab700da4e6a9",
+      "fileCount": 69
+    },
+    {
+      "file": "2-ARTYVERSE_X_MASTER_STUDIO_v12_COMPLETE.zip",
+      "sha256": "c01ba0965e07e51b742f87188462b5f14cf3b209171913d10379b646c7a16a4b",
+      "fileCount": 49
+    }
+  ],
+  "identical": 44,
+  "addedInV15": [
+    "ARTYVERSE_X_v14_RENDERED_DEMO.html",
+    "docs/HYPER_ARCHITECTURE.md",
+    "docs/SECURITY_AND_GAPS.md",
+    "docs/V15_FULL_POLISH.md",
+    "portable/ARTYVERSE_X_v15_PORTABLE_STUDIO.html",
+    "previews/desktop.png",
+    "previews/mobile.png",
+    "previews/rendered-desktop.png",
+    "previews/rendered-mobile.png",
+    "previews/tablet.png",
+    "previews/v15-desktop.png",
+    "previews/v15-mobile-library.png",
+    "previews/v15-mobile-preview.png",
+    "previews/v15-mobile.png",
+    "public/node-engine.mjs",
+    "public/node-studio.css",
+    "public/node-studio.html",
+    "public/node-studio.js",
+    "tests/node-engine.test.mjs",
+    "tests/v15-polish.test.mjs"
+  ],
+  "changedInV15": [
+    "README.md",
+    "package.json",
+    "public/index.html",
+    "server.mjs",
+    "tests/studio.test.mjs"
+  ],
+  "removedSinceV12": [],
+  "status": "Read-only inventory. No code executed, no merge into app pending user scope."
+}

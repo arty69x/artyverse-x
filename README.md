@@ -1,4 +1,6 @@
-# ARTYVERSE X V3 · Hyper Polish
+# ARTYVERSE X · Visual Engineering Studio
+
+**Main site: https://artyverse-x.vercel.app** · [Move old browser work](https://artyverse-x.vercel.app/#/transfer) · [Recovery](https://artyverse-x-ai-assistant.vercel.app/?recovery=1#/transfer)
 
 **Artist × Multiverse.** A Thai-first local creative studio with a new semantic dark/light/system design, original ARCYCA SVG mascot, responsive navigation, evidence-first interview workspace and retained creative engines.
 
@@ -15,7 +17,7 @@ Read [the merged design](ARTYVERSE_X_MASTER_SPEC.md), [V3 decisions](docs/v3/IMP
 
 `npm run tokens` generates UI token exports; `npm run typecheck`, `npm test`, and `npm run test:e2e` verify the code and workflows. Browser tests use system Chromium as specified in playwright.config.ts. Versioned evidence is kept separate; changes invalidate affected runtime fingerprints.
 
-Copilot outlines are deterministic local structures, not AI inference. Optional browser STT may use the browser vendor’s service and needs user permission; manual text always works. Provider adapter, real voice recording, synthesis and local workflows remain available within their documented capabilities. Public cloud/multiplayer/commerce/community services are not connected by this frontend upgrade. Vercel is linked; complete hosted persistence and identity remain a separate deployment task.
+Copilot outlines are deterministic local structures, not AI inference. Optional browser STT may use the browser vendor’s service and needs user permission; manual text always works. Provider adapter, real voice recording, synthesis and local workflows remain available within their documented capabilities. Public cloud/multiplayer/commerce/community services are not connected by this frontend upgrade. Hosted persistence is browser-local IndexedDB; cloud identity/sync remain unavailable. Canonical deployment uses artyverse-x, with the old origin retained for reviewed transfer/recovery.
 
 ## Vercel / browser edition
 
@@ -36,3 +38,5 @@ Open `/#/home` for the Extract / Compose / Ship workspace and `/#/builder` for t
 ### Pattern Library from supplied references
 
 Open `/#/patterns`:8 independently authored editable web layouts,6 artifact-only styles and a separate60-entry reference inventory. Preview on request, edit a local draft, review imported presets, export self-contained HTML or create a new real CodeDocument in the existing Studio. No Framer component package/script/media was copied into runtime. All12 uploaded-source decisions, V7 recovery and source-to-feature mapping: [reference adoption](docs/reference-library/ADOPTION.md).
+
+Canonical operations and per-browser migration: [guide](docs/domain-migration/GUIDE_TH.md), [deployment targets](docs/domain-migration/OPERATIONS.md), [evidence](docs/domain-migration/VERIFICATION.md). No user data is silently cleared or claimed migrated without a verified import.

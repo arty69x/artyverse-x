@@ -950,6 +950,7 @@ export function SettingsPage() {
       </section>
       <section className="settings-section">
         <h2>{t("Storage & backup", "พื้นที่จัดเก็บและสำรองข้อมูล")}</h2>
+        <a className="button" href="#/transfer">{t('Move saved work + browser drafts between addresses','ย้ายงานและ draft ระหว่างโดเมน')} ↗</a>
         <p className="muted">
           {status
             ? `${status.storage} · ${(status.bytes / 1024).toFixed(1)} KB records (media excluded)`

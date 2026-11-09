@@ -66,3 +66,6 @@ Both builds/TypeScript,20 unit tests and9 affected browser journeys passed.12 TH
 
 ## Reference-library adoption (latest)
 24 unit tests,10 new/affected browser workflows,18 gallery/detail/generated-layout checks plus8 maximum-content320px cases passed. Ten visual cases include axe; eight generated desktop and eight generated narrow cases check geometry. Both builds/TypeScript and actual browser IndexedDB save/reload/Studio/filter handoff passed. Full54-case regression, original Framer motion matching and new Lighthouse/FPS are not claimed. All12 source fingerprints, V7 syntax recovery,60 reference-only entries and8 newly authored templates are separated in docs/reference-library/.
+
+## Canonical domain / safe browser transfer
+29 unit tests;54 normal app browser/API regression cases; real two-origin isolated IndexedDB/service-worker migration with records/WAV/revisions/drafts, conflicts/idempotency/receipt URL mapping, tamper rejection, explicit forwarding and recovery bypass; legacy gate +4 destination widths checked with axe. See docs/domain-migration/VERIFICATION.md. Platform checks are separate from user-local data: no actual user's personal browser storage has been claimed migrated by Vercel API.

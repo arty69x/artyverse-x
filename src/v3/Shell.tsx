@@ -1,3 +1,5 @@
+import "./transfer.css";
+import { legacyHost, legacyOrigin } from "../hosted/domains";
 import { browserEdition } from "../hosted/mode";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
@@ -242,6 +244,19 @@ export function Shell({
           {navigation()}
         </aside>
         <div className="main-shell">
+          {legacyHost && (
+            <div className="domain-recovery-banner">
+              <span>
+                {t(
+                  "Old address / recovery workspace. Work at this origin stays here until transferred.",
+                  "โดเมนเก่า / พื้นที่กู้คืน ข้อมูลยังอยู่ที่โดเมนนี้จนกว่าจะย้าย",
+                )}
+              </span>
+              <a href={legacyOrigin + "/#/transfer"}>
+                {t("Move to main address", "ย้ายไปโดเมนหลัก")} ↗
+              </a>
+            </div>
+          )}
           <header className="topbar">
             <div className="topbar-left">
               <button

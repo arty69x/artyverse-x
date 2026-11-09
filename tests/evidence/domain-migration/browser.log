@@ -1,0 +1,19 @@
+{
+  checks: [
+    'Old origin is a transfer gate; no blind redirect or data clearing',
+    'Actual source transfer download includes records/revisions/WAV/drafts/preferences; excludes unrelated keys',
+    'Tampered checksum rejected without changing destination',
+    'Destination originals retained; incoming workspace copied coherently with source media, revisions and remapped deep link',
+    'Both conflicting drafts retained and explicitly recoverable',
+    'Repeated same transfer is idempotent for saved records',
+    'Old item URLs resolve to copied canonical IDs after transfer',
+    'Forwarding is user-confirmed, preserves route; recovery bypass still opens intact old data'
+  ],
+  layouts: [
+    { width: 320, overflow: false, violations: [] },
+    { width: 390, overflow: false, violations: [] },
+    { width: 768, overflow: false, violations: [] },
+    { width: 1440, overflow: false, violations: [] }
+  ],
+  errors: []
+}

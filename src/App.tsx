@@ -1,3 +1,5 @@
+import { primaryLink, resolveOriginId, safeHash } from "../shared/origins";
+import { legacyHost, mainOrigin, legacyOrigin } from "./hosted/domains";
 import { WorkspaceBoundary } from "./v3/Boundary";
 import { useEffect, useState, lazy, Suspense } from "react";
 import { MotionConfig } from "motion/react";
@@ -104,7 +106,9 @@ const UnifiedBuilder = lazy(() =>
 const PatternLibrary = lazy(() =>
   import("./v3/PatternLibrary").then((m) => ({ default: m.PatternLibrary })),
 );
+const DomainTransfer = lazy(() => import("./v3/DomainTransfer"));
 export const routes = [
+  ["transfer", "Move workspace", "ย้ายพื้นที่ทำงาน", ArrowUpRight],
   ["patterns", "Pattern Library", "คลังรูปแบบดีไซน์", LayoutTemplate],
   ["builder", "Website Builder", "ออกแบบเว็บไซต์", Command],
   ["copilot", "Interview Copilot", "ผู้ช่วยสัมภาษณ์", Mic],
@@ -153,7 +157,12 @@ export function App() {
       )[parts[0]] ||
       parts[0] ||
       "home",
-    id = parts[1];
+    fromLegacy =
+      !legacyHost &&
+      new URLSearchParams(location.search).get("from") === "legacy",
+    id = fromLegacy
+      ? resolveOriginId(localStorage, legacyOrigin, parts[1])
+      : parts[1];
   const go: Navigate = (r, i) => {
     location.hash = "/" + r + (i ? "/" + i : "");
   };
@@ -168,6 +177,32 @@ export function App() {
     document.title = `${routes.find((r) => r[0] === route)?.[1] || "Workspace"} · ARTYVERSE X`;
     document.getElementById("main")?.focus({ preventScroll: true });
   }, [route, s.locale, s.motion]);
+  useEffect(() => {
+    if (!fromLegacy) return;
+    const hash = safeHash("#/" + route + (id ? "/" + id : ""));
+    history.replaceState(null, "", location.pathname + hash);
+    setPath(hash.slice(1));
+  }, [fromLegacy, route, id]);
+  if (
+    legacyHost &&
+    new URLSearchParams(location.search).get("recovery") !== "1" &&
+    localStorage.getItem("av-domain-forward") === "true"
+  )
+    return <ForwardToMain />;
+  if (
+    legacyHost &&
+    new URLSearchParams(location.search).get("recovery") !== "1" &&
+    route !== "transfer"
+  )
+    return (
+      <main id="main" tabIndex={-1}>
+        <Suspense
+          fallback={<div role="status">Loading workspace transfer…</div>}
+        >
+          <DomainTransfer sourceHash={location.hash || "#/home"} />
+        </Suspense>
+      </main>
+    );
   if (route === "concept")
     return (
       <Suspense
@@ -200,6 +235,9 @@ export function App() {
       break;
     case "design-system":
       page = <DesignBoard />;
+      break;
+    case "transfer":
+      page = <DomainTransfer />;
       break;
     case "patterns":
       page = <PatternLibrary id={id} go={go} />;
@@ -295,5 +333,22 @@ export function App() {
         </Suspense>
       </Shell>
     </MotionConfig>
+  );
+}
+
+function ForwardToMain() {
+  useEffect(() => {
+    location.replace(
+      primaryLink(
+        mainOrigin,
+        location.hash === "#/transfer" ? "#/home" : location.hash,
+        true,
+      ),
+    );
+  }, []);
+  return (
+    <p role="status">
+      Opening ARTYVERSE X at its main address… <a href={mainOrigin}>Continue</a>
+    </p>
   );
 }

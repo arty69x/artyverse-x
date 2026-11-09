@@ -1,0 +1,11 @@
+# Primary domain and transfer verification — 2026-11-09
+
+29 unit tests passed (24 existing +5 transfer boundary cases): checksum tamper detection, allowlisted browser data/no unrelated keys, deterministic conflict copies, project/asset/receipt mapping, user prose preservation, explicit draft conflict choices, staging capacity and post-merge verification, same-record reuse, safe origins/routes.
+
+Full existing browser/API regression:54 cases passed. Major new domain/receipt behavior is separately exercised against an isolated browser build using two actual loopback origins and their distinct IndexedDB/service workers. Production-origin constants are pinned separately for final deployment; QA origins are not production settings.
+
+Accepted two-origin browser checks: legacy gate/no blind redirect; actual file download with3 source records/WAV/revision/drafts; unrelated key excluded; tampered package rejects before mutation; destination originals preserved; linked source copies retain project/asset/history references; source media bytes verified; both conflicting drafts accessible and repeated recovery preserves prior copies; repeated import does not add records; old item URL reaches copied canonical ID; forwarding is explicit, route-preserving, and recovery bypass retains original data. Four destination sizes320/390/768/1440 and legacy source gate passed axe checks, no page overflow or page errors.
+
+Server, isolated QA browser and production browser builds/TypeScript passed. No physical-device test, personal production-browser data migration, Lighthouse/FPS, live runtime-log scan or WCAG certification claim. Platform READY/build/alias/access-policy checks are recorded separately once deployment is confirmed. Existing54-case regression belongs to the normal app paths; new receipt/gate behavior has its own explicit integration evidence.
+
+Earlier QA fixture issue: project payload lacked its actual schemaVersion/color and was corrected. Original draft recovery repeated-action behavior was hardened to preserve earlier copies. These are not counted as inherited source tests. All evidence uses isolated fixture data; no real user database is committed. ZIP v15/v12 intake is read-only and pending scope, not merged into this release.
